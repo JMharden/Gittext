@@ -1,0 +1,281 @@
+<script>
+
+	// 唤起微信支付
+
+
+	function call_pay(param,url,id){
+
+		param = eval('('+param+')');
+
+
+		if(typeof url == 'undefined' || !url)url = location.href;
+
+
+		if (typeof WeixinJSBridge == "undefined"){
+
+
+			if( document.addEventListener ){
+
+
+				document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+
+
+			}else if (document.attachEvent){
+
+
+				document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+
+
+				document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+
+
+			}
+
+
+
+
+
+		}else{
+
+
+			WeixinJSBridge.invoke(
+
+
+				'getBrandWCPayRequest',
+
+
+				param,
+
+
+				function(res){
+
+
+					WeixinJSBridge.log(res.err_msg);
+
+
+					if(res.err_msg == 'get_brand_wcpay_request:cancle'){
+
+
+						alert('你取消了支付');
+
+
+						location.href = '';
+
+
+					}else if(res.err_msg == 'get_brand_wcpay_request:ok'){
+
+						//alert('支付成功1');
+                     $.post("/index.php?m=&c=Index&a=jiance",{},function(d){
+			          if(d.status==1){
+			          	 var userm = $('.amount').html();
+                         userm = userm * 1+d.money*1;
+                         $('.amount').html(userm);
+                         $('#pid').val(d.id);
+			             // $(".chou").trigger("click");
+			             $(".pop_context3").html("您有"+d.money+"元的转盘红包没有抽奖</br>是否立即抽奖?");
+			             $(".toast3").show();
+
+			            }else{
+			             jiance();
+			            }
+
+			         },'json');
+                      
+			        	//location.href = '/';
+
+
+					}else{
+
+
+						//alert(res.err_msg)
+						alert('取消支付');
+
+
+						location.href = url;
+
+
+					}
+
+
+					
+
+
+					
+
+
+				}
+
+
+			);
+
+
+		}
+
+
+	}
+    function jiance(){
+    	$.post("/index.php?m=&c=Index&a=jiance",{},function(d){
+	    if(d.status==1){
+	      	 var userm = $('.amount').html();
+	         userm = userm * 1+d.money*1;
+	         $('.amount').html(userm);
+	         $('#pid').val(d.id);
+	         alert(d.money);
+	         //$(".chou").trigger("click");
+	         $(".pop_context3").html("您有"+d.money+"元的转盘红包没有抽奖</br>是否立即抽奖?");
+			 $(".toast3").show();
+	        }else{
+	        setTimeout(function(){
+			jiance1();
+				},500);	
+	         
+	        }
+
+	     },'json');
+    }
+    function jiance1(){
+    	$.post("/index.php?m=&c=Index&a=jiance",{},function(d){
+	    if(d.status==1){
+	    	 alert(d.money);
+	      	 var userm = $('.amount').html();
+	         userm = userm * 1+d.money*1;
+	         $('.amount').html(userm);
+	         $('#pid').val(d.id);
+	        // $(".chou").trigger("click");
+	        $(".pop_context3").html("您有"+d.money+"元的转盘红包没有抽奖</br>是否立即抽奖?");
+			$(".toast3").show();
+	        }else{
+	          setTimeout(function(){
+			  jiance();
+				},500);
+	        }
+
+	     },'json');
+    }
+
+	/*function  jsApiCall(){//传入微信里面的参数
+        WeixinJSBridge.invoke(
+			'getBrandWCPayRequest',
+			{
+               "appId" : "<?php echo $param['appId']?>",     //公众号名称，由商户传入     
+               "timeStamp":"<?php echo $param['timeStamp']?>",         //时间戳，自1970年以来的秒数     
+               "nonceStr" : "<?php echo $param['nonceStr']?>", //随机串     
+               "package" : "<?php echo $param['package']?>",     
+               "signType" : "MD5",         //微信签名方式:     
+               "paySign" : "<?php echo $param['paySign']?>" //微信签名 
+            },
+
+			function(res){
+				WeixinJSBridge.log(res.err_msg);
+				if(res.err_msg == 'get_brand_wcpay_request:cancle'){
+					alert('你取消了支付');
+					location.href = url;----------------------//
+				}else if(res.err_msg == 'get_brand_wcpay_request:ok'){
+					alert('支付成功2');
+				    //	location.href = '/';
+				}else{
+					alert(res.err_msg)
+					location.href = url;
+				}
+			}
+		);
+	}*/
+
+
+	function clickPlantB(plant_id){
+
+
+		<!--点击播种-->
+
+
+		$.post("{:U('do_plant')}",{plant_id:plant_id,index:{$_GET['index']|default=0}},function(d){
+
+
+			layer.msg(d.info);
+
+
+			// if(d.status == 1){
+
+
+			// 	location.href = location.href;
+
+
+			// }
+
+
+		});
+
+
+	}
+
+
+	// 通用ajax表单提交
+
+
+	function ajaxFormSubmit(seletor){
+
+
+		if(!seletor || seletor == '')seletor = "form";
+
+
+		data = $(seletor).serialize();
+
+
+		layer.load(0, {shade: [0.1,'#fff']});
+
+
+		$.post($(seletor).attr('action'),data,function(data){
+
+
+			layer.closeAll();
+
+
+			_index = layer.msg(data.info);
+
+
+			if(data.url && data.url != ''){
+
+
+				// 延迟一秒钟跳转
+
+
+				setTimeout(function(){
+
+
+					location.href = data.url;
+
+
+				},1000)
+
+
+			}
+
+
+			else{
+
+
+				setTimeout(function(){
+
+
+					layer.close(_index);
+
+
+				},3000)
+
+
+			}
+
+
+		})
+
+
+	}
+
+
+	
+
+
+</script>
+
+<!-- <script src="http://m.dqpps.com/js/wx.js"></script> -->
+

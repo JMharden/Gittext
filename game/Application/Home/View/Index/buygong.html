@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<include file="include/head" title="购买公排" />
+		<style>
+		.addr-content{ background:none;}
+		.addr-item{ background:#fff;}
+		.addr-form{}
+		.addr-content .items{ background:#fff; margin-bottom:5px; padding:10px; font-size:14px; line-height:30px;}
+		.addr-content .items .sn{ border-bottom:1px solid #eee;}
+		.addr-content .items .status,
+		.addr-content .items .del,
+		.addr-content .items .gotopay{ float:right;}
+		.addr-content .items .sn a{ margin:0 5px;}
+		.addr-content .items .time{ border-top:1px solid #eee; color:#B5ADAD;}
+		.addr-content .items .money{ float:right; font-size:16px; color:red; font-weight:bold;}
+		.addr-content .items .freez{ background:blue; color:#fff; padding:2px 5px;}
+		</style>
+	</head>
+	<body style="background: #f7f7f7;">
+		<include file="include/utop" />
+		
+		<div class="addr-content" style=" background:none;text-align: center;margin-top: 80px;font-size: 14px;">
+			
+			 每购买一个公排需要支付<span style="color:#fb9337">￥<?php echo $money;?></span>
+
+		</div>
+		 <div class="" style="margin:10px auto;width:180px;font-size:16px;display: none;">购买 <input class="gongnum" value="1" name="num" type="text" style="margin:10px auto;border:1px solid #ddd; color:#fb9337;border-radius: 4px;width: 100px;text-align: center;padding:3px;height: 25px;font-size: 16px;" /> 个</div>
+		 <div class="buygong" style="background-color:#fb9337;border-radius: 5px;width: 200px;height: 35px;color:#fff;line-height: 35px;text-align: center; margin:10px auto;font-size: 14px;cursor: pointer;display: none;" onclick="buygongpai()">确定购买</div>
+		<div class="page" style=" padding:10px;">
+	
+		</div>
+	</body>
+	<include file="include/commonjs" />
+	<script type="text/javascript">
+	$(function(){
+	  $('.buygong').show();
+	  
+	});
+    function buygongpai(){
+        var num = $('.gongnum').val();
+		$.post("",{num:num},function(d){
+			call_pay(d.pay_param,'','');
+		});
+	 }
+	</script>
+</html>

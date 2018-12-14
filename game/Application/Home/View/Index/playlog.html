@@ -1,0 +1,46 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><title>
+我的游戏记录—闲来猜猜乐
+</title><link type="text/css" rel="stylesheet" href="/Public/css/default2017.css?20170102">
+
+<style type="text/css">
+	.page a{
+     color:#fff;
+     padding: 5px;
+     text-decoration: none;
+	}
+</style>
+
+</head>
+<body>
+
+<include file="include/top" />
+<div class="container3">
+<div class="commision">
+<div class="c-title">我的游戏记录</div>
+<div class="c-details">
+<div class="c-table">
+<div class="c-table-header">
+<li class="th-date">游戏编号</li>
+<li class="th-item">我猜</li>
+<li class="th-price">投注金额</li>
+<li class="th-result">开奖结果</li>
+<li class="th-status">状态</li>
+</div>
+<div class="c-table-body">
+<volist name="list" id="vo">
+
+<li class="td-date">第{$vo.kid}期</li><li class="td-item">{$vo.buyname}</li><li class="td-price">{$vo.money}元</li><li class="td-result">{$vo.isname}</li><li class="td-status"><?php if($vo['status']==1){ echo '进行中';}else{if($vo['buyid']==$vo['isid']){ echo '中奖';}else{ echo '未中奖';}} ?></li>
+</volist>
+</div></div>
+<div class="page" style=" padding:10px;margin-bottom: 30px;">
+{$page}
+</div>
+<div class="c-table-footer" id="none" style="display: none;"><a href="javascript:gameMore();">加载更多...</a></div>
+</div>
+</div>
+</div>
+</div>
+<include file="include/footer" />
+
+</body>
+</html>

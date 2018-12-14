@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<include file="include/head" title="在线充值" />
+	<style>
+	</style>
+</head>
+
+<body>
+	<p style=" padding:50px; text-align:center; font-size:14px;">请稍候 ...</p>
+	<include file="include/commonjs" />
+	<script>
+	$(function(){
+		setTimeout(call_pay('{$pay_param}'),1000);
+	})
+	</script>
+</body>
+</html>

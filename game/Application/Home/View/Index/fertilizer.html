@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<include file="include/head" title="肥料详细信息" />
+	<style>
+	body{ background:#f2f2f2;}
+	.main{ padding:10px; background:#fff;}
+	.top{ padding-left:60px; position:relative; padding-top:5px; height:50px;}
+	.top img{ position:absolute; top:0px; left:0; width:50px; height:50px; border:1px solid #eee;}
+	.top .name{ font-size:16px; font-weight:bold;}
+	.top .price{ font-size:16px; color:red;}
+	
+	.title{ background:#fff; height:30px; line-height:30px; padding-left:10px; border-bottom:1px solid #eee;}
+	.margin-top10{ margin-top:10px;}
+	
+	.body{ background:#fff; padding:10px;}
+	.body img{ max-width:100%;}
+	
+	.bottom{  position:fixed; bottom:0; width:100%; background:#fff;}
+	.bottom-blank{line-height:40px; height:40px;}
+	.bottom li{ height:40px; line-height:40px;}
+	.bottom li a{ display:block; line-height:40px;}
+	.flex-box{　margin:0; padding:0; list-style:none; display:box; display:-webkit-box;}
+	.bottom li{ flex-box:1; -webkit-box-flex:1; text-align:center;}
+	
+	</style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="top">
+			<img src="{$info.pic}" />
+			<div class="name">{$info.name}</div>
+			<div class="price">￥{$info.price}</div>
+		</div>
+		<div class="detail">
+		
+		</div>
+	</div>
+	
+	<div class="title margin-top10">介绍</div>
+	<div class="body">
+		{$info.body}
+	</div>
+	
+	<div class="bottom-blank"></div>
+	<div class="bottom">
+		<ul class="flex-box">
+			<li>
+				购买
+			</li>
+			<li>
+				<a href="javascript:;" onclick="buyFerlitizer('money')">金币支付</a>
+			</li>
+			<li>
+				<a href="javascript:;" onclick="buyFerlitizer('wxpay')">微信支付</a>
+			</li>
+		</ul>
+	</div>
+	<include file="include/commonjs" />
+	<script>
+	function buyFerlitizer(payway){
+		layer.loading();
+		$.post("",{payway:payway},function(d){
+			if(d.status != 1){
+				layer.msg(d.info);
+				setTimeout(function(){layer.closeAll()},1000);
+			}else if(payway == 'wxpay'){
+				// 唤起微信支付
+				top.call_pay(d.pay_param);
+				setTimeout(function(){layer.closeAll()},1000);
+			}else{
+				layer.msg(d.info);
+				// 购买成功后刷新
+				setTimeout(function(){ location.href=location.href;},1000);
+			}
+		});
+	}
+	</script>
+</body>
+</html>

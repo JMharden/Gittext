@@ -1,0 +1,79 @@
+                <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">推广域名管理</h1>
+        </div><!--pageheader-->
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+			<div class="tableoptions">        
+				<form method="post">
+					域名:
+					<input type="text" name="domain" value="{$_GET['domain']}" class="smallinput" style="width:100px;" />
+					ID:
+					<input type="text" name="id" value="{$_GET['id']}" class="smallinput" style="width:100px;" />
+					<input type="submit" value="查找" />
+				</form>
+			</div><!--tableoptions-->
+
+			<form action="" method="post">
+				<table cellpadding="0" cellspacing="0" border="0" id="table2" class="stdtable stdtablecb">
+					<thead>
+						<tr>
+							<th class="head1"><input type="checkbox" class="check_all"></th>
+							<th class="head1">编号</th>
+	                        <th class="head0">域名</th>
+	                        <th class="head0">是否黑名单</th>
+	                        <!-- <th class="head0">是否二维码域名</th>
+	                        <th class="head0">是否默认域名</th> -->
+	                        <th class="head0">操作</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<volist name="list" id="vo">
+						<tr>
+						    <td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
+							<td>{$vo.id}</td>
+							<!--td>{$vo.openid}</td-->
+	                        <td>{$vo.domain}</td>
+	                        <td>
+	                            <if condition="$vo['is_lock'] eq 1"><span style="color: red;">是</span></if>
+	                            <if condition="$vo['is_lock'] eq 0">否</if>
+	                        </td>
+
+	                        <!-- <td>
+	                            <if condition="$vo['is_qr_code'] eq 1"><span style="color: red;">是</span></if>
+	                            <if condition="$vo['is_qr_code'] eq 0">否</if>
+	                        </td>
+
+	                        <td>
+	                            <if condition="$vo['is_home'] eq 1">是</if>
+	                            <if condition="$vo['is_home'] eq 0">否</if>
+	                        </td> -->
+
+	                        <td class="center">
+								<a href="{:U('edit', 'id='. $vo['id'] .'&type=1')}">修改</a> | 
+								<a href="{:U('del', 'id='.$vo['id'])}" onclick="return confirm('你确实要删除这个代理吗？')">删除</a>
+							</td>
+						</tr>
+						</volist>
+					</tbody>
+				</table>
+				<div style="margin:30px;">
+					<input value="增加" type="button" onclick="window.location='{:U('edit?type=1')}';">&nbsp;&nbsp;
+				</div>
+			</form>
+
+			<div class="dataTables_paginate paging_full_numbers" id="dyntable2_paginate">
+			{$page|default="<p style='text-align:center'>暂时没有数据</p>"}
+			</div>
+        </div><!--contentwrapper-->
+
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript">
+	       	$(function(){
+	           $(".check_all").click(function(){
+	         	var checked = $(this).get(0).checked;
+	            $("input[type=checkbox]").attr("checked", checked);
+	          });
+	        });
+       </script>
