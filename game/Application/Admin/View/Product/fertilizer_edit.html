@@ -1,0 +1,76 @@
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">编辑肥料</h1>
+			<span class="pagedesc"></span>
+        </div><!--pageheader-->
+        
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+        
+        
+            <form class="stdform stdform2" method="post">
+				<table class="form-table" cellspacing="1" border="0">
+					<tr>
+						<th class="title">名称</th>
+						<td>
+							<input type="text" name="name" id="name" value="{$info.name}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">图片<small>显示在首页，建议尺寸600*300px</small></th>
+						<td>
+							<iframe src="{:U('upload', 'event=setPic&url='.$info['pic'])}" scrolling="no" width="100" height="100"></iframe>
+							<input type="hidden" name="pic" id="pic" value="{$info.pic}" class="smallinput" />
+							<script>
+							function setPic(url){
+								document.getElementById('pic').value = url;
+							}
+							</script>
+						</td>
+					</tr>
+					<tr>
+						<th class="title">价格<small></small></th>
+						<td>
+							<input type="text" name="price" id="price" value="{$info.price}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">施肥奖励<small></small></th>
+						<td>
+							<input type="text" name="reward" id="reward" value="{$info.reward}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">作用植物<small></small></th>
+						<td>
+							<select name="plant_id" default="{$info.plant_id}">
+								<volist name="plants" id="vo">
+								<option value="{$vo.id}">{$vo.name}</option>
+								</volist>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th class="title">介绍<small></small></th>
+						<td>
+							<textarea name="body" id="body" class="longinput" style="margin: 0px; height: 400px; max-width:640px;">{$info.body}</textarea>
+						</td>
+					</tr>
+				</table>
+				
+				
+				<p class="stdformbutton">
+					<if condition="$info['pid'] neq ''">
+						<input type="hidden" value="{$info.pid}" name="pid" />	
+					</if>
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+				</p>
+			</form>
+			<script src="__PUBLIC__/plugins/ueditor1.4.3/ueditor.config.js"></script>
+			<script src="__PUBLIC__/plugins/ueditor1.4.3/ueditor.all.min.js"></script>
+			<script>
+				ue = UE.getEditor('body');
+			</script>
+        
+        </div><!--contentwrapper-->
+        

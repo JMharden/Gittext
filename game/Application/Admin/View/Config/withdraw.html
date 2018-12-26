@@ -1,0 +1,36 @@
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">提现设置</h1>
+            <span class="pagedesc"></span>
+            
+        </div><!--pageheader-->
+        
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+        
+        
+            <form class="stdform stdform2" method="post">
+				<p>
+					<label>每次最少提现金额<small>此设置大于1才有效</small></label>
+					<span class="field">
+						<input type="text" name="min_money" id="min_money" value="{$_CFG.withdraw.min_money}" class="smallinput" />
+					</span>
+				</p>
+				<p>
+					<label>每次最多提现金额</label>
+					<span class="field"><input type="text" name="max_money" id="max_money" value="{$_CFG.withdraw.max_money}" class="smallinput" /></span>
+				</p>
+				<p>
+					<label>手续费</label>
+					<span class="field"><input type="text" name="hand_fee" id="hand_fee" value="{$_CFG.withdraw.hand_fee}" class="smallinput" /></span>
+				</p>
+				
+				
+				<p class="stdformbutton">
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+				</p>
+			</form>
+        
+        
+        </div><!--contentwrapper-->
+        

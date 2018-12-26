@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<head>
+
+	<title>购买记录</title>
+
+</head>
+
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<style>
+
+	.b-top{
+
+		height: 45px;
+
+		background-color: #fff;
+
+		border-bottom: 1px solid #ddd;
+
+		line-height: 45px;
+
+		width: 100%;
+
+		float: left;
+
+	}
+
+	.bj-content{
+
+		min-height:100px;
+
+		float: left;
+
+		width: 100%;
+
+	}
+
+	.fanhui{
+
+		float: left;
+
+		margin-left: 5px;
+
+		color: #333;
+
+	}
+
+	.b-list{
+
+		float: left;
+
+		margin-left: 50px;
+
+		width: 80px;
+
+		color:#333;
+
+		height: 35px;
+
+		line-height: 35px;
+
+		background-color:#d5d5d5 ;
+
+		border-top-left-radius:5px;
+
+		border-bottom-left-radius:5px;
+
+		text-align: center;
+
+		margin-top:5px;
+
+	}
+
+	.j-list{
+
+		float: left;
+
+		width: 80px;
+
+		height: 35px;
+
+		line-height: 35px;
+
+		color:#fff;
+
+		background-color: #fed000;
+
+		border-top-right-radius:5px;
+
+		border-bottom-right-radius:5px;
+
+		text-align: center;
+
+		margin-top:5px;
+
+	}
+
+	.buylist{
+
+		width: 92%;
+
+	    float: left;
+
+	    margin: 10px 4%;
+
+	    background-color: #f1c600;
+
+	    color:#fff;
+
+	    border-radius: 5px;
+
+	    min-height: 130px;
+
+	}
+
+	.buy-left{
+
+		float: left;
+
+		width: 70%;
+
+	}
+
+	.buy-right{
+
+		float: left;
+
+		width: 30%;
+
+		line-height: 130px;
+
+		background-color: #e7252e;
+
+		font-size: 16px;
+
+		font-weight: bold;
+
+		text-align: center;
+
+		border-top-right-radius:5px;
+
+		border-bottom-right-radius:5px;
+
+		color:#fff;
+
+	}
+
+	.red{
+
+		color:#e7252e;
+
+	}
+
+	.buy-top{
+
+		width: 100%;
+
+		text-align: center;
+
+		margin: 10px auto;
+
+		font-size: 16px;
+
+		font-weight: bold;
+
+	}
+
+	.buy-bottom{
+
+		margin-bottom: 20px;
+
+		width: 80%;
+
+		font-size: 14px;
+
+		margin-left: 10%;
+
+
+
+	}
+
+</style>
+
+<body>
+
+<div class="b-top">
+
+	<a href="/index.php?m=&c=Index&a=index"><div class="fanhui"><span class="glyphicon glyphicon-chevron-left"></span>首页</div></a>
+
+	<a href="/index.php?m=&c=Index&a=buylist"><div class="b-list">购买列表</div></a>
+
+	<a href="/index.php?m=&c=Index&a=monilist"><div class="j-list">模拟列表</div></a>
+
+</div>
+
+<div class="bj-content">
+
+ <table class="table" style="text-align: center;">
+
+      <thead>
+
+        <tr>
+
+          <th width="40" style="text-align: center;">金额</th>
+
+          <th style="text-align: center;">升跌</th>
+          <th style="text-align: center;">亏盈</th>
+
+          <th style="text-align: center;">下单价格</th>
+          <th style="text-align: center;">结束价格</th>
+          <th style="text-align: center;">状态</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+       <volist name="list" id="vo">
+
+     <?php
+
+     $i++;
+
+     $k= $i/2;
+
+    if($vo['type']==1){
+
+
+
+    }
+
+    if($vo['type']==2){
+
+      $title = '购买动物';
+
+    }
+
+    if($vo['type']==3){
+
+      $title = '购买饲料';
+
+    }
+
+    if($vo['type']==4){
+
+  
+
+    }
+
+    $class = '';
+
+    $p = substr($k, -1);
+
+    if($p==9){
+
+      $class = 'danger';
+
+    }
+
+    if($p==7){
+
+      $class = 'success';
+
+    }
+
+    if($p==5){
+
+      $class = 'warning';
+
+    }
+
+    if($p==3){
+
+      $class = 'danger';
+
+    }
+
+    if($p==1){
+
+      $class = 'info';
+
+    }
+
+ ?>
+
+        <tr class="{$class}">
+
+          <td style="text-align: center;">{$vo['price']}</td>
+
+          <td><?php if($vo['ordertype']==1){echo '买跌';}else{echo '买涨';} ?></td>
+          <td><?php if($vo['result']==1){echo '盈';}else{echo '亏';} ?></td>
+
+          <td>{$vo['start_price']}</td>
+          <td>{$vo['end_price']}</td>
+
+          <td><?php if($vo['status']==1){echo '进行中';}else{echo '已结束';} ?></td>
+
+        </tr>
+
+    </volist>
+
+      </tbody>
+
+    </table>
+
+ <empty name="list">
+
+
+
+	<div style="color:#666;text-align: center;line-height: 100px;">暂时没有购买记录</div>
+
+
+
+	</empty>
+
+</div>
+
+</body>
+
+</html>

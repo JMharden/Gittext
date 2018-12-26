@@ -1,0 +1,194 @@
+﻿html,body{ margin: 0px; padding: 0px; font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei","arial, helvetica, sans-serif";background-color:#fdde48; }
+* {margin:0px;padding:0px;}
+img{border:none;}
+ul, li{list-style-type:none;}
+/*网页顶部*/
+.header{width:100%;height:55px;background:url(/res/images2017/headerbg.png);}
+.header-top{float:left;width:100%;}
+.header-top .header-tips{float:left;width:25%;margin-top:4px;}
+.header-top .header-tips a{margin-left:15px;display:block;padding:4px 9px;height:18px;line-height:18px;background-color:#CB1A48;border:none;font-size:14px;color:#FBE087;border-radius:6px;-moz-border-radius:6px;text-decoration:none;text-align:center;}
+.header-top .header-text{float:left;width:75%;}
+.header-top .txtScroll-top{overflow:hidden;position:relative;}
+.header-top .txtScroll-top .hd{padding:0 0px;height:30px;overflow:hidden;background:#f4f4f4;display:none;}
+.header-top .txtScroll-top .hd ul{float:right;overflow:hidden;zoom:1;margin-top:10px; }
+.header-top .txtScroll-top .hd ul li{float:left;width:9px;height:9px;overflow:hidden;margin-right:5px;text-indent:-999px;cursor:pointer;background:url("../images/icoCircle.gif") 0 -9px no-repeat;}
+.header-top .txtScroll-top .hd ul li.on{background-position:0 0;}
+.header-top .txtScroll-top .bd{padding-left:15px;padding-right:15px;}
+.header-top .txtScroll-top .infoList li{height:35px;line-height:35px;font-size:14px;color:#CB1A48;font-weight:500;letter-spacing:1px;}
+.header-bottom{float:left;width:100%;height:20px;line-height:20px;}
+.header-bottom span{margin-left:18px;font-size:14px;color:#CB1A48;font-weight:500;letter-spacing:1px;}
+/*网页底部*/
+.footer{width:100%;height:35px;position:fixed;bottom:0;overflow:hidden;background:url(/res/images2017/footerbg.png);}
+.footer li{float:left;width:24.5%;line-height:35px;border-right:#CA1945 solid 1px;text-align:center;}
+.footer li:last-child{border-right:none;}
+.footer li a{color:#FFFDFF;font-size:15px;font-weight:500;letter-spacing:1px;text-decoration:none;}
+/*主页内容*/
+.container{float:left;width:100%;background:url(/res/images2017/mainbg22.png) no-repeat;background-size:100% auto;}
+.container1{float:left;width:100%;background:url(/res/images2017/mainbg1.png) no-repeat;background-size:100% auto;}
+.container2{float:left;width:100%;background:url(/res/images2017/mainbg2.png) no-repeat;background-size:100% auto;}
+.container3{float:left;width:100%;background:url(/res/images2017/mainbg3.png) no-repeat;background-size:100% auto;}
+.container4{float:left;width:100%;background:url(/res/images2017/propagatebg.png) no-repeat;background-size:100% auto;}
+.main_body{float:left;width:100%;}
+.main_body2{float:left;width:100%;}
+.main_footer{position:fixed;bottom:32px;overflow:hidden;width:100%;}
+.main_footer img{max-width:100%;}
+/*宣传页、免费代理*/
+.identifier{position:relative;left:0px;top:5px;width:120px;height:30px;line-height:30px;text-align:center;}
+.identifier span{font-size:14px;color:#fff;font-weight:bold;}
+.identifier2{float:left;width:100%;height:30px;line-height:30px;text-align:left;margin-top:-25px;}
+.identifier2 span.memberid{float:left;margin-left:5px;font-size:14px;color:#FF5757;font-weight:bold;text-align:left;}
+.identifier2 span.batchno{float:right;background:url(/res/images2017/xiaolapa.png) no-repeat 0px 4px;background-size:20px auto;padding-left:22px;margin-right:5px;font-size:14px;color:#66001A;font-weight:500;}
+.campaign{float:left;width:100%;margin-top:150px;}
+.campaign .introduce{float:left;width:100%;font-size:15px;color:#fff;line-height:24px;letter-spacing:1px;text-align:center;margin-bottom:10px;}
+.campaign .introduce span{font-size:24px;font-weight:bold;}
+.campaign .introduce .price{color:#E30011;}
+.campaign .introduce img{max-width:100%;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none;}
+.qrcode{float:left;width:100%;text-align:center;}
+.qrcode img{width:120px;background-color:#fff;padding:2px;}
+.qrcode2{float:left;width:100%;text-align:center;margin-top:-44%;}
+.qrcode2 img{width:100px;background-color:#fff;padding:2px;}
+.campaign_footer{float:left;width:100%;position:fixed;bottom:38px;overflow:hidden;}
+.campaign_footer img{max-width:100%;}
+.propagate_qrcode{float:left;margin-left:37%;margin-top:30%;}
+.propagate_qrcode img{width:90px;background-color:#fff;padding:2px;}
+.propagate_commission{float:left;width:100%;margin-top:10%;text-align:center;}
+.propagate_commission img{max-width:100px;}
+.propagateCommission{float:left;width:100%;bottom:30px;position:fixed;overflow:hidden;display:none;text-align:center;}
+.propagateCommission img{max-width:90%;}
+/*猜一猜*/
+.guess{float:left;width:100%;margin-top:150px;}
+.guess .g-tips{float:left;width:100%;margin-top:5px;text-align:center;}
+.guess .g-tips .g-title{float:left;width:100%;height:28px;line-height:28px;text-align:center;}
+.guess .g-tips .g-title span{font-weight:500;font-size:18px;color:#333;margin-right:50px;}
+.guess .g-tips .g-time{float:left;width:100%;text-align:center;margin-top:-60px;}
+.guess .g-tips .g-time .g-showtime{margin:0 auto;width:113px;height:48px;line-height:48px;background:url(/res/images2017/showtime2.png) no-repeat;text-align:center;}
+.guess .g-tips .g-time .g-showtime span{margin-left:10px;font-size:30px;font-weight:bold;color:#fff;letter-spacing:20px;}
+.guess .g-fu{float:left;width:100%;text-align:center;padding-top:5px;}
+.guess .g-fu img{max-width:65%;}
+.guess .g-fu2{float:left;width:100%;text-align:center;padding-top:15px;}
+.guess .g-fu2 img{max-width:80%;}
+.guess .g-introduce{float:left;width:100%;overflow:hidden;text-align:left;}
+.guess .g-introduce p{float:left;width:94%;padding-left:3%;font-size:12px;color:#fff;min-height:22px;line-height:22px;text-align:left;}
+.guess .g-introduce a{text-decoration:underline;color:#fff;}
+.guess .g-introduce p a b{font-size:15px;font-weight:bold;color:#fff;}
+.guess .g-introduce span{float:right;line-height:28px;font-size:14px;color:#fff;margin-right:5px;}
+.guess .g-introduce p img{max-width:100px;}
+.g-xuan{float:left;width:100%;text-align:center;margin-bottom:5px;margin-top:-22px;}
+.xuan-xiangjiao{float:left;width:33%;text-align:center;}
+.xuan-xigua{float:left;width:33%;text-align:center;}
+.xuan-pingguo{float:right;width:33%;text-align:center;}
+.xuan-back{float:left;width:100%;padding-top:5px;padding-bottom:5px;text-align:center;}
+.xuan-xiangjiao .xuan-item,.xuan-pingguo .xuan-item,.xuan-xigua .xuan-item{float:left;width:100%;}
+.xuan-xiangjiao .xuan-item img{max-width:90px;vertical-align:middle;border:none;}
+.xuan-xigua .xuan-item img{max-width:90px;margin-top:17px;vertical-align:middle;border:none;}
+.xuan-pingguo .xuan-item img{max-width:90px;margin-top:11px;border:none;}
+.btnTouZhu{width:110px;height:55px;line-height:55px;padding-left:40px;background-color:#FF4126;border-radius:10px;border:none;text-align:center;font-size:16px;color:#FFF3BA;}
+.btnTouZhu.xiangjiao{background-size:auto 45px;background-image:url(/res/images/xlqw010.png);background-repeat:no-repeat;background-position:10px 5px;}
+.btnTouZhu.pingguo{background-size:auto 45px;background-image:url(/res/images/xlqw009.png);background-repeat:no-repeat;background-position:3px 3px;}
+.btnBack{width:100px;height:35px;line-height:35px;background-color:#FF8861;border-radius:15px;border:none;text-align:center;font-size:15px;color:#FFF3BA;}
+.btnBack2{width:100px;height:35px;line-height:35px;background-color:#FFF3BA;border-radius:15px;border:none;text-align:center;font-size:15px;color:#FF4126;}
+/*代理佣金*/
+.commision{float:left;width:100%;margin-top:255px;margin-bottom:35px;}
+.commision .c-header{width:100%;}
+.commision .c-header img{max-width:100%;}
+.commision .c-money{margin:10px;width:93%;height:40px;line-height:40px;background-color:#EFE6C5;font-size:16px;color:#66001A;font-weight:500;text-align:center;-webkit-box-shadow:inset 0 0 10px #CD8C88;-moz-box-shadow:inset 0 0 10px #CD8C88;box-shadow:inset 0 0 10px #CD8C88;}
+.commision .c-money span{font-size:16px;font-weight:bold;color:#E6013A;}
+.commision .c-cash{margin-left:2%;width:94%;height:30px;line-height:30px;font-size:16px;color:#FFFFFD;font-weight:500;text-align:center;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;}
+.commision .c-cash .word{width:60px;padding:3px 5px;font-size:16px;height:20px;line-height:20px;color:#E6013A;background-color:#EFE6C5;border:none;vertical-align:middle;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;-webkit-box-shadow:inset 0 0 10px #CD8C88;-moz-box-shadow:inset 0 0 10px #CD8C88;box-shadow:inset 0 0 10px #CD8C88;}
+.commision .c-cash .btn{border:none;}
+.commision .c-programme{width:100%;text-align:center;padding-bottom:30px;}
+.commision .c-programme img{max-width:90%;}
+.commision .c-tips{margin-top:10px;width:100%;font-size:14px;line-height:26px;color:#333;text-align:center;}
+.commision .c-funs{float:left;width:100%;}
+.commision .c-funs li{float:left;width:5%;text-align:center;}
+.commision .c-funs li.w25{width:30%;text-align:center;}
+.commision .c-funs li a{display:block;height:30px;text-decoration:none;}
+.commision .c-funs li a img{max-height:30px;}
+.commision .c-details{float:left;width:100%;}
+.commision .c-context{float:left;margin:10px;width:90%;padding:10px;min-height:280px;line-height:24px;font-size:14px;color:#FFFFFD;text-align:left;}
+.commision .c-context img{max-width:200px;}
+.commision .c-listbox{float:left;margin:10px;width:90%;padding:10px;min-height:280px;background-color:#fff;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;}
+.commision .c-listbox li{float:left;width:100%;height:28px;line-height:28px;font-size:13px;font-family:FangSong;color:#666;text-align:left;}
+.commision .c-listbox li span {float:right; padding-right:5px;font-size:13px;color:#666;text-align:right;}
+.commision .c-title{float:left;width:100%;height:22px;line-height:22px;font-size:16px;font-weight:bold;color:#fff;text-align:center;}
+.commision .c-title2{float:left;width:100%;margin-top:10px;height:22px;line-height:22px;font-size:18px;font-weight:bold;color:#FFFFFD;text-align:center;letter-spacing:1px;}
+.commision .c-table{float:left;margin:10px;width:88%;padding:10px;background-color:#EFE6C5;-webkit-box-shadow:inset 0 0 10px #CD8C88;-moz-box-shadow:inset 0 0 10px #CD8C88;box-shadow:inset 0 0 10px #CD8C88;}
+.commision .c-table-header{width:100%}
+.commision .c-table-header li{float:left;height:30px;line-height:30px;font-size:14px;font-weight:bold;color:#66001A;text-align:center;}
+.commision .c-table-header .th-date{width:34%;}
+.commision .c-table-header .th-item{width:13%;}
+.commision .c-table-header .th-price{width:20%;}
+.commision .c-table-header .th-result{width:20%;}
+.commision .c-table-header .th-status{width:13%;}
+.commision .c-table-header .th-batchno{width:30%;}
+.commision .c-table-header .th-amount{width:30%;}
+.commision .c-table-header .th-pubdate{width:40%;}
+#c-tables2{float:left;width:100%;min-height:260px;}
+#c-tables1{float:left;width:100%;min-height:270px;}
+#c-tables{float:left;width:100%;min-height:320px;}
+.commision .c-table-body{width:100%}
+.commision .c-table-body li{float:left;height:26px;line-height:26px;font-size:13px;color:#666;text-align:center;}
+.commision .c-table-body .td-date{width:34%;}
+.commision .c-table-body .td-item{width:13%;}
+.commision .c-table-body .td-price{width:20%;}
+.commision .c-table-body .td-result{width:20%;}
+.commision .c-table-body .td-status{width:13%;}
+.commision .c-table-body .td-batchno{width:30%;}
+.commision .c-table-body .td-amount{width:30%;}
+.commision .c-table-body .td-pubdate{width:40%;}
+.commision .c-table-footer{float:left;width:100%;height:30px;line-height:30px;text-align:center;}
+.commision .c-table-footer a{font-size:14px;color:#666;text-decoration:none;}
+.commision .c-table .content{float:left;width:100%;line-height:28px;font-size:14px;color:#666;text-align:left;}
+.commision .c-table .content img{max-width:100%;}
+/*用户中心*/
+.my_head{min-height:66px;margin-top:45px;margin-bottom:-1px;text-align:center;}
+.my_user{margin:0 auto;display:block;min-height:48px;width:200px;font-size:12px;overflow:hidden;text-align:center;}
+.my_user .image{margin:0 auto;display:block;width:60px;height:60px;overflow:hidden;background:#dddddd;-webkit-background-size:60px 60px;background-size:60px 60px;border-radius:30px;-webkit-border-radius:30px}
+.my_user .image img{width:60px;height:60px;border-radius:30px;-webkit-border-radius:30px}
+.my_user .name{height:26px;line-height:26px;font-size:14px;color:#333}
+.my_user .name .tag{float:left;margin-right:5px;color:#999}
+.my_user .des{margin-top:3px;line-height:28px;color:#D00034;font-size:14px;}
+.my_user .des span{font-size:16px;font-weight:bold;}
+.my_list a:before{position:absolute;top:50%;width:10px;height:10px;border-top:1px solid #E38198;border-left:1px solid #E38198;background:none}
+.my_list a:before{margin-top:-6px;-ms-transform:rotate(135deg);transform:rotate(135deg);-webkit-transform:rotate(135deg)}
+.my_list a:before,.my_menu a:before,.my_list .new:after,.my_links .link_online:before,.my_links .link_tel:before{content:'\20';display:block}
+.my_list{float:left;width:100%;margin-top:22px;margin-bottom:20px;}
+.my_list li{float:left;width:100%;height:33px;line-height:33px;background:url(/res/images2017/menubg.png);}
+.my_list li.mt{margin-top:5px;border-top:1px solid #8A0F2E;}
+.my_list li.tiao{border-bottom:1px solid #8A0F2E;}
+.my_list a{position:relative;font-size:14px;color:#F2E6E6;padding-left:20px;letter-spacing:1px;display:block;text-decoration:none;border:none;}
+.my_list a:before{right:20px;}
+.my_list em{color:#999;margin-left:5px;}
+.my_list span{position:absolute;right:30px;font-size:12px;color:#999;}
+/*猜一猜投注*/
+.b-title{float:left;width:92%;margin-left:2%;margin-top:245px;padding:6px;height:35px;line-height:45px;text-align:center;}
+.b-title span{font-size:24px;font-weight:bold;color:#FFFFFF;letter-spacing:1px;}
+.b-subtitle{float:left;width:100%;height:40px;line-height:40px;text-align:center;}
+.b-subtitle span{font-size:16px;font-weight:500;color:#66001A;}
+.betting{float:left;margin:0px 10px 45px 10px;width:88%;padding:10px;background-color:#EFE6C5;-webkit-box-shadow:inset 0 0 10px #CD8C88;-moz-box-shadow:inset 0 0 10px #CD8C88;box-shadow:inset 0 0 10px #CD8C88;}
+.betting .b-list{float:left;width:100%;}
+.betting .b-list li{float:left;width:33%;line-height:30px;font-size:13px;color:#333;padding-top:5px;padding-bottom:5px;text-align:center;}
+.betting .b-list li img{max-height:30px;}
+.betting .b-desc{float:left;width:100%;min-height:28px;line-height:28px;text-align:left;font-size:15px;font-weight:500;color:#66001A;}
+.betting .b-tips{float:left;width:100%;min-height:36px;line-height:36px;text-align:center;font-size:18px;font-weight:bold;color:#66001A;}
+.dialog{position:fixed;_position:absolute;z-index:1;width:100%;top:30%;height:280px;line-height:280px;font-size:14px;background-color:none;background-color:transparent;text-align:center;overflow:hidden;}
+.betinput{margin-bottom:2px;border-radius:8px;border:#ddd solid 1px;width:50px;height:22px;line-height:22px;font-size:13px;font-weight:500;color:#333;text-align:center;}
+/*历史趋势图*/
+.Trend{float:left;width:100%;position:fixed;bottom:34px;overflow:hidden;display:none;cursor:pointer;}
+.trendHeader{float:left;width:100%;height:22px;}
+.trendHeader .client-close{float:right;border-top-left-radius:20px;width:58px;height:22px;line-height:22px;background-color:#fff;text-align:center;}
+.trendHeader .client-close span{font-size:12px;font-weight:normal;color:#333;padding-left:5px;}
+.trendList{float:left;width:100%;border-top:#EFE6C5 solid 1px;border-right:#EFE6C5 solid 1px;background-color:#E61734;}
+.trendList .trendItem{float:left;width:24.6%;border-left:#EFE6C5 solid 1px;border-bottom:#EFE6C5 solid 1px;line-height:22px;font-size:12px;font-weight:500;color:#fff;text-align:center;}
+/*显示开奖结果*/
+.openLottery{float:left;width:100%;bottom:35px;background:url(/res/images2017/lottery-bg.png) no-repeat;background-size:100% auto;height:280px;display:none;}
+.lotteryTitle{float:left;width:100%;margin-bottom:40px;height:50px;line-height:50px;text-align:center;}
+.lotteryTitle span{font-size:24px;font-weight:bold;color:#CB1A48;}
+.lotteryResult{float:left;width:100%;height:45px;line-height:45px;text-align:center;}
+.lotteryResult span{font-size:20px;font-weight:bold;color:#CB1A48;}
+.lotteryMessage{float:left;margin-left:10%;width:80%;line-height:30px;text-align:center;}
+.lotteryMessage span{font-size:16px;font-weight:500;color:#CB1A48;}
+.lotteryBtn{float:left;width:100%;text-align:center;}
+/*游戏描述说明*/
+.gameDescription{float:left;width:100%;bottom:50px;position:fixed;overflow:hidden;display:none;text-align:center;}
+.gameDescription img{max-width:90%;}

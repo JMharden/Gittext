@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<include file="include/head" title="开奖记录" />
+		<style>
+		.addr-content{ background:none;}
+		.addr-item{ background:#fff;}
+		.addr-form{}
+		.addr-content .items{ background:#fff; margin-bottom:5px; padding:10px; font-size:14px; line-height:30px;}
+		.addr-content .items .sn{ border-bottom:1px solid #eee;}
+		.addr-content .items .status,
+		.addr-content .items .del,
+		.addr-content .items .gotopay{ float:right;}
+		.addr-content .items .sn a{ margin:0 5px;}
+		.addr-content .items .time{ border-top:1px solid #eee; color:#B5ADAD;}
+		.addr-content .items .money{ float:right; font-size:16px; color:red; font-weight:bold;}
+		.addr-content .items .freez{ background:blue; color:#fff; padding:2px 5px;}
+		</style>
+	</head>
+	<body style="background: #f7f7f7;">
+		<include file="include/utop" />
+		
+		<div class="addr-content" style=" background:none;">
+			<div class="addr-item">
+				开奖记录
+				<a href="{:U('chou')}" class="back2ucenter">返回 <span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			
+			<div style=" background:#fff; padding:10px;">
+				<table style=" width:100%; line-height:30px; text-align:center;">
+					<tr>
+						<th>时间</th>
+						<th>中奖单号</th>
+						<th>中奖人</th>
+						<th>奖金</th>
+						<th>推荐奖</th>
+					</tr>
+					<volist name="list" id="vo">
+					<tr>
+						<td>{$vo.create_time|date="Y-m-d",###}</td>
+						<td>8{$vo.id}</td>
+						<td>{$vo.nickname}</td>
+						<td>{$vo.reward}</td>
+						<td>{$vo.expense}</td>
+						
+					</tr>
+					</volist>
+					<empty name="list">
+					<tr>
+						<td colspan="5">暂时没有记录</td>
+					</tr>
+					</empty>
+				</table>
+			</div>
+			
+		</div>
+		<div class="page" style=" padding:10px;">
+		{$page}
+		</div>
+		
+		<div style="height:50px;"></div>
+		<div class="footer">
+			<ul>
+				<li><a href="{:U('ucenter')}">个人中心</a></li>
+				<li><a href="{:U('chou_log')}">参与记录</a></li>
+				<li><a href="{:U('chou_reward')}">开奖记录</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

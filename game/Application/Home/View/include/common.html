@@ -1,0 +1,23 @@
+	<script>
+	function ajaxFormSubmit(seletor){
+		if(!seletor || seletor == '')seletor = "form";
+		data = $(seletor).serialize();
+		layer.load(0, {shade: [0.1,'#fff']});
+		$.post($(seletor).attr('action'),data,function(data){
+			layer.closeAll();
+			_index = layer.msg(data.info);
+			if(data.url && data.url != ''){
+				// 延迟一秒钟跳转
+				setTimeout(function(){
+					location.href = data.url;
+				},1000)
+			}
+			else{
+				setTimeout(function(){
+					layer.close(_index);
+				},3000)
+			}
+		})
+	}
+	</script>
+	<include file="include/share" />
