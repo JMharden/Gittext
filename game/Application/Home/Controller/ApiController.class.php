@@ -90,47 +90,23 @@ class ApiController extends Controller {
 
 		}
 
-
-		
-
-
 		// TODO 可以在这里判断fromusername和配置中的微信数据是否匹配来增加安全性
-
-
-		
-
 
 		$dd -> setParam($this -> _mp);
 
-
-		
-
-
 		//file_put_contents('a.txt', var_export($this -> data,1));
-
 
 		$user_info = M('user') -> where(array('openid'=>$this -> data['fromusername'])) -> find();
 
-
 		$this -> user = $user_info;
-
-
-		
-
 
 		//如果是关注
 
-
 		if($this -> data['msgtype'] == 'event'){
-
 
 			// 关注
 
-
 			if($this -> data['event'] == 'subscribe'){
-
-
-				
 
 
 				if(!$user_info){
@@ -138,55 +114,35 @@ class ApiController extends Controller {
 
 					$userinfo = wxuser($this -> data['fromusername']);
 
-
 				   //注册会员
 
-
-				  $user_data['openid'] = $userinfo['openid']?$userinfo['openid']:'';
-				  $user_data['type'] = 1;
-
-
-			    $user_data['nickname'] = $userinfo['nickname']?$userinfo['nickname']:'匿名';
-
-
-			    $user_data['headimg'] = $userinfo['headimgurl']?$userinfo['headimgurl']:'./Public/images/default-head.jpg';
-
-
-			    $user_data['sub_time'] = time();
-
+				 	$user_data['openid'] = $userinfo['openid']?$userinfo['openid']:'';
+				    $user_data['type'] = 1;
+				    $user_data['nickname'] = $userinfo['nickname']?$userinfo['nickname']:'匿名';
+				    $user_data['headimg'] = $userinfo['headimgurl']?$userinfo['headimgurl']:'./Public/images/default-head.jpg';
+				    $user_data['sub_time'] = time();
 
 					// 如果是带参数的二维码则将推荐关系保存到数据库
 
-
 					if(!empty($this -> data['eventkey'])){
-
 
 						$param = str_replace('qrscene_user_','', $this -> data['eventkey']);
 
-
 						if(intval($param) >0){
-
 
 							$parent_info = M('user') -> find(intval($param));
 
-
 							if($parent_info){
-
 
 								$relation = M('relation') -> where(array('openid' => $this -> data['fromusername'])) -> find();
 
-
 								if(!$relation){
-
 
 									M('relation') -> add(array(
 
-
 										'openid' => $this -> data['fromusername'],
 
-
 										'parent_id' => $parent_info['id'],
-
 
 										'create_time' => NOW_TIME
 
@@ -258,11 +214,13 @@ class ApiController extends Controller {
 
 
 					}
-
-                   $user = M('user') -> where(array('openid'=>$user_data['fromusername'])) -> find();
-                 if(empty($user)){
-                 	M('user')->add($user_data);
-                 }
+					
+					// $user = M('user') -> where(array('openid'=>$user_data['fromusername'])) -> find();/
+                   $user = M('user') -> where(array('openid'=>$user_data['openid'])) -> find();
+	                 if(empty($user)){
+	                 	M('user')->add($user_data);
+	                 	$this->success('/kpan.php?m=Home&c=Index&a=index');
+	                 }
 					
 
 

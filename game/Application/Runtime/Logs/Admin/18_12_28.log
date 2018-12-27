@@ -1,0 +1,287 @@
+[ 2018-12-28T02:31:13+08:00 ] 127.0.0.1 /kpan.php?m=Home&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+ERR: 无法加载控制器:Public
+
+[ 2018-12-28T02:31:40+08:00 ] 127.0.0.1 /kpan.php?m=Home&c=Home&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Home
+
+[ 2018-12-28T02:31:50+08:00 ] 127.0.0.1 /kpan.php?m=Home&c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: name C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 13 行.
+NOTIC: [8] Undefined index: name C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2018-12-28T02:31:54+08:00 ] 127.0.0.1 /kpan.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+
+[ 2018-12-28T02:31:55+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545926400 AND `sub_time` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0370s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545926400 AND `ctime` <= 1546012799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545926400 AND `create_time` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: out_total_all C:\Users\Administrator\Desktop\123456\game\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0230s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0350s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545926400 AND `starttime` <= 1546012799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0320s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545926400 AND `create_time` <= 1546012799  ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545926400 AND `create_time` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0240s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545926400 AND `addtime` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545926400 AND `addtime` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0240s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-12-28T02:44:51+08:00 ] 127.0.0.1 /index.php?m=&c=Index&a=liveAccredit&money=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+ERR: 非法操作:liveAccredit
+
+[ 2018-12-28T02:44:59+08:00 ] 127.0.0.1 /index.php?m=&c=index&a=tixian
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+ERR: 非法操作:tixian
+
+[ 2018-12-28T03:09:17+08:00 ] 127.0.0.1 /index.php?m=&c=index&a=kefu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0000s ]
+ERR: 非法操作:kefu
+
+[ 2018-12-28T03:09:41+08:00 ] 127.0.0.1 /index.php?m=&c=index&a=tixian
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+ERR: 非法操作:tixian
+
+[ 2018-12-28T03:09:44+08:00 ] 127.0.0.1 /index.php?m=&c=index&a=usercode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+ERR: 非法操作:usercode
+
+[ 2018-12-28T03:10:18+08:00 ] 127.0.0.1 /index.php?m=&c=Pay&a=hx_pay&orderNo=K1545937818869&orderTime=20181228031018&money=20000
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载控制器:Pay
+
+[ 2018-12-28T03:15:44+08:00 ] 127.0.0.1 /index.php?m=&c=Index&a=duixian
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+ERR: 非法操作:duixian
+
+[ 2018-12-28T03:29:27+08:00 ] 127.0.0.1 /index.php?m=&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+
+[ 2018-12-28T03:29:27+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545926400 AND `sub_time` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0250s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545926400 AND `ctime` <= 1546012799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0240s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545926400 AND `create_time` <= 1546012799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: out_total_all C:\Users\Administrator\Desktop\123456\game\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0250s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545926400 AND `starttime` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0250s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545926400 AND `create_time` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545926400 AND `create_time` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0210s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545926400 AND `addtime` <= 1546012799  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545926400 AND `addtime` <= 1546012799  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0260s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero C:\Users\Administrator\Desktop\123456\game\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+

@@ -12,11 +12,11 @@ class HomeController extends Controller
         }
         //$this->error('系统维护时间,9:00开放');
         $this->_load_config();
-        if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') === false) {
-            $this->error('请在微信中打开');
-            $this->display('Index/code');
-            exit;
-        }
+        // if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') === false) {
+        //     $this->error('请在微信中打开');
+        //     $this->display('Index/code');
+        //     exit;
+        // }
 
 
         // $this->user = M('user')->find(25);

@@ -226,7 +226,7 @@ class PublicController extends Controller
             session('wechat_info.openid', $user_info['openid']);
             session('openid',$user_info['openid']);
         }
-        if (session('wechat_info.openid')) {
+        if (!session('wechat_info.openid')) {
             $user = M('user')->where(array('openid' => session('wechat_info.openid')))->find();
             if ($user) {
                 session('user', $user);
