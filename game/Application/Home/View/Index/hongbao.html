@@ -1,0 +1,171 @@
+
+<!DOCTYPE html><html lang="zh" class="pixel-ratio-2 retina android android-6 android-6-0-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-transform">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>欢乐俱乐部</title>
+	
+    <link rel="stylesheet" href="/res/hong/web.min.css?v=3640">    
+</head>
+<body class="ted">
+    <div class="bg-box">
+        <img class="bg-content" src="/res/hong/index-header.png">
+        <div class="bg-wrapper"></div>
+    </div>
+
+        <div class="rule-box service">
+            <span id="report-btn" class="rule-btn">我要投诉</span>
+        </div>
+        <div class="rule-box2 invite">
+            <span id="invite-btn" class="rule-btn">
+            邀请有奖
+            </span>
+        </div>
+
+    <div class="user-id-box">
+        <span class="user-id">ID: ad949</span>
+    </div>
+
+    <div class="user-id-box" style="top: 80px;">
+        <span class="user-id">余额: ￥<span id="yue">{$user['money']}</span></span>
+    </div>
+
+    <div class="marquee-box">
+    <marquee class="marquee" scrolldelay="150" direction="left" align="middle">
+            公告：支付10元有机会获得200元！
+    </marquee>
+    </div>
+
+    <div style="text-align: center; color: #fff; padding: 10px;">
+        <h3 style="">当前在线人数：<span id="online">17669</span></h3>
+        <h3 style="">红包奖金池 - 限时发放中</h3>
+        <h1 id="reward" data-reward="9690579" style="">{$user['money']}</h1>
+    </div>
+
+        <div class="btn-box">
+            <a class="btn bg-box" onclick="go(5)">
+                <img class="bg-content" src="/res/hong/btn-sm-5.png">
+                <div class="bg-wrapper"></div>
+            </a>
+            <a class="btn bg-box" onclick="go(10)">
+                <img class="bg-content" src="/res/hong/btn-sm-10.png">
+                <div class="bg-wrapper"></div>
+            </a>
+            <a class="btn bg-box" onclick="go(20)">
+                <img class="bg-content" src="/res/hong/btn-sm-20.png">
+                <div class="bg-wrapper"></div>
+            </a>
+        </div>
+        <div class="btn-box">
+            <a class="btn bg-box" onclick="go(50)">
+                <img class="bg-content" src="/res/hong/50.png">
+                <div class="bg-wrapper"></div>
+            </a>
+            <a class="btn bg-box" onclick="go(100)">
+                <img class="bg-content" src="/res/hong/100.png">
+                <div class="bg-wrapper"></div>
+            </a>
+            <a class="btn bg-box" onclick="go(200)">
+                <img class="bg-content" src="/res/hong/200.png">
+                <div class="bg-wrapper"></div>
+            </a>
+        </div>
+
+    <div class="weui_mask" style="background: rgba(0,0,0,0.4);"></div>
+
+    <!-- 有问题，加客服 -->
+    <div class="cool-dialog-ted dialog-service" style="display:none;">
+        <img class="dialog-bg" src="/res/hong/dialog-bg.png">
+        <div class="dialog-content">
+            <h3>有问题，加客服</h3>
+            <p>长按加客服，添加时，请描述遇到的问题！</p>
+            <div style="text-align:center;">
+                <img style="width:85%;" src="/res/hong/xinyan123.png">
+            </div>
+        </div>
+        <img class="close-btn" src="/res/hong/close.png">
+    </div>
+
+    <!-- 邀请有奖 -->
+    <div class="cool-dialog-ted dialog-invite" style="display:none;">
+        <img class="dialog-bg" src="/res/hong/dialog-bg.png">
+        <div class="dialog-content">
+            <h3>邀请好友，轻松赚钱</h3>
+            <div class="simple">1.系统每小时定时发放100000奖金。先到先得。</div>
+            <div class="simple">2.好友每玩1把，你就获得<span style="color:#af3;font-weight: bold;">7%以上</span>的豆。</div>
+            <div class="simple">3.日进十万豆的方式：
+                <dl style="margin-left: 15px;">
+                    <li>分享二维码到<span style="color:#af3;font-weight: bold;">朋友圈</span>。</li>
+                    <li>分享二维码到所有<span style="color:#af3;font-weight: bold;">朋友圈</span>微信群。</li>
+                    <li><span style="color:#af3;font-weight: bold;">群发</span>二维码给好友，让好友帮忙转发的朋友圈。</li>
+                    <li>可以给好友发个小红包，让他们去<span style="color:#af3;font-weight: bold;">分享</span>。</li>
+                </dl>
+            </div>
+            <a id="dialog-invite-btn" style="margin-top: 15px;" class="luck-btn" href="http://m.hlkyg.cn/ted/qrcode">开始赚钱</a>
+        </div>
+        <img class="close-btn" src="/res/hong/close.png">
+    </div>
+
+
+
+    
+    <div style="height: 49px;"></div>
+    <div class="weui_tabbar">
+        <a id="menu-index-btn" href="/index.php?m=&c=index&a=hongbao" class="weui_tabbar_item weui_bar_item_on">
+            <p class="weui_tabbar_label">红包</p>
+        </a>
+        <a id="menu-pay-btn" href="/index.php?m=&c=index&a=hongti" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">兑换</p>
+        </a>
+        <a id="menu-records-btn" href="/index.php?m=&c=index&a=hongjilu" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">记录</p>
+        </a>
+        <a id="menu-qrcode-btn" href="/index.php?m=&c=index&a=hongcode" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">赚钱</p>
+        </a>
+        <a id="menu-game-btn" href="/index.php?m=&c=index&a=dating" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">游乐城</p>
+        </a>
+    </div>
+
+ 
+<div style="display:none;">
+	
+</div>
+<input value="little"  id="pan" type="hidden"/>
+<input value="0"  id="status" type="hidden"/>
+<input value="0"  id="zhuan" type="hidden"/>
+<input value="2" id="money" type="hidden"/>
+<input value="1" id="type" type="hidden"/>
+<input value="<?php if(empty($rechar)){ echo 0;}else{ echo $rechar['id'];}?>" id="pid" type="hidden"/>
+<script type="text/javascript" src="/Public/js/jquery-1.7.2-min.js"></script>
+<script type="text/javascript">
+   function go(money){
+    
+    var st = $("#status").val();
+    if(st=='0'){
+        var userm = $('#yue').html();
+        userm = userm * 1;
+        var pid =  $("#pid").val();
+        if(userm < money*1) { //当抽奖次数为0的时候执行
+            //$(".pop_context1").html('你的账户余额不足,</br>需充值抽奖');
+            alert('余额不足');
+          //  goPayment(money2);
+        }else{
+           $.post('/index.php?m=&c=Index&a=chai&hid='+money+"&money="+money+'&pid='+pid,{},function(data){
+             if(data.status==1){
+                location.href="/index.php?m=&c=index&a=chaihong&hid="+data.hid;
+             }else{
+                alert(data.info);
+             }
+            },"json");
+        } 
+    }
+ }
+
+</script>
+</body></html>

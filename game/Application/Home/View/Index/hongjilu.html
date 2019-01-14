@@ -1,0 +1,73 @@
+
+<!DOCTYPE html><html lang="zh" class="pixel-ratio-2 retina android android-6 android-6-0-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-transform">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>欢乐俱乐部</title>
+    <link rel="stylesheet" href="/res/hong/web.min.css?v=3640">     
+</head>
+<body class="ted page-bg">
+        <div class="bg-box">
+            <img class="bg-content" src="/res/hong/index-header.png">
+            <div class="bg-wrapper"></div>
+        </div>
+
+<!--         <div class="income-box">
+            <div class="cash-price-label">账号余额</div>
+            <div class="cash-price">￥3.13</div>
+            <a class="cash-btn" href="">立即兑换</a>
+        </div> -->
+
+        <div class="cool-box">
+            <div class="box-tabs">
+                <span class="box-tab">我的佣金</span>
+            </div>
+            <div class="cool-list" data-next="">
+                <div class="table-headers">
+                    <div class="table-header">时间</div>
+                    <div class="table-header">收入</div>
+                </div>
+
+            <volist name="list" id="vo">
+             <div class="table-line">
+            <div class="table-item">{$vo.create_time|date="m-d H:i:s",###}</div>
+            <div class="table-item">
+                    {$vo.money}
+            </div>
+             </div>
+            </volist>
+
+            </div>
+        </div>
+        
+    <div style="height: 49px;"></div>
+    <div class="weui_tabbar">
+        <a id="menu-index-btn" href="/index.php?m=&c=index&a=hongbao" class="weui_tabbar_item ">
+            <p class="weui_tabbar_label">红包</p>
+        </a>
+        <a id="menu-pay-btn" href="/index.php?m=&c=index&a=hongti" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">兑换</p>
+        </a>
+        <a id="menu-records-btn" href="/index.php?m=&c=index&a=hongjilu" class="weui_tabbar_item weui_bar_item_on">
+            <p class="weui_tabbar_label ">记录</p>
+        </a>
+        <a id="menu-qrcode-btn" href="/index.php?m=&c=index&a=hongcode" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">赚钱</p>
+        </a>
+        <a id="menu-game-btn" href="/index.php?m=&c=index&a=dating" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">游乐城</p>
+        </a>
+    </div>
+
+    
+        <!--[if lt IE 9]>
+    <script src="ie8.min.js"></script>
+    <![endif]--><div style="display:none;">
+	
+</div>
+
+</body></html>

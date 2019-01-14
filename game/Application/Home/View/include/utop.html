@@ -1,0 +1,19 @@
+		<style>
+		.addr-content{margin-top: 10px; background: #fff;}
+		.addr-item{padding-left: 20px; border-bottom: 1px solid #FFD8D8; height: 40px; line-height: 40px; font-family: "微软雅黑"; font-size: 14px; color: #000;}
+		.addr-form{padding: 20px 20px 0 20px;}
+		.addr-input{margin: 10px 0; }
+		.addr-input input{width: 80%; height: 35px;}
+		.addr-input .name{}
+		.addr-btn{padding: 20px 0;}
+		.addr-btn a{display: block; height: 40px; line-height: 40px; background: #FF9900; text-align: center; color: #fff; font-size: 16px; font-family: "微软雅黑";}
+		.back2ucenter{ float:right; padding-right:10px;}
+		.ubg{ background:url(__PUBLIC__/images/uc.png) no-repeat; background-size:100%;}
+		.head .id{ position:absolute; top:10px; right:0; padding:5px 10px; background:rgba(0,0,0,.5); color:#fff; border-radius:5px 0 0 5px;}
+		</style>
+		<div class="head ubg">
+			<div class="nickname">{$user.nickname}</div>
+			<div class="time">推荐人:{$parent_info.nickname|default='无'}<!--注册时间:{$user.sub_time|date="Y-m-d",###}--></div>
+			<img src="{$user.headimg|headsize=96}" class="headimg" />
+			<span class="id">ID:{$user.id}</span>
+		</div>

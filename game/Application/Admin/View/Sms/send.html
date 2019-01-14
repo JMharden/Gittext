@@ -1,0 +1,36 @@
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">发送短信</h1>
+        </div><!--pageheader-->
+        
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+            <form class="stdform stdform2" method="post">
+				<table class="form-table" cellspacing="1" border="0">
+					<tr>
+						<th class="title">接受短信</th>
+						<td>
+							<input type="text" name="mobile" id="mobile" value="{$_GET.mobile}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">短信内容<small></small></th>
+						<td>
+							<textarea name="msg">{$_GET.msg|urldecode}</textarea>
+						</td>
+					</tr>
+					<tr>
+						<th class="title">签名<small></small></th>
+						<td>
+							<input type="text" name="sign" id="sign" value="{$_GET.sign|default=C('SMS_SIGN')}" class="smallinput" />
+						</td>
+					</tr>
+				</table>
+				
+				
+				<p class="stdformbutton">
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+				</p>
+			</form>
+        </div><!--contentwrapper-->
+        

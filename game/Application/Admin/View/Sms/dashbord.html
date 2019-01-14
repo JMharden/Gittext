@@ -1,0 +1,42 @@
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">短信概况</h1>
+        </div><!--pageheader-->
+        
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+            <form class="stdform stdform2" method="post">
+				<table class="form-table" cellspacing="1" border="0">
+					<tr>
+						<th class="title">短信账号<small>需要修改请联系开发者</small></th>
+						<td>
+							{:C('SMS_USER')} 
+						</td>
+					</tr>
+					<tr>
+						<th class="title">默认签名<small>需要修改请联系开发者</small></th>
+						<td>
+							{:C('SMS_SIGN')}
+						</td>
+					</tr>
+					<tr>
+						<th class="title">累计发送<small></small></th>
+						<td>
+							{$send|default=0} 条，其中成功{$success|default=0}条
+						</td>
+					</tr>
+					<tr>
+						<th class="title">剩余数量<small></small></th>
+						<td>
+							{$left}，<a href="http://www.smsbao.com/login.jhtml?redirectUrl=%2Fmember%2Fproduct%2Flist.jhtml" target="_blank">在线充值</a>
+						</td>
+					</tr>
+				</table>
+				
+				
+				<p class="stdformbutton">
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+				</p>
+			</form>
+        </div><!--contentwrapper-->
+        

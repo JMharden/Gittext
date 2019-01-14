@@ -1,0 +1,59 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>投诉</title>
+    <link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/1.1.0/weui.min.css">
+    
+<link rel="stylesheet" type="text/css" href="__Public__/css/w_type33e22b.css">
+
+</head>
+<body class="" ontouchstart="" debug="" wechat_real_lang="" scene="34">
+
+<div id="pageType" name="type" class="j_page page_type">
+    <p class="weui-cells__title" id="j_title">你可以：</p>
+    <div class="weui-cells" id="j_list">
+    <a href="javascript:void(0)" onClick="SendMess()" class="weui-cell weui-cell_access">
+        <div class="weui-cell__bd">提交给微信团队审核</div>
+        <div class="weui-cell__ft"></div>
+    </a>
+</div>
+    <div class="article_list" id="j_articles"></div>
+    <input type="hidden" name="typeid" value="{$content.typeid}"/>
+    <input type="hidden" name="content" value="{$content.content}"/>
+   
+</div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://res.wx.qq.com/open/libs/zepto/1.1.6/zepto.js"></script>
+<script>
+function SendMess(){
+    
+
+    $.ajax({
+        url:'{:U("Suggest/add")}',
+        type:'post',
+        data:{title:$('input[name=content]').val(),content:$('input[name=content]').val(),typeid:$('input[name=typeid]').val()},
+        dataType:'json',
+        success:function(json){
+            if(json.code == 200){
+                window.location.replace('{:U("Suggest/message")}');
+            }
+            
+        }
+    });
+}
+</script>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,275 @@
+
+<!DOCTYPE html><html lang="zh" class="pixel-ratio-2 retina android android-6 android-6-0-1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-transform">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>欢乐俱乐部</title>
+
+    <link rel="stylesheet" href="/res/hong/web.min.css?v=3640">    
+    <style type="text/css">
+     .packet-cover{
+        height:280px;
+        overflow:hidden;
+     }
+    </style>
+</head>
+<body class="ted">
+    <div class="bg-box">
+      <img class="bg-content" src="/res/hong/index-header.png">
+        <div class="bg-wrapper"></div>
+    </div>
+
+    <div class="user-id-box">
+        <span class="user-id">当前: {$info.money}元场</span>
+    </div>
+
+    <div style="text-align: center; position: absolute; top: 80px; left: 15px; right: 15px;
+padding: 6px 10px;
+font-size: 14px;
+font-weight: 500;
+color: #fff;
+background-color: rgba(0, 0, 0, 0.5);
+border-radius: 4px;">
+        <div class="anger-tip" style="font-weight: 500;font-size: 22px;">当前怒气: 10%</div>
+        <div class="anger-tip">怒气满100%，奖金随机翻2-20倍。</div>
+        <div class="anger-tip">每玩1把加5%，充值、兑换、换场，怒气清0。</div>
+    </div>
+
+    <div class="packet-box">
+        <div class="bg-box">
+            <img class="bg-content" src="/res/hong/packet-box.png">
+            <div class="bg-wrapper">
+                <div class="bg-box user-price">
+                    <img class="bg-content" src="/res/hong/price-bg.png">
+                    <div class="bg-wrapper price-box">
+                        <h2 class="price-line">账户余额：￥<span class="price"><?php echo $user['money']-$info['money'];?></span></h2>
+                    </div>
+                </div>
+                <div class="packets" onclick="packets()"style="display: block;">
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box one">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box two">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box three">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="packet bg-box">
+                            <img class="bg-content" src="/res/hong/packet-bg.png">
+                            <div class="bg-wrapper">
+                                <div class="bg-box">
+                                    <img class="bg-content rmb anmi-rotate" src="/res/hong/packet-wrapper.png">
+                                    <div class="bg-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="packet-result" style="display:none;">
+                    <div class="bg-box packet-red">
+                        <img class="bg-content" src="/res/hong/red.png">
+                        <div class="bg-wrapper price-box">
+                            <div class="packet-reward" data-price="15.65">
+                                ￥{$info.ying}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="packet-btns">
+                        <a class="btn cash-btn" href="/">再来一把</a>
+                        <a class="btn cash-btn" href="/">邀请中大包</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="packets-dialog" style="display: none;">
+  <div class="packets-marks"></div>
+  <div class="packet-ui">
+    <div class="dialog-decoration-r"><img src="/res/hong/dialog-decoration-01.png" alt=""></div>
+    <div class="dialog-decoration-l"><img src="/res/hong/dialog-decoration-02.png" alt=""></div>
+    <div class="packet-open animation">
+      <img src="/res/hong/dialog-packet-open.png" alt="">
+    </div>
+    <div class="packet-cover animation"><img src="/res/hong/dialog-packet-cover.png" alt=""></div>
+    <div class="packet-body"><img src="/res/hong/dialog-packet-body.png" alt=""></div>
+    <div class="packet-mark animation"><img src="/res/hong/dialog-packet-mark.png" alt=""></div>
+    <div class="gold animation"><img src="/res/hong/dialog-gold.png" alt=""></div>
+    <div class="gold-up animation">
+      <img src="/res/hong/dialog-gold-up.png" alt="">
+      <div class="bonus">
+            ￥{$info.ying}
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div style="height: 49px;"></div>
+    <div class="weui_tabbar">
+         <a id="menu-index-btn" href="/index.php?m=&c=index&a=hongbao" class="weui_tabbar_item weui_bar_item_on">
+            <p class="weui_tabbar_label">红包</p>
+        </a>
+        <a id="menu-pay-btn" href="/index.php?m=&c=index&a=hongti" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">兑换</p>
+        </a>
+        <a id="menu-records-btn" href="/index.php?m=&c=index&a=hongjilu" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">记录</p>
+        </a>
+        <a id="menu-qrcode-btn" href="/index.php?m=&c=index&a=hongcode" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">赚钱</p>
+        </a>
+        <a id="menu-game-btn" href="/index.php?m=&c=index&a=dating" class="weui_tabbar_item">
+            <p class="weui_tabbar_label">游乐城</p>
+        </a>
+    </div>
+
+    
+        <!--[if lt IE 9]>
+    <script src="ie8.min.js"></script>
+    <![endif]-->
+<div style="display:none;">
+	
+</div>
+
+<script src="/Public/js/jquery-1.7.2-min.js"></script>
+<script type="text/javascript">
+    function packets(){
+        $('.packets').hide();
+        $('.packets-dialog').show();
+        $('.packets-dialog').css('visibility','inherit');
+        $('.packets-dialog').css('height','700px');
+        setTimeout('chai()',1000);
+    }
+    function chai(){
+        $('.packet-cover').css('height','0');
+        $('.gold').css('top','-1200px');
+        $('.gold-up').css('top','11%');
+        setTimeout('xian()',3000);
+    }
+    function xian(){
+        $('.packets-dialog').hide();
+        $('.packet-result').show();
+        $(".price").html('{$user.money}');
+    }
+</script>
+</body></html>

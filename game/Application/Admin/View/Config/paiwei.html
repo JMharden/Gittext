@@ -1,0 +1,48 @@
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">排位设置</h1>
+            <span class="pagedesc"></span>
+            
+        </div><!--pageheader-->
+        
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+        
+        
+            <form class="stdform stdform2" method="post" enctype="multipart/form-data">
+				<p>
+					<label>购买公排金额
+					<!-- <small>用户达此积分则自动排位<br/>设置较大值即可不起用</small> -->
+					</label>
+					<span class="field"><input type="text" name="points" id="points" value="{$_CFG.paiwei.points}" class="smallinput" /></span>
+				</p>
+				<p>
+					<label>购买公排返利金额
+					<small>上一次执行返利时间:<?php echo date("Y-m-d H:i",$fantime)?></small> 
+					</label>
+					<span class="field"><input type="text" name="fanli" id="fanli" value="{$_CFG.paiwei.fanli}" class="smallinput" /></span>
+				</p>
+ 
+				<p>
+					<label>懒人奖金额</label>
+					<span class="field"><input type="text" name="lazy_money" id="lazy_money" value="{$_CFG.paiwei.lazy_money}" class="smallinput" /></span>
+				</p>
+				
+				<p>
+					<label>懒人奖层数</label>
+					<span class="field"><input type="text" name="lazy_level" id="lazy_level" value="{$_CFG.paiwei.lazy_level}" class="smallinput" /></span>
+				</p>
+				<p>
+					<label>直推奖</label>
+					<span class="field"><input type="text" name="streight_money" id="streight_money" value="{$_CFG.paiwei.streight_money}" class="smallinput" /></span>
+				</p>				
+				
+				
+				<p class="stdformbutton">
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+				</p>
+			</form>
+        
+        
+        </div><!--contentwrapper-->
+        
