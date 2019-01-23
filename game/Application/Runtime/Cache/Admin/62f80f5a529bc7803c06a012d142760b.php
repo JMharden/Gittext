@@ -49,7 +49,7 @@
 					<li class="header">开心大转盘</li>
 
 					<li>
-						<a href="/kpan.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
+						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
 					</li>
 
 					<li class="treeview" onclick="index(0)">
@@ -65,7 +65,7 @@
 							<li>
 								<a href="/kpan.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
 							</li>
-							<!-- <li><a href="/kpan.php?m=Admin&c=Config&a=pay_mp"><i class="fa fa-circle-o"></i>支付公众号</a></li> -->
+							<!-- <li><a href="/index.php?m=Admin&c=Config&a=pay_mp"><i class="fa fa-circle-o"></i>支付公众号</a></li> -->
 					</li>
 					</ul>
 					</li>
@@ -114,6 +114,7 @@
 							</li>
 						</ul>
 					</li>
+
 					<li class="treeview" onclick="index(4)">
 						<a href="#">
 							<i class="fa fa-cloud"></i>
@@ -146,6 +147,20 @@
 					</li>
 					<li class="treeview" onclick="index(6)">
 						<a href="#">
+							<i class="fa fa-gamepad"></i>
+							<span>活动管理</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="/kpan.php?m=Admin&c=Activity&a=index"><i class="fa fa-circle-o"></i>活动列表</a>
+							</li>
+							
+							
+						</ul>
+					</li>
+					<li class="treeview" onclick="index(7)">
+						<a href="#">
 							<i class="fa fa-pie-chart"></i> <span>报表查看</span>
 							<i class="fa fa-angle-left pull-right"></i>
 						</a>
@@ -176,7 +191,7 @@
 						<a href="/kpan.php?m=Admin&c=Admin&a=clear_cache"><i class="fa fa-recycle text-yellow"></i> <span>[清除缓存]</span></a>
 					</li>
 					<li>
-						<a href="/kpan.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
+						<a href="/index.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
 					</li>
 				</ul>
 			</section>

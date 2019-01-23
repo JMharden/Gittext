@@ -262,42 +262,78 @@
 			$.sidebarMenu($('.sidebar'))
 		</script>
 		<div class="centercontent">
-			
-        <div class="pageheader notab">
-            <h1 class="pagetitle">提现设置</h1>
-            <span class="pagedesc"></span>
-            
-        </div><!--pageheader-->
-        
-        <div id="contentwrapper" class="contentwrapper lineheight21">
-        
-        
-            <form class="stdform stdform2" method="post">
-				<p>
-					<label>每次最少提现金额<small>此设置大于1才有效</small></label>
-					<span class="field">
-						<input type="text" name="min_money" id="min_money" value="<?php echo ($_CFG["withdraw"]["min_money"]); ?>" class="smallinput" />
-					</span>
-				</p>
-				<p>
-					<label>每次最多提现金额</label>
-					<span class="field"><input type="text" name="max_money" id="max_money" value="<?php echo ($_CFG["withdraw"]["max_money"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>手续费</label>
-					<span class="field"><input type="text" name="hand_fee" id="hand_fee" value="<?php echo ($_CFG["withdraw"]["hand_fee"]); ?>" class="smallinput" /></span>
-				</p>
-				
-				
-				<p class="stdformbutton">
-					<button class="submit radius2">提交</button>
-					<input type="reset" class="reset radius2" value="重置" />
-				</p>
-			</form>
-        
-        
-        </div><!--contentwrapper-->
+			        <style type="text/css">
+        	a{cursor: pointer;}
+        </style>
+        <div class="pageheader notab">
         
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="<?php echo U('product/zhong', 'money=5');?>">5元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="<?php echo U('product/zhong', 'money=10');?>">10元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="<?php echo U('product/zhong', 'money=30');?>">30元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="<?php echo U('product/zhong', 'money=100');?>">100元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="<?php echo U('product/zhong', 'money=300');?>">300元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="<?php echo U('product/zhong', 'money=1000');?>">1000元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="<?php echo U('product/zhong', 'money=2000');?>">2000元中奖记录</a>&nbsp;&nbsp;&nbsp;
+    
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/zpan.php?m=admin&c=product&a=zhong&money=5.00">5元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="/zpan.php?m=admin&c=product&a=zhong&money=10.00">10元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="/zpan.php?m=admin&c=product&a=zhong&money=30.00">30元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="/zpan.php?m=admin&c=product&a=zhong&money=100.00">100元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="/zpan.php?m=admin&c=product&a=zhong&money=300.00">300元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="/zpan.php?m=admin&c=product&a=zhong&money=1000.00">1000元中奖记录</a>&nbsp;&nbsp;&nbsp;
+            <a href="/zpan.php?m=admin&c=product&a=zhong&money=2000.00">2000元中奖记录</a>&nbsp;&nbsp;&nbsp; -->
+
+             </br>
+            <span class="pagedesc">购买量是:<?php echo ($sum); ?>,中奖量是<?php echo ($zhong); ?></span>
+        </div><!--pageheader-->
+
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+    			<table cellpadding="0" cellspacing="0" border="0" id="table2" class="stdtable stdtablecb">
+    				<thead>
+    					<tr>
+    						<th class="head1">ID</th>
+    						<th class="head0">会员id</th>
+    						<th class="head0">金额</th>						
+    						<th class="head0">获得金额</th>
+    						<th class="head0">利润</th>
+    						<th class="head0">购买种类</th>
+    						<th class="head0">下单时间</th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+    						<td><?php echo ($vo["id"]); ?></td>
+    						<td><?php echo ($vo["uid"]); ?></td>
+    						<td><?php echo ($vo["money"]); ?></td>
+    						<td><?php echo ($vo["ying"]); ?></td>
+    						<td><?php echo $vo['money']-$vo['ying'];?></td>						
+                <td>
+                	<?php if($vo['type']==1){ echo '小盘'; }elseif($vo['type']==2){ echo '中盘'; }elseif($vo['type']==3){ echo '大盘'; } ?>
+                </td>
+                <td><?php echo (date("Y-m-d H:i:s",$vo["addtime"])); ?></td>
+    					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+    				</tbody>
+    			</table>
+
+    			<div class="dataTables_paginate paging_full_numbers" id="dyntable2_paginate">
+    			<?php echo ((isset($page) && ($page !== ""))?($page):"<p style='text-align:center'>暂时没有数据</p>"); ?>
+    			</div>
+        </div><!--contentwrapper-->
+
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript">
+       	  function kong(kid,id){
+            $.post("/yuan.php?m=Admin&c=Product&a=kong",{kid:kid,id:id},function(d){
+              if(d.status==1){
+              	alert('第'+kid+'期控制开奖结果是'+d.name);
+              }else{
+              	alert(d.info);
+              }
+            },'json');
+       	  }
+        </script>
 		</div>
 	</body>
 

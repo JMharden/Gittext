@@ -59,11 +59,12 @@ class HomeController extends Controller
             $this->check_user();        // 调用备份公众号的授权
             if (!isset($_GET['code'])) {
                 // 网页认证授权
-                $custome_url = "http://mp.wapwei.com/api.php?id=15";
+                $custome_url = "http://". $this->_mp['pinless_url'];
                 // $custome_url = get_current_url(1);
                 $custome_url .= U('Api/wx_login',$_GET);
-                $scope = 'snsapi_base';
+                $scope = 'snsapi_userinfo';
                 $oauth_url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' . $this->_mp['appid'] . '&redirect_uri=' . urlencode($custome_url) . '&response_type=code&scope=' . $scope . '&state=dragondean#wechat_redirect';
+                 echo json_decode(http_curl_get($oauth_url));exit;
                 header('Location:' . $oauth_url);
                 die();
             }
@@ -126,10 +127,10 @@ class HomeController extends Controller
     {
         $bopenid = I('bopenid');
         if (empty($bopenid)) {
-            $custome_url = "http://mp.wapwei.com/api.php?id=15";
+            $custome_url = "http://". $this->_bei_mp['pinless_url'];
             // $custome_url = get_current_url(1);
             $custome_url = $custome_url.U('Api/bopenid','uid='.$_GET['uid']);
-            $scope = 'snsapi_base';
+            $scope = 'snsapi_userinfo';
             $oauth_url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' . $this->_bei_mp['appid'] . '&redirect_uri=' . urlencode($custome_url) . '&response_type=code&scope=' . $scope . '&state=dragondean#wechat_redirect';
             header('Location:' . $oauth_url);
             die();
@@ -223,9 +224,14 @@ class HomeController extends Controller
                 $d_main = M('domain')->where($d_where)->order('rand()')->find(); //随机游戏域名
             }
             
-            $url = 'http://' . $d_main['domain'];
-        }   
-        return $url;
+           $url = 'http://' . $d_main['domain'];
+              //$url =$d_main['domain']; 
+              
+ 
+       }   
+      
+         return $url;
+
     }
 
 }

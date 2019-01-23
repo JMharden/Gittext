@@ -236,7 +236,7 @@ class WxLoginController extends \Think\Controller
 			$jumpurl = $jumpurlObj[0]['url'];
 		}		
 		//跳转到可用链接
-		header('Location:http://mp.wapwei.com/api.php?id=15');
+		header('Location:http://' . $jumpurl . '/index.php?m=Wap&c=Index&a=index&userid='. $userid .'&uopenid=' . $uopenid);
 	}
 	
 	public function mainfo()

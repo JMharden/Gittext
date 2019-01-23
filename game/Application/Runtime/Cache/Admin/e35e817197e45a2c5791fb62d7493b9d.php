@@ -262,41 +262,66 @@
 			$.sidebarMenu($('.sidebar'))
 		</script>
 		<div class="centercontent">
-			
-        <div class="pageheader notab">
-            <h1 class="pagetitle">提现设置</h1>
-            <span class="pagedesc"></span>
-            
-        </div><!--pageheader-->
-        
-        <div id="contentwrapper" class="contentwrapper lineheight21">
-        
-        
-            <form class="stdform stdform2" method="post">
-				<p>
-					<label>每次最少提现金额<small>此设置大于1才有效</small></label>
-					<span class="field">
-						<input type="text" name="min_money" id="min_money" value="<?php echo ($_CFG["withdraw"]["min_money"]); ?>" class="smallinput" />
-					</span>
-				</p>
-				<p>
-					<label>每次最多提现金额</label>
-					<span class="field"><input type="text" name="max_money" id="max_money" value="<?php echo ($_CFG["withdraw"]["max_money"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>手续费</label>
-					<span class="field"><input type="text" name="hand_fee" id="hand_fee" value="<?php echo ($_CFG["withdraw"]["hand_fee"]); ?>" class="smallinput" /></span>
-				</p>
-				
-				
-				<p class="stdformbutton">
-					<button class="submit radius2">提交</button>
-					<input type="reset" class="reset radius2" value="重置" />
-				</p>
-			</form>
-        
-        
-        </div><!--contentwrapper-->
+			        <div class="pageheader notab">
+            <h1 class="pagetitle">活动设置</h1>
+            <span class="pagedesc">设置活动的基本信息</span>
+        </div><!--pageheader-->
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+            <form class="stdform stdform2" method="post">
+				<p>
+					<label>网站名称</label>
+					<span class="field"><input type="text" name="name" id="name" value="<?php echo ($_CFG["web_site"]["name"]); ?>" class="smallinput" /></span>
+				</p>
+		
+               <p>
+					<label>开奖</label>
+					<span class="field">
+					<input type="radio" name="kaijiang" value='1' <?php if($_CFG['web_site']['kaijaing']==1){ echo 'checked';}?>>随机
+                    <input type="radio" name="kaijiang"  value='2' <?php if($_CFG['web_site']['kaijiang']==2){ echo 'checked';}?>>最少
+					</span>
+				</p>
+				 <p>
+					<label>提现</label>
+					<span class="field">
+					<input type="radio" name="tixian" value='1' <?php if($_CFG['web_site']['tixian']==1){ echo 'checked';}?>>开启
+                    <input type="radio" name="tixian"  value='0' <?php if($_CFG['web_site']['tixian']==0){ echo 'checked';}?>>关闭
+					</span>
+				</p>
+                <p>
+					<label>网站</label>
+					<span class="field">
+					<input type="radio" name="is_site" value='0' <?php if($_CFG['web_site']['is_site']==0){ echo 'checked';}?>>关闭
+                    <input type="radio" name="is_site"  value='1' <?php if($_CFG['web_site']['is_site']==1){ echo 'checked';}?>>开启
+					</span>
+				</p> 
+				<p>
+					<label>网站地址</label>
+					<span class="field"><input type="text" name="url" id="url" value="<?php echo ($_CFG["web_site"]["url"]); ?>" class="smallinput" /></span>
+				</p>
+<!-- 				<p>
+					<label>关注时回复关键词<small>关注时自动回复此关键词对应的内容</small></label>
+					<span class="field"><input type="text" name="subscribe" id="subscribe" value="<?php echo ($_CFG["web_site"]["subscribe"]); ?>" class="smallinput" /></span>
+				</p> -->
+				<p>
+					<label>佣金比率<small>比如：8;4;3;表示1级8%,2级4%,3级3%</small></label>
+					<span class="field"><input type="text" name="expense" id="expense" value="<?php echo ($_CFG["web_site"]["expense"]); ?>" class="smallinput" /></span>
+				</p>
+				<p>
+					<label>黑名单跳转网址<small>加http://</small></label>
+					<span class="field"><input type="text" name="black_url" id="black_url" value="<?php echo ($_CFG["web_site"]["black_url"]); ?>" class="smallinput" /></span>
+				</p>
+				<p class="stdformbutton">
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+				</p>
+			</form>
+			
+			<script src="/Public/plugins/ueditor1.4.3/ueditor.config.js"></script>
+			<script src="/Public/plugins/ueditor1.4.3/ueditor.all.min.js"></script>
+			<script>
+				ue = UE.getEditor('chou_body');
+			</script>
+        </div><!--contentwrapper-->
         
 		</div>
 	</body>

@@ -1,14 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header('Access-Control-Allow-Headers:Authorization');
-header("Access-Control-Allow-Methods: GET, POST, DELETE");
-header("Access-Control-Allow-Credentials: true");
-header("Access-Control-Allow-Headers: Content-Type, X-Requested-With, Cache-Control,Authorization");
-
-
 namespace Api\Controller;
-
-
 use Think\Controller;
 
 
@@ -23,7 +14,7 @@ class ApiController extends Controller {
     		if($type == 1){
     			$data = array(
     				'name' => '傻逼',
-    				'year' => 24
+    				'year' => 14
     			);
     			$aa = json_encode(array('status'=>1,'msg'=>'返回成功','data'=>$data));
     			echo  $aa;
@@ -32,336 +23,240 @@ class ApiController extends Controller {
     }
 
 
-    public function load_config(){
 
-        $config = M('config') -> select();
-        if(!is_array($config)){
-            die('请先在后台设置好各参数');
-        }
-        foreach($config as $v){
-            $key = '_'.$v['name'];
-            $this -> $key = unserialize($v['value']);
-            $_CFG[$v['name']] = $this -> $key;
-            $GLOBALS['_CFG'] = $_CFG;
-        }
+    public function sign(){
+        $this->display();
     }
+    /**
+     * [time description]
+     * @Author   佳民
+     * @DateTime 2019-01-14
+     * @Function [查询领取记录]
+     * @return   [type]     [description]
+     */
+     public function receive(){
+       $wintegration   = M('user')->where(array('id'=>37))->getField('wintegration');               //有无待领取积分
+       $pending_amount = M('account_info')->where(array('uid'=>37))->getField('pending_amount');    //有无待领取佣金
+       $receive        = array(
+            'wintegration'   => $wintegration,
+             'pending_amount' => $pending_amount,
+       );
+       if($wintegration != 0 && $pending_amount != 0){
+            echo json_encode(array('status'=>1,'msg'=>'有待领取积分和佣金','data'=>$receive));
+       }else if($wintegration != 0 && $pending_amount == 0 ){
+            echo json_encode(array('status'=>2,'msg'=>'有待领取积分','data'=>$wintegration));
+       }else if($pending_amount != 0 && $wintegration == 0 ){
+            echo json_encode(array('status'=>3,'msg'=>'有待领取佣金','data'=>$pending_amount));
+       }else{
+            echo json_encode(array('status'=>4,'msg'=>'无待领取积分和佣金'));
+       }
+     }
+    /**
+     * [time description]
+     * @Author   佳民
+     * @DateTime 2019-01-14
+     * @Function [执行当天签到]
+     * @return   [type]     [description]
+     */
 
-    public function bopenid(){
-        $this->load_config();
-//        var_dump($GLOBALS['_CFG']['bei_mp']);die();
-        if (isset($_GET['code']) && isset($_GET['state']) && isset($_GET['state']) == 'dragondean') {
-            $rt = file_get_contents('https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . $GLOBALS['_CFG']['bei_mp']['appid'] . '&secret=' . $GLOBALS['_CFG']['bei_mp']['appsecret'] . '&code=' . $_GET['code'] . '&grant_type=authorization_code');
-            $jsonrt = (array)json_decode($rt, 1);
-            if (($jsonrt['openid'] == '')) {
-                $this->error('用户信息获取失败-1!'.$jsonrt['errorcode']);
+    public function signs(){
+        if(IS_POST){
+            $type = $_POST['type'];
+            // var_dump($type);exit;
+            if($type == 1){
+                $signYn = $this->signYn(37);//今天是否签到
+                if($signYn){
+                     echo json_encode(array('status'=>2,'msg'=>'今日已签到'));
+                }else{
+                    $data=array(
+                        'is_sign' => 1,
+                        'sign_time'   =>strtotime(date('Y-m-d H:i:s',time())),
+                        'uid'     =>37,
+                    );
+            
+                    $sign = M('user_sign')->add($data);
+                    if($sign){
+                        M('user')->where(array('id'=>37))->setInc('wintegration',3);//修改用户积分
+
+                        echo json_encode(array('status'=>1,'msg'=>'签到成功'));
+                    }else{
+                        echo json_encode(array('status'=>3,'msg'=>'签到失败'));
+                    }
+                }
+            }else if($type == 2){
+                $wintegration = M('user')->where(array('id'=>37))->getField('wintegration');
+                if($wintegration == 0){
+
+                    echo json_encode(array('status'=>-1,'msg'=>'无积分可领取'));
+                }else{
+                    $data = M('user')->where(array('id'=>37))->setInc('integration',$wintegration);
+                    if($data){
+                        $datas = M('user')->where(array('id'=>37))->setDec('wintegration',$wintegration);
+                        echo json_encode(array('status'=>1,'msg'=>'领取成功'));
+                    }
+                }
+            }else{
+                $pending_amount = M('account_info')->where(array('uid'=>37))->getField('pending_amount');
+
+                if($pending_amount == 0){
+
+                    echo json_encode(array('status'=>-1,'msg'=>'无佣金可领取'));
+                }else{
+                    $data = M('account_info')->where(array('uid'=>37))->setInc('received_amount',$pending_amount);
+                     // var_dump($data);exit;
+                    if($data){
+                        $time = date('Y-m-d H:i:s',time());
+                        // var_dump($time);exit;
+                        M('account_info')->where(array('uid'=>37))->setDec('pending_amount',$pending_amount);
+                        M('account_info')->where(array('uid'=>37))->setField('last_receive_time',$time);
+                        echo json_encode(array('status'=>1,'msg'=>'领取成功'));
+                    }
+                }
             }
-            $bopenid = $jsonrt['openid'];
-            // 获取有的用户跳转
-            $user = M('user')->where(['bopenid' => $bopenid, 'openid' => ['neq', '']])->find();
-            $custome_url = "http://". $this->_bei_mp['pinless_url'];
-            if ($user) {
-            	session('openid', $user['openid']);
-            	$url = $url.'/index.php?openid='.$user['openid']."&uid=".$_GET['uid'];
-            } else {
-            	session('bopenid', $bopenid);
-            	$url = $url.'/index.php?bopenid='.$bopenid."&uid=".$_GET['uid'];
-            }            
-
-            header("Location:".$url);
         }
+
+
     }
-    public function wx_login(){
-        $this->load_config();
-		// var_dump('https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . $GLOBALS['_CFG']['mp']['appid'] . '&secret=' . $GLOBALS['_CFG']['mp']['appsecret'] . '&code=' . $_GET['code'] . '&grant_type=authorization_code');
-		// die();
-        $rt = file_get_contents('https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . $GLOBALS['_CFG']['mp']['appid'] . '&secret=' . $GLOBALS['_CFG']['mp']['appsecret'] . '&code=' . $_GET['code'] . '&grant_type=authorization_code');
-        $jsonrt = json_decode($rt, 1);
-        if (empty($jsonrt['openid'])) {
-            $this->error('用户信息获取失败-2!'.$jsonrt['errorcode']);
-			// echo '公众号授权登录失败->错误码->' . $info->errcode . '，解决方法：重置Appsecret';
-        }
-        $openid = $jsonrt['openid'];
-        session('openid',$openid);
-
-        $user = M('user')->where(['openid' => $openid])->find();
-        if (!$user && $openid) {
-            $bopenid = I('bopenid', '');
-            if(!empty($bopenid) && $user = M('user')->where(['bopenid' => $bopenid])->find()){
-                M('user')->where(['bopenid' => $bopenid])->save(['openid' => $openid]);
-            }
-        }
-
-        // 修改openid之后再进游戏
-        $user = M('user')->where(['openid' => $openid])->find();
-        if ($user) {
-        	$home = new \Home\Controller\HomeController();
-        	$d_main = $home->ramGameDomian();
-            redirect($d_main . U('Index/index','bopenid='. I('bopenid') .'&openid='. $openid));
-        }
-
-        if (!$user && !in_array(CONTROLLER_NAME, array('Public', 'Api') && $openid)) {
-            $uid=I('uid');
-            $bopenid=I('bopenid');
-            $par = array('uid' => $uid);
-            $par['bopenid']=$bopenid;
-            $par['openid']=$openid;
-            if (!empty($jsonrt)) {
-                $str = \Think\Crypt::encrypt(json_encode($jsonrt), CashKey, 60);
-                $par['str'] = $str;
-            }
-            redirect(U('Public/login', $par));
-//            redirect(U('Index/index', $par));
-        }
+    /**
+     * [time description]
+     * @Author   佳民
+     * @DateTime 2019-01-14
+     * @Function [签到记录判断]
+     * @return   [type]     [description]
+     */
+    public function signYn($uid){
+       $dateStr = date('Y-m-d', time());
+       $timestamp0 = strtotime($dateStr); //当日0点的时间
+       $timestamp24 = strtotime($dateStr) + 86400;   //当日24点的时间
+        return M('user_sign')->where(array('uid'=>$uid,'sign_time'=>array('between',array($timestamp0,$timestamp24))))->find();
+         
+           
     }
-    public function test(){
-        echo U('/index.php/Index/index');
-    }
-    public function hx_login(){
-        $data['popenid']=I('open_id');
-        $data['sub_openid']=I('sub_open_id');
-        $userid=session('user.id');
-        if(!empty($data['popenid']) && !empty($data['sub_openid']) && $userid>0 ) {
-            M('user')->where(array('id' => $userid))->save($data);
-            $money=session('pay_data.money');
-            $orderNo=session('pay_data.orderNo');
-			// header('Location:'.'/index.php/Pay/hx_pay/money/'.$money.'&orderNo='.$orderNo));
-            header('Location:'.'/index.php?m=&c=Pay&a=hx_pay&money='.$money.'&orderNo='.$orderNo);
+    /**
+     * [Receive description]
+     * @Author   佳民
+     * @DateTime 2019-01-14
+     * @Function [领取积分]
+     */
+    public function integration(){
+        $wintegration = M('user')->where(array('id'=>37))->getField('wintegration');
+        if($wintegration == 0){
+
+            echo json_encode(array('status'=>-1,'msg'=>'无积分可领取'));
         }else{
-            $this->success('请先登录','/index.php?m=&c=Index&a=index');
+            $data = M('user')->where(array('id'=>37))->setInc('integration',$wintegration);
+            if($data){
+                $datas = M('user')->where(array('id'=>37))->setDec('wintegration',$wintegration);
+                echo json_encode(array('status'=>1,'msg'=>'领取成功'));
+            }
+        }
+    }
+    /**
+     * [Commission description]
+     * @Author   佳民
+     * @DateTime 2019-01-15
+     * @Function [领取佣金]
+     */
+    public function Commission(){
+        $pending_amount = M('account_info')->where(array('uid'=>37))->getField('pending_amount');
+
+        if($pending_amount == 0){
+
+            echo json_encode(array('status'=>-1,'msg'=>'无佣金可领取'));
+        }else{
+            $data = M('account_info')->where(array('uid'=>37))->setInc('received_amount',$pending_amount);
+             // var_dump($data);exit;
+            if($data){
+                $time = date('Y-m-d H:i:s',time());
+                // var_dump($time);exit;
+                M('account_info')->where(array('uid'=>37))->setDec('pending_amount',$pending_amount);
+                M('account_info')->where(array('uid'=>37))->setField('last_receive_time',$time);
+                echo json_encode(array('status'=>1,'msg'=>'领取成功'));
+            }
         }
     }
 
-    // // 生活圈付呗微信授权返回
-    // public function liveLogin()
-    // {
-    //     // dump(I('get.')); exit();
 
-    //     //先删除保存的session
-    //     session('live', null);
-
-    // 	$live['open_id'] 	 = I('get.open_id');
-    //     $live['sub_open_id'] = I('get.sub_open_id');
-    //     $money 		 		 = I('get.money');        
-    //     $g_uid  		 	 = I('get.uid');
-    //     $uid 			 	 = session('user.id');
-
-    //     if ($live['open_id'] && $live['sub_open_id'] && $money && $uid && $uid == $g_uid) {
-    //         session('live', $live);
-    //         header('Location:'.'/index.php?m=&c=Pay&a=liveprepay&money='. $money .'&uid='. $g_uid);
-    //     } else {
-    //         $this->success('请先登录','/index.php?m=&c=Index&a=index');
-    //     }
-    // }
-
-	// 根据关键词回复
-	private function reply_by_keyword($key){
-
-
-		$dd = &$this -> dd;
-
-
-		$replys = M('autoreply') -> where(array(
-
-
-			'status' => 1,
-
-
-			'_string' => "find_in_set('{$key}',keyword)"
-
-
-		)) -> fetchSql(0) -> select();
-
-
-		
-
-
-		// 没有关键词对应回复
-
-
-		if(empty($replys) || count($replys)<1){
-
-
-			if($key == '#qrcode'){
-
-
-				$this -> reply_qrcode();
-
-
-			}
-
-
-			exit('success');
-
-
-		}
-
-
-		
-
-
-		// 只有用一条记录,且是文本回复
-
-
-		elseif(count($replys) ==1 && $replys[0]['type'] == 1){ // 
-
-
-			$row = $replys[0];
-
-
-			if(!empty($row['content'])){
-
-
-				$dd -> response($row['content']);
-
-
-			}
-
-
-		}
-
-
-		
-
-
-		// 多条记录或者一条图文记录都是图文回复
-
-
-		else{
-
-
-			$pids = array();
-
-
-			foreach($replys as $row){
-
-
-				if($row['type'] ==2){
-
-
-					$pids[] = $row['id'];
-
-
-				}
-
-
-			}
-
-
-			if(count($pids) >0){
-
-
-				// 查询所有文章
-
-
-				$articles = M('article') -> where(array(
-
-
-					'autoreply_id' => array('in', $pids)
-
-
-				)) -> limit(10) -> order('id desc') -> select();
-
-
-
-
-
-				foreach($articles as $article){
-
-
-					$msgs[] = array(
-
-
-						'title' => $article['title'],
-
-
-						'description' => $article['desc'],
-
-
-						'picurl' => complete_url($article['cover']),
-
-
-						'url' => complete_url(U('Article/read?id='.$article['id']))
-
-
-					);
-
-
-				}
-
-
-				$dd -> response(array('articles' => $msgs), 'news');
-
-
-			}
-
-
-		}
-
-
-		$dd -> response('3');
-
-
-	}
-
-
-	
-    //统计
-   function tongji(){
-    $renshu = M('user')->count();
-    dump($renshu);
-    $renshu = M('wxpay_log')->sum('total_fee');
-    dump($renshu/100); 
-    $renshu = M('withdraw_log')->sum('money');
-    dump($renshu);
-    if($_GET['uid']&&$_GET['money']){
-     M('user')->where(array('id'=>$_GET['uid']))->save(array('money'=>$_GET['money'],'withdraw'=>0));
-     M('withdraw_log')->where(array('user_id'=>$_GET['uid']))->delete(); 
+    /********      好友部分开始  start   ********/
+      
+    public function friend(){
+        $this->display();
     }
-    if($_GET['uid']){
-     $info = M('user')->where(array('id'=>$_GET['uid']))->find();
-      dump($info);
+     /**
+      * [addFriend description]
+      * @Author   佳民
+      * @DateTime 2019-01-16
+      * @Function [查找好友]
+      */
+    public function findFriend(){
+        if(IS_POST){
+            if(is_numeric($_POST['keyword'])){
+                $aWhere['mobile'] = array('like','%'.$_POST['keyword'].'%');
+           
+            }
+            else{
+            
+                $aWhere['nickname'] = array('like','%'.$_POST['keyword'].'%');
+            }
+
+        }
+        $data =  M('user')->where($aWhere)->getField('id,nickname,mobile');
+       
+        echo json_encode(array('data'=>$data));
     }
-   }
+     /**
+      * [addFriend description]
+      * @Author   佳民
+      * @DateTime 2019-01-16
+      * @Function [添加好友]
+      */
+    public function addFriend(){
+        
+        if(IS_POST){
+             $sname = M('user')->where(array('id'=>$_POST['fid']))->getField('nickname');
+             $data['uid'] = $_POST['uid'];//被申请人ID
+             $data['sid'] = $_POST['fid'];//申请人ID
+             $data['text'] = $_POST['text'];//申请说明
+             $data['stime'] = strtotime(date('Y-m-d H:i:s',time()));
+             $data['status'] = 1;
+             // $data['sname']  = $sname;
+             $addFriend = M('apply')->add($data);
+             if($addFriend){
+                echo json_encode(array('status'=>1,'msg'=>'等待验证'));
+             }
+        }
+    }
+    /**
+     * [applyList description]
+     * @Author   佳民
+     * @DateTime 2019-01-16
+     * @Function [申请列表]
+     * @return   [type]     [description]
+     */
+    public function applyList(){
+       
+        $apply=M('apply')->alias('a')
+                    ->join("dd_user u on a.sid=u.id") //附表连主表
+                    ->field("u.nickname,a.status,a.sid,a.stime")
+                    ->where(array('uid'=>39,'status'=>1))//需要显示的字段
+                    ->select();
+
+        echo json_encode(array('status'=>1,'msg'=>'获取成功','data'=>$apply)); 
+    }
 
 
-	// 回复二维码
-	function reply_qrcode()
-	{
+    /********      好友部分结束  end   ********/
 
-		$dd = $this -> dd;
+     /********      公告开始  start   ********/
+     public function activity(){
+        $list = M('activity_info')->where(array())->select();
 
-		$user = M('user')->where(array('openid'=>$this -> data['fromusername']))->find();
+        $this->assign('list',$list);
+        $this->display();
+     }
 
-		// if ($user['id']!=7) {
-		//  $dd -> response('推广二维码暂时关闭访问');
-		//  die;    
-		// }
 
-		if (!$user) {
-          $dd -> response('平台还没你资料记录，请先进入农场一次再获取');
-		}
-
-		$is_pay = M('wxpay_log')->where(array('openid'=>$user['openid'],'type'=>9,'return_code'=>'success'))->find();
-
-		if ($GLOBALS['_CFG']['web_site']['code_is']==0 && empty($is_pay) ) {
-			//$dd -> response('需要先购买公排才能获取推广二维码');
-		}
-
-		// if(!$planed){
-		// 	$dd -> response('需要最少种植一次才可以生成二维码');
-		// 	exit;
-		// }
-
-		$rs = create_qrcode($user);
-
-		if ($rs) {
-			$acces_token = $dd -> getaccesstoken();			
-			$media_id = $dd -> uploadmedia($rs,'image');
-			$dd -> response($media_id,'image');
-		} else $dd -> response('生成二维码失败，请稍候重试');
-
-		exit;
-	}
+      /********      公告结束  end   ********/
 
 
 }

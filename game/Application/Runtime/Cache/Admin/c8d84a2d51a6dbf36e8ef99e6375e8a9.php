@@ -262,42 +262,71 @@
 			$.sidebarMenu($('.sidebar'))
 		</script>
 		<div class="centercontent">
-			
-        <div class="pageheader notab">
-            <h1 class="pagetitle">提现设置</h1>
-            <span class="pagedesc"></span>
-            
-        </div><!--pageheader-->
-        
-        <div id="contentwrapper" class="contentwrapper lineheight21">
-        
-        
-            <form class="stdform stdform2" method="post">
-				<p>
-					<label>每次最少提现金额<small>此设置大于1才有效</small></label>
-					<span class="field">
-						<input type="text" name="min_money" id="min_money" value="<?php echo ($_CFG["withdraw"]["min_money"]); ?>" class="smallinput" />
-					</span>
-				</p>
-				<p>
-					<label>每次最多提现金额</label>
-					<span class="field"><input type="text" name="max_money" id="max_money" value="<?php echo ($_CFG["withdraw"]["max_money"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>手续费</label>
-					<span class="field"><input type="text" name="hand_fee" id="hand_fee" value="<?php echo ($_CFG["withdraw"]["hand_fee"]); ?>" class="smallinput" /></span>
-				</p>
-				
-				
-				<p class="stdformbutton">
-					<button class="submit radius2">提交</button>
-					<input type="reset" class="reset radius2" value="重置" />
-				</p>
-			</form>
-        
-        
-        </div><!--contentwrapper-->
-        
+				        <div class="pageheader notab">
+            <h1 class="pagetitle">活动管理</h1>
+        </div><!--pageheader-->
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+			<!-- <div class="tableoptions">        
+				<form method="post">
+					域名:
+					<input type="text" name="domain" value="<?php echo ($_GET['domain']); ?>" class="smallinput" style="width:100px;" />
+					ID:
+					<input type="text" name="id" value="<?php echo ($_GET['id']); ?>" class="smallinput" style="width:100px;" />
+					<input type="submit" value="查找" />
+				</form>
+			</div> --><!--tableoptions-->
+
+			<form action="" method="post">
+				<table cellpadding="0" cellspacing="0" border="0" id="table2" class="stdtable stdtablecb">
+					<thead>
+						<tr>
+							<th class="head1"><input type="checkbox" class="check_all"></th>
+							<th class="head1">编号</th>
+	                        <th class="head1">活动名称</th>
+	                       	<th class="head0">活动内容</th>
+	                       	<th class="head1">URL</th>
+	                       	<th class="head1">创建时间</th>
+	                       	<th class="head1">过期时间</th>
+	                        <th class="head0">操作</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+						    <td><input type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>"></td>
+							<td><?php echo ($vo["id"]); ?></td>
+							<!--td><?php echo ($vo["openid"]); ?></td-->
+	                        <td><?php echo ($vo["title"]); ?></td>
+							<td><?php echo ($vo["content"]); ?></td>
+							<td><?php echo ($vo["url"]); ?></td>
+							<td><?php echo ($vo["create_time"]); ?></td>
+							<td><?php echo ($vo["expire_time"]); ?></td>
+	                        <td class="center">
+								<a href="<?php echo U('edit', 'id='.$vo['id']);?>">修改</a> | 
+								<a href="<?php echo U('del', 'id='.$vo['id']);?>" onclick="return confirm('你确实要删除这个代理吗？')">删除</a>
+							</td>
+						</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+					</tbody>
+				</table>
+				<div style="margin:30px;">
+				<input value="增加" type="button" onclick="window.location='<?php echo U('edit');?>';">&nbsp;&nbsp;
+				</div>
+			</form>
+
+			<div class="dataTables_paginate paging_full_numbers" id="dyntable2_paginate">
+			<?php echo ((isset($page) && ($page !== ""))?($page):"<p style='text-align:center'>暂时没有数据</p>"); ?>
+			</div>
+        </div><!--contentwrapper-->
+
+        <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript">
+	       	$(function(){
+	           $(".check_all").click(function(){
+	         	var checked = $(this).get(0).checked;
+	            $("input[type=checkbox]").attr("checked", checked);
+	          });
+	        });
+       </script>
 		</div>
 	</body>
 

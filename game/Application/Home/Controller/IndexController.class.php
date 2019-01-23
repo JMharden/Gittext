@@ -15,7 +15,7 @@ class IndexController extends HomeController {
     parent::_initialize();
 
     $user = $this->user;
-
+// var_dump($user);exit;
     if ( $user['id'] != 1000001 && $user['id'] != 1000002&& $user['id'] != 1000003) {
       // $this->error('系统正在维护,开放时间请等客服通知');
     }
@@ -72,8 +72,11 @@ class IndexController extends HomeController {
   }
 
   public function index() {
-    // if(empty($user)){
-      // $this->redirect('http://tt2.wapwei.com/index.html');
+   
+ //Log::record('测试日志信息');
+
+ // if(empty($user)){
+//       $this->redirect('http://tt2.wapwei.com/index.html');
     // }
     // $z_log = M('zhuan')->where(array('_string'=>'ying>money','money'=>array('gt',5)))->order('id desc')->limit(5)->select();
     // $rechar = M('charge_log')->where(array('user_id'=>$this->user['id'],'chou'=>0))->find();

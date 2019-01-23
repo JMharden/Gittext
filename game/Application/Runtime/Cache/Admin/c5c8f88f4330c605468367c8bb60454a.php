@@ -262,42 +262,55 @@
 			$.sidebarMenu($('.sidebar'))
 		</script>
 		<div class="centercontent">
-			
-        <div class="pageheader notab">
-            <h1 class="pagetitle">提现设置</h1>
-            <span class="pagedesc"></span>
-            
-        </div><!--pageheader-->
-        
-        <div id="contentwrapper" class="contentwrapper lineheight21">
-        
-        
-            <form class="stdform stdform2" method="post">
-				<p>
-					<label>每次最少提现金额<small>此设置大于1才有效</small></label>
-					<span class="field">
-						<input type="text" name="min_money" id="min_money" value="<?php echo ($_CFG["withdraw"]["min_money"]); ?>" class="smallinput" />
-					</span>
-				</p>
-				<p>
-					<label>每次最多提现金额</label>
-					<span class="field"><input type="text" name="max_money" id="max_money" value="<?php echo ($_CFG["withdraw"]["max_money"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>手续费</label>
-					<span class="field"><input type="text" name="hand_fee" id="hand_fee" value="<?php echo ($_CFG["withdraw"]["hand_fee"]); ?>" class="smallinput" /></span>
-				</p>
-				
-				
-				<p class="stdformbutton">
-					<button class="submit radius2">提交</button>
-					<input type="reset" class="reset radius2" value="重置" />
-				</p>
-			</form>
-        
-        
-        </div><!--contentwrapper-->
-        
+			        <div class="pageheader notab">
+            <h1 class="pagetitle">编辑会员信息</h1>
+        </div><!--pageheader-->
+
+        <script src="/Public/plugins/My97DatePicker/WdatePicker.js"></script>
+        <div id="contentwrapper" class="contentwrapper lineheight21">       
+            <form class="stdform stdform2" method="post">
+				<p>
+					<label>ID</label>
+					<span class="field"><input type="text" name="id" id="id" value="<?php echo ($info["id"]); ?>" disabled class="smallinput" /></span>
+				</p>
+			
+				<p>
+					<label>OPENID</label>
+					<span class="field"><input type="text" name="openid" id="openid" value="<?php echo ($info["openid"]); ?>" disabled class="smallinput" /></span>
+				</p>
+
+				<p>
+					<label>姓名</label>
+					<span class="field"><input type="text" name="name" id="name" value="<?php echo ($info["name"]); ?>" class="smallinput" /></span>
+				</p>
+
+				<p>
+					<label>手机</label>
+					<span class="field"><input type="text" name="login_name" id="login_name" value="<?php echo ($info["login_name"]); ?>" class="smallinput" /></span>
+				</p>
+
+				<p>
+					<label>地址</label>
+					<span class="field"><input type="text" name="addr" id="addr" value="<?php echo ($info["addr"]); ?>" class="smallinput" /></span>
+				</p>
+
+				<p>
+					<label>上级</label>
+					<span class="field"><input type="text" name="parent1" id="parent1" value="<?php echo ($info["parent1"]); ?>" class="smallinput" /></span>
+				</p>
+
+				<p>
+					<label>注册时间</label>
+					<span class="field"><?php echo (date("Y-m-d H:i:s",$info["create_time"])); ?></span>
+				</p>
+
+				<p class="stdformbutton">
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+				</p>
+
+			</form>
+        </div><!--contentwrapper-->    
 		</div>
 	</body>
 

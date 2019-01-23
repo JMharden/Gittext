@@ -420,10 +420,11 @@ class ApiController extends Controller {
         $this->load_config();
 //        var_dump($GLOBALS['_CFG']['bei_mp']);die();
         if (isset($_GET['code']) && isset($_GET['state']) && isset($_GET['state']) == 'dragondean') {
-            $rt = file_get_contents('https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . $GLOBALS['_CFG']['bei_mp']['appid'] . '&secret=' . $GLOBALS['_CFG']['bei_mp']['appsecret'] . '&code=' . $_GET['code'] . '&grant_type=authorization_code');
+             $req_url ='https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . $GLOBALS['_CFG']['bei_mp']['appid'] . '&secret=' . $GLOBALS['_CFG']['bei_mp']['appsecret'] . '&code=' . $_GET['code'] . '&grant_type=authorization_code';
+             $rt = file_get_contents('https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . $GLOBALS['_CFG']['bei_mp']['appid'] . '&secret=' . $GLOBALS['_CFG']['bei_mp']['appsecret'] . '&code=' . $_GET['code'] . '&grant_type=authorization_code');
             $jsonrt = (array)json_decode($rt, 1);
             if (($jsonrt['openid'] == '')) {
-                $this->error('用户信息获取失败-1!'.$jsonrt['errorcode']);
+                $this->error('用户信息获取失败(bopenid)!'.$req_url.$rt.$jsonrt['errorcode']);
             }
             $bopenid = $jsonrt['openid'];
             // 获取有的用户跳转
@@ -447,7 +448,7 @@ class ApiController extends Controller {
         $rt = file_get_contents('https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . $GLOBALS['_CFG']['mp']['appid'] . '&secret=' . $GLOBALS['_CFG']['mp']['appsecret'] . '&code=' . $_GET['code'] . '&grant_type=authorization_code');
         $jsonrt = json_decode($rt, 1);
         if (empty($jsonrt['openid'])) {
-            $this->error('用户信息获取失败-2!'.$jsonrt['errorcode']);
+            $this->error('用户信息获取失败(wxlogin)-2!'.$jsonrt['errorcode']);
 			// echo '公众号授权登录失败->错误码->' . $info->errcode . '，解决方法：重置Appsecret';
         }
         $openid = $jsonrt['openid'];

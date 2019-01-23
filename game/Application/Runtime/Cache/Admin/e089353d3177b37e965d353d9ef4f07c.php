@@ -60,10 +60,10 @@
 						</a>
 						<ul class="treeview-menu" style="display: none;">
 							<li>
-								<a href="/index.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
+								<a href="/kpan.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
 							</li>
 							<li>
-								<a href="/index.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
+								<a href="/kpan.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
 							</li>
 							<!-- <li><a href="/index.php?m=Admin&c=Config&a=pay_mp"><i class="fa fa-circle-o"></i>支付公众号</a></li> -->
 					</li>
@@ -114,6 +114,7 @@
 							</li>
 						</ul>
 					</li>
+
 					<li class="treeview" onclick="index(4)">
 						<a href="#">
 							<i class="fa fa-cloud"></i>
@@ -145,6 +146,20 @@
 						</ul>
 					</li>
 					<li class="treeview" onclick="index(6)">
+						<a href="#">
+							<i class="fa fa-gamepad"></i>
+							<span>活动管理</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="/kpan.php?m=Admin&c=Activity&a=index"><i class="fa fa-circle-o"></i>活动列表</a>
+							</li>
+							
+							
+						</ul>
+					</li>
+					<li class="treeview" onclick="index(7)">
 						<a href="#">
 							<i class="fa fa-pie-chart"></i> <span>报表查看</span>
 							<i class="fa fa-angle-left pull-right"></i>

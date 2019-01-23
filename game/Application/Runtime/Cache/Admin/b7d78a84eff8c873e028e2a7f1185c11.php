@@ -262,42 +262,63 @@
 			$.sidebarMenu($('.sidebar'))
 		</script>
 		<div class="centercontent">
-			
-        <div class="pageheader notab">
-            <h1 class="pagetitle">提现设置</h1>
-            <span class="pagedesc"></span>
-            
-        </div><!--pageheader-->
-        
-        <div id="contentwrapper" class="contentwrapper lineheight21">
-        
-        
-            <form class="stdform stdform2" method="post">
-				<p>
-					<label>每次最少提现金额<small>此设置大于1才有效</small></label>
-					<span class="field">
-						<input type="text" name="min_money" id="min_money" value="<?php echo ($_CFG["withdraw"]["min_money"]); ?>" class="smallinput" />
-					</span>
-				</p>
-				<p>
-					<label>每次最多提现金额</label>
-					<span class="field"><input type="text" name="max_money" id="max_money" value="<?php echo ($_CFG["withdraw"]["max_money"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>手续费</label>
-					<span class="field"><input type="text" name="hand_fee" id="hand_fee" value="<?php echo ($_CFG["withdraw"]["hand_fee"]); ?>" class="smallinput" /></span>
-				</p>
-				
-				
-				<p class="stdformbutton">
-					<button class="submit radius2">提交</button>
-					<input type="reset" class="reset radius2" value="重置" />
-				</p>
-			</form>
-        
-        
-        </div><!--contentwrapper-->
-        
+			        <script src="/Public/plugins/My97DatePicker/WdatePicker.js"></script>
+        <div class="pageheader notab">
+            <h1 class="pagetitle">添加/编辑域名信息</h1>
+        </div><!--pageheader-->
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+			<form class="stdform stdform2" method="post">
+				<p>
+					<label>ID</label>
+					<span class="field">
+						<input type="hidden" name="id" id="id" value="<?php echo ($info["id"]); ?>" class="smallinput" />
+						<input type="text" name="id" id="id" value="<?php echo ($info["id"]); ?>" disabled class="smallinput" />
+					</span>
+				</p>
+				<p>
+					<label>活动标题</label>
+					<span class="field">
+						<input type="text" name="title" id="title" value="<?php echo ($info["title"]); ?>" class="smallinput" />
+					</span>
+				</p>
+				<p>
+					<label>活动内容</label>
+					<span class="field">
+						<textarea name="content"><?php echo ($info["content"]); ?></textarea> 
+					</span>
+				</p>
+				<p>
+					<label>活动url</label>
+					<span class="field">
+						<input type="text" name="url" id="url" value="<?php echo ($info["url"]); ?>" class="smallinput" />
+					</span>
+				</p>
+				<p>
+					<label>创建时间</label>
+					<span class="field">
+						<input type="date" name="create_time" id="create_time" value="<?php echo ($info["create_time"]); ?>" class="smallinput" />
+					</span>
+				</p>
+				<p>
+					<label>过期时间</label>
+					<span class="field">
+						<input type="date" name="expire_time" id="expire_time" value="<?php echo ($info["expire_time"]); ?>" class="smallinput" />
+					</span>
+				</p>
+
+
+
+
+
+				<p class="stdformbutton">
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+					<?php if(!isset($_GET['type'])): ?><input type="hidden" name="is_type" value="0" />
+					<?php else: ?>
+						<input type="hidden" name="is_type" value="1" /><?php endif; ?>
+				</p>
+			</form>
+        </div><!--contentwrapper-->     
 		</div>
 	</body>
 
