@@ -9,7 +9,13 @@ use Think\Controller;
 
 class IndexController extends HomeController {
 
-
+  /**
+   * [_initialize description]
+   * @Author   佳民
+   * @DateTime 2019-01-27
+   * @Function [初始化]
+   * @return   [type]     [description]
+   */
   public function _initialize() 
   {
     parent::_initialize();
