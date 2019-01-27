@@ -28,7 +28,7 @@
 			
 			获取好友列表
 		</div>
-		<div id="agree" style="width: 100px;height: 60px;position: absolute;left: 150px;top:450px;font-size: 20px;">
+			<div id="agree" style="width: 100px;height: 60px;position: absolute;left: 150px;top:450px;font-size: 20px;">
 			
 			同意添加
 		</div>
@@ -41,7 +41,7 @@
 				var keyword=$("#search").val();
 				$.ajax({
 					type:"post",
-					url:'http://tt.wapwei.com/api.php?m=Api&c=api&a=findFriend', 
+					url:'http://tt.wapwei.com/index.php?m=Index&c=index&a=findFriend', 
 					dataType:"json", 
 					data:{'keyword':keyword},
 					success: function (data) {
@@ -57,7 +57,7 @@
 			     $.ajax({
 				        type: "post",
 				        dataType: "json",
-				        url: "http://tt.wapwei.com/api.php?m=Api&c=api&a=addFriend",
+				        url: "http://tt.wapwei.com/index.php?m=Index&c=index&a=addFriend",
 				        data:{'uid':37,'fid':39,'text':'老铁加个好友呗'},
 			       	    success:function(data){
 			              console.log(data.data);
@@ -74,7 +74,7 @@
 			     $.ajax({
 				        type: "post",
 				        dataType: "json",
-				        url: "http://tt.wapwei.com/api.php?m=Api&c=api&a=applyList",
+				        url: "http://tt.wapwei.com/index.php?m=Index&c=index&a=applyList",
 				        data:{},
 			       	    success:function(data){
 			              console.log(data.data);
@@ -84,14 +84,14 @@
 					    },
 				 })
 		    });
-		    	   		//同意添加
+		    		    	   		//同意添加
 		    $("#agree").click(function(){
 
 	
 			     $.ajax({
 				        type: "post",
 				        dataType: "json",
-				        url: "http://tt.wapwei.com/api.php?m=Api&c=api&a=agree",
+				        url: "http://tt.wapwei.com/index.php?m=Index&c=index&a=agree",
 				        data:{},
 			       	    success:function(data){
 			              console.log(data.data);

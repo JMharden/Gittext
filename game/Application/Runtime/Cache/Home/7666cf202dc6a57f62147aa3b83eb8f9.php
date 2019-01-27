@@ -94,22 +94,22 @@
                        <span></span><p>抽奖</p>  
                     </li>
                     </a>
-                    <a href="/index.php?m=&c=index&a=tixian">
+                    <a href="/kpan.php?m=&c=index&a=tixian">
                     <li class="footer_li footer_li_2">
                      <span></span><p>提现</p>      
                     </li>
                     </a>
-                    <a href="/index.php?m=&c=index&a=usercode">
+                    <a href="/kpan.php?m=&c=index&a=usercode">
                     <li class="footer_li footer_li_3 footer_li_active">
                       <span></span><p>代理赚钱</p>
                     </li>
                     </a>
-                    <a href="/index.php?m=&c=index&a=daili">
+                    <a href="/kpan.php?m=&c=index&a=daili">
                     <li class="footer_li footer_li_4">
                       <span></span><p>佣金</p>
                     </li>
                     </a>
-                    <a href="/index.php?m=&c=index&a=kefu">
+                    <a href="/kpan.php?m=&c=index&a=kefu">
                     <li class="footer_li footer_li_5" style="cursor:pointer">
                       <span></span><p>客服</p>
                     </li>
