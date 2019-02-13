@@ -216,12 +216,14 @@ class PublicController extends Controller
         $str = I('get.str');
         $bopenid=I('bopenid');
         //echo $str;
+        
         $str = \Think\Crypt::decrypt(json_encode($str), CashKey);
+        // var_dump($str);exit;
         $user_info = null;
         if (!empty($str)) {
             $user_info = json_decode($str, true);
         }
-//        var_dump($user_info);die();
+       // var_dump($user_info);die();
         if (is_array($user_info)) {
             session('wechat_info.openid', $user_info['openid']);
             session('openid',$user_info['openid']);
@@ -234,14 +236,14 @@ class PublicController extends Controller
                 exit;
             } else {
                 $user_data['openid'] = session('wechat_info.openid') ? session('wechat_info.openid') : '';
-                $user_data['nickname'] = session('wechat_info.nickname') ? session('wechat_info.nickname') : '匿名';
-                $user_data['headimg'] = session('wechat_info.headimgurl') ? session('wechat_info.headimgurl') : './Public/images/default-head.jpg';
+                $user_data['nickname'] = session('wechat_info.nickname') ? session('wechat_info.nickname') : '';
+                $user_data['headimg'] = session('wechat_info.headimgurl') ? session('wechat_info.headimgurl') : '';
                 $user_data['sub_time'] = time();
                 $user_data['bopenid']=$bopenid;
                 if (is_array($user_info)) {
                     $user_data['openid'] = !empty($user_info['openid']) ? $user_info['openid'] : '';
-                    $user_data['nickname'] = !empty($user_info['nickname']) ? $user_info['nickname'] : '匿名';
-                    $user_data['headimg'] = !empty($user_info['headimgurl']) ? $user_info['headimgurl'] : './Public/images/default-head.jpg';
+                    $user_data['nickname'] = !empty($user_info['nickname']) ? $user_info['nickname'] : '';
+                    $user_data['headimg'] = !empty($user_info['headimgurl']) ? $user_info['headimgurl'] : '';
                 }
                 //获取推荐关系
                 $abc_10 = M('relation')->where(array('openid' => session('wechat_info.openid')))->find();

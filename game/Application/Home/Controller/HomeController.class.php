@@ -12,11 +12,11 @@ class HomeController extends Controller
         }
         //$this->error('系统维护时间,9:00开放');
         $this->_load_config();
-        if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') === false) {
-            $this->error('请在微信中打开');
-            $this->display('Index/code');
-            exit;
-        }
+        // if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') === false) {
+        //     $this->error('请在微信中打开');
+        //     $this->display('Index/code');
+        //     exit;
+        // }
 
 
         // $this->user = M('user')->find(25);
@@ -55,6 +55,7 @@ class HomeController extends Controller
                 session('wechat_info', $user_info);
             }*/
         } elseif (!$this->openid  && IS_WECHAT) { // 没登录，没有获取openid且在微信中，则获取openid
+
             $this->isDomain();          // 调用当前域名是否禁用
             $this->check_user();        // 调用备份公众号的授权
             if (!isset($_GET['code'])) {
@@ -64,7 +65,7 @@ class HomeController extends Controller
                 $custome_url .= U('Api/wx_login',$_GET);
                 $scope = 'snsapi_userinfo';
                 $oauth_url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' . $this->_mp['appid'] . '&redirect_uri=' . urlencode($custome_url) . '&response_type=code&scope=' . $scope . '&state=dragondean#wechat_redirect';
-                 echo json_decode(http_curl_get($oauth_url));exit;
+                 // echo json_decode(http_curl_get($oauth_url));exit;
                 header('Location:' . $oauth_url);
                 die();
             }
@@ -73,6 +74,7 @@ class HomeController extends Controller
 
 
         if ($this->openid) {
+          
             if (!M('user')->where(array('openid'=>$this->openid))->count()) {
                session_destroy();
                header('Location:'.U('Index/index'));
@@ -81,7 +83,7 @@ class HomeController extends Controller
             session('openid', $this->openid);
         }
         if ($this->user) {
-
+            
             $bopenid = I('bopenid','');
             $user = M('user')->where(array('openid'=>$this->openid))->find();
             $nowtime = date('Y-m-d h:i:s', time());
