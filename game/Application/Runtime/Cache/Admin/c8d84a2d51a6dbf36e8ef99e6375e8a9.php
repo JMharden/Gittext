@@ -262,7 +262,7 @@
 			$.sidebarMenu($('.sidebar'))
 		</script>
 		<div class="centercontent">
-			        <div class="pageheader notab">
+				        <div class="pageheader notab">
             <h1 class="pagetitle">活动管理</h1>
         </div><!--pageheader-->
         <div id="contentwrapper" class="contentwrapper lineheight21">

@@ -22,19 +22,9 @@ class ApiController extends Controller {
     	}
     }
 
-public function duan($integrl){
-    if(0 <= $integrl&$integrl <= 100){
-        echo '青铜';
-    }elseif (101 <= $integrl&$integrl <= 200){
-        echo '白银';
-    }else{
-        echo '黄金';
-    }
-}
 
 
     public function sign(){
-   
         $this->display();
     }
     /**
@@ -70,8 +60,6 @@ public function duan($integrl){
      */
 
     public function signs(){
-   
-       
         if(IS_POST){
             $type = $_POST['type'];
             // var_dump($type);exit;
@@ -107,7 +95,7 @@ public function duan($integrl){
                         echo json_encode(array('status'=>1,'msg'=>'领取成功'));
                     }
                 }
-            }else if($type == 3){
+            }else{
                 $pending_amount = M('account_info')->where(array('uid'=>37))->getField('pending_amount');
 
                 if($pending_amount == 0){
@@ -124,8 +112,6 @@ public function duan($integrl){
                         echo json_encode(array('status'=>1,'msg'=>'领取成功'));
                     }
                 }
-            }else{
-                echo json_encode(array('status'=>0,'msg'=>'系统错误'));
             }
         }
 
@@ -249,7 +235,7 @@ public function duan($integrl){
      */
     public function applyList(){
        
-    $apply=M('apply')->alias('a')
+        $apply=M('apply')->alias('a')
                     ->join("dd_user u on a.sid=u.id") //附表连主表
                     ->field("u.nickname,a.status,a.sid,a.stime")
                     ->where(array('uid'=>39,'status'=>1))//需要显示的字段
@@ -258,23 +244,19 @@ public function duan($integrl){
         echo json_encode(array('status'=>1,'msg'=>'获取成功','data'=>$apply)); 
     }
 
-    public function agree(){
-        if(IS_POST){
-             // $data = M('apply')->where(array('id'=>1))->find();
-        
-            
-             // $data['sname']  = $sname;
-             $addFriend =  M('apply')->where(array('id'=>1))->setField('status',2);
-             if($addFriend){
-                echo json_encode(array('status'=>1,'msg'=>'添加成功'));
-             }
-        }
-    }
-
 
     /********      好友部分结束  end   ********/
 
+     /********      公告开始  start   ********/
+     public function activity(){
+        $list = M('activity_info')->where(array())->select();
 
+        $this->assign('list',$list);
+        $this->display();
+     }
+
+
+      /********      公告结束  end   ********/
 
 
 }

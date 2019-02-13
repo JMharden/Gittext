@@ -9,7 +9,7 @@ return array(
 
 	'DB_HOST'               =>  '127.0.0.1', // 服务器地址
 
-	'DB_NAME'               =>  'test',       // 数据库名
+	'DB_NAME'               =>  'gametest',       // 数据库名
 
 	'DB_USER'               =>  'root',      // 用户名
 

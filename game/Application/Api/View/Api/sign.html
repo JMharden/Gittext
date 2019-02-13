@@ -19,27 +19,26 @@
 		<div id="commission" style="width: 100px;height: 40px;position: absolute;left: 150px;top:350px;font-size: 20px;background-color:green;">领取佣金</div>
 		<div id="receive" style="width: 100px;height: 40px;position: absolute;left: 150px;top:450px;font-size: 20px;background-color:green;">123</div>
 
-		
 		<script type="text/javascript" src="/Public/js/jquery.rotate.min.js"></script>
 		<include file="include/commonjs" />
 		<script>
-			var url = 'http://tt.wapwei.com/';
 			//签到
 			$("#sign").click(function(){
 				// alert(123);
 			    // $("#click").text("is click"); 
-	
+				
 			     $.ajax({
 				        type: "post",
 				        dataType: "json",
-				        url:  url+"index.php?m=Index&c=index&a=signs",
+				        url: "http://tt.wapwei.com/api.php?m=Api&c=api&a=signs",
 				        data:{'type':1},
 			       	    success:function(data){
-			              alert('签到成功');
+			       	    	console.log(data);
+			              // alert('签到成功');
 				        },
-						// error:function(data){
-						//         alert('已签到');
-					 //    },
+						error:function(data){
+						        // alert('已签到');
+					    },
 				 })
 		    });
 		    //领取积分
@@ -50,14 +49,14 @@
 			     $.ajax({
 				        type: "post",
 				        dataType: "json",
-				        url:  url+"index.php?m=Index&c=index&a=signs",
+				        url: "http://tt.wapwei.com/api.php?m=Api&c=api&a=signs",
 				        data:{'type':2},
 			       	    success:function(data){
-			              // alert('领取成功');
+			              // alert('签到成功');
 				        },
-						// error:function(data){
-						//         // alert('已签到');
-					 //    },
+						error:function(data){
+						        // alert('已签到');
+					    },
 				 })
 		    });
 		    //领取佣金
@@ -68,7 +67,7 @@
 			     $.ajax({
 				        type: "post",
 				        dataType: "json",
-				        url:  url+"index.php?m=Index&c=index&a=signs",
+				        url: "http://tt.wapwei.com/api.php?m=Api&c=api&a=signs",
 				        data:{'type':3},
 			       	    success:function(data){
 			              // alert('签到成功');
@@ -78,7 +77,7 @@
 					    },
 				 })
 		    });
-		    //测试开始游戏
+		    //领取佣金
 		    $("#receive").click(function(){
 				// alert(123);
 			    // $("#click").text("is click"); 
@@ -86,10 +85,10 @@
 			     $.ajax({
 				        type: "post",
 				        dataType: "json",
-				        url: url+"index.php?m=Index&c=index&a=multiGame",
-				        data:{'status':2,'uid':[80,81],'result':[987,521],'game_id':666},
+				        url: "http://tt.wapwei.com/api.php?m=Api&c=api&a=receive",
+				        data:{'type':3},
 			       	    success:function(data){
-			              console.log(data);
+			              console.log(data.data);
 				        },
 						error:function(data){
 						        // alert('已签到');
@@ -99,7 +98,6 @@
 
 		    
 		</script>
-
 
 	</body>
 

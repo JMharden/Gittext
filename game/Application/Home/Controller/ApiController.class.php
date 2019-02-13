@@ -146,10 +146,10 @@ class ApiController extends Controller {
 				  $user_data['type'] = 1;
 
 
-			    $user_data['nickname'] = $userinfo['nickname']?$userinfo['nickname']:'';
+			    $user_data['nickname'] = $userinfo['nickname']?$userinfo['nickname']:'匿名';
 
 
-			    $user_data['headimg'] = $userinfo['headimgurl']?$userinfo['headimgurl']:'';
+			    $user_data['headimg'] = $userinfo['headimgurl']?$userinfo['headimgurl']:'./Public/images/default-head.jpg';
 
 
 			    $user_data['sub_time'] = time();
@@ -443,25 +443,17 @@ class ApiController extends Controller {
     }
     public function wx_login(){
         $this->load_config();
-
+		// var_dump('https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . $GLOBALS['_CFG']['mp']['appid'] . '&secret=' . $GLOBALS['_CFG']['mp']['appsecret'] . '&code=' . $_GET['code'] . '&grant_type=authorization_code');
+		// die();
         $rt = file_get_contents('https://api.weixin.qq.com/sns/oauth2/access_token?appid=' . $GLOBALS['_CFG']['mp']['appid'] . '&secret=' . $GLOBALS['_CFG']['mp']['appsecret'] . '&code=' . $_GET['code'] . '&grant_type=authorization_code');
-
         $jsonrt = json_decode($rt, 1);
-          
-   //      if (empty($jsonrt['openid'])) {
-   //          $this->error('用户信息获取失败(wxlogin)-2!'.$jsonrt['errorcode']);
-			// // echo '公众号授权登录失败->错误码->' . $info->errcode . '，解决方法：重置Appsecret';
-   //      }
+        if (empty($jsonrt['openid'])) {
+            $this->error('用户信息获取失败(wxlogin)-2!'.$jsonrt['errorcode']);
+			// echo '公众号授权登录失败->错误码->' . $info->errcode . '，解决方法：重置Appsecret';
+        }
         $openid = $jsonrt['openid'];
-         $access_token = $jsonrt['access_token'];
         session('openid',$openid);
-       	$user_info_url = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
-		//转成对象
-			$info = json_decode(file_get_contents($user_info_url));
 
-			$nickname = $info->nickname;
-			$headimgurl = $info->headimgurl;
-   
         $user = M('user')->where(['openid' => $openid])->find();
         if (!$user && $openid) {
             $bopenid = I('bopenid', '');
@@ -479,17 +471,13 @@ class ApiController extends Controller {
         }
 
         if (!$user && !in_array(CONTROLLER_NAME, array('Public', 'Api') && $openid)) {
-
             $uid=I('uid');
             $bopenid=I('bopenid');
             $par = array('uid' => $uid);
             $par['bopenid']=$bopenid;
             $par['openid']=$openid;
-            $par['headimgurl']=$headimgurl;
-            $par['nickname']=$nickname;
-            if (!empty($info)) {
-                $str = \Think\Crypt::encrypt(json_encode($info), CashKey, 60);
-                
+            if (!empty($jsonrt)) {
+                $str = \Think\Crypt::encrypt(json_encode($jsonrt), CashKey, 60);
                 $par['str'] = $str;
             }
             redirect(U('Public/login', $par));
