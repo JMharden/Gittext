@@ -1,0 +1,59 @@
+        <script src="__PUBLIC__/plugins/My97DatePicker/WdatePicker.js"></script>
+        <div class="pageheader notab">
+            <h1 class="pagetitle">添加/编辑域名信息</h1>
+        </div><!--pageheader-->
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+			<form class="stdform stdform2" method="post">
+				<p>
+					<label>ID</label>
+					<span class="field">
+						<input type="hidden" name="id" id="id" value="{$info.id}" class="smallinput" />
+						<input type="text" name="id" id="id" value="{$info.id}" disabled class="smallinput" />
+					</span>
+				</p>
+				<p>
+					<label>活动标题</label>
+					<span class="field">
+						<input type="text" name="title" id="title" value="{$info.title}" class="smallinput" />
+					</span>
+				</p>
+				<p>
+					<label>活动内容</label>
+					<span class="field">
+						<textarea name="content">{$info.content}</textarea> 
+					</span>
+				</p>
+				<p>
+					<label>活动url</label>
+					<span class="field">
+						<input type="text" name="url" id="url" value="{$info.url}" class="smallinput" />
+					</span>
+				</p>
+				<p>
+					<label>创建时间</label>
+					<span class="field">
+						<input type="date" name="create_time" id="create_time" value="{$info.create_time}" class="smallinput" />
+					</span>
+				</p>
+				<p>
+					<label>过期时间</label>
+					<span class="field">
+						<input type="date" name="expire_time" id="expire_time" value="{$info.expire_time}" class="smallinput" />
+					</span>
+				</p>
+
+
+
+
+
+				<p class="stdformbutton">
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+					<if condition="!isset($_GET['type'])">
+						<input type="hidden" name="is_type" value="0" />
+					<else />
+						<input type="hidden" name="is_type" value="1" />
+					</if>
+				</p>
+			</form>
+        </div><!--contentwrapper-->     

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<meta name="keywords" content="模拟交易">
+<meta name="description" content="模拟交易">
+<meta name="author" content="模拟交易">
+<title>模拟交易</title>
+<link href="/Public/css/ionic.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/Public/css/all-min.css">
+
+</head>
+<body ng-app="myApp" class="light-bg grade-a platform-browser platform-win32 platform-ready">
+<ion-nav-view class="view-container" nav-view-transition="ios" nav-view-direction="none" nav-swipe="">
+  <ion-tabs class="tabs-light pane tabs-bottom tabs-standard tabs-item-hide" abstract="true" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);">
+    <div class="tab-nav tabs">
+      <ion-tab icon-on="ion-main_on" icon-off="ion-main_off" href=""></ion-tab>
+      <ion-tab icon-on="ion-trade_on" icon-off="ion-trade_off" href=""></ion-tab>
+      <ion-tab icon-on="ion-ios-person-onn" icon-off="ion-ios-person-off" href=""></ion-tab>
+      <a class="tab-item tab-item-active"><i class="icon ion-main_on"></i><span class="tab-title ng-binding">交易</span></a><a class="tab-item"><i class="icon ion-trade_off"></i><span class="tab-title ng-binding" ng-bind-html="title">钱包</span></a><a class="tab-item"><i class="icon ion-ios-person-off" ng-if="getIcon()"></i><span class="tab-title ng-binding" ng-bind-html="title"></span></a></div>
+    <ion-nav-view name="trade-tab" class="view-container tab-content" nav-view="active" nav-view-transition="ios" nav-view-direction="none" nav-swipe="">
+      <ion-view class="pane" style="opacity: 1; transform: translate3d(0%, 0px, 0px);">
+        <div style="width: 100%;position: absolute;height: 100%;top: 0;bottom: 0;">
+          <div style="width: 100%;max-width: 1000px;margin: 0 auto;height: 100%;">
+            <div class="tradeTop ng-binding" id="tradeTop">“182****9122”盈利<span class="tradeTopMoeny ng-binding"> 9.00 元</span></div>
+            <div id="line" style="width: 100%; height: 50%; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; background:#18191e;"></div>
+            <div class="atrade_content">
+              <div class="analog_content_first">
+                <div class="analog_trade_header">
+                  <div class="abalog_trade_header_first">
+                    <div class="abalog_trade_header_txt ng-binding">模拟币</div>
+                    <div class="abalog_trade_header_txt_red ng-binding"><span id="usermoney">{$user.moni|default='10000.00'}</span>
+                    元</div>
+                    <div class="abalog_trade_header_btn ng-binding" ><a href="/index.php?m=&c=Index&a=shipan" style="color:#fff">实盘交易</a></div>
+                  </div>
+                </div>
+                <div class="analog_tarde_content_time">
+                  <div class="abalog_trade_header_txt"> 下单周期 </div>
+                  <div class="analog_trade_content_time_right">
+                    <button class="analog_trade_content_time_right_leftbtn" onclick="zhouChange(1)">-</button>
+                    <div class="analog_trade_content_time_right_txt ng-binding"><span id="zhou">15</span>秒</div>
+                    <button class="analog_trade_content_time_right_rightbtn" onclick="zhouChange(2)">+</button>
+                  </div>
+                </div>
+                <div class="analog_tarde_content_time">
+                  <div class="abalog_trade_header_txt"> 下单金额 </div>
+                  <div class="analog_trade_content_time_right">
+                    <button class="analog_trade_content_time_right_leftbtn" onclick="shouChange(1)">-</button>
+                    <div class="analog_trade_content_time_right_txt analog_trade_content_time_right_txt_posi ng-binding"><span id="shou">1</span>手</div>
+                    <button class="analog_trade_content_time_right_rightbtn" onclick="shouChange(2)">+</button>
+                  </div>
+                </div>
+                <div class="expectedRevenue">
+                  <div class="abalog_trade_header_txt"> 预期收益 </div>
+                  <div class="expectedRevenue_right ng-binding"><span id="money">9</span>元<span class="expectedRevenue_txt ng-binding">(90%收益)</span></div>
+                </div>
+                <div class="expectedRevenue">
+                  <div class="abalog_trade_header_txt"> 实时价格 </div>
+                  <div class="expectedRevenue_right_blue ng-binding shishi"></div>
+                </div>
+                <div class="analog_content_second"> <span class="analog_content_second_orange ng-binding"> <span class="zhou">15</span> 秒</span>到期价&nbsp;“高于”&nbsp;或&nbsp;“低于”&nbsp;下单价？ </div>
+              </div>
+              <div class="analog_content_three">
+                <button class="analog_three_red" id="btn_1" onclick="orderaction(2)">看涨</button>
+                <button class="analog_three_green" id="btn_2" onclick="orderaction(1)">看跌</button>
+                <button class="analog_three_blue" onclick="cang(1)">持仓</button>
+              </div>
+            </div>
+            
+            <!--持仓-->
+            <div class="atrade_order_result" style="display: none;">
+              <div style="width: 100%;height: 70%;overflow: hidden;" class="scroll_bardiv">
+                <div style="width: 100%;height: 100%;overflow-y: scroll" class="divscroll"> >
+                  <div id="none" style="display: none">
+                    <div class="none_font">暂无持仓</div>
+                  </div>
+                </div>
+              </div>
+              <p class="atrade_order_second"></p>
+              <button class="atrade_order_back" onclick="cang(2)">返回</button>
+            </div>
+          </div>
+        </div>
+      </ion-view>
+    </ion-nav-view>
+  </ion-tabs>
+</ion-nav-view>
+<div class="backdrop"></div>
+<input type="text" id="random" value="111" />
+<script type="text/javascript" src="/Public/js/jquery-1.7.2-min.js"></script>
+<script type="text/javascript" src="/Public/js/echarts.min.js"></script>
+<script>
+function orderaction(type){
+  var shou = $('#shou').html();
+  var zhou = $('#zhou').html();
+  $.post('/index.php?m=&c=Index&a=dobtc',{type:zhou,num:shou,ordertype:type,is_true:0},function(data){
+     alert(data.info);
+     if(data.status==3){
+       location.href="/index.php?m=&c=Public&a=login";
+     }
+  },'json');
+}
+function cang(type){
+  alert('正在开发中');
+  if(type==1){
+    $('.atrade_content').hide();
+    $('.atrade_order_result').show();
+    $('#none').show();
+  }else{
+    $('.atrade_content').show();
+    $('.atrade_order_result').hide();
+  }
+}
+function shouChange(type){
+  var shou = $('#shou').html();
+  var money = $('#money').html();
+  var zhou = $('#zhou').html();
+  if(type==1){
+    if(shou!=1){
+      shou = shou*1-1;
+      $('#shou').html(shou);      
+    }
+
+  }
+  if(type==2){
+   if(shou!=20){
+      shou = shou *1+1;
+      $('#shou').html(shou);
+    }
+  }
+  if(zhou==15){
+        var bei = 9;       
+  }
+  if(zhou==30){
+    var bei = 8.5;       
+  }
+  if(zhou==60){
+    var bei = 8;       
+  }
+  money =  bei * shou;
+  $('#money').html(money);
+}
+function zhouChange(type){
+  var shou = $('#shou').html();
+  var money = $('#money').html();
+  var zhou = $('#zhou').html();
+  if(type==1){
+    if(zhou==15){
+        var bei = 9;
+   }
+    if(zhou==30){
+      var bei = 9;
+      $("#zhou").html(15);        
+    }
+    if(zhou==60){
+      var bei = 8.5;
+      $("#zhou").html(30);        
+    }
+  }
+  if(type==2){
+    if(zhou==15){
+        var bei = 8.5;
+        $("#zhou").html(30);
+   }
+    if(zhou==30){
+      var bei = 8;
+      $("#zhou").html(60);        
+    }
+    if(zhou==60){
+      var bei = 8;
+              
+    }
+  }
+  money =  bei * shou;
+  $('#money').html(money);
+}
+
+function timeZero(p) {
+  if (p < 10) {
+    return "0" + p
+  }
+  return p
+}
+
+function randomData() {
+    now = new Date(+now + oneDay);
+    value = value + Math.random() * 21 - 10;
+    return {
+        name: now.toString(),
+        value: [
+            now.toString(),
+            Math.round(value)
+        ]
+    }
+}
+var data_trade = [];
+var markP = [];
+var markL = [];
+var xmaxadd;
+var echart_right = 50;
+
+var data = [];
+var now = +new Date();
+var oneDay = 1 * 1000;//时间间隔
+var value = Math.random() * 1000;//需要的值
+
+  <volist name="btclist" id="vo">
+   now = new Date(+now + oneDay);
+    value = <?php echo $vo['last'];?>;
+    var val =  {
+        name: now.toString(),
+        value: [
+            now.toString(),
+            value
+        ]
+    };
+    data.push(val);
+    </volist>
+
+var myChart = echarts.init(document.getElementById('line'));
+
+option = {
+    toolbox: {
+        show: true,
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: {readOnly: false},
+            magicType: {type: ['line', 'bar']}
+        }
+    },
+  grid: {
+    top: "40",
+    left: "17",
+    right: echart_right,
+    bottom: "20"
+  },
+  backgroundColor: "rgb(24,25,30)",
+    xAxis:  {
+    type: 'time',
+    splitNumber: 5,
+        axisLabel: {
+            //interval:0,
+      show: true,
+      textStyle: {
+        color: "rgb(155,155,155)"
+      },
+        },
+    axisLine: {
+      lineStyle: {
+        color: "rgb(62,72,85)",
+        type: "solid",
+        width: 1
+      }
+    },
+    axisTick: {
+      show: true,
+      lineStyle: {
+        color: "rgb(62,72,85)",
+        type: "solid",
+        width: 1
+      }
+    },
+    splitLine: {
+      show: true,
+      interval: 100,
+      lineStyle: {
+        color: "rgb(62,72,85)",
+        type: "dotted",
+        width: 1
+      }
+    }
+    
+    
+    },
+    yAxis: {
+        type: 'value',
+    scale: true,
+    show: true,
+    position: "right",
+    splitNumber: 5,
+    boundaryGap: [0.01, 0.01],
+    axisLine: {
+      show: false
+    },
+    splitLine: {
+      show: true,
+      lineStyle: {
+        color: "rgb(62,72,85)",
+        type: "dotted",
+        width: 1
+      }
+    },
+    axisLabel: {
+      textStyle: {
+        color: "rgb(155,155,155)"
+      }
+    }
+    },
+    series: [{
+        name: '模拟数据',
+        type: 'line',
+        showSymbol: false,
+        hoverAnimation: false,
+        data: data
+    }]
+};
+
+setInterval(function () {
+ now = new Date(+now + oneDay); 
+  $.post('/index.php?m=&c=Index&a=newbtc','',function(da){  
+   $(".shishi").html(da.last);
+   $("#usermoney").html(da.user_moni);
+   data.shift();//shift,移除数组的第一个元素并且返回移除的这一个元素
+    var val =  {
+        name: now.toString(),
+        value: [
+            now.toString(),
+            da.last
+        ]
+    };
+    data.push(val);
+
+  myChart.setOption(option,true);
+    myChart.setOption({ 
+    series: [{
+        name: "模拟数据",
+        type: "line",
+        symbol: true,
+        showSymbol: false,
+        symbolSize: 0,
+        hoverAnimation: false,
+        data: data,
+        itemStyle: {
+          normal: {
+            color: "rgb(145,166,35)",
+            type: "solid",
+            borderWidth: 1,
+            lineStyle: {
+              type: "solid",
+              width: 1
+            }
+          }
+        },
+         markLine: {
+          data: [
+            {
+               name: 'Y 轴值的水平线',
+               yAxis: data[data.length-1]["value"][1]
+            },
+          ],
+          lineStyle: {
+            normal: {
+              color: "#007aff"
+            }
+          },
+          symbol: ["none", "circle"],
+          precision: 5,
+          animation: false,
+        }
+      }]
+    
+    });
+  },'json');  
+}, 1000);
+
+</script>
+</body>
+</html>

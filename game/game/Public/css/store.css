@@ -1,0 +1,84 @@
+/*头部*/
+.header-blank{ height:40px;}
+.header{
+	padding:0 10px; width:100%; height:40px; line-height:40px; background:#357CB4; font-size:16px; color:#000; text-align:center; font-family: "微软雅黑"; 
+	position:fixed; top:0; left:0; z-index:999; border-radius:0; color:#fff;
+}
+.header .left{ float:left; padding-right: 10px; position: relative; padding-top: 3px;}
+.header .left a span{color: #949494;font-size: 20px;}
+.header .left i{display: inline-block;width: 4px;height: 31px;background: url(../img/header_bg.jpg) no-repeat; position: absolute; right: -5px;top: 7px;}
+.header .right{ float:right;}
+.header .right a span{color: #949494;}
+.header a{ color:#fff;}
+.header a span{font-size:20px;margin-top:12px;}
+
+ul.box{display:box; display:-webkit-box; display:-moz-box; padding:0; margin:0; list-style:none;}
+ul.box li{box-flex:1; -webkit-box-flex:1; -moz-box-flex:1;}
+
+/*banner*/
+.focus{ width:100%;  margin:0 auto; position:relative; overflow:hidden;}
+.focus .hd{ width:100%; height:11px;  position:absolute; z-index:1; bottom:5px; text-align:center;}
+.focus .hd ul{ 
+	display:inline-block; height:5px; padding:3px 5px; background-color:rgba(255,255,255,0.7); -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; 
+	font-size:0; vertical-align:top; box-sizing:content-box; list-style: none;
+}
+.focus .hd ul li{ display:inline-block; width:5px; height:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#8C8C8C; margin:0 5px;  vertical-align:top; overflow:hidden;   }
+.focus .hd ul .on{ background:#FE6C9C;}
+.focus .bd{ position:relative; z-index:0;}
+.focus .bd ul{list-style: none; width: 100%; margin: 0; padding: 0;}
+.focus .bd li img{ width:100%; background:url(../images/loading.gif) center center no-repeat;}
+.focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */}
+
+/*底部*/
+.footer-blank{ height:50px;}
+.footer{ z-index:999; height:50px; background:#357CB4; color:#fff; position:fixed; width:100%; bottom:0; left:0;}
+.footer a{ color:inherit;}
+.footer ul{
+	list-style:none; padding:0; margin:0; line-height:50px; text-align:center;
+	display:-moz-box; /* Firefox */
+	display:-webkit-box; /* Safari and Chrome */
+	display:box;
+}
+.footer ul li{
+	font-size:14px;font-family: "微软雅黑";
+	-moz-box-flex:1.0; /* Firefox */
+	-webkit-box-flex:1.0; /* Safari 和 Chrome */
+	box-flex:1.0;
+}
+.footer ul li span{font-size:16px; padding-top:5px; color: #fff; margin-right:10px;}
+
+/*首页*/
+.index-product img{width:100%;}
+
+/*个人中心*/
+.addr-header table,.ucenter-header table{display:block; width:100%; position:relative; color:#fff; font-family: "微软雅黑";}
+.addr-header table td,.ucenter-header table td{padding: 15px 0px;}
+.addr-header .td-head,.ucenter-header .td-head{ width:90px; }
+.addr-header .img-head,.ucenter-header .img-head{ width:70px; height:70px; border: 1px solid #838383;}
+.addr-header .nickname,.ucenter-header .nickname{margin-top:10px; font-size:16px; }
+.addr-header .parent,.ucenter-header .parent{font-size:13px; padding-top:5px;}
+.addr-header .span-btn,.ucenter-header .span-btn{display:inline-block; width:70px; height:40px; background:#FF9933; text-align: center; line-height:40px; font-size:13px;}
+.addr-header .td-blank,.ucenter-header .td-blank{width: 100%;}
+.addr-header .td-btn,.ucenter-header .td-btn{padding-left:10px;}
+
+.ucenter-header{ background:#357CB4; padding:10px; position:relative;}
+.ucenter-header .widthdraw{ position:absolute; right:10px; top:45px; padding:5px 15px; background:#ccc; color:#000;}
+.ucenter-menu,.ucenter-account{margin: 5px 0; font-family: "微软雅黑"; border-top: 1px solid #EAEAEA;}
+.ucenter-menu ul li,.ucenter-account ul li{float: left; text-align: center; border-right: 1px solid #EAEAEA; border-bottom: 1px solid #EAEAEA;}
+.ucenter-account ul li{width: 50%; padding: 10px 0;}
+.ucenter-menu ul li{width: 33.3%; line-height: 20px; padding: 25px 0;}
+.ucenter-menu ul li.li-none,.ucenter-account ul li.li-none{ border-right: none;}
+.ucenter-menu ul li a,.ucenter-account ul li a{display: block; color: #000;}
+.ucenter-menu ul li a span,.ucenter-account ul li a span{color: #FF0000;}
+
+/*收货信息*/
+.addr-content{margin-top: 10px; background: #fff;}
+.addr-item{padding-left: 20px; border-bottom: 1px solid #FFD8D8; height: 40px; line-height: 40px; font-family: "微软雅黑"; font-size: 14px; color: #000;}
+.addr-form{padding: 20px 20px 0 20px;}
+.addr-input{margin: 10px 0; }
+.addr-input input{width: 80%; height: 35px;}
+.addr-input .name{}
+.addr-btn{padding: 20px 0;}
+.addr-btn a{display: block; height: 40px; line-height: 40px; background: #FF9900; text-align: center; color: #fff; font-size: 16px; font-family: "微软雅黑";}
+.back2ucenter{ float:right; padding-right:10px;}
+

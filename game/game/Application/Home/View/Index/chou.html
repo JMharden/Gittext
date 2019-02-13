@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<include file="include/head" title="抽抽乐" />
+		<style>
+		body{ background:#4da7e7}
+		.action{ text-align:center;}
+		.action a{ color:#fff; line-height:50px;}
+		a.btn{ padding:10px 50px; background:#fbe02f; color:#fff; border-radius:3px; font-size:16px; color:#666; font-weight:bold;}
+		
+		</style>
+	</head>
+	<body>
+		<div class="">
+			<img src="__PUBLIC__/images/chou.jpg" style=" width:100%" />
+		</div>
+		<div class="" style=" text-align:center; padding:10px;">
+			我参与过<span style=" font-weight:bold">{$count}</span>次，当前奖池￥<span style=" font-size:16px; color:red; font-weight:bold;">{$total|default='0.00'}</span>
+		</div>
+		<div class="action" style=" padding:30px;">
+			
+			
+				<if condition="$reward eq ''">
+				<a href="javascript:;" onclick="buy()" class="btn">立即参与</a>
+				<else/>
+				<a href="javascript:;" onclick="alert('明天再来')" class="btn">今日已开奖，明日再来</a>
+				</if>
+			
+			<br/>
+			<a href="javascript:;" onclick="showRules()">活动规则</a>
+		</div>
+		<div style="display:none; padding:10px;" id="rules">{$_CFG.site.chou_body}</div>
+		<script>
+		function showRules(){
+			index = layer.open({
+			  type: 1,
+			  shade: false,
+			  title: false, //不显示标题
+			  content: $('#rules'), //捕获的元素
+			  cancel: function(){
+				
+			  }
+			});
+			// layer.full(index);
+		}
+		function buy(){
+			// 选择支付方式
+			
+			layer.msg('请选择支付方式', {
+				shade: [0.1,'#fff'],
+				time: 2000000,
+				btn: ['金币支付','积分支付','微信支付'], 
+				btn1: function(){
+					buySubmit('money');
+				},
+				btn2: function(){
+					buySubmit('points');
+				},
+				btn3: function(){
+					buySubmit('wxpay');
+				}
+			});
+			return;
+		}
+		function buySubmit(payway){
+			layer.load();
+			$.post("",{payway:payway},function(d){
+				
+				if(payway == 'wxpay' && d.status == 1){
+					call_pay(d.pay_param);
+				}
+				else{
+					layer.msg(d.info);
+				}
+				if(d.status == 1){
+					setTimeout(function(){location.href = location.href;},1500);
+				}
+			});
+		}
+		
+		function call_pay(param){
+			param = eval('('+param+')');
+			if (typeof WeixinJSBridge == "undefined"){
+				if( document.addEventListener ){
+					document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+				}else if (document.attachEvent){
+					document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+					document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+				}
+			}else{
+				WeixinJSBridge.invoke(
+					'getBrandWCPayRequest',
+					param,
+					function(res){
+						WeixinJSBridge.log(res.err_msg);
+						if(res.err_msg == 'get_brand_wcpay_request:cancle'){
+							alert('你取消了支付');
+						}else if(res.err_msg == 'get_brand_wcpay_request:ok'){
+							alert('支付成功');
+							location.href = location.href;
+						}else{
+							alert(res.err_msg)
+						}
+					}
+				);
+			}
+		}
+		</script>
+		
+		<div style="height:50px;"></div>
+		<div class="footer">
+			<ul>
+				<li><a href="{:U('ucenter')}">个人中心</a></li>
+				<li><a href="{:U('chou_log')}">参与记录</a></li>
+				<li><a href="{:U('chou_reward')}">开奖记录</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

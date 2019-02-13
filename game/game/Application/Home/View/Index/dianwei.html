@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<include file="include/head" title="我的点位" />
+		<style>
+		.addr-content{ background:none;}
+		.addr-item{ background:#fff;}
+		.addr-form{}
+		.addr-content .items{ background:#fff; margin-bottom:5px; padding:10px; font-size:14px; line-height:30px;}
+		.addr-content .items .sn{ border-bottom:1px solid #eee;}
+		.addr-content .items .status,
+		.addr-content .items .del,
+		.addr-content .items .gotopay{ float:right;}
+		.addr-content .items .sn a{ margin:0 5px;}
+		.addr-content .items .time{ border-top:1px solid #eee; color:#B5ADAD;}
+		.addr-content .items .money{ float:right; font-size:16px; color:red; font-weight:bold;}
+		.addr-content .items .freez{ background:blue; color:#fff; padding:2px 5px;}
+		</style>
+	</head>
+	<body style="background: #f7f7f7;">
+		<include file="include/utop" />
+		
+		<div class="addr-content" style=" background:none;">
+			<div class="addr-item">
+				我的点位
+				<a href="{:U('ucenter')}" class="back2ucenter">返回 <span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			
+			<volist name="list" id="vo">
+			<div class="items" style=" margin-bottom:5px;">
+				
+				<div class="name" style=" font-size:16px; line-height:20px;">
+				{$vo.x}排{$vo.y}列
+				<span style=" float:right">{$vo.childs}子节点</span>
+				</div>
+				<div class="time">
+				{$vo.create_time|date="Y-m-d H:i:s",###}
+				</div>
+			</div>
+			</volist>
+			<empty name="list">
+			<div style=" padding:10px; color:#666;">暂时没有记录</div>
+			</empty>
+		</div>
+		<div class="page" style=" padding:10px;">
+		{$page}
+		</div>
+	</body>
+</html>

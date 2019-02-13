@@ -9,13 +9,7 @@ use Think\Controller;
 
 class IndexController extends HomeController {
 
-  /**
-   * [_initialize description]
-   * @Author   佳民
-   * @DateTime 2019-01-27
-   * @Function [初始化]
-   * @return   [type]     [description]
-   */
+
   public function _initialize() 
   {
     parent::_initialize();
@@ -33,6 +27,31 @@ class IndexController extends HomeController {
      * [time description]
      * @Author   佳民
      * @DateTime 2019-01-14
+     * @Function [查询领取记录]
+     * @return   [type]     [description]
+     */
+     public function receive(){
+      $uid = $this->user['id'];
+       $wintegration   = M('user')->where(array('id'=>$uid))->getField('wintegration');               //有无待领取积分
+       $pending_amount = M('account_info')->where(array('uid'=>$uid))->getField('pending_amount');    //有无待领取佣金
+       $receive        = array(
+            'wintegration'   => $wintegration,
+             'pending_amount' => $pending_amount,
+       );
+       if($wintegration != 0 && $pending_amount != 0){
+            echo json_encode(array('status'=>1,'msg'=>'有待领取积分和佣金','data'=>$receive));
+       }else if($wintegration != 0 && $pending_amount == 0 ){
+            echo json_encode(array('status'=>2,'msg'=>'有待领取积分','data'=>$wintegration));
+       }else if($pending_amount != 0 && $wintegration == 0 ){
+            echo json_encode(array('status'=>3,'msg'=>'有待领取佣金','data'=>$pending_amount));
+       }else{
+            echo json_encode(array('status'=>4,'msg'=>'无待领取积分和佣金'));
+       }
+     }
+    /**
+     * [time description]
+     * @Author   佳民
+     * @DateTime 2019-01-14
      * @Function [今日签到记录判断]
      * @return   [type]     [description]
      */
@@ -44,6 +63,7 @@ class IndexController extends HomeController {
          
            
     }
+
     /**
      * [time description]
      * @Author   佳民
@@ -121,16 +141,16 @@ class IndexController extends HomeController {
 	 * [startGame description]
 	 * @Author   佳民
 	 * @DateTime 2019-01-22
-	 * @Function [开始游戏]
+	 * @Function [单人游戏]
 	 * @return   [type]     [description]
  	*/
-  	public function startGame(){
+  	public function singleGame(){
 	  	 $uid = $this->user['id'];
 	  	if(IS_POST){
-	  		$type   = $_POST['type'];//游戏类型
+	  		
 	  		$status = $_POST['status'];//1位开始游戏2为结束游戏
     	  		if($type == 1){//单人游戏	
-    	  			if($status == 1){
+    	  			if($status == 1){//游戏开始
     	  				$data = array(
     	  					'uid' => 76,
     	  					'start_time' => $_POST['start_time'],//游戏开始时间
@@ -153,7 +173,7 @@ class IndexController extends HomeController {
     	  					// 'uid'      => $uid,
     	  					'result'   => $_POST['result'],//游戏结果
     	  					'end_time' => strtotime(date('Y-m-d H:i:s',$_POST['end_time'])),//游戏结束时间
-    	  					'map'     => $_POST['map'],
+    	  					// 'map'     => $_POST['map'],
     	  				);
     	  				$savelog = M('singleplay_log')->where(array('mark'=>$_POST['mark']))->save($datas);
     	  				if($savelog){
@@ -162,65 +182,132 @@ class IndexController extends HomeController {
     	  			}else{
     	  				 echo json_encode(array('status'=>0,'msg'=>'系统错误'));exit;
     	  			}
-	  		} elseif ($type == 2) {//1vs1竞技
-              $num = count($_POST['uid']);
-              if($status == 1){
-                
-
-               
-                $game = M('play_log')->where(array('game_id'=>$_POST['game_id']))->select();
-                if($game){
-                    echo json_encode(array('status'=>-1,'msg'=>'该局游戏已存在'));exit;
-                    exit;
-                }else{
-                    
-                    for ($i=0; $i<$num ; $i++) { 
-                       
-                      $data = array(
-                        'user_id' => $_POST['uid'][$i],
-                        'start_time' => $_POST['start_time'],//游戏开始时间
-                        'game_id' => $_POST['game_id'],//每局游戏的唯一标志
-                      );
-                       // var_dump($data);
-                       $addlog = M('play_log')->add($data);
-
-                    }
-                   
-                  if($addlog){
-                    echo json_encode(array('status'=>1,'msg'=>'新增游戏记录成功'));exit;
-                  }
-                }
-                
-              }else if ($status == 2) {
-                $game = M('play_log')->where(array('game_id'=>$_POST['game_id']))->select();
-
-                $nums = count($_POST['result']);
-
-                for ($i=0; $i<$nums ; $i++) { 
-                       
-                      $datas = array(
-                        'result' => $_POST['result'][$i],
-                        'end_time' => $_POST['end_time'],//游戏开始时间
-                        'game_id' => $_POST['game_id'],//每局游戏的唯一标志
-                      );
-                      $savelog = M('play_log')->where(array('game_id'=>$_POST['game_id']))->save($datas);
-                   
+	  		} 
+              
              
-                }
-                
-                if($savelog){
-                  echo json_encode(array('status'=>2,'msg'=>'修改游戏记录成功'));exit;
-                }
-              }else{
-                 echo json_encode(array('status'=>0,'msg'=>'系统错误'));exit;
-              }
      
       }else{
              echo json_encode(array('status'=>0,'msg'=>'系统错误'));exit;
              exit;
         
-	  	}} 
+	  	}
   	}
+        /**
+     * [Commission description]
+     * @Author   佳民
+     * @DateTime 2019-01-28
+     * @Function [佣金分配]
+     */
+    public function Commission(){
+      // $uid = $this->user['id'];
+      $uid = 75;
+
+      $introducer = M('play_log')->where(array('user_id'=>$uid,'game_id'=>666,'result'=>'赢'))->field(array('introducer_id','introducer2_id','introducer3_id'))->find();
+      // var_dump($introducer);exit;
+      $rate = array(
+          'introducer_money' => 0.1,
+          'introducer2_money' => 0.07,
+          'introducer3_money' => 0.03,
+      );
+      $newdata = array_combine($introducer,$rate);
+      // var_dump($newdata);exit;
+       foreach ($newdata as $k => $v){
+            $money = 100*$v;
+// var_dump($money);exit;
+          M('user')->where(array('id'=>$k))->setInc('money',$money);//添加用户游戏数据
+
+        }
+    }
+
+
+    /**
+     * [multiGame description]
+     * @Author   佳民
+     * @DateTime 2019-01-27
+     * @Function [1VS1竞技]
+     * @return   [type]     [description]
+     */
+    public function multiGame(){
+      if(IS_POST){
+
+          $status = $_POST['status'];
+          $uids = $_POST['uid'];
+          $num = count($uids);
+        if($status == 1){
+          
+            $game = M('play_log')->where(array('game_id'=>$_POST['game_id']))->select();
+            if($game){
+                echo json_encode(array('status'=>-1,'msg'=>'该局游戏已存在'));exit;
+                exit;
+            }else{
+                
+                for ($i=0; $i<$num ; $i++) { 
+                   
+                  $data = array(
+                    'user_id' => $_POST['uid'][$i],
+                    'start_time' => $_POST['start_time'],//游戏开始时间
+                    'game_id' => $_POST['game_id'],//每局游戏的唯一标志
+                  );
+
+                   // var_dump($data);
+                   $addlog = M('play_log')->add($data);//添加用户游戏数据
+
+                }
+               
+                $game =array(
+                    'auser_id' => $uids[0],
+                    'buser_id' => $uids[1],
+                    'game_id' => $_POST['game_id'],
+                    // 'start_time' => $_POST['start_time'],
+                );
+                 $addgamelog = M('game_log')->add($game);//添加游戏详细数据
+                if($addlog && $addgamelog){
+                  echo json_encode(array('status'=>1,'msg'=>'新增游戏记录成功'));
+                }
+            }
+          
+        }else if ($status == 2) {
+       
+
+          $results = $_POST['result'];
+          $a = array_combine($_POST['uid'], $_POST['result']);
+
+          foreach ($a as $k=>$v){
+
+             $datas = array(
+                  'result' => $v,
+                  'end_time' => $_POST['end_time'],//游戏开始时间
+                  'game_id' => $_POST['game_id'],//每局游戏的唯一标志
+                );
+             // var_dump($datas);exit;
+              $savelog = M('play_log')->where(array('user_id'=>$k,'game_id'=>$_POST['game_id']))->save($datas);
+          } 
+          $games =array(
+                  'auser_id' => $uids[0],
+                  'auser_step' => $results[0],
+                  'auser_score' => $_POST['auser_score'],
+                  'buser_id' => $uids[1],
+                  'buser_step' => $results[1],
+                  'buser_score' => $_POST['b_userscore'],
+                  'game_id' => $_POST['game_id'],
+                  'end_time' => $_POST['end_time'],
+          );
+          $gamelog = M('game_log')->where(array('game_id'=>$_POST['game_id']))->save($games);
+
+          if($savelog & $gamelog){
+           echo json_encode(array('status'=>2,'msg'=>'修改游戏记录成功'));exit;
+          }
+        }else{
+
+           echo json_encode(array('status'=>0,'msg'=>'系统错误'));exit;
+        }
+      }else{
+
+             echo json_encode(array('status'=>0,'msg'=>'系统错误'));exit;
+             exit;
+        
+      }
+    }
 
   /**----------------  挑战书部分start    ---------------------**/
 

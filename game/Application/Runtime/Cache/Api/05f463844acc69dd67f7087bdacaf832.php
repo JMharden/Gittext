@@ -87,8 +87,8 @@
 			     $.ajax({
 				        type: "post",
 				        dataType: "json",
-				        url: url+"index.php?m=Index&c=index&a=startGame",
-				        data:{'type':2,'status':2,'uid':[76,18],'result':[123,555],'game_id':456},
+				        url: url+"index.php?m=Index&c=index&a=multiGame",
+				        data:{'status':2,'uid':[80,81],'result':[987,521],'game_id':666},
 			       	    success:function(data){
 			              console.log(data);
 				        },

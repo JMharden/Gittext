@@ -1,0 +1,58 @@
+<div class="fixed_left">
+    <div class="left_div">
+        <p class="fixed_left_font">
+            <span class="name" style="margin-left: -2px;">ID:{$user.id}</span>
+            <span class="balance" style="font-size:0.1rem;position: relative;"><span style="display: inline-block;position: absolute;top: 0">余额:¥<b class="amount">{$user.money}</b></span><i style="width: 0.13rem;height:0.13rem;background: url(/res/zhuan/images/icon.png) no-repeat;background-size: 100% 100%;display: inline-block;background-color: rgb(230,120,120);border-radius: 50%;margin-left:0.85rem;margin-top:0.03rem;
+            " class="littleaddbutn";></i></span>
+            <a onclick="duixian()"><span class="cash_postal"><button>兑换</button></span></a>
+            <a  href="{:U('Suggest/index')}"><span class="cash_postal"><button>投诉</button></span></a>
+           <!--  <a href="/index.php?m=&c=Index&a=rechar"><span class="cash_postal"><button>充值</button></span></a> -->
+        </p>
+    </div>
+</div>
+<div class="toast dialog  toast5 " <?php if(empty($rechar)){ echo 'style="display:none;"';}?>>
+	<!--新增充值页面-->
+	<div class="shade"></div>
+	<div class="bigger" style="min-hight:1rem;">
+			<p class="cz">充值中心</p>
+		<div style="padding-top:0.4rem;box-sizing: border-box;width:80%;height:85%;margin: auto;background: url('/res/zhuan/images/notice_bg.png') center 0px / 98% 100% no-repeat;">
+			<div class="btnmony btnstyle" style="margin-top: 0.1rem;" onclick="remoneyChange('3','{$user.id}')">充值3金币</div>						
+			<div class="btnmony btnstyle" onclick="remoneyChange('5')">充值5金币</div>
+			<div class="btnmony btnstyle" onclick="remoneyChange('10')">充值10金币</div>
+			<div class="btnmony btnstyle" onclick="remoneyChange('20')">充值20金币</div>
+			<div class="btnmony btnstyle" onclick="remoneyChange('50')">充值50金币</div>
+			<div class="btnmony btnstyle" onclick="remoneyChange('100')">充值100金币</div>
+			<div class="btnmony btnstyle" onclick="remoneyChange('500')">充值500金币</div>
+			<div class="btnmony btnstyle btncolor" onclick="quxiao5()">取消</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">	
+	var d_flag = true;		
+	//修复充值问题
+	function remoneyChange(money){
+		var a = 1;
+		window.location = '/index.php?m=&c=Index&a=liveAccredit&money=' + money;		
+	};
+	function quxiao5(){
+		$(".toast5").hide();	
+	}
+	$(".littleaddbutn").click(function(){
+		$(".toast5").show();
+	});
+	//修复悦换图片消失问题
+	function duixian() {
+		if (d_flag) {
+			d_flag = false;
+		    $("#2_little").css('display','flex');
+			$.post("/index.php?m=&c=Index&a=duixian", { money: money }, function(d) {
+				d_flag = true;
+				alert(d.info);
+				if (d.status == 1) {
+					window.location = '/';
+				}
+			}, 'json');
+		}
+	};	
+</script>	

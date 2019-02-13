@@ -1,0 +1,96 @@
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">订单详情</h1>
+        </div><!--pageheader-->
+        <script src="__PUBLIC__/plugins/My97DatePicker/WdatePicker.js"></script>
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+        
+        
+            <form class="stdform stdform2" method="post">
+				<div class="contenttitle2">
+					<h3>基本信息</h3>
+			    </div><!--contenttitle-->
+				<table class="form-table" cellspacing="1" border="0">
+					<tr>
+						<th class="title">ID</th>
+						<td>
+							{$info.id}
+						</td>
+						<th class="title">订单号</th>
+						<td>
+							{$info.sn}
+						</td>
+					</tr>
+					<tr>
+						<th class="title">产品</th>
+						<td>
+							{$info.name}
+						</td>
+						<th class="title">价格</th>
+						<td>
+							￥{$info.price}
+						</td>
+					</tr>
+				</table>
+				<div class="contenttitle2">
+					<h3>收益信息</h3>
+			    </div><!--contenttitle-->
+				<table class="form-table" cellspacing="1" border="0">
+					<tr>
+						<th class="title">日收益</th>
+						<th class="title">收益天数</th>
+						<th class="title">已发放收益次数</th>
+						<th class="title">一级提成</th>
+						<th class="title">二级提成</th>
+						<th class="title">三级提成</th>
+						<th class="title">已发佣金次数</th>
+						
+					</tr>
+					<tr>
+						<td>￥{$info.day_money}</td>
+						<td>{$info.days}</td>
+						<td>{$info.bonus_times}</td>
+						<td>￥{$info.expense1}</td>
+						<td>￥{$info.expense2}</td>
+						<td>￥{$info.expense3}</td>
+						<td>{$info.expense_times}</td>
+					</tr>
+				</table>
+				<div class="contenttitle2">
+					<h3>用户信息</h3>
+			    </div><!--contenttitle-->
+				<table class="form-table" cellspacing="1" border="0">
+					<tr>
+						<th class="title">用户ＩＤ</th>
+						<th class="title">手机</th>
+						<th class="title">上级ＩＤ</th>
+						<th class="title">余额</th>
+						<th class="title">已提现</th>
+						<th class="title">累计佣金</th>
+						<th class="title">累计收益</th>
+						
+					</tr>
+					<tr>
+						<td>{$user_info.id}</td>
+						<td>{$user_info.mobile}</td>
+						<td>{$user_info.parent}</td>
+						<td>￥{$user_info.money}</td>
+						<td>￥{$user_info.withdraw}</td>
+						<td>￥{$user_info.expense}</td>
+						<td>￥{$user_info.bonus}</td>
+					</tr>
+				</table>
+				
+				<p class="stdformbutton">
+					
+					<a href="javascript:;" onclick="history.go(-1)">返回上一页</a>
+				</p>
+			</form>
+			<script src="__PUBLIC__/plugins/ueditor1.4.3/ueditor.config.js"></script>
+			<script src="__PUBLIC__/plugins/ueditor1.4.3/ueditor.all.min.js"></script>
+			<script>
+				ue = UE.getEditor('body');
+			</script>
+        
+        </div><!--contentwrapper-->
+        
