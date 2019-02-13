@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "loadrotate",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "rotation": [
+        {
+          "frame": 0,
+          "value": 0,
+          "curve": [
+            0.6008031088082901,
+            0.10380829015544035,
+            0.4018911917098444,
+            0.9060880829015545
+          ]
+        },
+        {
+          "frame": 1.0166666666666666,
+          "value": 360
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "frame": 1.0166666666666666,
+      "func": "playOut",
+      "params": []
+    }
+  ]
+}

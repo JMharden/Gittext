@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "fffa145a-4f84-40b1-8506-7ed130837caa",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "Weeds_07": {
+      "ver": "1.0.3",
+      "uuid": "7f17c3c4-7fae-423e-baf1-fc99a0f16c2b",
+      "rawTextureUuid": "fffa145a-4f84-40b1-8506-7ed130837caa",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 0,
+      "trimX": 2,
+      "trimY": 0,
+      "width": 56,
+      "height": 137,
+      "rawWidth": 59,
+      "rawHeight": 137,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
