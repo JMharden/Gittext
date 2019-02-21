@@ -19,14 +19,19 @@ class ApiController extends Controller {
  */
     public function login()
     {
-        // var_dump($_POST);exit;
+        session_start();
         //开发者使用登陆凭证 code 获取 session_key 和 openid
         $APPID = 'wx1234d2031a772642';//自己配置
         $AppSecret = '15a280992dba65df7986bed3b168ebef';//自己配置
         $code = $_POST['code'];
+        if($code == null ){
+           echo json_encode(['status'=>'-2','message'=>'code不能为空']);
+           exit;
+        }
         $signature = $_POST['signature'];
-        $rawData = $_POST['rawData'];
-        $iv =  $_POST['iv'];
+        $rawData   = $_POST['rawData'];
+        $iv        = $_POST['iv'];
+        $uid       = 163;
         $encryptedData = $_POST['encryptedData'];
         $url = "https://api.weixin.qq.com/sns/jscode2session?appid=" . $APPID . "&secret=" . $AppSecret . "&js_code=" . $code . "&grant_type=authorization_code";
         $arr = $this->vget($url);  // 一个使用curl实现的get方法请求
@@ -40,7 +45,7 @@ class ApiController extends Controller {
         
         // var_dump($signature2);exit;
         if ($signature != $signature2) {
-            echo json_encode(['code' => 500, 'msg' => '数据签名验证失败！']);
+            echo json_encode(['status'=>'0', 'msg' => '数据签名验证失败！']);exit;
         }
         Vendor("PHP.wxBizDataCrypt");  //加载解密文件，在官方有下载
         
@@ -48,7 +53,8 @@ class ApiController extends Controller {
         $pc = new \WXBizDataCrypt($APPID, $session_key);
         $errCode = $pc->decryptData($encryptedData, $iv, $data);  //其中$data包含用户的所有数据
         if ($errCode !== 0) {
-           echo json_encode(['code' => 400, 'msg' => '数据为空！']);
+           echo json_encode(['status'=>'-1','message'=>'数据为空']);
+           exit;
         }
           /**
              * 7.生成第三方3rd_session，用于第三方服务器和小程序之间做登录态校验。为了保证安全性，3rd_session应该满足：
@@ -61,100 +67,60 @@ class ApiController extends Controller {
         $user_info = json_decode($data,true);
         $rand = rand();
         $session3rd = md5($rand);
-        $data['session3rd'] = $session3rd;
+        $user_info['session3rd'] = $session3rd;
         $sessionkey = array($session_key,$openid);
         session($session3rd,$sessionkey);//存入session
-        // $_SESSION["$session3rd"] =  $sessionkey; 
-
+        // var_dump($user_info);exit;
 
         $user = M('user')->where(array('openid'=>$user_info['openId']))->find();
+    
         $time = date('Y-m-d H:i:s',time());
 
-        // if (is_array($user_info)) {
-        //     session('wechat_info.openid', $user_info['openId']);
-        //     // session('openid',$user_info['openId']);
-        // }
 
+        // var_dump($_SESSION);exit;
         // if (session('wechat_info.openid')) {
            
             if($user){//老用户
       
-                    
-                $update = M('user')->where(array('openid'=>$user_info['openId']))->save(array('last_login_time'=>$time));
-                session('user', $user);
-                //     // 判断是否更新成功
-                //     if($update){
-                //         echo json_encode(['status'=>'1','message'=>'登录成功']);
-                //     }else{
-                //         echo json_encode(['status'=>'0','message'=>'登录失败']);
-                //     }
-                // // }
+                $user_info['avatarUrl'] = $user['headimg'];
+                $user_info['money'] = $user['money2'];
+                $user_info['id'] = $user['id'];
+                $login_time = strtotime($user['last_login_time']);// 
+                $time = time() - $login_time;     
+                $times = $time / 3600; 
+
+                M('user')->where(array('openid'=>$user_info['openId']))->save(array('last_login_time'=>$time));
 
             }else{//新用户
 
-                $user_data['openid']    =  $user_info['openId'];
+                $user_data['openid']    = $user_info['openId'];
                 $user_data['nickname']  = $user_info['nickName'];
                 $user_data['headimg']   = $user_info['avatarUrl'];
                 $user_data['sub_time']  = time();
                 $user_data['join_time'] = $time;
                 $user_data['last_login_time'] = $time;
-                
+                // var_dump($user_info);exit;
                 //获取推荐关系
-                $abc_10 = M('relation')->where(array('openid' => $user_data['openid']))->find();
-                 // var_dump($abc_10);exit;
-                if ($abc_10) {
+                if($uid){
+                    $userid = M('user')->where(array('id'=>$uid))->getField('parent1');//推荐人的上级用户ID
+                    $user_data['parent1'] = $uid;
+                    $user_data['parent2'] = $userid;
+               
+                    M('relation')->add(array(
+                        'openid' => $user_data['openid'],
+                        'parent_id' => $uid,
+                        'create_time' => NOW_TIME
+                    ));
+                }
 
-                    $parent_user = M('user')->where(array('id' => $abc_10['parent_id']))->find();
-                    // var_dump($)
-                   
-                    if ($parent_user) {
-                        $user_data['parent1'] = $parent_user['id'];
-                        $user_data['parent2'] = $parent_user['parent1'];
-                        $user_data['parent3'] = $parent_user['parent2'];
-                        $user_data['parent4'] = $parent_user['parent3'];
-                        $user_data['parent5'] = $parent_user['parent4'];
-                        $user_data['parent6'] = $parent_user['parent5'];
-                        $user_data['parent7'] = $parent_user['parent6'];
-                        $user_data['parent8'] = $parent_user['parent7'];
-                        $user_data['parent9'] = $parent_user['parent8'];
-                    }
-                }
-                $user = M('user')->where(array('openid' => $user_data['openid']))->find();
-                if (empty($user)) {
-                        //检查备份
-                    $parent_info = M('user')->where(array('id' => $user_data['openid']))->find();
-                    if ($parent_info) {
-                        $relation = M('relation')->where(array('openid' => session('wechat_info.openid')))->find();
-                        if (!$relation) {
-                            M('relation')->add(array(
-                                'openid' => $user_data['openid'],
-                                'parent_id' => $parent_info['id'],
-                                'create_time' => NOW_TIME
-                            ));
-                                //推送有下级消息
-                            if ($parent_info['openid']) {
-                                //获取推荐关系
-                                if ($parent_info) {
-                                    $user_data['parent1'] = $parent_info['id'];
-                                    $user_data['parent2'] = $parent_info['parent1'];
-                                    $user_data['parent3'] = $parent_info['parent2'];
-                                    $user_data['parent4'] = $parent_info['parent3'];
-                                    $user_data['parent5'] = $parent_info['parent4'];
-                                    $user_data['parent6'] = $parent_info['parent5'];
-                                    $user_data['parent7'] = $parent_info['parent6'];
-                                    $user_data['parent8'] = $parent_info['parent7'];
-                                    $user_data['parent9'] = $parent_info['parent8'];
-                                }
-                            }
-                        }
-                    }
-                    $user_data['type'] = 2;
-                    $info = M('user')->add($user_data);
+                $user_data['type'] = 2;
+                $info = M('user')->add($user_data);
                         
-                }
-            // }
-        }
-        echo json_encode(['status'=>'1','message'=>'返回成功','data'=>$data]);
+            }
+            if ($user_info) {
+                session('user_info', $user_info);
+            }
+        echo  json_encode(['status'=>'1','message'=>'返回成功','data'=>$user_info]);
        
      
         
@@ -172,31 +138,15 @@ class ApiController extends Controller {
         curl_close($info);
         return $output;
     }
-   
-    /**
-    * 读取/dev/urandom获取随机数
-     * @param $len
-     * @return mixed|string
-     */
-    // public function randomFromDev($len) {
-    //     $fp = @fopen('/dev/urandom','rb');
-    //     $result = '';
-    //     if ($fp !== FALSE) {
-    //         $result .= @fread($fp, $len);
-    //         @fclose($fp);
-    //     }
-    //     else
-    //     {
-    //         trigger_error('Can not open /dev/urandom.');
-    //     }
-    //     // convert from binary to string
-    //     $result = base64_encode($result);
-    //     // remove none url chars
-    //     $result = strtr($result, '+/', '-_');
+    
+    // public function login(){
 
-    //     return substr($result, 0, $len);
     // }
 
+    public function slimeRule(){
+        session_start();
+        echo $_SESSION['user_info'];
+    }   
 
     public function index(){
         if(IS_POST){
