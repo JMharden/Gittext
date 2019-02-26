@@ -161,16 +161,112 @@ class ApiController extends Controller {
         }
        
     }
+     /**----------------  历史战绩部分start    ---------------------**/
+  public function record(){
+     $uid = 76;
 
 
-    public function slimeRule(){
-        $uid = $this->getUserId();
-        $play_num = M('play_log')->where(array('uid'=>$uid,'status'=>2))->count();
-        // if($play_num ){
+      $data=M('play_log')->where(array('user_id'=>$uid))->select();
+      $auname = M('user')->where(array('id'=>$uid))->getField('nickname');
+      $game_id = array_column($data,'game_id');
+      $a = count($game_id);
+      $result=array();
 
-        // }
-        var_dump($play_num);exit;
-    }   
+     foreach ($game_id as $key => $value) {
+        // var_dump($value);exit;
+       $play=array();
+        $data1 = M('play_log')->where(array('game_id'=>$value))->select();
+        $buname = M('user')->where(array('id'=>$data1[1]['user_id']))->getField('nickname');
+        // var_dump($buname);exit;
+        $play = array(
+            'auname' => $auname,
+            'buname' => $buname,
+            'result' => $data1[0]['result'],
+            'end_time' => $data1[0]['end_time']
+        );
+       
+        $result[] = $play;
+
+        // echo  json_encode($play);
+     }
+     $record = array_column($result, 'end_time'); 
+
+     array_multisort($record, SORT_ASC, $result); 
+
+      // var_dump($result);
+    // echo   json_encode(array('data'=>$result));
+        return array('record'=>$result);
+      // echo "str $result ;
+    
+  }
+  /**
+   * [userInfo description]
+   * @Author   佳民
+   * @DateTime 2019-02-22
+   * @Function [用户信息及历史战绩数据]
+   * @return   [type]     [description]
+   */
+  public function userInfo(){
+     $uid = 76; 
+     // $uid = $this->getUserId();
+     $userInfo = M('user')->where(array('id'=>$uid))->field('id,nickname,money2,headimg,integration')->find();
+     $scene = M('play_log')->where(array('user_id'=>$uid))->count();
+     $win =   M('play_log')->where(array('user_id'=>$uid,'result'=>'赢'))->count();
+     // var_dump($win);exit;
+     $probability =round($win/$scene*100,2)."%";
+
+     $grade = $this->grade($win);
+     $info = array(
+        'infos'=>array(
+            'id'    => $userInfo['id'] ,
+            'nickname' => $userInfo['nickname'],
+            'money2' => $userInfo['money2'],
+            'headimg' => $userInfo['headimg'],
+            'integration' => $userInfo['integration'],
+            'grdae' => $grade,
+            'probability' =>$probability,
+        ),
+     );
+     $record = $this->record();
+     $result = $info+$record;
+     echo json_encode($result);
+     // var_dump($results);
+  }
+
+
+ /**----------------  历史战绩部分end    ---------------------**/
+ /**
+  * [duan description]
+  * @Author   佳民
+  * @DateTime 2019-02-22
+  * @Function [评级判断]
+  * @param    [type]     $integrl [description]
+  * @return   [type]              [description]
+  */
+    public function grade($win){
+        if(0 <= $win&$win <= 5){
+            return '青铜';
+        }elseif (6 <= $win&$win <= 10){
+            return '白银';
+        }elseif (11 <= $win&$win <= 20){
+            return '黄金';
+        }elseif (21 <= $win&$win <= 30){
+            return '白金';
+        }elseif (31 <= $win&$win <= 40){
+            return '钻石';
+        }else{
+            return '大师';
+        }
+    }
+
+    // public function slimeRule(){
+    //     $uid = $this->getUserId();
+    //     $play_num = M('play_log')->where(array('uid'=>$uid,'status'=>2))->count();
+    //     // if($play_num ){
+
+    //     // }
+    //     var_dump($play_num);exit;
+    // }   
 
 
 
@@ -622,7 +718,7 @@ class ApiController extends Controller {
      * @return   [type]     [description]
      */
     public function  clubMembers(){
-      // $uid = $this->user['id'];
+    
         $uid = 76;
         $club_id = M('user')->where(array('id'=>$uid))->getField('club_id');
 
@@ -639,103 +735,7 @@ class ApiController extends Controller {
 
 
 
- /**----------------  历史战绩部分start    ---------------------**/
-  public function record(){
-     $uid = 76;
 
-
-      $data=M('play_log')->where(array('user_id'=>$uid))->select();
-      $auname = M('user')->where(array('id'=>$uid))->getField('nickname');
-      $game_id = array_column($data,'game_id');
-        $a = count($game_id);
-    $result=array();
-
-     foreach ($game_id as $key => $value) {
-        // var_dump($value);exit;
-       $play=array();
-        $data1 = M('play_log')->where(array('game_id'=>$value))->select();
-        $buname = M('user')->where(array('id'=>$data1[1]['user_id']))->getField('nickname');
-        // var_dump($buname);exit;
-        $play = array(
-            'auname' => $auname,
-            'buname' => $buname,
-            'result' => $data1[0]['result'],
-            'end_time' => $data1[0]['end_time']
-        );
-       
-        $result[] = $play;
-
-        // echo  json_encode($play);
-     }
-     $record = array_column($result, 'end_time'); 
-
-     array_multisort($record, SORT_ASC, $result); 
-
-      // var_dump($result);
-    // echo   json_encode(array('data'=>$result));
-        return array('record'=>$result);
-      // echo "str $result ;
-    
-  }
-  /**
-   * [userInfo description]
-   * @Author   佳民
-   * @DateTime 2019-02-22
-   * @Function [用户信息及历史战绩数据]
-   * @return   [type]     [description]
-   */
-  public function userInfo(){
-     $uid = 76; 
-     // $uid = $this->getUserId();
-     $userInfo = M('user')->where(array('id'=>$uid))->field('id,nickname,money2,headimg,integration')->find();
-     $scene = M('play_log')->where(array('user_id'=>$uid))->count();
-     $win =   M('play_log')->where(array('user_id'=>$uid,'result'=>'赢'))->count();
-     // var_dump($win);exit;
-     $probability =round($win/$scene*100,2)."%";
-
-     $grade = $this->grade($win);
-     $info = array(
-        'infos'=>array(
-            'id'    => $userInfo['id'] ,
-            'nickname' => $userInfo['nickname'],
-            'money2' => $userInfo['money2'],
-            'headimg' => $userInfo['headimg'],
-            'integration' => $userInfo['integration'],
-            'grdae' => $grade,
-            'probability' =>$probability,
-        ),
-     );
-     $record = $this->record();
-     $result = $info+$record;
-     echo json_encode($result);
-     // var_dump($results);
-  }
-
-
- /**----------------  历史战绩部分end    ---------------------**/
- /**
-  * [duan description]
-  * @Author   佳民
-  * @DateTime 2019-02-22
-  * @Function [评级判断]
-  * @param    [type]     $integrl [description]
-  * @return   [type]              [description]
-  */
-    public function grade($win){
-        if(0 <= $win&$win <= 5){
-            return '青铜';
-        }elseif (6 <= $win&$win <= 10){
-            return '白银';
-        }elseif (11 <= $win&$win <= 20){
-            return '黄金';
-        }elseif (21 <= $win&$win <= 30){
-            return '白金';
-        }elseif (31 <= $win&$win <= 40){
-            return '钻石';
-        }else{
-            return '大师';
-        }
-    }
  /**----------------  好友部分start    ---------------------**/
 
   /**
