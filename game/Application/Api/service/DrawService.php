@@ -50,7 +50,6 @@ class CommissionService
            throw new Exception("佣金余额不足");
        }
         $data=['user_id'=>$userId,
-        $data=['user_id'=>$userId,
                 'create_time'=>NOW_TIME,
                 'money'=>$amount,
                'type'=>1
