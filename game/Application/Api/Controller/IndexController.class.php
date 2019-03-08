@@ -71,7 +71,7 @@ class IndexController extends ApiController
         $start = $_GET['start'];
         $limit = $_GET['limit'];
         //根据gameid，type分类查询的可以后面做
-        $data=M('game_log')->where(array('auser_id'=>$uid))->limit($start,$limit)->select();
+        $data=M('game_detail_log')->where(array('auser_id'=>$uid))->limit($start,$limit)->select();
 
         echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
     }
@@ -257,7 +257,7 @@ class IndexController extends ApiController
                     'a_uname'  => $auname,
                    
                 );
-                 $addgamelog = M('game_log')->add($game);//添加游戏详细数据
+                 $addgamelog = M('game_detail_log')->add($game);//添加游戏详细数据
                 if($addlog && $addgamelog){
                   echo json_encode(array('status'=>1,'msg'=>'新增游戏记录成功'));
                 }
@@ -290,7 +290,7 @@ class IndexController extends ApiController
                   'game_id' => $_POST['game_id'],
                   'end_time' => $_POST['end_time'],
           );
-          $gamelog = M('game_log')->where(array('game_id'=>$_POST['game_id']))->save($games);
+          $gamelog = M('game_detail_log')->where(array('game_id'=>$_POST['game_id']))->save($games);
           // var_dump($gamelog);
           if($savelog && $gamelog){
 

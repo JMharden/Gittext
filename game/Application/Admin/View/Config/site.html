@@ -3,118 +3,34 @@
             <span class="pagedesc">设置游戏的基本信息</span>
         </div><!--pageheader-->
         <div id="contentwrapper" class="contentwrapper lineheight21">
-            <form class="stdform stdform2" method="post">          
+            <form class="stdform stdform2" method="post">
                 <p>
-					<label>利润比率 (此刻利润值为：<span style="color:#f65c20">{$lirun}</span>)<small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="lirun" id="lirun" value="{$_CFG.site.lirun}" class="smallinput" /></span>
+                    <label>对战金额<span style="color:#f65c20">{$battleAmount}</span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="battleAmount" id="battleAmount" value="{$_CFG.site.battleAmount}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>利润比率 (此刻利润值为：<span style="color:#f65c20">{$lirun}</span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="lirun" id="lirun" value="{$_CFG.site.lirun}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>抽成总比率不能大于等1</small></label>
+                </p>
+				<p>
+					<label>俱乐部抽成比例<small>比如：0.2表示20%</small></label>
+					<span class="field"><input type="text" name="clubRatio" id="clubRatio" value="{$_CFG.site.clubRatio}" class="smallinput" /></span>
 				</p>
 				<p>
-					<label>新盘前3000ID第一轮必中的金额<small>比如：2;5;10;2元5元10元</small></label>
-					<span class="field"><input type="text" name="bizhong" id="bizhong" value="{$_CFG.site.bizhong}" class="smallinput" /></span>
+					<label>第一级抽成比例 <small>比如：0.2表示20%</small></label>
+					<span class="field"><input type="text" name="firstRatio" id="firstRatio" value="{$_CFG.site.firstRatio}" class="smallinput" /></span>
 				</p>
-				<p>
-					<label>邀请每满N人以上就会必中奖一回 <small>比如：20人就必中一次</small></label>
-					<span class="field"><input type="text" name="meiman" id="meiman" value="{$_CFG.site.meiman}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>无规律必中一次，例如第4  第9 第14</label>
-					<span class="field"><input type="text" name="wuguili" id="wuguili" value="{$_CFG.site.wuguili}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>小盘1.9倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="xiao19" id="xiao19" value="{$_CFG.site.xiao19}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>小盘0.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="xiao01" id="xiao01" value="{$_CFG.site.xiao01}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>中盘0.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="zhong01" id="zhong01" value="{$_CFG.site.zhong01}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>中盘0.5倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="zhong05" id="zhong05" value="{$_CFG.site.zhong05}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>中盘2.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="zhong21" id="zhong21" value="{$_CFG.site.zhong21}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>中盘3.6倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="zhong36" id="zhong36" value="{$_CFG.site.zhong36}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.05倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da005" id="da005" value="{$_CFG.site.da005}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da01" id="da01" value="{$_CFG.site.da01}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.2倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da02" id="da02" value="{$_CFG.site.da02}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.3倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da03" id="da03" value="{$_CFG.site.da03}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.5倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da05" id="da05" value="{$_CFG.site.da05}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘1.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da11" id="da11" value="{$_CFG.site.da11}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘2倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da2" id="da2" value="{$_CFG.site.da2}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘3倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da3" id="da3" value="{$_CFG.site.da3}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘5倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da5" id="da5" value="{$_CFG.site.da5}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘6倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da6" id="da6" value="{$_CFG.site.da6}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘8倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da8" id="da8" value="{$_CFG.site.da8}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘10倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da10" id="da10" value="{$_CFG.site.da10}" class="smallinput" /></span>
-				</p>
-				<!-- 
-				<p>
-					<label>偷菜比率<small>比如：被偷后收益减少比率(%)</small></label>
-					<span class="field"><input type="text" name="tou" id="tou" value="{$_CFG.site.tou}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>抽抽乐价格<small>参与抽抽乐需要支付的积分</small></label>
-					<span class="field"><input type="text" name="chou" id="chou" value="{$_CFG.site.chou}" class="smallinput" /></span>
-				</p> 
-				<p>
-					<label>抽抽乐奖金<small>百分比（%）</small></label>
-					<span class="field"><input type="text" name="chou_reward" id="chou_reward" value="{$_CFG.site.chou_reward}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>抽抽乐推荐奖<small>百分比（%）</small></label>
-					<span class="field"><input type="text" name="chou_expense" id="chou_expense" value="{$_CFG.site.chou_expense}" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>抽抽乐规则说明<small></small></label>
-					<span class="field">
-						<textarea name="chou_body" id="chou_body" style=" height:300px;">{$_CFG.site.chou_body}</textarea>
-					</span>
-				</p> -->
+                <p>
+                    <label>第二级抽成比例 <small>比如：0.2表示20%</small></label>
+                    <span class="field"><input type="text" name="secondRatio" id="secondRatio" value="{$_CFG.site.secondRatio}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>第三级抽成比例 <small>比如：0.2表示20%</small></label>
+                    <span class="field"><input type="text" name="thirdRatio" id="thirdRatio" value="{$_CFG.site.thirdRatio}" class="smallinput" /></span>
+                </p>
 				<p class="stdformbutton">
 					<button class="submit radius2">提交</button>
 					<input type="reset" class="reset radius2" value="重置" />
