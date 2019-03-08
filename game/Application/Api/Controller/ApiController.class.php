@@ -4,7 +4,7 @@ use Think\Controller;
 
 
 class ApiController extends Controller {
-	    // 加载配置
+        // 加载配置
     protected function _load_config()
     {
         $_CFG = S('sys_config');
@@ -46,8 +46,8 @@ class ApiController extends Controller {
         // $APPID = 'wx1234d2031a772642';//自己配置
         // $AppSecret = '15a280992dba65df7986bed3b168ebef';//自己配置
         $this->_load_config();
-     	$APPID = $this->_mp['appid'];
-      	$AppSecret = $this->_mp['appsecret'];
+        $APPID = $this->_mp['appid'];
+        $AppSecret = $this->_mp['appsecret'];
         // var_dump($APPID);exit;
         $code = $_POST['code'];
         session('code',$code);
@@ -91,17 +91,18 @@ class ApiController extends Controller {
        
         $session3rd = $this->randomFromDev(16);
         
-    	$user_info['session3rd'] = $session3rd;
+        $user_info['session3rd'] = $session3rd;
 
         $user = M('user')->where(array('openid'=>$user_info['openId']))->find();
         $time = date('Y-m-d H:i:s',time());
         // if (session('wechat_info.openid')) {
            
             if($user){//老用户
-      
+                $user_info['club_id'] = (int)$user['club_id'];
                 $user_info['avatarUrl'] = $user['headimg'];
+                $user_info['active_point'] = (int)$user['active_point'];
                 $user_info['money'] = $user['money'];
-                $user_info['id'] = $user['id'];
+                $user_info['id'] = (int)$user['id'];
                 $loginNum = $user['all_login_time']+1;
                 M('user')->where(array('openid'=>$user_info['openId']))->save(array('last_login_time'=>$time,'all_login_time'=>$loginNum));
 
@@ -158,28 +159,28 @@ class ApiController extends Controller {
     }
 
     /**
-	 * 读取/dev/urandom获取随机数
-	 * @param $len
-	 * @return mixed|string
-	 */
-	public function randomFromDev($len) {
-	    $fp = @fopen('/dev/urandom','rb');
-	    $result = '';
-	    if ($fp !== FALSE) {
-	        $result .= @fread($fp, $len);
-	        @fclose($fp);
-	    }
-	    else
-	    {
-	        trigger_error('Can not open /dev/urandom.');
-	    }
-	    // convert from binary to string
-	    $result = base64_encode($result);
-	    // remove none url chars
-	    $result = strtr($result, '+/', '-_');
+     * 读取/dev/urandom获取随机数
+     * @param $len
+     * @return mixed|string
+     */
+    public function randomFromDev($len) {
+        $fp = @fopen('/dev/urandom','rb');
+        $result = '';
+        if ($fp !== FALSE) {
+            $result .= @fread($fp, $len);
+            @fclose($fp);
+        }
+        else
+        {
+            trigger_error('Can not open /dev/urandom.');
+        }
+        // convert from binary to string
+        $result = base64_encode($result);
+        // remove none url chars
+        $result = strtr($result, '+/', '-_');
 
-	    return substr($result, 0, $len);
-	}
+        return substr($result, 0, $len);
+    }
 
 
 
