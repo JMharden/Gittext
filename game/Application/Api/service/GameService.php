@@ -10,7 +10,6 @@ namespace Api\Service;
 
 
 use function Sodium\add;
-
 class GameService
 {
     /**
@@ -37,7 +36,7 @@ class GameService
         ];
         M('play_match_info')->add($data);
         //处理佣金相关逻辑
-        dealDraw($userInfos, $matchId);
+        CommissionService::dealDraw($userInfos, $matchId);
         return $matchId;
     }
 
@@ -84,90 +83,13 @@ class GameService
 
     }
 
-    /** 佣金计算
-     * @param $userInfos
-     * @param $matchId
-     * @param $ticketFee
-     */
-    function dealDraw($userInfos, $matchId, $ticketFee)
-    {
-        $clubFee = $GLOBALS['_CFG']['site']['clubRatio'] * $ticketFee;
-        $parent1Fee = $GLOBALS['_CFG']['site']['$firstRatio'] * $ticketFee;
-        $parent2Fee = $GLOBALS['_CFG']['site']['$secondRatio'] * $ticketFee;
-        $parent3Fee = $GLOBALS['_CFG']['site']['$thirdRatio'] * $ticketFee;
-        $systemFee = ($ticketFee - $parent1Fee - $parent2Fee - $parent3Fee - $clubFee) * sizeof($userInfos);
-        $time = time();
-        if (sizeof($userInfos) > 0) {
-            foreach ($userInfos as $userInfo) {
-                if ($userInfo['parent1']) {
-                    $data[] = ['user_id' => $userInfo['parent1'],
-                        'buyer_id' => $userInfo['id'],
-                        'money' => $ticketFee,
-                        'divided_money' => $parent1Fee,
-                        'level' => 1,
-                        'create_time' => $time,
-                        'type' => 1,
-                        'match_id' => $matchId,
-                        'status' => 0];
-                }
-                if ($userInfo['parent2']) {
-                    $data[] = ['user_id' => $userInfo['parent2'],
-                        'buyer_id' => $userInfo['id'],
-                        'money' => $ticketFee,
-                        'divided_money' => $parent2Fee,
-                        'level' => 2,
-                        'create_time' => $time,
-                        'type' => 1,
-                        'match_id' => $matchId,
-                        'status' => 0
-                    ];
-                }
-                if ($userInfo['parent3']) {
-                    $data[] = ['user_id' => $userInfo['parent3'],
-                        'buyer_id' => $userInfo['id'],
-                        'money' => $ticketFee,
-                        'divided_money' => $parent3Fee,
-                        'level' => 3,
-                        'create_time' => $time,
-                        'type' => 1,
-                        'match_id' => $matchId,
-                        'status' => 0];
-                }
-                if ($userInfo['club_id']) {
-                    //level=0表示俱乐部
-                    $ower_id = M('club_info')->where(array('id' => $userInfo['club_id']))->getField('ower_id');
-                    $data[] = ['user_id' => $ower_id,
-                        'buyer_id' => $userInfo['id'],
-                        'money' => $ticketFee,
-                        'divided_money' => $clubFee,
-                        'level' => 0,
-                        'create_time' => $time,
-                        'type' => 2,
-                        'match_id' => $matchId,
-                        'status' => 0];
-                }
-            }
-            //系统回收
-            $data[] = ['user_id' => 'system',
-                'buyer_id' => $userInfo['club_id'],
-                'money' => $ticketFee,
-                'divided_money' => $systemFee,
-                'level' => -1,
-                'create_time' => $time,
-                'match_id' => $matchId,
-                'type' => 2,
-                'status' => 1];
-            //除系统回收的佣金外默认都是待领取的，只有用户点击领取完才会更新了status 还有用户信息表里的总佣金expense字段 还有finance_log的收入支出明细，
-            M('expense')->addAll($data);
-        }
-
         /**处理门票相关逻辑
          * @param $playUser
          * @param $ticketFee
          * @param $battleAmount
          * @return mixed 返回用户的上级相关信息，用户后面计算分成
          */
- function dealTicketFee($playUser,$ticketFee,$battleAmount)
+        function dealTicketFee($playUser,$ticketFee,$battleAmount)
         {
             // 判断是否所有对战用户都满足条件（ 用户余额>门票费用+对战金额）
             $userInfos = M('user')->where(array('id' => array('IN', $playUser), 'money' => array('>=', $ticketFee + $battleAmount)))->getField('id,parent1,parent2,parent3,club_Id');;
@@ -217,5 +139,4 @@ class GameService
             }
             return $randomString;
         }
-    }
 }
