@@ -1,0 +1,10 @@
+
+/vendor/*
+/config/app.php
+
+.gitignore
+.idea/Gittext.iml
+.idea/misc.xml
+.idea/modules.xml
+game/.idea/
+game/Application/Runtime/*
