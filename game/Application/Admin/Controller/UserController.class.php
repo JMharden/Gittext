@@ -190,7 +190,55 @@ class UserController extends AdminController
 		$this -> success('删除成功！');
 	}
 
-	
+
+
+	   // 列表
+	public function agent_list()
+	{
+		
+
+		$this -> _list('agent_info');
+	}
+
+	public function add_agent(){
+		$user_id =  intval($_GET['id']);
+		if(IS_POST){
+			$data = array(
+				'user_id' => $user_id,
+				'tel'     => $_POST['tel'],
+				'remark'  => $_POST['remark'],
+				'discount'=> $_POST['discount'], 
+				'active'  => $_POST['active'],
+				'create_time'=>date('Y-m-d H:i:s',time()),
+			);
+			$result = M('agent_info')->add($data);
+			if($result){
+				M('user')->where(array('id'=>$user_id))->setField('is_agents',1);
+
+			}
+			$this -> success('设置成功', U('agent_list'));
+		}
+		$this->display();
+	}
+
+	public function edit_agent(){
+
+		$id = intval($_GET['id']);
+		$info = M('agent_info') -> find($id);
+		if(!$info){
+			$this -> error('操作错误');
+		}
+
+		$this -> _edit('agent_info',U('agent_list'));
+	}
+
+		// 删除商品
+	public function del_agent()
+	{
+		$this -> _del('agent_info', $_GET['id']);
+		$this -> success('删除成功！');
+	}
+
 
 	// 充值
 	public function charge()

@@ -8,17 +8,10 @@
             openid: <input type="text" name="openid" value="{$_GET['openid']}" class="smallinput" style="width:230px;"/>
             <br />
             余额排序: 
-            <select name="money_order" style="width: 120px; min-width: 120px;">
+            <select name="money" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
-                <option value="asc" <if condition="$_GET['money_order'] eq asc"> selected</if> >正序</option>
-                <option value="desc" <if condition="$_GET['money_order'] eq desc"> selected</if> >倒序</option>
-            </select>
-
-            盈亏: 
-            <select name="yingkui_order" style="width: 120px; min-width: 120px;">
-                <option value="">请选择</option>
-                <option value="asc" <if condition="$_GET['yingkui_order'] eq asc"> selected</if> >正序</option>
-                <option value="desc" <if condition="$_GET['yingkui_order'] eq desc"> selected</if> >倒序</option>
+                <option value="asc" <if condition="$_GET['money'] eq asc"> selected</if> >正序</option>
+                <option value="desc" <if condition="$_GET['money'] eq desc"> selected</if> >倒序</option>
             </select>
 
             <!-- 手数: 
@@ -28,26 +21,26 @@
                 <option value="desc" <if condition="$_GET['num_order'] eq desc"> selected</if> >倒序</option>
             </select> -->
 
-            提现金额: 
-            <select name="withdraw_order" style="width: 120px; min-width: 120px;">
+            积分: 
+            <select name="integration" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
-                <option value="asc" <if condition="$_GET['withdraw_order'] eq asc"> selected</if> >正序</option>
-                <option value="desc" <if condition="$_GET['withdraw_order'] eq desc"> selected</if> >倒序</option>
+                <option value="asc" <if condition="$_GET['integration'] eq asc"> selected</if> >正序</option>
+                <option value="desc" <if condition="$_GET['integration'] eq desc"> selected</if> >倒序</option>
             </select>
 
-            充值累计: 
-            <select name="count_money_order" style="width: 120px; min-width: 120px;">
+            活跃值: 
+            <select name="active_point" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
-                <option value="asc" <if condition="$_GET['count_money_order'] eq asc"> selected</if> >正序</option>
-                <option value="desc" <if condition="$_GET['count_money_order'] eq desc"> selected</if> >倒序</option>
+                <option value="asc" <if condition="$_GET['active_point'] eq asc"> selected</if> >正序</option>
+                <option value="desc" <if condition="$_GET['active_point'] eq desc"> selected</if> >倒序</option>
             </select>
 
-            佣金: 
+           <!--  佣金: 
             <select name="expense_order" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
                 <option value="asc" <if condition="$_GET['expense_order'] eq asc"> selected</if> >正序</option>
                 <option value="desc" <if condition="$_GET['expense_order'] eq desc"> selected</if> >倒序</option>
-            </select>
+            </select> -->
 
             <input type="submit" value="查找"/>
         </form>
@@ -61,16 +54,16 @@
                     <th class="head1">编号</th>
                     <!--th class="head0" style=" width:280px">OPENID</th-->
                     <th class="head0">昵称</th>
-                    <th class="head0">手机</th>
+                    <!-- <th class="head0">手机</th> -->
                     <th class="head0">注册日期</th>
                     <th class="head0">上级</th>
-                    <th class="head0">充值</th>
+                    <!-- <th class="head0">充值</th> -->
                     <th class="head0">余额</th>
-                    <th class="head0">盈亏</th>
-                    <th class="head0">下单金额</th>
-                    <th class="head0">黑名单</th>
-                    <th class="head0">累计佣金</th>
-                    <th class="head0">累计提现</th>
+                    <th class="head0">活跃值</th>
+                    <th class="head0">积分</th>
+                    <!-- <th class="head0">黑名单</th> -->
+                    <!-- <th class="head0">累计佣金</th> -->
+                    <!-- <th class="head0">累计提现</th> -->
                     <th class="head0">操作</th>
                 </tr>
             </thead>
@@ -82,23 +75,23 @@
                     <td>{$vo.id}</td>                        
                     <!--td>{$vo.openid}</td-->
                     <td>{$vo.nickname}</td>
-                    <td>{$vo.login_name}</td>
+                    <!-- <td>{$vo.login_name}</td> -->
                     <td>{$vo.sub_time|date="Y-m-d H:i",###}</td>
                     <td>{$vo.parent1} > {$vo.parent2} > {$vo.parent3}</td>
-                    <td>{$vo.count_money}</td>
-                    <td><a href="{:U('Finance/logs?type=money&user_id='.$vo['id'])}"> {$vo.money} </a></td>
-                    <td><a href=""> <?php echo $vo['yingmoney']-$vo['xiazhu'];?> </a></td>
-                    <td> {$vo.xiazhu}</td>
-                    <td>
+                    <!-- <td>{$vo.count_money}</td> -->
+                    <td>{$vo.money}</td>
+                    <td>{$vo.integration}</td>
+                    <td>{$vo.active_point}</td>
+                    <!-- <td>
                         <if condition="$vo['is_tong'] eq 1">是</if>
                         <if condition="$vo['is_tong'] eq 0">否</if>
-                    </td>
-                    <td><a href="{:U('Finance/expense?user_id='.$vo['id'])}"> {$vo.expense} </a></td>
-                    <td><a href="{:U('Finance/withdraw?user_id='.$vo['id'])}"> {$vo.withdraw} </a></td>
+                    </td> -->
+                    <!-- <td><a href="{:U('Finance/expense?user_id='.$vo['id'])}"> {$vo.expense} </a></td> -->
+                    <!-- <td><a href="{:U('Finance/withdraw?user_id='.$vo['id'])}"> {$vo.withdraw} </a></td> -->
                     <td class="center">
-                        <a href="{:U('product/buy', 'uid='.$vo['id'])}">购买记录</a> | 
+                        <a href="{:U('product/buy', 'uid='.$vo['id'])}">历史战绩</a> | 
                         <a href="{:U('finance/payorder', 'userid='.$vo['id'])}">充值记录</a> | 
-                        <!-- <a href="{:U('charge', 'id='.$vo['id'])}">充值</a> | --> 
+                        <a href="{:U('add_agent', 'id='.$vo['id'])}">设为代理商</a> | 
                         <a href="{:U('edit', 'id='.$vo['id'])}">修改</a> | 
                         <a href="{:U('del', 'id='.$vo['id'])}" onclick="return confirm('你确实要删除这个会员吗？')">删除</a>
                     </td>
@@ -106,10 +99,10 @@
             </volist>
             </tbody>
         </table>
-        <div style="margin:30px;">
+        <!-- <div style="margin:30px;">
             <input value="拉黑会员" type="submit" name="tongdao">&nbsp; &nbsp;&nbsp; 
             <input value="取消黑名单" type="submit" name="tongdao">&nbsp; &nbsp;&nbsp;            
-        </div>
+        </div> -->
     </form>
     <div class="dataTables_paginate paging_full_numbers" id="dyntable2_paginate"> {$page|default="<p
                 style='text-align:center'>暂时没有数据</p>"}

@@ -1,0 +1,72 @@
+<div class="pageheader notab"><h1 class="pagetitle">代理商管理</h1></div><!--pageheader-->
+<div id="contentwrapper" class="contentwrapper lineheight21">
+
+
+    <form action="" method="post">
+        <table cellpadding="0" cellspacing="0" border="0" id="table2" class="stdtable stdtablecb">
+            <thead>
+                <tr>
+                    <th class="head1"><input type="checkbox" class="check_all"></th>
+                    <th class="head1">编号</th>
+                    <th class="head0">用户名</th>
+                   
+                    <th class="head0">手机号</th>
+                    
+                    <th class="head0">折扣</th>
+                   
+                    <th class="head0">备注</th>
+                  
+                    <th class="head0">是否有效</th>
+                    <th class="head0">创建时间</th>
+           
+                    <th class="head0">操作</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            <volist name="list" id="vo">
+                <tr>
+                    <td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
+                    <td>{$vo.id}</td>                        
+                    <td>{$vo.user_id}</td>
+                    <td>{$vo.tel}</td>
+                    <td>{$vo.discount}</td>
+                     <td>{$vo.remark}</td>
+                  
+                   
+                    
+                    <td>
+                        <if condition="$vo['active'] eq 1">是</if>
+                        <if condition="$vo['active'] eq 0">否</if>
+                    </td>
+                    <td>{$vo.create_time}</td>
+                   
+                    <td class="center">
+                        <a href="{:U('product/buy', 'uid='.$vo['id'])}">充值</a> | 
+                        <a href="{:U('finance/payorder', 'userid='.$vo['id'])}">充值记录</a> | 
+                        <a href="{:U('edit_agent', 'id='.$vo['id'])}">修改</a> | 
+                        <a href="{:U('del_agent', 'id='.$vo['id'])}" onclick="return confirm('你确实要删除这个代理吗？')">删除</a>
+                    </td>
+                </tr>
+            </volist>
+            </tbody>
+        </table>
+        <!-- <div style="margin:30px;">
+            <input value="拉黑会员" type="submit" name="tongdao">&nbsp; &nbsp;&nbsp; 
+            <input value="取消黑名单" type="submit" name="tongdao">&nbsp; &nbsp;&nbsp;            
+        </div> -->
+    </form>
+    <div class="dataTables_paginate paging_full_numbers" id="dyntable2_paginate"> {$page|default="<p
+                style='text-align:center'>暂时没有数据</p>"}
+    </div>
+</div><!--contentwrapper-->
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">        
+$(function () {
+    $(".check_all").click(function () {
+        var checked = $(this).get(0).checked;
+        $("input[type=checkbox]").attr("checked", checked);
+    });
+});       
+</script>
