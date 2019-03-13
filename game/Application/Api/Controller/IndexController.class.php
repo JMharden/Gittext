@@ -38,7 +38,7 @@ class IndexController extends ApiController
     //             'id'       => $user['id'] ,
     //             'openid'    =>$user['openid'],
     //             'club_id'    =>$user['club_id'],
-    //             'club_role'    =>$user['club_role '],
+                // 'club_role'    =>$user['club_role '],
     //             'nickname' => $user['nickname'],
     //             'money'   => $user['money'],
     //             'headimg'  => $user['headimg'],
@@ -66,7 +66,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-02-26
      * @Function [历史战绩]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function record(){
       
@@ -85,7 +85,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-02-26
      * @Function [用户信息]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function userInfo(){
       
@@ -152,7 +152,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-01-22
      * @Function [单人游戏]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
     */
     public function singleGame(){
         // $uid =S($_POST['token'])[2];
@@ -208,7 +208,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-01-27
      * @Function [1VS1竞技]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function multiGame(){
       // $uid =S($_POST['token'])[2];
@@ -313,7 +313,7 @@ class IndexController extends ApiController
    * @Author   佳民
    * @DateTime 2019-01-22
    * @Function [挑战书详情]
-   * @return   [type]     [description]
+   * @return   [JSON]     [description]
    */
   public function challengeInfo(){
         $challenge = M('challenge_info')->where(array('id'=>$_POST['cid']))->find();
@@ -342,7 +342,7 @@ class IndexController extends ApiController
    * @Author   佳民
    * @DateTime 2019-01-23
    * @Function [发起挑战]
-   * @return   [type]     [description]
+   * @return   [JSON]     [description]
    */
   public function challenge(){
        $uid =S($_POST['token'])[2];
@@ -367,19 +367,19 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-02-13
      * @Function [创建俱乐部]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function createClub(){
        // $uid =S($_POST['token'])[2];
        $uid = 183;
        $subordinate  =  M('user')->where(array('parent1'=>$uid))->count();   //下级人数
-       $userInfo =  M('user')->where(array('id'=>$uid))->getField('active_point,nickname,money'); //活跃点
-       $username     =  M('user')->where(array('id'=>$uid))->getField('nickname');    
-       // var_dump($userInfo);exit;
-       echo json_encode($userInfo['money']);
+       $userInfo    =  M('user')->where(array('id'=>$uid))->field('nickname,money,active_point')->find();    
+       // echo json_encode($userInfo['money']);
        if(IS_POST){
           if($subordinate < 1 || $userInfo['active_point'] <100){
               echo json_encode(array('status'=>-1,'msg'=>'对不起,暂无资格创建俱乐部'));
+          }elseif($userInfo['money'] < 5000){
+              echo json_encode(array('status'=>-2,'msg'=>'余额不足，请先充值'));
           }else{
               $data = array(
                   'ower_id'     => $uid,
@@ -402,8 +402,8 @@ class IndexController extends ApiController
               }else{
                 $result = M('club_info')->add($data);
                 if($result){
-                  $club = M('club_info')->where(array('club_name'=>$_POST['club_name']))->find();
-                  M('user')->where(array('id'=>$uid))->save($data);
+                  // $club = M('club_info')->where(array('club_name'=>$_POST['club_name']))->find();
+                  M('user')->where(array('id'=>$uid))->setDec('money',$data['create_fee']);
                   echo json_encode(array('status'=>1,'msg'=>'创建俱乐部成功'));exit;
                 }
               } 
@@ -415,7 +415,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-01-23
      * @Function [推荐俱乐部]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function clubs(){
         // if(IS_POST){
@@ -423,12 +423,7 @@ class IndexController extends ApiController
       
           $club_name = $_POST['club_name'];
           $aWhere['club_name'] = array('like','%'.$club_name.'%');
-          // if($club_name == null ){
-            // $club = M('club_info')->field('id,club_name,club_head,ower_name,create_number')->select();
-          // }else{
-            $club = M('club_info')->field('id,club_name,club_head,ower_name,create_number')->where($aWhere)->select();
-          // }
-          
+          $club = M('club_info')->field('id,club_name,club_head,ower_name,create_number')->where($aWhere)->select();
           $data = array_column($club, 'id');
           foreach($data as $k=>$v){
             $id=$v['id'];
@@ -450,13 +445,13 @@ class IndexController extends ApiController
     //图片上传
     public function upload(){
       if(IS_POST){
-      $upload = new \Think\Upload();// 实例化上传类
-      $upload->maxSize  =   3145728 ;// 设置附件上传大小
-      $upload->exts   =   array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-      $upload->rootPath =   './Uploads/'; // 设置附件上传根目录
-      // $upload->savePath =   ''; // 设置附件上传（子）目录
-      // 上传文件 
-      $info  =  $upload->upload();
+        $upload = new \Think\Upload();// 实例化上传类
+        $upload->maxSize  =   3145728 ;// 设置附件上传大小
+        $upload->exts   =   array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+        $upload->rootPath =   './Uploads/'; // 设置附件上传根目录
+        // $upload->savePath =   ''; // 设置附件上传（子）目录
+        // 上传文件 
+        $info  =  $upload->upload();
         if(!$info) {// 上传错误提示错误信息
           $this->error($upload->getError());
         }else{// 上传成功 获取上传文件信息
@@ -469,13 +464,14 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-03-04
      * @Function [俱乐部详情]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function clubInfo(){
       // var_dump(S('clubinfo_5'));exit;
        // $uid =S($_POST['token'])[2];
        // $club_id = S('user_info_'.$uid)[2];
-       $club_id = $_POST['club_id'];
+       $club_id = 5;
+       $uid = 182;
        if(IS_POST){
           if(S('clubinfo_'.$club_id)){
             // echo "213";exit;
@@ -485,11 +481,16 @@ class IndexController extends ApiController
               $usernum  = M('user')->where(array('club_id'=>$club_id))->count();
               $active_point  = M('user')->where(array('club_id'=>$club_id))->sum('active_point');
               $userInfo =  M('user')->where(array('id'=>$clubInfo['ower_id']))->field('club_role,headimg')->find();
-              // var_dump($userInfo);exit;
+              if($uid == $clubInfo['ower_id']){
+                $club_role = 1;
+              }else{
+                $club_role = 2;
+              }
               $info = array(
+                'club_id'   => $clubInfo['club_id'], //俱乐部ID
                 'club_name' => $clubInfo['club_name'],//俱乐部名称
                 'club_head' => $clubInfo['club_head'],//俱乐部图标
-                'club_role' => $userInfo['club_role'],   //俱乐部身份
+                'club_role' => $club_role,   //俱乐部身份
                 'headimg' => $userInfo['headimg'],//创建人头像
                 'declaration' => $clubInfo['declaration'],//宣言
                 'area' => $clubInfo['area'],//地区
@@ -501,17 +502,93 @@ class IndexController extends ApiController
               );
 
           }
+          S('clubInfo_'.$club_id,$info,18000);
+          echo json_encode(array('status'=>1,'msg'=>'俱乐部信息返回成功','data'=>$info));exit;
+       }else{
+          echo json_encode(array('status'=>-1,'msg'=>'系统错误'));
        } 
-        S('clubInfo_'.$club_id,$info,18000);
-        echo json_encode(array('status'=>1,'msg'=>'俱乐部信息返回成功','data'=>$info));
-    }
 
+    }
+    /**
+     * [clubMembers description]
+     * @Author   佳民
+     * @DateTime 2019-01-25
+     * @Function [俱乐部成员列表]
+     * @return   [JSON]     [description]
+     */
+    public function  clubMembers(){
+      // $club_id = S('user_info_'.$uid)[2];
+      if(IS_POST){
+        $club_id = 5;
+        if(S('clubMembers_'.$club_id)){
+          // var_dump(S('clubMembers_'.$club_id));exit;
+          echo json_encode(S('clubMembers_'.$club_id));
+        }else{
+          $members = M('user')->where(array('club_id'=>5))->field('id,nickname,club_role,headimg,active_point,win_amount,last_login_time')->select();
+          $data = array_column($members, 'id');
+          foreach($data as $k=>$v){
+            $id=$v['id'];
+            $members[$k]['grade'] = $this->grade($members[$k]['win_amount']); //段位
+            $members[$k]['level']  = $this->level($members[$k]['active_point']);
+            // $user=M("user")->where(array("club_id"=>$id))->count();
+            // $active=M("user")->where(array("club_id"=>$id))->sum('active_point');
+            // $members[$k]['active']=$active;
+            
+          }
+          S('clubMembers_'.$club_id,$members);
+          echo json_encode($members);
+        }
+      
+        
+      }  
+        
+    }
+    public function clubSet(){
+      $club_id = $_POST['club_id'];
+      if(IS_POST){
+        $result = M('club_info')->where(array('id'=>$club_id))->save($_POST);
+        if($result){
+          S('clubInfo_'.$club_id,null);
+          echo json_encode(array('status'=>1,'msg'=>'编辑成功'));
+        }else{
+          echo json_encode(array('status'=>-1,'msg'=>'编辑失败'));
+        }
+      }
+    }
+    /**
+     * [clubSet description]
+     * @Author   佳民
+     * @DateTime 2019-03-12
+     * @Function [俱乐部成员操作]
+     * @return   [JSON]     [description]
+     */
+    public function memberSet(){
+
+      if(IS_POST){
+        if($_POST['type'] == 1){ //将成踢出俱乐部
+           $result = M('user')->where(array('id'=>$_POST['uid']))->setField('club_id',0);
+           if($result){
+            S('user_info_'.$uid,null);
+            echo json_encode(array('status'=>1,'msg'=>'操作成功'));
+           }
+        }elseif($_POST['type'] == 2){ //转让部长
+          $nickname = M('user')->where(array('id'=>$_POST['uid']))->getField('nickname');
+          $result = M('club_info')->where(array('id'=>$_POST['club_id']))->setField(array('ower_id',$_POST['uid']),array('ower_name',$nickname));
+          if($result){
+            S('clubInfo_'.$club_id,null);
+            echo json_encode(array('status'=>1,'msg'=>'操作成功'));
+           }
+        }else{
+          echo json_encode(array('status'=>-1,'msg'=>'系统错误'));
+        }
+      }
+    }
     /**
      * [fingClub description]
      * @Author   佳民
      * @DateTime 2019-02-13
      * @Function [查找俱乐部]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     // public function findClub(){
     //     // if(IS_POST){
@@ -541,27 +618,33 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-02-13
      * @Function [加入俱乐部]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function joinClub(){
         $uid = 183;
+        $club_id =$_POST['club_id'];
+        if($club_id == null ){
+          return false;
+        }
         if(IS_POST){
-          $number = M('club_info')->where(array('id'=>$_POST['club_id']))->getField('create_number');
-          $club_num = M('user')->where(array('club_id'=>$_POST['club_id']))->count();
-          if($number == $club_num){
+          $user = M('user')->where(array('id'=>$uid))->field('club_id,nickname')->find();
+          $club = M('club_info')->where(array('id'=>$club_id))->field('create_number,club_name')->find();
+          $club_num = M('user')->where(array('club_id'=>$club_id))->count();
+          if($club['create_number'] == $club_num){
             echo json_encode(['status'=>-1,'msg'=>'人数已达上限']);exit;
 
           }else{
 
-            $club_id = M('user')->where(array('id'=>$uid))->getField('club_id');
-            if($club_id != null || $club_id != 0){
+            if($user['club_id'] != 0){
               echo json_encode(['status'=>-2,'msg'=>'你当前已有俱乐部']);exit;
             }else{
               $data = array(
                 'user_id' => $uid,
-                'club_id' => $_POST['club_id'],
+                'club_id' => $club_id,
                 'status'  => 1,
                 'type'    => 1,
+                'remark' => 玩家.$user['nickname'].申请加入.$club['club_name'].是否同意？,
+               
               );
               $result = M('club_infomation')->add($data);
               if($result){
@@ -577,7 +660,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-03-06
      * @Function [俱乐部记录]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function clubRecords(){
       $infomation=M('club_infomation')->alias('c')
@@ -589,31 +672,44 @@ class IndexController extends ApiController
       echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$infomation]);
       
     }
-    /**
-     * [clubMembers description]
-     * @Author   佳民
-     * @DateTime 2019-01-25
-     * @Function [俱乐部成员列表]
-     * @return   [type]     [description]
-     */
-    public function  clubMembers(){
-      // $uid =S($_POST['token'])[2];
-        $uid = 182;
-        $club_id = M('user')->where(array('id'=>$uid))->getField('club_id');
 
-        $clubMember = M('user')->where(array('club_id'=>$club_id))->select();
-        // $number = M('user')->where(array('club_id'=>$club_id))->count();
-        // array_push($clubMember, $number);
-        
-        echo json_encode($clubMember);
-       
-    }
 
 
   /**----------------  俱乐部部分end    ---------------------**/
 
+// public function active($uid){
+
+// }
+ /**
+  * [duan description]
+  * @Author   佳民
+  * @DateTime 2019-02-22
+  * @Function [段位判断]
+  * @param    [type]      [description]
+  * @return   [type]      [description]
+  */
+    public function level($active){
+        if(0 <= $active&$active <= 50){
+            return '青铜';
+        }elseif (51 <= $active&$active <= 200){
+            return '白银';
+        }elseif (201 <= $active&$active <= 400){
+            return '黄金';
+        }elseif (401 <= $active&$active <= 600){
+            return '铂金';
+        }elseif (601 <= $active&$active <= 800){
+            return '钻石';
+        }elseif (801 <= $active&$active <= 1000){
+            return '大师';
+        }else{
+            return '王者';
+        }
+    }
 
 
+    /**
+     * 
+     */
  
 
  /**
@@ -689,7 +785,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-01-16
      * @Function [申请列表]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function applyList(){
         $uid =S($_POST['token'])[2];
@@ -707,7 +803,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-01-16
      * @Function [同意好友申请]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
 
     public function agree(){
@@ -735,7 +831,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-01-14
      * @Function [查询领取记录]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
      public function receive(){
       $uid =S($_POST['token'])[2];
@@ -760,7 +856,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-01-14
      * @Function [今日签到记录判断]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function signYn($uid){
        $dateStr = date('Y-m-d', time());
@@ -776,7 +872,7 @@ class IndexController extends ApiController
      * @Author   佳民
      * @DateTime 2019-01-14
      * @Function [签到,领取积分]
-     * @return   [type]     [description]
+     * @return   [JSON]     [description]
      */
     public function signs(){
    
