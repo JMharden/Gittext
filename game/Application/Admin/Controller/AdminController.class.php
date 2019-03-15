@@ -71,7 +71,13 @@ class AdminController extends Controller
      * 俱乐部长周交易记录
      */
 	public function dayReport(){
+		$today = strtotime(date('Y-m-d'));
+        $today_end = $today + 86400 -1;
 
+        $data['user_count'] 	= M('user')->where(['sub_time' => [['egt', $today], ['elt', $today_end], 'and']])->count();//今日新增用户
+        $data['user_count_all'] = M('user')->count();//总用户
+        $data['game_count_all']     = M('play_match_info')->where(['status'=>1])->count();//游戏总场次
+        $data['game_count'] M('user')->where(['create_time' => [['egt', $today], ['elt', $today_end], 'and']，'status'=>1])->count();//今日游戏总场次
 
     }
 	// 后台首界面
