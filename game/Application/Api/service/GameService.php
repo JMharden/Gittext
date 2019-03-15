@@ -77,11 +77,56 @@ class GameService
             );
             // var_dump($datas);exit;
             M('play_log')->addAll($datas);
-
+            //rank分计算
+            //todo  若用户升级段位了前端需要提示 ，此操作最好从缓存中取值判断，不要在查一遍sql
+            M('user')->where(array('id' => $uid))->setInc('rank', dealRank($gameLog['type'],$uid,$winnerId,$v->sorce));
         }
         return $result;
 
     }
+
+    /**处理游戏rank分
+     * +20 -15        初级场
+     * +30 -15  （额外+10） 中级场
+     * +35 -15  （额外+15） 高级场
+     * $score  若评分很高 则有额外加分 （暂定若评分为S  则额外+5分）
+     * @param $gameType
+     * @param $result
+     */
+        function dealRank($gameType,$userId,$winnerId,$score){
+            $plu =0;
+            if($score =='S'){
+                $plu= 5;
+            }
+            //如果输 直接扣掉15分
+            if($userId!=$winnerId){
+                return -15+$plu;
+            } else if($gameType==1){
+                        return 20+$plu;
+            } else if($gameType==2){
+                return 25+$plu;
+            } else if($gameType==3){
+                return 30+$plu;
+            }
+        }
+
+    /**rank分转换为段位
+     *
+     * 1240 下 青铜三  1240 - 1280 青铜2   1280 -1320 青铜1  -》青铜      +40分一个段位          （所有青铜）
+     * 1320 - 1380 白银3   1380-1440 白银2  1440-1500 白银1 ——》白银（匹配用）  +60分一个段位  （所有白银为一个段位区间）
+     * 1500-1560  黄金5   1560-1620 黄金4  1620- 1680   黄金3   1680-1740 黄金2  1740-1800黄金1 ——》黄金   +60分一个段位  （黄金5到黄金3 为一个段位区间用于匹配）
+     * （1800-1860  V  1860-1920 iV   1920-1980 iiV ）-》铂金2    1980-2040  2040-2100 铂金1   +60分一个段位
+     *  (2100- 2200  220-2300  2300-2400 )->钻石2    （2400-2500  2500-2600）  =》钻石1   +100分一个段位
+     *  大师  +100分一个段位
+     * 王者
+     *
+     * @param $rank
+     *
+     */
+        function getDuan($rank){
+
+
+        }
 
     /**
      * @param $gameType 1:初级场 ，2 ：中级场  3 ：高级场 （不同类型对应的门票费用不同）
