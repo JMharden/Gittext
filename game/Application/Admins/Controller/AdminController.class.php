@@ -10,11 +10,11 @@ class AdminController extends Controller
     public function _initialize()
     {
 
-		// 权限判断，Index控制器的不需要登录，其他的必须登录后才可以浏览
-		if (CONTROLLER_NAME != 'Index' && !session('?admin')) {
-			$this -> error('请登陆后操作!', U('Index/login'));
-			exit;
-		}
+		// // 权限判断，Index控制器的不需要登录，其他的必须登录后才可以浏览
+		// if (CONTROLLER_NAME != 'Index' && !session('?wap123')) {
+		// 	$this -> error('请登陆后操作!', U('Index/login'));
+		// 	exit;
+		// }
 
 		
 		// _开头的函数为内部函数，不能直接访问
@@ -37,7 +37,7 @@ class AdminController extends Controller
 				$_CFG[$v['name']] = unserialize($v['value']);
 			}
 
-			unset($config);			
+			unset($config);		  	
 			S('sys_config',$_CFG);
 		}
 
@@ -61,9 +61,9 @@ class AdminController extends Controller
 		$this -> success('操作成功');
 	}
 
-    //报表
+	    //报表
     /**
-     * 用户相关： 新增用户，总用户，留存，平均在线时长
+     *用户相关： 新增用户，总用户，留存，平均在线时长
      * 对局相关：总对局场次，今日对局场次，比赛平均时长 ，初级场总场次，中级场总场次，高级场总场次
      * 提成相关：总门票收入，提成收入，俱乐部提成收入，上级提成收入
      * 金币相关：总金币 ，玩家留存金币， 代理商留存金币  ，总门票收入 ，玩家总充值金额
@@ -81,39 +81,14 @@ class AdminController extends Controller
         $data['game_count_first'] = M('play_match_info')->where(['type'=>1,'status'=>1])->count();//初级场总场次
         $data['game_count_middle'] = M('play_match_info')->where(['type'=>2,'status'=>1])->count();//中级场总场次
         $data['game_count_high'] = M('play_match_info')->where(['type'=>3,'status'=>1])->count();//高级场总场次
-        $data['game_aver_time']  = $this->time();//游戏平均时长
-		$this -> assign($data);
-		$this -> display();
-
-    }
-    public function time(){
-        $time=M('play_match_info')->alias('a')
-                ->join("dd_play_log i on a.game_id=i.game_id") //附表连主表
-                ->field("i.start_time,i.end_time")
-                ->where(array('i.status'=>1))//需要显示的字段
-                ->select();
-		$times = count($time);
-		$diff = 0;
-
-        foreach ($time as $key => $value) {
-
-        	$time[$key]['start_time'] = strtotime($time[$key]['start_time']);
-        	$time[$key]['end_time'] = strtotime($time[$key]['end_time']);
-        	$time['diff'] =$time[$key]['end_time']-$time[$key]['start_time'];
-			$diff+=$time['diff'];
-        }
-        $a = $diff/$times;
-        $minute = floor($a%86400/60);
-        $second = floor($a%86400%60);
-        return $minute.'分'.$times.'秒';
-   
+        var_dump($data);
     }
 	// 后台首界面
 	public function welcome()
 	{
 	    $today = strtotime(date('Y-m-d'));
         $today_end = $today + 86400 -1;
-
+// var_dump($today_end);exit;
 
         // 名称块
         $data['user_count'] 	= M('user')->where(['sub_time' => [['egt', $today], ['elt', $today_end], 'and']])->count();

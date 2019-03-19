@@ -49,7 +49,7 @@
 					<li class="header">开心大转盘</li>
 
 					<li>
-						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
+						<a href="/kpan.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
 					</li>
 
 					<li class="treeview" onclick="index(0)">

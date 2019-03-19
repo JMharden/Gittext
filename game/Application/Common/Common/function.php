@@ -1035,7 +1035,7 @@ function flog($user_id,$type,$money,$action,$remark = null){
 		'create_time' => $time,
 
 
-		'remark' => $remark
+		'remark' => $remak
 
 
 	));

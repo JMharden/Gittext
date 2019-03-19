@@ -1,0 +1,234 @@
+
+<div id="contentwrapper" class="contentwrapper lineheight21">
+  
+  <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+    <thead>
+      <tr>
+        <th class="head1"  colspan="2">*用户相关</th>
+        <!-- <th class="head1">内容</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>今日新增用户统计</td>
+        <td>{$user_count}个</td>
+      </tr>
+      <tr>
+        <td>用户总数</td>
+        <td>{$user_count_all}个</td>
+      </tr>
+      <tr>
+        <td>用户留存</td>
+        <td>{$user_count}个</td>
+      </tr>
+      <tr>
+        <td>平均在线时长</td>
+        <td>{$user_count}个</td>
+      </tr>
+<!--       <tr>
+        <td>今日充值</td>
+        <td>{$pay_total}元</td>
+      </tr>
+      <tr>
+        <td>充值总数</td>
+        <td>{$pay_total_all}元</td>
+      </tr>
+      <tr>
+        <td>今日提现</td>
+        <td>{$out_total}元</td>
+      </tr>
+      <tr>
+        <td>提现总数</td>
+        <td>{$out_total_all}元</td>
+      </tr> -->
+    </tbody>
+  </table>
+  <div class="contentwrapper lineheight21"></div>
+
+  <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+    <thead>
+      <tr>
+        <th class="head1" colspan="2">* 对局相关</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>总对局场次</td>
+        <td>{$user_in}</td>
+      </tr>
+      <tr>
+        <td>今日对局场次</td>
+        <td>{$today_in}</td>
+      </tr>
+      <tr>
+        <td>比赛平均时长</td>
+        <td>{$xiadan}</td>
+      </tr>
+      <tr>
+        <td>总对局场次</td>
+        <td>初级场总场次:{$ying} 中级场总场次:{$today_win_ext} 高级场总场次:{$today_win_ext}合计:{$ying + $today_win_ext}</td>
+      </tr>
+<!--       <tr>
+        <td>今日支出</td>
+        <td>{$today_out}</td>
+      </tr>
+      <tr>
+        <td>今日净利润</td>
+        <td>{$today_in-$today_out}</td>
+      </tr>
+      <tr>
+        <td>利润率</td>
+        <td>
+          <php>echo sprintf("%.2f",(($xiadan - $ying - $today_win_ext)/$xiadan)) * 100</php>%</td>
+      </tr> -->
+    </tbody>
+  </table>
+  <div class="contentwrapper lineheight21"></div>
+
+  <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+    <thead>
+      <tr>
+        <th class="head1" colspan="2">* 提成相关  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>总门票收入</td>
+        <td>{$zuo_in}</td>
+      </tr>
+      <tr>
+        <td>提成收入</td>
+        <td>{$zuo_xiadan}</td>
+      </tr>
+      <tr>
+        <td>俱乐部提成收入</td>
+        <td>中奖:{$zuo_ying} 佣金:{$zuo_win_ext} 合计:{$zuo_ying + $zuo_win_ext}</td>
+      </tr>
+      <tr>
+        <td>上级提成收入</td>
+        <td>{$zuo_out}</td>
+      </tr>
+<!--          <tr>
+          <td>昨日净利润</td>
+          <td>{$zuo_xiadan - $zuo_ying - $zuo_win_ext}</td>
+        </tr>
+        <tr>
+          <td>利润率</td>
+          <td>
+            <php>echo sprintf("%.2f",(($zuo_xiadan - $zuo_ying - $zuo_win_ext)/$zuo_xiadan)) * 100</php>%</td>
+        </tr> -->
+    </tbody>
+  </table>
+
+  <div class="contentwrapper lineheight21"></div>
+
+  <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+    <thead>
+      <tr>
+        <th class="head1" colspan="2">* 金币相关  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>总金币</td>
+        <td>{$qian_in}</td>
+      </tr>
+      <tr>
+        <td>玩家留存金币</td>
+        <td>{$qian_xiadan}</td>
+      </tr>
+      <tr>
+        <td>代理商留存金币</td>
+        <td>中奖:{$qian_ying} 佣金:{$qian_win_ext} 合计:{$qian_ying + $qian_win_ext}</td>
+      </tr>
+      <tr>
+        <td>总门票收入</td>
+        <td>{$qian_out}</td>
+        <tr>
+          <td>玩家总充值金额</td>
+          <td>{$qian_xiadan - $qian_ying - $qian_win_ext}</td>
+        </tr>
+       </tr>
+        <!-- <tr>
+          <td>利润率</td>
+          <td>
+            <php>echo sprintf("%.2f",(($qian_xiadan - $qian_ying - $qian_win_ext)/$qian_xiadan)) * 100</php>%</td>
+        </tr> -->
+    </tbody>
+  </table>
+
+  <!-- <div class="contentwrapper lineheight21"></div>
+  <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+    <thead>
+      <tr>
+        <th class="head1" colspan="2">本月盈亏</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>本月收入</td>
+        <td>{$month_in}</td>
+      </tr>
+      <tr>
+        <td>用户下单金额</td>
+  
+        <td>{$yue_xiadan}</td>
+      </tr>
+  
+      <tr>
+        <td>用户总收益</td>
+        <td>中奖:{$yue_ying} 佣金:{$month_win_ext} 合计:{$yue_ying + $month_win_ext}</td>
+      </tr>
+      <tr>
+        <td>本月支出</td>
+        <td>{$month_out}</td>
+      </tr>
+      <tr>
+        <td>本月净利润</td>
+        <td>{$yue_xiadan- $yue_ying - $month_win_ext} </td>
+      </tr>
+      <tr>
+        <td>利润率</td>
+        <td>
+          <php>echo sprintf("%.2f",($yue_xiadan- $yue_ying - $month_win_ext)/$yue_xiadan) * 100</php>%</td>
+      </tr>
+    </tbody>
+  </table> -->
+
+  <div class="contentwrapper lineheight21"></div>
+<!--   <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+    <thead>
+      <tr>
+        <th class="head1" colspan="2">总盈亏</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>总收入</td>
+        <td>{$all_in}</td>
+      </tr>
+      <td>用户下单金额</td>
+
+      <td>{$all_xiadan}</td>
+      </tr>
+      <tr>
+        <td>用户总收益</td>
+        <td>中奖:{$all_ying} 佣金:{$all_win_ext} 合计:{$all_ying + $all_win_ext}</td>
+      </tr>
+      <tr>
+        <td>总支出</td>
+        <td>{$all_out}</td>
+      </tr>
+      <tr>
+        <td>净利润</td>
+        <td>{$all_in - $all_ying - $all_win_ext} </td>
+      </tr>
+      <tr>
+        <td>利润率</td>
+        <td>
+          <php>echo sprintf("%.2f",($all_in - $all_ying - $all_win_ext)/$all_in) * 100</php>%</td>
+      </tr>
+    </tbody>
+  </table> -->
+</div>
+<!--contentwrapper

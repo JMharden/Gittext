@@ -49,7 +49,7 @@
 					<li class="header">开心大转盘</li>
 
 					<li>
-						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
+						<a href="/kpan.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
 					</li>
 
 					<li class="treeview" onclick="index(0)">
@@ -61,9 +61,6 @@
 						<ul class="treeview-menu" style="display: none;">
 							<li>
 								<a href="/kpan.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
 							</li>
 							<!-- <li><a href="/index.php?m=Admin&c=Config&a=pay_mp"><i class="fa fa-circle-o"></i>支付公众号</a></li> -->
 					</li>
@@ -137,6 +134,9 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
+								<a href="/kpan.php?m=Admin&c=User&a=agent_list"><i class="fa fa-circle-o"></i> 代理商管理</a>
+							</li>
+							<li>
 								<a href="/kpan.php?m=Admin&c=User&a=index"><i class="fa fa-circle-o"></i> 会员管理</a>
 							</li>
 							<li>
@@ -191,7 +191,7 @@
 						<a href="/kpan.php?m=Admin&c=Admin&a=clear_cache"><i class="fa fa-recycle text-yellow"></i> <span>[清除缓存]</span></a>
 					</li>
 					<li>
-						<a href="/index.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
+						<a href="/kpan.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
 					</li>
 				</ul>
 			</section>

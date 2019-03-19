@@ -49,7 +49,7 @@
 					<li class="header">开心大转盘</li>
 
 					<li>
-						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
+						<a href="/kpan.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
 					</li>
 
 					<li class="treeview" onclick="index(0)">
@@ -61,9 +61,6 @@
 						<ul class="treeview-menu" style="display: none;">
 							<li>
 								<a href="/kpan.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
 							</li>
 							<!-- <li><a href="/index.php?m=Admin&c=Config&a=pay_mp"><i class="fa fa-circle-o"></i>支付公众号</a></li> -->
 					</li>
@@ -137,6 +134,9 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
+								<a href="/kpan.php?m=Admin&c=User&a=agent_list"><i class="fa fa-circle-o"></i> 代理商管理</a>
+							</li>
+							<li>
 								<a href="/kpan.php?m=Admin&c=User&a=index"><i class="fa fa-circle-o"></i> 会员管理</a>
 							</li>
 							<li>
@@ -191,7 +191,7 @@
 						<a href="/kpan.php?m=Admin&c=Admin&a=clear_cache"><i class="fa fa-recycle text-yellow"></i> <span>[清除缓存]</span></a>
 					</li>
 					<li>
-						<a href="/index.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
+						<a href="/kpan.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
 					</li>
 				</ul>
 			</section>
@@ -272,17 +272,10 @@
             openid: <input type="text" name="openid" value="<?php echo ($_GET['openid']); ?>" class="smallinput" style="width:230px;"/>
             <br />
             余额排序: 
-            <select name="money_order" style="width: 120px; min-width: 120px;">
+            <select name="money" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
-                <option value="asc" <?php if($_GET['money_order'] == asc): ?>selected<?php endif; ?> >正序</option>
-                <option value="desc" <?php if($_GET['money_order'] == desc): ?>selected<?php endif; ?> >倒序</option>
-            </select>
-
-            盈亏: 
-            <select name="yingkui_order" style="width: 120px; min-width: 120px;">
-                <option value="">请选择</option>
-                <option value="asc" <?php if($_GET['yingkui_order'] == asc): ?>selected<?php endif; ?> >正序</option>
-                <option value="desc" <?php if($_GET['yingkui_order'] == desc): ?>selected<?php endif; ?> >倒序</option>
+                <option value="asc" <?php if($_GET['money'] == asc): ?>selected<?php endif; ?> >正序</option>
+                <option value="desc" <?php if($_GET['money'] == desc): ?>selected<?php endif; ?> >倒序</option>
             </select>
 
             <!-- 手数: 
@@ -292,26 +285,26 @@
                 <option value="desc" <?php if($_GET['num_order'] == desc): ?>selected<?php endif; ?> >倒序</option>
             </select> -->
 
-            提现金额: 
-            <select name="withdraw_order" style="width: 120px; min-width: 120px;">
+            积分: 
+            <select name="integration" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
-                <option value="asc" <?php if($_GET['withdraw_order'] == asc): ?>selected<?php endif; ?> >正序</option>
-                <option value="desc" <?php if($_GET['withdraw_order'] == desc): ?>selected<?php endif; ?> >倒序</option>
+                <option value="asc" <?php if($_GET['integration'] == asc): ?>selected<?php endif; ?> >正序</option>
+                <option value="desc" <?php if($_GET['integration'] == desc): ?>selected<?php endif; ?> >倒序</option>
             </select>
 
-            充值累计: 
-            <select name="count_money_order" style="width: 120px; min-width: 120px;">
+            活跃值: 
+            <select name="active_point" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
-                <option value="asc" <?php if($_GET['count_money_order'] == asc): ?>selected<?php endif; ?> >正序</option>
-                <option value="desc" <?php if($_GET['count_money_order'] == desc): ?>selected<?php endif; ?> >倒序</option>
+                <option value="asc" <?php if($_GET['active_point'] == asc): ?>selected<?php endif; ?> >正序</option>
+                <option value="desc" <?php if($_GET['active_point'] == desc): ?>selected<?php endif; ?> >倒序</option>
             </select>
 
-            佣金: 
+           <!--  佣金: 
             <select name="expense_order" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
                 <option value="asc" <?php if($_GET['expense_order'] == asc): ?>selected<?php endif; ?> >正序</option>
                 <option value="desc" <?php if($_GET['expense_order'] == desc): ?>selected<?php endif; ?> >倒序</option>
-            </select>
+            </select> -->
 
             <input type="submit" value="查找"/>
         </form>
@@ -325,16 +318,16 @@
                     <th class="head1">编号</th>
                     <!--th class="head0" style=" width:280px">OPENID</th-->
                     <th class="head0">昵称</th>
-                    <th class="head0">手机</th>
+                    <!-- <th class="head0">手机</th> -->
                     <th class="head0">注册日期</th>
                     <th class="head0">上级</th>
-                    <th class="head0">充值</th>
+                    <!-- <th class="head0">充值</th> -->
                     <th class="head0">余额</th>
-                    <th class="head0">盈亏</th>
-                    <th class="head0">下单金额</th>
-                    <th class="head0">黑名单</th>
-                    <th class="head0">累计佣金</th>
-                    <th class="head0">累计提现</th>
+                    <th class="head0">活跃值</th>
+                    <th class="head0">积分</th>
+                    <!-- <th class="head0">黑名单</th> -->
+                    <!-- <th class="head0">累计佣金</th> -->
+                    <!-- <th class="head0">累计提现</th> -->
                     <th class="head0">操作</th>
                 </tr>
             </thead>
@@ -345,33 +338,33 @@
                     <td><?php echo ($vo["id"]); ?></td>                        
                     <!--td><?php echo ($vo["openid"]); ?></td-->
                     <td><?php echo ($vo["nickname"]); ?></td>
-                    <td><?php echo ($vo["login_name"]); ?></td>
+                    <!-- <td><?php echo ($vo["login_name"]); ?></td> -->
                     <td><?php echo (date("Y-m-d H:i",$vo["sub_time"])); ?></td>
                     <td><?php echo ($vo["parent1"]); ?> > <?php echo ($vo["parent2"]); ?> > <?php echo ($vo["parent3"]); ?></td>
-                    <td><?php echo ($vo["count_money"]); ?></td>
-                    <td><a href="<?php echo U('Finance/logs?type=money&user_id='.$vo['id']);?>"> <?php echo ($vo["money"]); ?> </a></td>
-                    <td><a href=""> <?php echo $vo['yingmoney']-$vo['xiazhu'];?> </a></td>
-                    <td> <?php echo ($vo["xiazhu"]); ?></td>
-                    <td>
+                    <!-- <td><?php echo ($vo["count_money"]); ?></td> -->
+                    <td><?php echo ($vo["money"]); ?></td>
+                    <td><?php echo ($vo["integration"]); ?></td>
+                    <td><?php echo ($vo["active_point"]); ?></td>
+                    <!-- <td>
                         <?php if($vo['is_tong'] == 1): ?>是<?php endif; ?>
                         <?php if($vo['is_tong'] == 0): ?>否<?php endif; ?>
-                    </td>
-                    <td><a href="<?php echo U('Finance/expense?user_id='.$vo['id']);?>"> <?php echo ($vo["expense"]); ?> </a></td>
-                    <td><a href="<?php echo U('Finance/withdraw?user_id='.$vo['id']);?>"> <?php echo ($vo["withdraw"]); ?> </a></td>
+                    </td> -->
+                    <!-- <td><a href="<?php echo U('Finance/expense?user_id='.$vo['id']);?>"> <?php echo ($vo["expense"]); ?> </a></td> -->
+                    <!-- <td><a href="<?php echo U('Finance/withdraw?user_id='.$vo['id']);?>"> <?php echo ($vo["withdraw"]); ?> </a></td> -->
                     <td class="center">
-                        <a href="<?php echo U('product/buy', 'uid='.$vo['id']);?>">购买记录</a> | 
+                        <a href="<?php echo U('product/buy', 'uid='.$vo['id']);?>">历史战绩</a> | 
                         <a href="<?php echo U('finance/payorder', 'userid='.$vo['id']);?>">充值记录</a> | 
-                        <!-- <a href="<?php echo U('charge', 'id='.$vo['id']);?>">充值</a> | --> 
+                        <a href="<?php echo U('add_agent', 'id='.$vo['id']);?>">设为代理商</a> | 
                         <a href="<?php echo U('edit', 'id='.$vo['id']);?>">修改</a> | 
                         <a href="<?php echo U('del', 'id='.$vo['id']);?>" onclick="return confirm('你确实要删除这个会员吗？')">删除</a>
                     </td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>
-        <div style="margin:30px;">
+        <!-- <div style="margin:30px;">
             <input value="拉黑会员" type="submit" name="tongdao">&nbsp; &nbsp;&nbsp; 
             <input value="取消黑名单" type="submit" name="tongdao">&nbsp; &nbsp;&nbsp;            
-        </div>
+        </div> -->
     </form>
     <div class="dataTables_paginate paging_full_numbers" id="dyntable2_paginate"> <?php echo ((isset($page) && ($page !== ""))?($page):"<p
                 style='text-align:center'>暂时没有数据</p>"); ?>
