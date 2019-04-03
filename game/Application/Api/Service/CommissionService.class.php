@@ -43,9 +43,10 @@ class CommissionService
     /**
      * @param $userId
      * @param $amount 提现金额
+     * @throws Exception
      */
     function  withDraw($userId,$amount){
-        $userInfos = M('user')->where(array('id' => array('IN', $userId), 'expense_avail' => array('>=',$amount)))->getField('id,expense_avail');
+        $userInfos = M('user')->where(array('id' => array('IN', $userId), 'expense_avail' => array('EGT',$amount)))->getField('id,expense_avail');
        if(!$userInfos){
            throw new Exception("佣金余额不足");
        }
@@ -72,9 +73,9 @@ class CommissionService
     function dealDraw($userInfos, $matchId, $ticketFee)
     {
         $clubFee = $GLOBALS['_CFG']['site']['clubRatio'] * $ticketFee;
-        $parent1Fee = $GLOBALS['_CFG']['site']['$firstRatio'] * $ticketFee;
-        $parent2Fee = $GLOBALS['_CFG']['site']['$secondRatio'] * $ticketFee;
-        $parent3Fee = $GLOBALS['_CFG']['site']['$thirdRatio'] * $ticketFee;
+        $parent1Fee = $GLOBALS['_CFG']['site']['firstRatio'] * $ticketFee;
+        $parent2Fee = $GLOBALS['_CFG']['site']['secondRatio'] * $ticketFee;
+        $parent3Fee = $GLOBALS['_CFG']['site']['thirdRatio'] * $ticketFee;
         $systemFee = ($ticketFee - $parent1Fee - $parent2Fee - $parent3Fee - $clubFee) * sizeof($userInfos);
         $time = time();
         if (sizeof($userInfos) > 0) {
@@ -134,8 +135,8 @@ class CommissionService
                 'divided_money' => $systemFee,
                 'level' => -1,
                 'create_time' => $time,
-                'match_id' => $matchId,
                 'type' => 2,
+                'match_id' => $matchId,
                 'status' => 1];
             //除系统回收的佣金外默认都是待领取的，只有用户点击领取完才会更新了status 还有用户信息表里的总佣金expense字段 还有finance_log的收入支出明细，
             M('expense')->addAll($data);

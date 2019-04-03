@@ -3,7 +3,7 @@
 /config/app.php
 
 .gitignore
-.idea/Gittext.iml
+.idea/*
 .idea/misc.xml
 .idea/modules.xml
 game/.idea/
