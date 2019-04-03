@@ -1,0 +1,2 @@
+#恢复体力定时脚本
+*/30 * * * * curl 'http://47.102.145.210/kpan.php?m=Admin&c=TimedTask&a=recovery'

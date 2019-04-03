@@ -1,0 +1,2 @@
+#每日初始化
+0 0 * * * curl 'http://47.102.145.210/kpan.php?m=Admin&c=TimedTask&a=init'
