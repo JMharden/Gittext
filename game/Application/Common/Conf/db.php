@@ -7,7 +7,7 @@ return array(
 
 	'DB_TYPE'               =>  'mysql',     // 数据库类型
 
-	'DB_HOST'               =>  '47.102.99.34', // 服务器地址
+	'DB_HOST'               =>  '47.102.145.210', // 服务器地址
 
 	'DB_NAME'               =>  'test',       // 数据库名
 
