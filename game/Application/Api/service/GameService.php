@@ -124,7 +124,64 @@ class GameService
      *
      */
         function getDuan($rank){
-
+            if(0 <= $rank&$rank <=1320){
+                // if(0 <= $rank&$rank <=1240){
+                //     return '青铜III';
+                // }elseif (1241 <= $rank&$rank <= 1280){
+                //     return '青铜II';
+                // }else{
+                //     return '青铜I';
+                // }
+                return '青铜'；
+               
+            }elseif (1321 <= $rank&$rank <= 1500){
+                // if(1321 <= $rank&$rank <=1380){
+                //     return '白银III';
+                // }elseif (1381 <= $rank&$rank <= 1440){
+                //     return '白银II';
+                // }else{
+                //     return '白银I';
+                // }
+                return '白银';
+            }elseif (1501 <= $rank&$rank <= 1800){
+                if(1501 <= $rank&$rank  <= 1680){
+                    return '黄金III';
+                }elseif (1681 <= $rank&$rank <= 1740){
+                    return '黄金II';
+                }else{
+                    return '黄金I';
+                }
+                // if(1501 <= $rank&$rank <=1560 || 1561 <= $rank&$rank <= 1620 || 1621 <= $rank&$rank <= 1680){
+                //     return '黄金V';
+                // }elseif (1561 <= $rank&$rank <= 1620){
+                //     return '黄金IV';
+                // }elseif (1621 <= $rank&$rank <= 1680){
+                //     return '黄金III';
+                // }elseif (1681 <= $rank&$rank <= 1740){
+                //     return '黄金II';
+                // }else{
+                //     return '黄金I';
+                // }
+             
+            }elseif (1801 <= $rank&$rank <= 1980){
+                if(1801 <= $rank&$rank <= 1980){
+                    return '铂金II';
+                }else{
+                    return '铂金I';
+                }
+                
+            }elseif (2101 <= $rank&$rank <= 2600){
+                if(2101 <= $rank&$rank <= 2400){
+                    return '钻石II';
+                }else{
+                    return '钻石I';
+                }
+               
+            }elseif (2601 <= $rank&$rank <= 2800){
+                return '大师';
+            }else{
+                return '王者';
+            }
 
         }
 
