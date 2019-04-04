@@ -15,6 +15,23 @@ class
 GameService
 {
     /**
+     *
+     */
+    public function recovery($userId)
+    {
+        //要不要针对频率进行限制?
+        if(S("recovery_task_".$userId)){
+            echo "limit exec per 5min";
+            exit;
+        }
+        //体力上限为50
+        M('user')->where(array('stamina' => array('LT', 50),'id' => $userId))->setInc('stamina', 1);
+        S("recovery_task_".$userId,"task",["expire"=>300]);
+        echo "success";
+        exit;
+    }
+
+    /**
      * 创建对局
      * @param $playUser
      * @param $gameType

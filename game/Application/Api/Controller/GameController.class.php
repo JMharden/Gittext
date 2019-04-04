@@ -23,7 +23,14 @@ class GameController extends ApiController
 
    }
 
+    public function recovery(){
 
+            $userId =  $_GET['userId'];
+            $gameService =  new GameService();
+            $data = $gameService->recovery($userId);
+            echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
+
+    }
     public function createMatch(){
        try{
            $gameType =  $_GET['gameType'];
