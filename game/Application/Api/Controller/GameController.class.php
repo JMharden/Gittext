@@ -15,7 +15,7 @@ class GameController extends ApiController
        $rand = $_GET['rand'];
        if($rand&&S('request_rand_'.$rand)){
            echo   json_encode(['status' => '-2', 'msg' => '重复提交']);
-        //   exit;
+          exit;
        }
        if($rand){
            S('request_rand_'.$rand,$rand,300);

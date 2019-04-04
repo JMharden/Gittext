@@ -17,27 +17,41 @@ class CommissionService
      * 待领取佣金
      * @return  按用户分组聚合
      */
-    function   UnclaimedRecord($userId){
-        if($userId){
+    function unclaimedRecord($userId)
+    {
+        if ($userId) {
+            $cache = S("unclaimed" . $userId);
+            if ($cache) {
+                return $cache;
+            }
             //可以通过判断是否有返回记录确定用户是否有待领取的
-            return   $record = M('expense')->where(array("user_id"=>$userId,"status"=>0))->field("user_id,buyer_id,sum(divided_money) as total")->group('buyer_id')->select(); ;
+            $record = M('expense')->where(array("user_id" => $userId, "status" => 0))->field("user_id,buyer_id,sum(divided_money) as total")->group('buyer_id')->select();
+            S("unclaimed" . $userId, $record, 300);
+            return $record;
         }
-         return null;
+        return null;
     }
 
     /**
      * 佣金领取操作 （将所有待领取佣金都领取了）
+     * @param $userId
+     * @return mixed
+     * @throws Exception
      */
-    function  receive ($userId){
-        $record = M('expense')->where(array("user_id"=>$userId,"status"=>0))->field("user_id,sum(divided_money) as total")->select();
-        if($record||$record['total']==0){
-             throw new Exception("你没有待领取的佣金");
+    function receive($userId)
+    {
+        if ($userId) {
+            $record = M('expense')->where(array("user_id" => $userId, "status" => 0))->field("user_id,sum(divided_money) as total")->find();
+            if (!$record || $record['total'] == 0) {
+                throw new Exception("你没有待领取的佣金");
+            }
+            M('expense')->where(array("user_id" => $userId, "status" => 0))->save(array('status' => 1, 'modify_time' => NOW_TIME));
+            //更新用户总佣金
+            M('user')->where(array('id' => array('IN', $userId)))->setInc('expense', $record['total']);//->setInc('active_point', 10)->setInc('match_amount', 1);
+            S("unclaimed" . $userId, []);
+            return $record;
         }
-        M('expense')->where(array("user_id"=>$userId,"status"=>0))->save(array('status'=>1,'modify_time'=>NOW_TIME));
-        //更新用户总佣金
-        M('user')->where(array('id' => array('IN', $userId)))->setInc('expense', $record['total'])->setInc('active_point',10)->setInc('match_amount',1);
-
-        return $record;
+        return null;
     }
 
     /**
@@ -45,22 +59,22 @@ class CommissionService
      * @param $amount 提现金额
      * @throws Exception
      */
-    function  withDraw($userId,$amount){
-        $userInfos = M('user')->where(array('id' => array('IN', $userId), 'expense_avail' => array('EGT',$amount)))->getField('id,expense_avail');
-       if(!$userInfos){
-           throw new Exception("佣金余额不足");
-       }
-        $data=['user_id'=>$userId,
-                'create_time'=>NOW_TIME,
-                'money'=>$amount,
-               'type'=>1
-            ];
+    function withDraw($userId, $amount)
+    {
+        $userInfos = M('user')->where(array('id' => array('IN', $userId), 'expense_avail' => array('EGT', $amount)))->getField('id,expense_avail');
+        if (!$userInfos) {
+            throw new Exception("佣金余额不足");
+        }
+        $data = ['user_id' => $userId,
+            'create_time' => NOW_TIME,
+            'money' => $amount,
+            'type' => 1
+        ];
         //佣金提现记录
         M('expense_withdraw')->add($data);
         //todo 提现方式待定:是已现金直接发放还是说 兑换到money
-
         //更新佣金信息
-        M('user')->where(array('id' => $userId))->setInc('expense_withdraw', $amount)->setDec('expense_avail',$amount);
+        M('user')->where(array('id' => $userId))->setInc('expense_withdraw', $amount)->setDec('expense_avail', $amount);
 
     }
 
@@ -81,6 +95,7 @@ class CommissionService
         if (sizeof($userInfos) > 0) {
             foreach ($userInfos as $userInfo) {
                 if ($userInfo['parent1']) {
+                    S("unclaimed" . $userInfo['parent1'], null);
                     $data[] = ['user_id' => $userInfo['parent1'],
                         'buyer_id' => $userInfo['id'],
                         'money' => $ticketFee,
@@ -92,6 +107,7 @@ class CommissionService
                         'status' => 0];
                 }
                 if ($userInfo['parent2']) {
+                    S("unclaimed" . $userInfo['parent2'], null);
                     $data[] = ['user_id' => $userInfo['parent2'],
                         'buyer_id' => $userInfo['id'],
                         'money' => $ticketFee,
@@ -104,6 +120,7 @@ class CommissionService
                     ];
                 }
                 if ($userInfo['parent3']) {
+                    S("unclaimed" . $userInfo['parent3'], null);
                     $data[] = ['user_id' => $userInfo['parent3'],
                         'buyer_id' => $userInfo['id'],
                         'money' => $ticketFee,
@@ -117,6 +134,7 @@ class CommissionService
                 if ($userInfo['club_id']) {
                     //level=0表示俱乐部
                     $ower_id = M('club_info')->where(array('id' => $userInfo['club_id']))->getField('ower_id');
+                    S("unclaimed" . $ower_id, null);
                     $data[] = ['user_id' => $ower_id,
                         'buyer_id' => $userInfo['id'],
                         'money' => $ticketFee,

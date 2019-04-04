@@ -150,7 +150,7 @@ GameService
                 // }else{
                 //     return '青铜I';
                 // }
-                return '青铜'；
+                return '青铜';
                
             }elseif (1321 <= $rank&$rank <= 1500){
                 // if(1321 <= $rank&$rank <=1380){
