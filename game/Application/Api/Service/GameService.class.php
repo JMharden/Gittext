@@ -84,20 +84,22 @@ GameService
         //    throw new Exception('该对局已结算', 1001);
         }
         M('play_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
-        $winBonus = $gameLog['battle_amount'] * $gameLog['player_num'];
+        $playNum = $gameLog['player_num'];
+      //  $winBonus = $gameLog['battle_amount'] * $gameLog['player_num'];
+        $bonusRatio  =$this -> dealBonus($playNum, $gameLog['battle_amount']);
+        $rankData =$this -> dealRankByNum($playNum);
         //游戏结算
-        $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
-        $Model->execute("update dd_user set money=money-".$winBonus.", win_amount=win_amount+1 where id = ".$winner);
-        //记录收入支出
-        flog($winner, 2, $winBonus, "游戏奖励");
         //记录游戏数据 (个人数据 放单独字段，玩家所有对局记录存 data里)
         foreach ($resultJson as $v) {
             $uid = $v['userId'];
+            //个人排名
+            $rank = $v['rank'];
             $datas[] = array(
                 'user_id' => $uid,
                 'game_id' => 0,
                 'result' => $result,
                 'score' => $v['score'],
+                'rank' => $v['rank'],
                 'start_time' => $gameLog['create_time'],
                 'end_time' => NOW_TIME,//游戏开始时间
                 'challenge_id'=> '',
@@ -107,42 +109,137 @@ GameService
                 'winner_id' => $winnerId,
                 'match_id'=>$matchId
             );
-            //rank分计算
-            //todo  若用户升级段位了前端需要提示 ，此操作最好从缓存中取值判断，不要在查一遍sql
-            $rank =$this ->dealRank($gameLog['type'],$uid,$winnerId,$v['score']);
-            M('user')->where(array('id' => $uid))->setInc('rank',$rank );
+            //判断当前排名是否有奖励
+            $bonus =0;
+            if($rank<=count($bonusRatio)){
+                $bonus= $bonusRatio[$rank];
+                $finLogs[] = array(
+                    'user_id' => $uid,
+                    'type' => 2,
+                    'money' =>$bonus,
+                    'action' => '游戏对局',
+                    'create_time' => NOW_TIME,
+                    'remark' => $v['rank']
+                );
+                //排名第一增加胜局数
+                if($rank==1){
+                    M('user')->where(array('id' => $uid))->setInc('win_amount',1 );
+                }
+                M('user')->where(array('id' => $uid))->setInc('money',$bonus );
+            }
+            //rank分计 算
+            $ranks =$this ->dealRank($gameLog['type'],$v['score'],$rank,$rankData);
+            M('user')->where(array('id' => $uid))->setInc('rank',$ranks );
+            $res[]=array(
+                'user_id' => $uid,
+                'winner' => $winner,
+                'score'=>$v['score'],
+                'rank'=>$rank,//排名
+                'ranks'=>$ranks,//排位分计算
+                'bonus'=>$bonus
+            );
         }
+
+        M('finance_log')->addAll($finLogs);
         M('play_log')->addAll($datas);
-        return $result;
+        return $res;
 
     }
 
+    /**
+     * 奖金分配
+     * 1-3个人   一个人获奖   第一名获奖 1*n
+     * 4-8个人  两个人获奖   第一名: 3+(n-4)*0.5    第二名：1+(n-4)*0.5
+     * 9-14个人 三个人获奖   第一名: 5+(n-9)*0.3    第二名：3+(n-9)*0.3  第三名：1+(n-9)*0.4   （四舍五入取整）
+     * 15-20个人 四个人获奖   第一名: 6.5+(n-15)*0.25   第二名：4.5+(n-15)*0.25  第三名：3+(n-15)*0.25   第三名：1+(n-15)*0.25
+     *
+     * @param $playerNum 玩家数量
+     * @param $battleAmount  对战金额
+     * @return array
+     */
+    function dealBonus($playerNum,$battleAmount){
+        $first=0;
+        $second =0;
+        $third =0;
+        $fourth =0;
+        if($playerNum<4){
+            $first =$playerNum*$battleAmount;
+        }else if ($playerNum<9){
+            $first = (($playerNum-4)*0.5 +3)*$battleAmount;
+            $second = (($playerNum-4)*0.5 +1)*$battleAmount;
+        }else if ($playerNum<15){
+            $first = round((($playerNum-9)*0.3 +5)*$battleAmount,1);
+            $second =  round(($playerNum-9)*0.3 +3*$battleAmount,1);
+            $third = $playerNum*$battleAmount-$first-$second;
+        }else{
+            $first =  round(($playerNum-15)*0.25 +6.5*$battleAmount,1);
+            $second = round(($playerNum-15)*0.25 +4.5*$battleAmount,1);
+            $third =round( ($playerNum-15)*0.25 +3*$battleAmount,1);
+            $fourth =  $playerNum*$battleAmount-$first-$second-$third;
+        }
+       $data =array($first,$second,$third,$fourth);
+        return $data;
+    }
+
+
+    function dealRankByNum($playerNum){
+        $first=0;
+        $second =0;
+        $third =0;
+        $fourth =0;
+        if($playerNum<4){
+            $first =15;
+        }else if ($playerNum<9){
+            $first = 20;
+            $second = 15;
+        }else if ($playerNum<15){
+            $first = 25;
+            $second =  20;
+            $third = 15;
+        }else{
+            $first = 30;
+            $second =25;
+            $third =20;
+            $fourth = 15;
+        }
+        $data =array($first,$second,$third,$fourth);
+        return $data;
+    }
     /**处理游戏rank分
      * +20 -15        初级场
      * +30 -15  （额外+10） 中级场
      * +35 -15  （额外+15） 高级场
      * $score  若评分很高 则有额外加分 （暂定若评分为S  则额外+5分）
      * @param $gameType
-     * @param $result
+     * @param $userId
+     * @param $winnerId
+     * @param $score
+     * @param $rank
+     * @param $playNum  比赛人数，排名 也决定rank分
      * @return int|void
      */
-        function dealRank($gameType,$userId,$winnerId,$score){
-            $plu =0;
+        function dealRank($gameType,$score,$rank,$playNum){
+            $scorePlu =0;
+            $rankAdd =0;
+            $gameTypePlu =0;
+          if($rank<=count($playNum)){
+              $rankAdd =$playNum[$rank];
+          }
             if($score =='S'){
-                $plu= 5;
+                $scorePlu= 5;
             }
-            $userId=''.$userId;
             //如果输 直接扣掉15分
-            if($userId!=$winnerId){
-                return -15+$plu;
-            } else if($gameType==1){
-                        return 20+$plu;
-            } else if($gameType==2){
-                return 25+$plu;
-            } else if($gameType==3){
-                return 30+$plu;
+            if($rank<count($playNum)){
+                return -15+$scorePlu;
             }
-            return;
+            if($gameType==1){
+                $gameTypePlu =5;
+            } else if($gameType==2){
+                $gameTypePlu=10;
+            } else if($gameType==3){
+                $gameTypePlu=15;
+            }
+            return $rankAdd+$gameTypePlu+$scorePlu;
         }
 
     /**rank分转换为段位
