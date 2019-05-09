@@ -30,7 +30,83 @@ GameService
         echo "success";
         exit;
     }
+    /**娱乐赛游戏结算
+ *  //参数 { 'matchId':'12avas123'，'winner':'1232','data':[ { userId:'' , result:'', } ] }
+ * @param $matchId
+ * @param $result
+ * @param $winner
+ * @param $winnerId
+ * @return  返回游戏结果用于前端展示
+ * @throws Exception
+ */
+function funGameSettle($matchId, $result, $winner, $winnerId)
+{
+    $resultJson = json_decode( $result,true);
+    //判断游戏是否存在, 参数是否正常（玩家id能对应上）
+    $gameLog = M('fun_match_info')->where(array("match_id" => $matchId))->find();
+    if (!$gameLog) {
+        throw new Exception('未查找到对应的游戏对局', 1001);
+    }
+    if ($gameLog[status] == '1') {
+        //    throw new Exception('该对局已结算', 1001);
+    }
+    M('fun_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
+    $winBonus = $gameLog['battle_amount'] * $gameLog['player_num'];
+    //游戏结算
+    $Model = new \Think\Model();
+    $Model->execute("update dd_user set candy=candy+".$gameLog['player_num'].", fun_win_amount=fun_win_amount+1 where id = ".$winner);
+    //记录游戏数据 (个人数据 放单独字段，玩家所有对局记录存 data里)
+    foreach ($resultJson as $v) {
+        $uid = $v['userId'];
+        $datas[] = array(
+            'user_id' => $uid,
+            'game_id' => 0,
+            'result' => $result,
+            'score' => $v['score'],
+            'start_time' => $gameLog['create_time'],
+            'end_time' => NOW_TIME,//游戏开始时间
+            'challenge_id'=> '',
+            'type'=>$gameLog['type'],
+            'status'=>2,
+            'winner' => $winner,
+            'winner_id' => $winnerId,
+            'match_id'=>$matchId
+        );
+        //rank分计算
+        $rank =$this ->dealRank($gameLog['type'],$uid,$winnerId,$v['score']);
+        M('user')->where(array('id' => $uid))->setInc('rank',$rank );
+    }
+    M('play_log')->addAll($datas);
+    return $result;
 
+}
+/**
+ * 创建娱乐赛
+ * @param $playUser
+ * @throws Exception
+ */
+
+function createFunMatch($playUser){
+    if (!($playUser && sizeof($playUser) >1)) {
+        throw new Exception('参数错误。', 1001);
+    }
+    //判断体力是否充足
+    $userInfos = M('user')->where(array('id' => array('IN', $playUser), 'stamina'=>array('GT',0)))->getField('id,parent1,parent2,parent3,club_Id');
+    if (sizeof($playUser) > sizeof($userInfos)) {
+        throw new Exception('用户体力不足。', 1001);
+    }
+    //active_point 加5 ，游戏总对局数加1,体力-1
+    $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
+    $Model->execute("update dd_user set  active_point=active_point+5,fun_amount =fun_amount +1,stamina = stamina -1 where id in (".implode(",",$playUser).")");
+    //创建比赛
+    $matchId = $this->generateRandomString();
+    $data = ['match_id' => $matchId,
+        'player_num' => sizeof($playUser),
+        'players' => implode(",",$playUser),
+        'create_time' => NOW_TIME,
+    ];
+    M('fun_match_info')->add($data);
+}
     /**
      * 创建对局
      * @param $playUser
