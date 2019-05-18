@@ -250,50 +250,7 @@ class ApiController extends Controller {
         return substr($result, 0, $len);
     }
 
-	// public function index()
- //    {   
- //       // echo "123123";exit;
- //        $token = $_POST['token'];
-
- //        if ($token == null || S($token) == null) {
- //            echo json_encode(['status' => '403', 'message' => 'request forbidden']);
- //            exit;
- //        }
- //        // var_dump(S($token));exit;
- //        $uid =S($token)[2];
- //       if(S('user_info_'.$uid)){
-
- //           // $userInfo = M('user')->where(array('id'=>$uid))->find();
- //            $user  = M('user')->where(array('id'=>$uid))->field('id,nickname,money2,headimg,integration,empiric,active_point')->find();
- //            $scene = M('play_log')->where(array('user_id'=>$uid))->count();
- //            $win   = M('play_log')->where(array('user_id'=>$uid,'result'=>'赢'))->count();
- //            $probability =round($win/$scene*100,2)."%";
-
- //            $grade = $this->grade($win);
- //            $userInfo = array(
- //                'id'       => $user['id'] ,
- //                'openid'    =>$user['openid'],
- //                'club_id'    =>$user['club_id'],
- //                'club_role'    =>$user['club_role '],
- //                'nickname' => $user['nickname'],
- //                'money'   => $user['money'],
- //                'headimg'  => $user['headimg'],
- //                'empiric'  => $user['empiric'],//经验值
- //                'active' => $user['active_point'],//活跃度
- //                'inter'    => $user['integration'],//积分
- //                'grade'    => $grade,//段位
- //                'probability' =>$probability,//胜率
-                
- //            );
-       
- //           if(!$userInfo){
- //               echo json_encode(['status' => '403', 'msg' => 'userInfo not find']);
- //               exit;
- //           }
- //           //后面有接口要取用户信息（推荐关系啥的）直接从缓存里拿就行
- //           S('user_info_'.$uid, $userInfo,18000);//用户信息存入Redis
- //       }
- //    }
+	
 
     public function upload(){
     	$this->display();
@@ -366,6 +323,41 @@ class ApiController extends Controller {
 
 
 
+    // 邀请二维码
+    public function qrcode()
+    {  
+        // if (!$this->user) {
+        //     $this->error('请登陆后操作！', U('Public/login'));
+        // }
+        $uid = $GLOBALS['current_uid'];
+        $path = "./Public/invite/" . date('Y-m') . '/' . $uid . ".png";
+        $invite_path = "./Public/invite/" . date('Y-m') . '/' . $uid . "_invite.png";
+        if (!is_dir(dirname($path))) {
+            mkdir(dirname($path), 0777, 1);
+        }
+        if (!file_exists($path)) {
+            $url = complete_url(U('Api/login?uid=' . $uid));
+            // 生成二维码图片
+            if (!is_dir(dirname($path))) mkdir(dirname($path), 0777, true);
+            include COMMON_PATH . 'Util/phpqrcode/phpqrcode.php';
+            \QRcode::png($url, $path, 'M', 4);
+        }
+        if (!file_exists($invite_path)) {
+          // $a = getimagesize($path);
+          // var_dump($a);exit;
+            // 合成
+            $im_dst = imagecreatefromjpeg("./Public/images/bg.jpg");
 
+            $im_src = imagecreatefrompng($path);
+            // 合成二维码（二维码大小282*282)
+            imagecopyresized($im_dst, $im_src, 190,512, 0, 0, 227, 227,164,164);
+            // 保存
+            imagejpeg($im_dst, $invite_path);
+        }
+      
+            header("Content-type: image/jpeg");
+            echo file_get_contents($invite_path);
+        
+    }
 
 }
