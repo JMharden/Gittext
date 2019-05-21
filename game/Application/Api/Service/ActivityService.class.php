@@ -59,7 +59,12 @@ class ActivityService
         //判断领取的奖励是否存在，是否过期
         $date = M('login_reward')->where(array("user_id"=>$userId,id=>$activityId,'is_draw'=>'N',"expire_date"=>array("EGT", date("Y-m-d"))))->find();
         if($date){
-          return   M('login_reward')->where(array(id=>$activityId))->save(array("is_draw"=>"Y","draw_time"=>date("Y-m-d")));
+            //更新领取记录
+            M('login_reward')->where(array(id=>$activityId))->save(array("is_draw"=>"Y","draw_time"=>date("Y-m-d")));
+            //更新用户奖励
+
+
+          return  "";
         }else{
             return null;
         }
