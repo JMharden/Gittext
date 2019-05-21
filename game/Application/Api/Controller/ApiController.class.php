@@ -179,13 +179,20 @@ class ApiController extends Controller {
             }
             $uinfo = M('user')->where(array('openid'=>$user_info['openId']))->find();
             // var_dump($user);exit;
+        //累计登陆奖励
+        $activityService =  new ActivityService();
+        $acclogin = $activityService->accuLogin($uinfo['id']);
             if ($uinfo) {
 
                 $sessionkey = array($session_key,$openid,$user['id']);
                 S($session3rd,$sessionkey,18000);//存入session
                 S('user_info_'.$user['id'], $user_info,18000);//用户信息存入Redis
             }
-          echo  json_encode(['status'=>'1','msg'=>'返回成功','data'=>$user_info]);
+          $data =[
+              "userInfo"=>$user_info,
+              "accLoginActivity"=>$acclogin
+          ]  ;
+          echo  json_encode(['status'=>'1','msg'=>'返回成功','data'=>$data]);
     }
 
     public function vget($url){
