@@ -90,6 +90,7 @@ class IndexController extends ApiController
                   echo json_encode(array('status'=>1,'msg'=>'创建俱乐部成功'));exit;
                 }
               } 
+		  
           }
        }
     }
