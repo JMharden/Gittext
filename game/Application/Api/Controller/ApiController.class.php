@@ -1,52 +1,11 @@
 <?php
 namespace Api\Controller;
+use Api\Service\UserService;
 use Think\Controller;
 
 
 class ApiController extends Controller {
-     public function _initialize_bak()
-     {
-     	 $this->_load_config();
-         $token = $_POST['token'];
-         if ($token == null || S($token) == null) {
-             echo json_encode(['status' => '403', 'message' => 'request forbidden']);
-             exit;
-         }
-        //  var_dump(S($token));
-         //exit;
-         $uid =S($token)[2];
-         $useInfo =S('user_info_'.$uid);
-        if(!$useInfo){
-             $user  = M('user')->where(array('id'=>$uid))->field('id,nickname,money2,headimg,integration,empiric,active_point')->find();
-             $scene = M('play_log')->where(array('user_id'=>$uid))->count();
-             $win   = M('play_log')->where(array('user_id'=>$uid,'result'=>'赢'))->count();
-             $probability =round($win/$scene*100,2)."%";
-             $grade = $this->grade($win);
-             $userInfo = array(
-                 'id'       => $user['id'] ,
-                 'openid'    =>$user['openid'],
-                 'club_id'    =>$user['club_id'],
-                 'club_role'    =>$user['is_club_owner '],
-                 'nickname' => $user['nickname'],
-                 'money'   => $user['money'],
-                 'headimg'  => $user['headimg'],
-                 'empiric'  => $user['empiric'],//经验值
-                 'active' => $user['active_point'],//活跃度
-                 'inter'    => $user['integration'],//积分
-                 'grade'    => $grade,//段位
-                 'probability' =>$probability,//胜率
-             );
-            if(!$userInfo){
-                echo json_encode(['status' => '403', 'msg' => 'userInfo not find']);
-                exit;
-            }
-            //后面有接口要取用户信息（推荐关系啥的）直接从缓存里拿就行
-            S('user_info_'.$uid, $userInfo,18000);//用户信息存入Redis
-            $GLOBALS['current_use_info'] =$userInfo;
-        }
-         $GLOBALS['current_uid'] =$uid;
 
-     }
         // 加载配置
     protected function _load_config()
     {
@@ -103,6 +62,7 @@ class ApiController extends Controller {
         $rawData   = $_POST['rawData'];
         $iv        = $_POST['iv'];
         $uid       = $_GET['uid'];//推荐人用户ID
+        $introduceType = $_GET['source'];
         // var_dump($uid);exit;
         $encryptedData = $_POST['encryptedData'];
         $url = "https://api.weixin.qq.com/sns/jscode2session?appid=" . $APPID . "&secret=" . $AppSecret . "&js_code=" . $code . "&grant_type=authorization_code";
@@ -131,65 +91,47 @@ class ApiController extends Controller {
         // 7.生成第三方3rd_session，以 $session3rd 为key，sessionKey+openId为value，写入memcached
         
         $user_info = json_decode($data,true);
-       
         $session3rd = $this->randomFromDev(16);
-        
         $user_info['session3rd'] = $session3rd;
-
-        $user = M('user')->where(array('openid'=>$user_info['openId']))->find();
+        $userService = new UserService();
+        $user = $userService->getUserFullInfoByOpen($user_info['openId']);
         $time = date('Y-m-d H:i:s',time());
-        // if (session('wechat_info.openid')) {
-           
-            if($user){//老用户
-                $user_info['club_id'] = (int)$user['club_id'];
-                $user_info['avatarUrl'] = $user['headimg'];
-                $user_info['active_point'] = (int)$user['active_point'];
-                $user_info['money'] = $user['money'];
-                $user_info['id'] = (int)$user['id'];
-                $loginNum = $user['all_login_time']+1;
-                M('user')->where(array('openid'=>$user_info['openId']))->save(array('last_login_time'=>$time,'all_login_time'=>$loginNum));
-
-            }else{//新用户
-
+            if(!$user){//新用户
                 $user_data['openid']    = $user_info['openId'];
                 $user_data['nickname']  = $user_info['nickName'];
                 $user_data['headimg']   = $user_info['avatarUrl'];
                 $user_data['sub_time']  = time();
                 $user_data['join_time'] = $time;
                 $user_data['last_login_time'] = $time;
+                //用户引入方式
+                $user_data['source'] = $introduceType;
                 // var_dump($user_info);exit;
                 //获取推荐关系
                 if($uid){
-                    $introducer_2id = M('user')->where(array('id'=>$uid))->getField('introducer_id');//推荐人的上级用户ID
-                    $introducer_3id = M('user')->where(array('id'=>$introducer_2id))->getField('introducer_id');//推荐人的上级用户ID
-                    $user_data['introducer_id'] = $uid;
-                    $user_data['introducer_2id'] = $introducer_2id;
-                    $user_data['introducer_3id'] = $introducer_3id;
-               
+                         $intro1User =  $userService->getUserBaseInfo($uid);
+                         if($intro1User){
+                             $introducer_2id= $intro1User['introducer_id'];
+                         }
+                    $user_data['parent1'] = $uid;
+                    $user_data['parent2'] = $introducer_2id;
                     M('relation')->add(array(
                         'openid' => $user_data['openid'],
                         'parent_id' => $uid,
                         'create_time' => $time
                     ));
                 }
-
                 $user_data['type'] = 2;
-                $info = M('user')->add($user_data);
-                        
+                $user = $userService->addUser($user_data);
             }
-            $uinfo = M('user')->where(array('openid'=>$user_info['openId']))->find();
-            // var_dump($user);exit;
-        //累计登陆奖励
-        $activityService =  new ActivityService();
-        $acclogin = $activityService->accuLogin($uinfo['id']);
-            if ($uinfo) {
-
-                $sessionkey = array($session_key,$openid,$user['id']);
-                S($session3rd,$sessionkey,18000);//存入session
-                S('user_info_'.$user['id'], $user_info,18000);//用户信息存入Redis
-            }
+            //接口访问令牌
+            $user['session3rd'] = $session3rd;
+            //累计登陆奖励
+            $activityService =  new ActivityService();
+            $acclogin = $activityService->accuLogin($user['id']);
+            $sessionkey = array($session_key,$openid,$user['id']);
+            S($session3rd,$sessionkey,18000);//存入session
           $data =[
-              "userInfo"=>$user_info,
+              "userInfo"=>$user,
               "accLoginActivity"=>$acclogin
           ]  ;
           echo  json_encode(['status'=>'1','msg'=>'返回成功','data'=>$data]);

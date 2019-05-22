@@ -2,6 +2,7 @@
 
 namespace Api\Controller;
 
+use Api\Service\UserService;
 use Think\Controller;
 
 /**
@@ -10,55 +11,27 @@ use Think\Controller;
  */
 class IndexController extends ApiController
 {
-    // public function _initialize()
-    // {
-    // 		// if(S('123123') == null ){
-    // 		// 	echo json_encode(['status' => '403', 'message' => 'request forbidden']);
-    //   //       exit;	
-    // 		// }
-    // 	 $this->_load_config();
-    //     $token = $_POST['token'];
+    public function _initialize_bak()
+    {
+        $this->_load_config();
+        $token = $_POST['token'];
+        if ($token == null || S($token) == null) {
+            echo json_encode(['status' => '403', 'message' => 'request forbidden']);
+            exit;
+        }
+        //  var_dump(S($token));
+        //exit;
+        $uid =S($token)[2];
+        $userService = new UserService();
+       $userInfo =  $userService->getUserBaseInfo($uid);
+        if(!$userInfo){
+            echo json_encode(['status' => '403', 'msg' => 'userInfo not find']);
+            exit;
+        }
+         $GLOBALS['current_use_info'] =$userInfo;
+          $GLOBALS['current_uid'] =$uid;
 
-    //     if ($token == null || S($token) == null) {
-    //         echo json_encode(['status' => '403', 'message' => 'request forbidden']);
-    //         exit;
-    //     }
-    //     // var_dump(S($token));exit;
-    //     $uid =S($token)[2];
-    //    if(S('user_info_'.$uid)){
-
-    //        // $userInfo = M('user')->where(array('id'=>$uid))->find();
-            // $user  = M('user')->where(array('id'=>$uid))->field('id,nickname,money2,headimg,integration,empiric,active_point')->find();
-    //         $scene = M('play_log')->where(array('user_id'=>$uid))->count();
-    //         $win   = M('play_log')->where(array('user_id'=>$uid,'result'=>'赢'))->count();
-    //         $probability =round($win/$scene*100,2)."%";
-
-    //         $grade = $this->grade($win);
-    //         $userInfo = array(
-    //             'id'       => $user['id'] ,
-    //             'openid'    =>$user['openid'],
-    //             'club_id'    =>$user['club_id'],
-                // 'club_role'    =>$user['is_club_owner '],//是否部长
-    //             'nickname' => $user['nickname'],
-    //             'money'   => $user['money'],
-    //             'headimg'  => $user['headimg'],
-    //             'empiric'  => $user['empiric'],//经验值
-    //             'active' => $user['active_point'],//活跃度
-    //             'inter'    => $user['integration'],//积分
-    //             'grade'    => $grade,//段位
-    //             'probability' =>$probability,//胜率
-                
-    //         );
-       
-    //        if(!$userInfo){
-    //            echo json_encode(['status' => '403', 'msg' => 'userInfo not find']);
-    //            exit;
-    //        }
-    //        //后面有接口要取用户信息（推荐关系啥的）直接从缓存里拿就行
-    //        S('user_info_'.$uid, $userInfo,18000);//用户信息存入Redis
-    //    }
-    // }
-
+    }
  
     /**----------------  历史战绩部分start    ---------------------**/
     /**
