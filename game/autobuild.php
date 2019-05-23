@@ -1,1 +1,1 @@
-<?phpecho "123";echo shell_exec("./phpstudy/auto_build.sh");
+<?phpecho "123333";echo shell_exec("./phpstudy/auto_build.sh");
