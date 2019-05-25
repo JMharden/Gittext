@@ -124,6 +124,7 @@ class ApiController extends Controller {
                         'create_time' => $time
                     ));
                 }
+                
                 $user_data['type'] = 2;
                 $user = $userService->addUser($user_data);
             }
