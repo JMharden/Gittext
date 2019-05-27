@@ -2778,3 +2778,72 @@ function http_code($url)
 	}
 
 }
+
+function getonlineip(){//获取用户ip
+
+  if($_SERVER['HTTP_CLIENT_IP'])
+
+  {
+
+   $onlineip=$_SERVER['HTTP_CLIENT_IP']; //用户IP
+
+  }
+
+  else if($_SERVER['HTTP_X_FORWARDED_FOR'])
+
+  {
+
+   $onlineip=$_SERVER['HTTP_X_FORWARDED_FOR']; //代理IP
+
+  }
+
+  else
+
+  {
+
+   $onlineip=$_SERVER['REMOTE_ADDR']; //服务器IP
+
+  }
+
+  return $onlineip;
+
+}
+
+  function getPostData() {
+        $postdata = file_get_contents("php://input");
+        $data = urldecode($postdata);
+         $data = substr_replace($data, '', 0, 5);
+        $data = str_replace(PHP_EOL, '', $data);
+        //var_dump($data);
+         //$data = json_decode($data, true);
+        //var_dump($data);
+         return $data;
+  }
+
+     /**二分查找*/
+function search($score, $filter)
+{   
+
+    $half = floor(count($filter) / 2); // 取出中間数
+
+    // 判断积分在哪个区间
+
+    if ($score <= $filter[$half-1]['max']) {
+
+        $filter = array_slice($filter, 0 , $half);
+
+    } else {
+
+        $filter = array_slice($filter, $half , count($filter));
+
+    }
+    // 继续递归直到只剩一个元素
+
+    if (count($filter) != 1) {
+
+        $filter = search($score, $filter);
+
+    }
+    return $filter;
+
+}
