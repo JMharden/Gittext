@@ -87,8 +87,9 @@ function funGameSettle($matchId, $result, $winner, $winnerId)
  */
 
 function createFunMatch($playUser){
-    if (!($playUser && sizeof($playUser) >1)) {
-        throw new Exception('参数错误。', 1001);
+//放开人数限制
+  if (!($playUser && sizeof($playUser) >0)) {
+       throw new Exception('参数错误。', 1001);
     }
     //判断体力是否充足
     $userInfos = M('user')->where(array('id' => array('IN', $playUser), 'stamina'=>array('GT',0)))->getField('id,parent1,parent2,parent3,club_Id');
