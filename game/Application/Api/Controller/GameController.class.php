@@ -33,8 +33,8 @@ class GameController extends ApiController
     }
     public function createMatch(){
        try{
-           $gameType =  $_GET['gameType'];
-           $playUser =  $_GET['playUser'];
+           $gameType =  $_POST['gameType'];
+           $playUser =  $_POST['playUser'];
            $gameService =  new GameService();
            $data = $gameService->createMatch($playUser,$gameType);
            echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
@@ -59,7 +59,7 @@ class GameController extends ApiController
     }
        public function createFunMatch(){
        try{
-            $playUser =  $_GET['playUser'];
+            $playUser =  $_POST['playUser'];
             $gameService =  new GameService();
             $data = $gameService->createFunMatch($playUser);
             echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
