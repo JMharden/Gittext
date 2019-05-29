@@ -23,13 +23,13 @@ class ActivityService
             if($ween==0){
                 $ween=7;
             }
-            $start = date("Y-m-d",strtotime("-".$ween."day"));
-            $end = date("Y-m-d",strtotime("+".(7- $ween)."day"));
+            $start = date("Y-m-d 0:0:0",strtotime("-".($ween-1)."day"));
+            $end = date("Y-m-d 23:59:59",strtotime("+".(7- $ween)."day"));
             date("Y-m-d",strtotime("+".(7- date('w'))."day"));
             date('w');
             date_add() ;
             $maxAccDay=1;
-            $data= M('login_reward')->where(array("user_id" => $userId,"create_date"=>array('GT',$start)))->order('create_date desc')->select();
+            $data= M('login_reward')->where(array("user_id" => $userId,"create_date"=>array('between',array($start,$end))))->order('create_date desc')->select();
             //判断当天是否已经登陆过
             if($data&& $data[0]['create_date']==date("Y-m-d")){
                 $maxAccDay = $data[0]['accu_login_days'];
@@ -43,7 +43,7 @@ class ActivityService
                     'accu_login_days'=>$maxAccDay,
                     'reward_num'=>$reward['num'],
                     'reward_type'=>$reward['type'],
-                    "create_date"=>date("Y-m-d"),
+                    "create_date"=>date("Y-m-d H:i:s"),
                     'expire_date'=>$end,
                     'is_draw'=>'N'
                 ];
@@ -77,13 +77,13 @@ class ActivityService
      */
     function getLoginRewardList($loginDays){
         $list =[
-            1=>['num'=>5,'type'=>'candy1'],
-            2=>['num'=>10,'type'=>'candy1'],
-            3=>['num'=>20,'type'=>'candy1'],
-            4=>['num'=>5,'type'=>'candy2'],
-            5=>['num'=>10,'type'=>'candy2'],
-            6=>['num'=>15,'type'=>'candy2'],
-            7=>['num'=>3,'type'=>'candy3']
+            1=>['num'=>5,'type'=>'candy'],
+            2=>['num'=>10,'type'=>'candy'],
+            3=>['num'=>20,'type'=>'candy'],
+            4=>['num'=>5,'type'=>'candy1'],
+            5=>['num'=>10,'type'=>'candy1'],
+            6=>['num'=>15,'type'=>'candy1'],
+            7=>['num'=>10,'type'=>'candy2']
         ];
         if($loginDays>0&&$loginDays<8){
             return $list[$loginDays];
@@ -105,7 +105,7 @@ class ActivityService
         $data = M('login_reward')->where(array("user_id"=>$userId,id=>$activityId,'is_draw'=>'N',"expire_date"=>array("EGT", date("Y-m-d"))))->find();
         if($data){
             //更新领取记录
-            M('login_reward')->where(array(id=>$activityId))->save(array("is_draw"=>"Y","draw_time"=>date("Y-m-d")));
+            M('login_reward')->where(array(id=>$activityId))->save(array("is_draw"=>"Y","draw_time"=>date("Y-m-d H:i:s")));
             //更新用户奖励
             $num = $data['reward_num'];
             $type = $data['reward_type'];
