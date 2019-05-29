@@ -58,7 +58,7 @@ class ApiController extends Controller {
         $signature = $_POST['signature'];
         $rawData   = $_POST['rawData'];
         $iv        = $_POST['iv'];
-        $uid       = $_GET['uid'];//推荐人用户ID
+        $uid       = 182;//推荐人用户ID
         $introduceType = $_GET['source'];
         // var_dump($uid);exit;
         $encryptedData = $_POST['encryptedData'];
@@ -92,7 +92,6 @@ class ApiController extends Controller {
         $user_info['session3rd'] = $session3rd;
         $userService = new UserService();
         // var_dump($user_info['openId']);exit;
-
         $user = $userService->getUserFullInfoByOpen($user_info['openId']);
         // var_dump($user);exit;
         $time = date('Y-m-d H:i:s',time());
@@ -112,7 +111,7 @@ class ApiController extends Controller {
                          $intro1User =  $userService->getUserBaseInfo($uid);
                          if($intro1User){
                              $parent2= $intro1User['parent1'];
-                             $parent3= M('user_base')->where(array('id'=>$intro1User['parent1']))->getField('id');
+                             $parent3= M('user_base')->where(array('id'=>$intro1User['parent1']))->getField('parent1');
                          }
                     $user_data['parent1'] = $uid;
                     $user_data['parent2'] = $parent2;
@@ -125,8 +124,8 @@ class ApiController extends Controller {
                     ));
                 }
                 
-                $user_data['type'] = 2;
-                $user = $userService->addUser($user_data);
+                $user = $userService->addUser($user_data,$user_info['openId']);
+                // var_dump($user);exit;
             }
             //接口访问令牌
             $user['session3rd'] = $session3rd;
@@ -175,12 +174,10 @@ class ApiController extends Controller {
         $result = strtr($result, '+/', '-_');
         return substr($result, 0, $len);
     }
-
       //日志写入
     public function write_log(){ 
         // $data = json_encode(array(date('Y-m-d H:i:s'),$this->getIps(),$this->getUrl(),$this->getPostData()));
          $data = json_encode(array(date('Y-m-d H:i:s'),getIps(),geturl(),getPostData()));
-
         $years = date('Y-m');
         //设置路径目录信息
         $url = './Public/log/'.$years.'/'.date('Ymd').'_log.txt';  
@@ -193,13 +190,9 @@ class ApiController extends Controller {
            $res = mkdir(iconv("UTF-8", "GBK", $dir_name),0777,true);
           }
           $fp = fopen($url,"a");//打开文件资源通道 不存在则自动创建   
-
         fwrite($fp,var_export($data,true)."\r\n");//写入文件
         fclose($fp);//关闭资源通道
     }
-
-
-
     // 生成邀请海报
     public function qrcode($uid)
     {  
@@ -220,10 +213,8 @@ class ApiController extends Controller {
             \QRcode::png($url, $path, 'M', 4);
         }
         if (!file_exists($invite_path)) {
-
           
             $im_dst = imagecreatefromjpeg("./Public/images/bg.jpg");
-
             $im_src = imagecreatefrompng($path);
             list($width, $height) = getimagesize($path);
              // 合成二维码（二维码大小282*282)
@@ -238,22 +229,14 @@ class ApiController extends Controller {
             echo file_get_contents($invite_path);
         
     }
-
   //获取用户推广海报路径
      public  function get_qrcode_path($uid){
-
           // $this->_load_config();
           $url = $GLOBALS['_CFG']['web_site']['url'];;
-
           $path = './Public/invite/'.date('Y-m').'/';
-
            return array(
-
               'path'      => $path,
-
-
               'invite'       => $url. substr($path,1).$user.'_invite.png',
           );
-
       }
 }
