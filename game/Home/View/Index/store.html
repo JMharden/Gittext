@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<include file="include/head" title="商店" />
+	<style>
+	body{ background:#f2f2f2;}
+	.grid{ background:#fff; padding:0; margin:0; list-style:none; display:table; width:100%;}
+	.grid li{ float:left; text-align:center; padding:10px 5px; border-right:1px solid #eee; border-bottom:1px solid #eee;box-sizing:border-box;}
+	.grid4 li{ width:25%;}
+	.grid li img{ max-width:100%; max-height:100%;}
+	.grid li a{ color:#666;}
+	.grid4 li:nth-child(4n){ border-right:none;}
+	.grid3 li{ width:33.33%;}
+	.grid3 li:nth-child(3n){ border-right:none;}
+	.grid2 li{ width:50%;}
+	.grid2 li:nth-child(2n){ border-right:none;}
+	
+	.title{ background:#fff; height:30px; line-height:30px; padding-left:10px; border-bottom:1px solid #eee;}
+	.margin-top10{ margin-top:10px;}
+	</style>
+</head>
+
+<body>
+	<div class="title">植物</div>
+	<div>
+		<ul class="grid grid3">
+			<volist name="plants" id="vo">
+			<li>
+				<a href="{:U('plant?id='.$vo['id'])}">
+					<img src="{$vo.pic}" /><br/>
+					{$vo.name}
+				</a>
+			</li>
+			</volist>
+		<ul>
+	</div>
+	
+	<div class="title margin-top10">肥料</div>
+	<div>
+		<ul class="grid grid3">
+			<volist name="fertilizer" id="vo">
+			<li>
+				<a href="{:U('fertilizer?id='.$vo['id'])}">
+					<img src="{$vo.pic}" /><br/>
+					{$vo.name}
+				</a>
+			</li>
+			</volist>
+		<ul>
+	</div>
+</body>
+</html>

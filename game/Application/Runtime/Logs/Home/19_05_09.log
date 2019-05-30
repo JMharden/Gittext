@@ -1,0 +1,694 @@
+[ 2019-05-09T00:24:41+08:00 ] 167.86.74.177 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2019-05-09T00:43:02+08:00 ] 187.0.165.246 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2019-05-09T00:53:43+08:00 ] 60.191.38.78 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2019-05-09T04:22:14+08:00 ] 190.237.42.212 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2019-05-09T04:32:04+08:00 ] 179.60.210.93 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2019-05-09T04:57:53+08:00 ] 124.248.202.190 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010903s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2019-05-09T06:00:33+08:00 ] 201.150.150.13 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000375s ]
+
+[ 2019-05-09T06:22:08+08:00 ] 72.2.164.51 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000438s ]
+
+[ 2019-05-09T07:33:25+08:00 ] 47.52.210.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined index: HTTP_USER_AGENT /phpstudy/www/Gittext/game/#DFrame/Library/Think/App.class.php 第 75 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: HTTP_HOST /phpstudy/www/Gittext/game/Application/Common/Util/ddwechat.class.php 第 1297 行.
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010018s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010054s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000454s ]
+
+[ 2019-05-09T08:53:35+08:00 ] 200.1.220.154 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2019-05-09T09:36:56+08:00 ] 35.193.132.138 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009108s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000387s ]
+
+[ 2019-05-09T10:18:31+08:00 ] 47.52.210.90 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+NOTIC: [8] Undefined index: HTTP_USER_AGENT /phpstudy/www/Gittext/game/#DFrame/Library/Think/App.class.php 第 75 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: HTTP_HOST /phpstudy/www/Gittext/game/Application/Common/Util/ddwechat.class.php 第 1297 行.
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009493s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009527s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000357s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000390s ]
+
+[ 2019-05-09T11:51:55+08:00 ] 47.92.115.203 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2019-05-09T12:08:21+08:00 ] 47.92.71.118 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000428s ]
+
+[ 2019-05-09T14:27:05+08:00 ] 201.158.24.72 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2019-05-09T15:00:27+08:00 ] 37.112.204.63 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2019-05-09T16:28:10+08:00 ] 104.248.16.188 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2019-05-09T18:58:10+08:00 ] 189.79.230.77 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2019-05-09T19:32:14+08:00 ] 198.167.223.52 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011795s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2019-05-09T19:45:34+08:00 ] 139.224.238.50 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009549s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2019-05-09T20:54:39+08:00 ] 47.100.104.184 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010525s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2019-05-09T21:52:39+08:00 ] 107.170.192.46 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2019-05-09T22:34:29+08:00 ] 60.191.52.254 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_zhuan` WHERE ( ying>money ) AND `money` > 5 ORDER BY id desc LIMIT 5   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_charge_log` WHERE `user_id` = null AND `chou` = 0 LIMIT 1   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 61 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 62 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: 
+INFO: 
+INFO: 
+

@@ -1,0 +1,276 @@
+[ 2019-04-06T00:28:06+08:00 ] 47.93.180.168 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+NOTIC: [8] Undefined index: HTTP_USER_AGENT /phpstudy/www/Gittext/game/#DFrame/Library/Think/App.class.php 第 75 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: HTTP_HOST /phpstudy/www/Gittext/game/Application/Common/Util/ddwechat.class.php 第 1297 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T02:55:44+08:00 ] 180.249.181.15 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T03:24:45+08:00 ] 62.20.155.157 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T03:51:43+08:00 ] 101.251.242.238 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T04:56:13+08:00 ] 47.100.64.9 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+NOTIC: [8] Undefined index: HTTP_USER_AGENT /phpstudy/www/Gittext/game/#DFrame/Library/Think/App.class.php 第 75 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: HTTP_HOST /phpstudy/www/Gittext/game/Application/Common/Util/ddwechat.class.php 第 1297 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T05:54:06+08:00 ] 201.92.158.173 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T05:54:06+08:00 ] 201.92.158.173 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0029s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T06:05:45+08:00 ] 159.89.142.125 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T06:24:12+08:00 ] 212.4.155.216 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+NOTIC: [8] Undefined index: HTTP_USER_AGENT /phpstudy/www/Gittext/game/#DFrame/Library/Think/App.class.php 第 75 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: HTTP_HOST /phpstudy/www/Gittext/game/Application/Common/Util/ddwechat.class.php 第 1297 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T06:42:09+08:00 ] 177.103.99.24 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T07:40:39+08:00 ] 165.16.42.3 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T08:59:48+08:00 ] 191.253.127.44 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T09:02:42+08:00 ] 106.15.52.246 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined index: HTTP_USER_AGENT /phpstudy/www/Gittext/game/#DFrame/Library/Think/App.class.php 第 75 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: HTTP_HOST /phpstudy/www/Gittext/game/Application/Common/Util/ddwechat.class.php 第 1297 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T10:09:27+08:00 ] 42.115.9.46 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T10:12:44+08:00 ] 83.220.89.22 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0031s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T10:22:00+08:00 ] 185.224.103.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T13:10:17+08:00 ] 179.110.224.188 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T15:31:29+08:00 ] 190.94.136.165 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0029s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T21:30:25+08:00 ] 3.83.238.248 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T21:43:47+08:00 ] 185.126.41.233 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T23:09:19+08:00 ] 173.82.170.93 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+NOTIC: [8] Undefined index: HTTP_USER_AGENT /phpstudy/www/Gittext/game/#DFrame/Library/Think/App.class.php 第 75 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: HTTP_HOST /phpstudy/www/Gittext/game/Application/Common/Util/ddwechat.class.php 第 1297 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+
+[ 2019-04-06T23:47:49+08:00 ] 173.82.170.93 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+NOTIC: [8] Undefined index: HTTP_USER_AGENT /phpstudy/www/Gittext/game/#DFrame/Library/Think/App.class.php 第 75 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] Undefined index: nuid /phpstudy/www/Gittext/game/Application/Home/Controller/HomeController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: HTTP_HOST /phpstudy/www/Gittext/game/Application/Common/Util/ddwechat.class.php 第 1297 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_zhuan' doesn't exist
+

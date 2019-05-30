@@ -1,0 +1,434 @@
+[ 2019-04-09T09:37:13+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T09:37:18+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0041s ]
+SQL: SELECT `id`,`nickname`,`club_role`,`headimg`,`active_point`,`win_amount`,`last_login_time` FROM `dd_user` WHERE `club_id` = 5  [ RunTime:0.0028s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 538 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 538 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2019-04-09T09:37:24+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T09:37:48+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubSet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0027s ]
+SQL: UPDATE `dd_club_info` SET `club_head`='',`ercode`='',`declaration`='无敌是多么多么无敌',`club_notice`='123456' WHERE `id` = '5' [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
+[ 2019-04-09T09:37:48+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubSet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: UPDATE `dd_club_info` SET `club_head`='',`ercode`='',`declaration`='无敌是多么多么无敌',`club_notice`='123456' WHERE `id` = '5' [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2019-04-09T09:37:48+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubSet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0034s ]
+SQL: UPDATE `dd_club_info` SET `club_head`='',`ercode`='',`declaration`='无敌是多么多么无敌',`club_notice`='123456' WHERE `id` = '5' [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2019-04-09T09:38:15+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubSet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0028s ]
+SQL: UPDATE `dd_club_info` SET `club_head`='',`ercode`='',`declaration`='无敌是多么多么的寂寞',`club_notice`='123456' WHERE `id` = '5' [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2019-04-09T09:38:24+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0035s ]
+SQL: SELECT `is_club_owner`,`club_id` FROM `dd_user` WHERE `id` = 183 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_club_infomation` [ RunTime:0.0025s ]
+SQL: SELECT c.id,c.status,c.type,c.remark,c.club_id,c.time FROM dd_club_infomation c INNER JOIN dd_email_read e on c.id=e.email_id  WHERE e.user_id = 183 AND e.status <> 1 AND `club_id` = '7' AND c.type <> 1  [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2019-04-09T09:38:36+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T09:38:43+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T09:39:08+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubSet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0026s ]
+SQL: UPDATE `dd_club_info` SET `club_head`='',`ercode`='',`declaration`='无敌是多么多么的寂寞',`club_notice`='123456' WHERE `id` = '5' [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2019-04-09T09:39:24+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T14:33:09+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0043s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0032s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0031s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0031s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T14:33:16+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T14:33:20+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubSet
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0035s ]
+SQL: UPDATE `dd_club_info` SET `club_head`='',`ercode`='',`declaration`='无敌是多么多么的寂寞',`club_notice`='123456789' WHERE `id` = '5' [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2019-04-09T14:33:49+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0044s ]
+SQL: SELECT `id`,`nickname`,`club_role`,`headimg`,`active_point`,`win_amount`,`last_login_time` FROM `dd_user` WHERE `club_id` = 5  [ RunTime:0.0033s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 538 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 538 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2019-04-09T14:33:53+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `is_club_owner`,`club_id` FROM `dd_user` WHERE `id` = 183 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `dd_club_infomation` [ RunTime:0.0016s ]
+SQL: SELECT c.id,c.status,c.type,c.remark,c.club_id,c.time FROM dd_club_infomation c INNER JOIN dd_email_read e on c.id=e.email_id  WHERE e.user_id = 183 AND e.status <> 1 AND `club_id` = '7' AND c.type <> 1  [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2019-04-09T14:37:23+08:00 ] 36.113.100.31 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0034s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0033s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0032s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T14:38:30+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T14:38:35+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T14:38:38+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0031s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0032s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0031s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T14:38:39+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2019-04-09T14:38:58+08:00 ] 14.20.36.222 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T16:55:05+08:00 ] 43.250.201.56 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T17:03:10+08:00 ] 119.39.248.30 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T18:27:43+08:00 ] 112.96.176.241 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T18:50:15+08:00 ] 14.28.140.180 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T19:01:19+08:00 ] 120.230.98.20 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0035s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+
+[ 2019-04-09T19:01:26+08:00 ] 120.230.98.20 /api.php?m=Api&c=Index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT `id`,`nickname`,`club_role`,`headimg`,`active_point`,`win_amount`,`last_login_time` FROM `dd_user` WHERE `club_id` = 5  [ RunTime:0.0015s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 538 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 538 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2019-04-09T19:01:38+08:00 ] 120.230.98.20 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 498 行.
+

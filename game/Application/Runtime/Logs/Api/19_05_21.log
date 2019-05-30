@@ -1,0 +1,2082 @@
+[ 2019-05-21T08:26:40+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T08:33:14+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T08:36:33+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T08:42:16+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T08:44:11+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T08:56:09+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T09:00:04+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T09:03:27+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T09:09:09+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T09:11:45+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T09:30:40+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+NOTIC: [8] Undefined index: current_uid /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 620 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by o.id asc' at line 1
+
+[ 2019-05-21T09:31:53+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `dd_user_info` [ RunTime:0.0028s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user_info` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2019-05-21T09:32:04+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_user_info` [ RunTime:0.0026s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user_info` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2019-05-21T09:47:02+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `dd_user_info` [ RunTime:0.0023s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user_info` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2019-05-21T09:48:42+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user_info` [ RunTime:0.0024s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user_info` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2019-05-21T09:48:47+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `dd_user_info` [ RunTime:0.0031s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user_info` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2019-05-21T09:53:39+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T10:00:32+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T11:16:32+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T11:18:29+08:00 ] 113.87.42.212 /api.php?m=Api&c=Api&a=login&uid=163
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-21T11:26:23+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+
+[ 2019-05-21T11:26:42+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+
+[ 2019-05-21T11:26:44+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+
+[ 2019-05-21T11:27:18+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+
+[ 2019-05-21T11:27:32+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T11:28:05+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user_base` [ RunTime:0.0024s ]
+SQL: SELECT a.nickname,a.id,u.money,a.headimg,u.rank,a.openid,u.match_amount,u.win_amount FROM dd_user_base a INNER JOIN dd_user u on a.id=u.user_id  WHERE a.id = 182 LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2019-05-21T11:29:24+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user_base` [ RunTime:0.0026s ]
+SQL: SELECT a.nickname,a.id,u.money,a.headimg,u.rank,a.openid,u.match_amount,u.win_amount FROM dd_user_base a INNER JOIN dd_user u on a.id=u.user_id  WHERE a.id = 182 LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2019-05-21T11:29:42+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user_base` [ RunTime:0.0026s ]
+SQL: SELECT a.nickname,a.id,u.money,a.headimg,u.rank,a.openid,u.match_amount,u.win_amount FROM dd_user_base a INNER JOIN dd_user u on a.id=u.user_id  WHERE a.id = 182 LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2019-05-21T11:30:27+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user_base` [ RunTime:0.0032s ]
+SQL: SELECT a.nickname,a.id,u.money,a.headimg,u.rank,a.openid,u.match_amount,u.win_amount FROM dd_user_base a INNER JOIN dd_user u on a.id=u.user_id  WHERE a.id = 182 LIMIT 1   [ RunTime:0.0028s ]
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+
+[ 2019-05-21T11:30:56+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `user_id` = 182 AND `login_time` BETWEEN 1558368000 AND 1558454400 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000456s ]
+
+[ 2019-05-21T11:31:47+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+
+[ 2019-05-21T11:32:20+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+
+[ 2019-05-21T11:33:01+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `user_id` = 182 AND `login_time` BETWEEN 1558368000 AND 1558454400 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2019-05-21T12:25:45+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+NOTIC: [2048] Declaration of Api\Controller\ActivityController::loginLog() should be compatible with Api\Controller\ApiController::loginLog($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/ActivityController.class.php 第 13 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `user_id` = 182 AND `login_time` BETWEEN 1558368000 AND 1558454400 LIMIT 1   [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2019-05-21T12:25:49+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0018s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T12:25:50+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T12:26:47+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2019-05-21T12:27:52+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2019-05-21T12:27:54+08:00 ] 113.87.42.212 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0019s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T12:29:25+08:00 ] 113.87.42.212 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2019-05-21T12:38:38+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0020s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000492s ]
+
+[ 2019-05-21T12:47:43+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2019-05-21T12:48:27+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2019-05-21T12:48:33+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0021s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000504s ]
+
+[ 2019-05-21T12:49:19+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0035s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2019-05-21T14:29:15+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000493s ]
+
+[ 2019-05-21T14:30:37+08:00 ] 117.136.88.19 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T14:30:41+08:00 ] 117.136.88.19 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2019-05-21T14:30:51+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T14:30:52+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0022s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000489s ]
+
+[ 2019-05-21T14:50:13+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+ERR: 参数错误或者未定义:uid
+
+[ 2019-05-21T14:50:20+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000391s ]
+
+[ 2019-05-21T14:53:01+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2019-05-21T14:55:59+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+
+[ 2019-05-21T14:57:12+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+
+[ 2019-05-21T14:58:16+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+
+[ 2019-05-21T15:00:24+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+
+[ 2019-05-21T15:00:39+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+
+[ 2019-05-21T15:00:44+08:00 ] 223.104.130.37 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2019-05-21T15:01:21+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_login_log` WHERE ( `login_time` >= '1558368000-2 day' AND `login_time` < '1558368000+1 week -2 day'  ) AND `user_id` = 182  [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2019-05-21T15:01:39+08:00 ] 223.104.130.37 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+
+[ 2019-05-21T15:01:42+08:00 ] 223.104.130.37 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T15:02:50+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+
+[ 2019-05-21T15:03:24+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+
+[ 2019-05-21T15:03:44+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+
+[ 2019-05-21T15:07:26+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `login_time` BETWEEN 1558281600 AND 1558886399 AND `user_id` = 182  [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000486s ]
+
+[ 2019-05-21T15:08:04+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `login_time` BETWEEN 1558281600 AND 1558886399 AND `user_id` = 182  [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2019-05-21T15:08:22+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `login_time` BETWEEN 1558368000 AND 1559491199 AND `user_id` = 182  [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2019-05-21T15:08:35+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `login_time` BETWEEN 1558281600 AND 1558886399 AND `user_id` = 182  [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2019-05-21T15:11:44+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `login_time` BETWEEN 1558281600 AND 1558886399 AND `user_id` = 182  [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000551s ]
+
+[ 2019-05-21T15:11:45+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `login_time` BETWEEN 1558281600 AND 1558886399 AND `user_id` = 182  [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2019-05-21T15:11:49+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `login_time` BETWEEN 1558281600 AND 1558886399 AND `user_id` = 182  [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2019-05-21T15:11:50+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `dd_login_log` WHERE `login_time` BETWEEN 1558281600 AND 1558886399 AND `user_id` = 182  [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2019-05-21T15:11:54+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=userLogs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_login_log` [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_login_log` WHERE `login_time` BETWEEN 1558281600 AND 1558886399 AND `user_id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2019-05-21T15:26:28+08:00 ] 175.6.6.29 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2019-05-21T15:33:09+08:00 ] 175.6.6.29 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T15:33:10+08:00 ] 175.6.6.29 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T15:33:59+08:00 ] 175.6.6.29 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T16:34:31+08:00 ] 113.87.42.212 /api.php?m=activity&c=activity&a=loginLog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user_base` [ RunTime:0.0027s ]
+SQL: SELECT a.nickname,a.id,u.money,a.headimg,u.rank,a.openid,u.match_amount,u.win_amount FROM dd_user_base a INNER JOIN dd_user u on a.id=u.user_id  WHERE a.id = 182 LIMIT 1   [ RunTime:0.0023s ]
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+ERR: 参数错误或者未定义:uid
+
+[ 2019-05-21T16:34:34+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2019-05-21T16:34:38+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2019-05-21T16:39:49+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+
+[ 2019-05-21T16:40:52+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0022s ]
+NOTIC: [8] Undefined variable: uid /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 786 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = null AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0021s ]
+
+[ 2019-05-21T16:41:13+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0019s ]
+
+[ 2019-05-21T16:41:14+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0026s ]
+
+[ 2019-05-21T17:44:21+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0021s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','1') [ RunTime:0.0165s ]
+
+[ 2019-05-21T17:44:29+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0016s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','1') [ RunTime:0.0149s ]
+
+[ 2019-05-21T17:46:20+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0022s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0198s ]
+
+[ 2019-05-21T17:47:18+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0022s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0074s ]
+
+[ 2019-05-21T17:50:29+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0026s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0069s ]
+
+[ 2019-05-21T17:50:39+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0019s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0159s ]
+
+[ 2019-05-21T17:52:02+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0017s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0069s ]
+
+[ 2019-05-21T17:52:17+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0025s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0149s ]
+
+[ 2019-05-21T17:52:34+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0026s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0151s ]
+
+[ 2019-05-21T17:52:37+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0027s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0074s ]
+
+[ 2019-05-21T17:53:19+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0029s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0343s ]
+
+[ 2019-05-21T17:53:26+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0021s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','') [ RunTime:0.0142s ]
+
+[ 2019-05-21T17:59:41+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0026s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','1') [ RunTime:0.0088s ]
+
+[ 2019-05-21T18:00:56+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0014s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','我的家属') [ RunTime:0.0084s ]
+
+[ 2019-05-21T19:21:30+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0027s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','大风刮过') [ RunTime:0.0148s ]
+
+[ 2019-05-21T19:22:30+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_feedback` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_feedback` WHERE `user_id` = 182 AND `add_time` BETWEEN '2019-05-21 0:0:0' AND '2019-05-21 23:59:59' LIMIT 1   [ RunTime:0.0032s ]
+SQL: INSERT INTO `dd_feedback` (`user_id`,`content`) VALUES ('182','大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较。。。。。。大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较。。。。。。大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航斤斤计较大风刮过股海护航') [ RunTime:0.0171s ]
+
+[ 2019-05-21T19:24:09+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000550s ]
+
+[ 2019-05-21T19:24:18+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0023s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0019s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:20+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0021s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0017s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:20+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0021s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0017s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:21+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0024s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:21+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0024s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:22+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0029s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0025s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:22+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0020s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0016s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:22+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0026s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0026s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:22+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0022s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0017s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:35+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0025s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0022s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:36+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0028s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0023s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:37+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0017s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0013s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:37+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0023s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:37+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0025s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:38+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0019s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0016s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:39+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0031s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0026s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:39+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0034s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0031s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:40+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0025s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:40+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0021s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:40+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0024s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:24:48+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2019-05-21T19:24:53+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0025s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:25:32+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2019-05-21T19:25:39+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0019s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0015s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:27:29+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+
+[ 2019-05-21T19:28:18+08:00 ] 113.87.42.212 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2019-05-21T19:28:26+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2019-05-21T19:28:38+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0023s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:30:33+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0032s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0028s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.dd_user_info' doesn't exist
+
+[ 2019-05-21T19:32:37+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=feedback
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000643s ]
+
+[ 2019-05-21T19:32:41+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0022s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2019-05-21T19:32:48+08:00 ] 113.87.42.212 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0024s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 4 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+SQL: UPDATE `dd_user` SET `candy1`=candy1-1 WHERE `user_id` = 182 [ RunTime:0.0020s ]
+SQL: UPDATE `dd_user_slime` SET `exp`=exp+200 WHERE `u_id` = 182 AND `s_id` = 4 [ RunTime:0.0140s ]
+SQL: SELECT `exp`,`blood`,`blue` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 4 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `blood`,`blue` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 4 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `user_id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+

@@ -1,0 +1,1725 @@
+[ 2019-04-28T09:46:21+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0461s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0033s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012568s ]
+
+[ 2019-04-28T09:46:41+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0540s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0092s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T09:46:43+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T09:46:45+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T09:46:48+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T09:46:49+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0023s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2019-04-28T09:46:56+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T09:46:57+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0023s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2019-04-28T09:47:23+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T09:47:24+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0037s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0029s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000449s ]
+
+[ 2019-04-28T09:48:46+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T09:48:46+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0020s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2019-04-28T10:09:24+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0022s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T10:09:26+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T10:27:17+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T10:28:28+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0362s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2019-04-28T10:28:42+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T10:28:57+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0035s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T10:46:05+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T10:46:06+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0019s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2019-04-28T11:28:03+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0039s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0031s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0028s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T14:17:33+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+ERR: SQLSTATE[HY000] [2002] Connection refused
+
+[ 2019-04-28T14:37:36+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0016s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2019-04-28T14:42:16+08:00 ] 14.20.38.25 /api.php?m=Api&c=api&a=sign
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Api/View/include/commonjs.html): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/#DFrame/Library/Think/Template.class.php 第 1393 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065466s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2019-04-28T15:23:58+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0019s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2019-04-28T15:24:00+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '5' LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2019-04-28T15:24:06+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '12' LIMIT 1   [ RunTime:0.0023s ]
+SQL: INSERT INTO `dd_message_log` (`msg_id`,`uid`,`status`,`create_time`) VALUES ('12','182','1','1556436246') [ RunTime:0.0157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2019-04-28T15:24:09+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000304s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '5' LIMIT 1   [ RunTime:0.0021s ]
+
+[ 2019-04-28T15:24:11+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '50' LIMIT 1   [ RunTime:0.0016s ]
+SQL: INSERT INTO `dd_message_log` (`msg_id`,`uid`,`status`,`create_time`) VALUES ('50','182','1','1556436251') [ RunTime:0.0144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2019-04-28T16:46:17+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T18:29:40+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T18:30:46+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T18:31:13+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T19:12:01+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0024s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2019-04-28T19:12:13+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T19:12:48+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T19:12:52+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T19:12:53+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0027s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000483s ]
+
+[ 2019-04-28T19:24:38+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0037s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T19:24:44+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0024s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000544s ]
+
+[ 2019-04-28T20:09:51+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:11:15+08:00 ] 14.116.137.167 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0041s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0031s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0033s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2019-04-28T20:12:32+08:00 ] 14.116.137.167 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:12:35+08:00 ] 14.116.137.167 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0027s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2019-04-28T20:13:11+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0039s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0031s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:13:24+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-04-28T20:13:40+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-04-28T20:14:06+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0070s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0041s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:14:20+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-04-28T20:14:45+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0023s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:15:00+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0027s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2019-04-28T20:20:40+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:20:57+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:20:58+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0013s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000427s ]
+
+[ 2019-04-28T20:22:12+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0024s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0014s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:22:27+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-04-28T20:24:48+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-04-28T20:27:18+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:27:20+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0025s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000431s ]
+
+[ 2019-04-28T20:27:46+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-04-28T20:32:07+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:32:08+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0019s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2019-04-28T20:32:54+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-04-28T20:35:14+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0022s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:35:14+08:00 ] 14.20.38.25 /api.php?m=Index&c=index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`nickname`,`is_club_owner`,`headimg`,`rank`,`last_login_time`,`active_point`,`slime`,`match_amount`,`win_amount` FROM `dd_user` WHERE `club_id` = 3  [ RunTime:0.0021s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 403 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 405 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 411 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2019-04-28T20:35:28+08:00 ] 14.20.38.25 /api.php?m=Api&c=Index&a=upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-04-28T20:42:12+08:00 ] 183.14.30.171 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T20:42:15+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0027s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2019-04-28T20:42:42+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0019s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2019-04-28T20:42:45+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '49' LIMIT 1   [ RunTime:0.0013s ]
+SQL: INSERT INTO `dd_message_log` (`msg_id`,`uid`,`status`,`create_time`) VALUES ('49','182','1','1556455365') [ RunTime:0.0055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2019-04-28T20:57:13+08:00 ] 183.14.30.171 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
+[ 2019-04-28T21:17:22+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0022s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000510s ]
+
+[ 2019-04-28T21:17:23+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '49' LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2019-04-28T21:17:25+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '15' LIMIT 1   [ RunTime:0.0018s ]
+SQL: INSERT INTO `dd_message_log` (`msg_id`,`uid`,`status`,`create_time`) VALUES ('15','182','1','1556457445') [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000543s ]
+
+[ 2019-04-28T21:17:26+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '3' LIMIT 1   [ RunTime:0.0030s ]
+SQL: INSERT INTO `dd_message_log` (`msg_id`,`uid`,`status`,`create_time`) VALUES ('3','182','1','1556457446') [ RunTime:0.0155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2019-04-28T21:17:27+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: INSERT INTO `dd_message_log` (`msg_id`,`uid`,`status`,`create_time`) VALUES ('1','182','1','1556457447') [ RunTime:0.0141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2019-04-28T21:17:29+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '49' LIMIT 1   [ RunTime:0.0026s ]
+
+[ 2019-04-28T21:17:31+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '5' LIMIT 1   [ RunTime:0.0025s ]
+
+[ 2019-04-28T21:19:26+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0019s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2019-04-28T21:19:27+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0022s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0015s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2019-04-28T21:19:28+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0029s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2019-04-28T21:20:50+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0028s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 50 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 49 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 15 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [8] Undefined offset: 12 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 569 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 567 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2019-04-28T21:20:54+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '50' LIMIT 1   [ RunTime:0.0018s ]
+
+[ 2019-04-28T21:20:57+08:00 ] 183.14.30.171 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '15' LIMIT 1   [ RunTime:0.0016s ]
+

@@ -1,0 +1,146 @@
+[ 2019-04-22T11:15:28+08:00 ] 14.153.201.122 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(4,5,6); [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2019-04-22T11:15:36+08:00 ] 14.153.201.122 /api.php?m=Index&c=index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined variable: club /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 152 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2019-04-22T11:17:21+08:00 ] 14.153.201.122 /api.php?m=Index&c=index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 134 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0027s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0022s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 139 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2019-04-22T12:04:56+08:00 ] 14.153.201.122 /api.php?m=Index&c=index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 134 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2019-04-22T12:07:52+08:00 ] 14.153.201.122 /api.php?m=Index&c=index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 134 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2019-04-22T12:08:33+08:00 ] 14.153.201.122 /api.php?m=Index&c=index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 134 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2019-04-22T12:09:08+08:00 ] 14.153.201.122 /api.php?m=Index&c=index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 134 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0018s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 139 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2019-04-22T16:12:34+08:00 ] 14.153.201.122 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 134 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0018s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 139 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000537s ]
+

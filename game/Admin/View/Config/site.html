@@ -1,0 +1,61 @@
+        <div class="pageheader notab">
+            <h1 class="pagetitle">游戏设置</h1>
+            <span class="pagedesc">设置游戏的基本信息</span>
+        </div><!--pageheader-->
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+            <form class="stdform stdform2" method="post">
+                <p>
+                    <label>初级场对战金额<span style="color:#f65c20">{$battleAmount1}</span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="battleAmount1" id="battleAmount1" value="{$_CFG.site.battleAmount1}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>初级场利润比率 (此刻利润值为：<span style="color:#f65c20">{$lirun1}</span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="lirun1" id="lirun1" value="{$_CFG.site.lirun}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>中级场对战金额<span style="color:#f65c20">{$battleAmount2}</span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="battleAmount2" id="battleAmount2" value="{$_CFG.site.battleAmount2}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>中级场利润比率 (此刻利润值为：<span style="color:#f65c20">{$lirun2}</span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="lirun2" id="lirun2" value="{$_CFG.site.lirun2}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>高级场对战金额<span style="color:#f65c20">{$battleAmount3}</span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="battleAmount3" id="battleAmount3" value="{$_CFG.site.battleAmount3}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>高级场利润比率 (此刻利润值为：<span style="color:#f65c20">{$lirun3}</span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="lirun3" id="lirun3" value="{$_CFG.site.lirun3}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>抽成总比率不能大于等1</small></label>
+                </p>
+				<p>
+					<label>俱乐部抽成比例<small>比如：0.2表示20%</small></label>
+					<span class="field"><input type="text" name="clubRatio" id="clubRatio" value="{$_CFG.site.clubRatio}" class="smallinput" /></span>
+				</p>
+				<p>
+					<label>第一级抽成比例 <small>比如：0.2表示20%</small></label>
+					<span class="field"><input type="text" name="firstRatio" id="firstRatio" value="{$_CFG.site.firstRatio}" class="smallinput" /></span>
+				</p>
+                <p>
+                    <label>第二级抽成比例 <small>比如：0.2表示20%</small></label>
+                    <span class="field"><input type="text" name="secondRatio" id="secondRatio" value="{$_CFG.site.secondRatio}" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>第三级抽成比例 <small>比如：0.2表示20%</small></label>
+                    <span class="field"><input type="text" name="thirdRatio" id="thirdRatio" value="{$_CFG.site.thirdRatio}" class="smallinput" /></span>
+                </p>
+				<p class="stdformbutton">
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+				</p>
+			</form>
+
+			<script src="__PUBLIC__/plugins/ueditor1.4.3/ueditor.config.js"></script>
+			<script src="__PUBLIC__/plugins/ueditor1.4.3/ueditor.all.min.js"></script>
+				<script>
+					ue = UE.getEditor('chou_body');
+				</script>
+        </div><!--contentwrapper-->  

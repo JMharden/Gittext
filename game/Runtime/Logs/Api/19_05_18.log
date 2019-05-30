@@ -1,0 +1,2589 @@
+[ 2019-05-18T09:43:18+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2019-05-18T10:32:45+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=ercode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T10:32:56+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=ercode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined index: stream /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 48 行.
+NOTIC: [2] imagejpeg(Uploads/images/qrcode_bg.jpg): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 80 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000550s ]
+
+[ 2019-05-18T10:34:08+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=ercode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined index: stream /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 48 行.
+NOTIC: [2] imagejpeg(upload/image/qrcode_bg.jpg): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 80 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2019-05-18T10:34:57+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=ercode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined index: stream /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 48 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2019-05-18T10:34:59+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=ercode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined index: stream /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 48 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2019-05-18T10:37:27+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=ercode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T10:41:07+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004533s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+
+[ 2019-05-18T10:41:10+08:00 ] 113.87.27.206 /api.php?m=Api&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-05-18T10:41:15+08:00 ] 113.87.27.206 /api.php?m=Api&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-05-18T10:41:16+08:00 ] 113.87.27.206 /api.php?m=Api&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-05-18T10:41:22+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] imagecreatefromjpeg(./Public/images/invite.jpg): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 50 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 53 行.
+NOTIC: [2] imagejpeg() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 55 行.
+
+[ 2019-05-18T10:42:10+08:00 ] 183.3.255.32 /api.php?m=Api&c=Index&a=slime&parent=182
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2019-05-18T10:43:09+08:00 ] 61.151.178.197 /api.php?m=Api&c=Index&a=slime&parent=182
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2019-05-18T11:09:17+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=ercode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0031s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: 非法操作:ercode
+
+[ 2019-05-18T11:09:19+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+
+[ 2019-05-18T11:09:22+08:00 ] 113.87.27.206 /api.php?m=Api&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-05-18T11:09:28+08:00 ] 113.87.27.206 /api.php?m=Api&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-05-18T11:09:33+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] imagecreatefromjpeg(./Public/images/invite.jpg): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 59 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 62 行.
+NOTIC: [2] imagejpeg() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 64 行.
+
+[ 2019-05-18T11:12:15+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=ercode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: 非法操作:ercode
+
+[ 2019-05-18T11:12:21+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: path /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 50 行.
+NOTIC: [8] Undefined variable: path /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 53 行.
+NOTIC: [8] Undefined variable: path /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 53 行.
+NOTIC: [2] mkdir(): Invalid path /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 53 行.
+NOTIC: [8] Undefined variable: path /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 55 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000622s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2019-05-18T11:17:13+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2048] Only variables should be assigned by reference /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 24 行.
+NOTIC: [2] imagepng(http://tt.wapwei.com/api.php?m=Api&amp;c=Api&amp;a=login&amp;uid=182qrcode9d9859ebb4e825179a00a36b2d734ca0.png): failed to open stream: HTTP wrapper does not support writeable connections /phpstudy/www/Gittext/game/#DFrame/Library/Vendor/phpqrcode/class.phpqrcode.php 第 954 行.
+
+[ 2019-05-18T11:19:42+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: user_info /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `dd_user` LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [2] unlink(./Public/qrcode/1902/27/182_qrcode.jpg): No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1686 行.
+NOTIC: [2] Illegal string offset 'domain' /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1705 行.
+
+[ 2019-05-18T11:20:17+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: user_info /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_user` LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2019-05-18T11:22:37+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: user_info /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_user` LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] unlink(./Public/qrcode/1902/27/182_qrcode.jpg): No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1686 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2019-05-18T11:22:52+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: user_info /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_user` LIMIT 1   [ RunTime:0.0027s ]
+NOTIC: [2] unlink(./Public/qrcode/1902/27/182_qrcode.jpg): No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1686 行.
+NOTIC: [2] Illegal string offset 'domain' /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1705 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2019-05-18T11:23:56+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: user_info /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_user` LIMIT 1   [ RunTime:0.0016s ]
+NOTIC: [2] unlink(./Public/qrcode/1902/27/182_qrcode.jpg): No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1686 行.
+NOTIC: [2] Illegal string offset 'domain' /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1705 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000608s ]
+
+[ 2019-05-18T11:25:47+08:00 ] 183.3.255.32 /api.php?m=Api&c=Api&a=login&uid=182
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T11:30:10+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T11:30:34+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] file_get_contents(logo.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 44 行.
+NOTIC: [2] imagecreatefromstring(): Empty string or invalid image /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 44 行.
+NOTIC: [2] imagesx() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 47 行.
+NOTIC: [2] imagesy() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 48 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 51 行.
+NOTIC: [2] imagecopyresampled() expects parameter 2 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 55 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000486s ]
+
+[ 2019-05-18T11:33:26+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] file_get_contents(logo.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 69 行.
+NOTIC: [2] imagecreatefromstring(): Empty string or invalid image /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 69 行.
+NOTIC: [2] imagesx() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 72 行.
+NOTIC: [2] imagesy() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 73 行.
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 76 行.
+NOTIC: [2] imagecopyresampled() expects parameter 2 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 80 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2019-05-18T14:34:38+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000550s ]
+
+[ 2019-05-18T14:35:20+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2019-05-18T14:35:32+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2019-05-18T14:38:35+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000604s ]
+
+[ 2019-05-18T14:39:22+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2019-05-18T14:40:02+08:00 ] 183.3.255.32 /api.php?m=Api&c=Api&a=login&uid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T14:40:09+08:00 ] 101.227.139.164 /api.php?m=Api&c=Api&a=login&uid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T14:41:00+08:00 ] 61.151.178.165 /api.php?m=Api&c=Api&a=login&uid=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T14:41:28+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000628s ]
+
+[ 2019-05-18T14:44:19+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: config /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 71 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2019-05-18T14:46:01+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001466s ]
+
+[ 2019-05-18T14:46:51+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2019-05-18T14:47:46+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000489s ]
+
+[ 2019-05-18T14:49:01+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2019-05-18T14:49:36+08:00 ] 183.3.255.32 /api.php?m=Api&c=Api&a=login&uid=182
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T14:49:44+08:00 ] 183.3.255.32 /api.php?m=Api&c=Api&a=login&uid=182
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T14:49:49+08:00 ] 101.227.139.164 /api.php?m=Api&c=Api&a=login&uid=182
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T14:50:35+08:00 ] 101.89.239.216 /api.php?m=Api&c=Api&a=login&uid=182
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T14:56:41+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined index: stream /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2803 行.
+NOTIC: [2] imagejpeg(./Public/invite/invite/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2835 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000635s ]
+
+[ 2019-05-18T14:57:02+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined index: stream /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2803 行.
+NOTIC: [2] imagejpeg(./Public/invite/intivecode/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2835 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000568s ]
+
+[ 2019-05-18T14:58:48+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] imagecreatefromjpeg(./Public/invite/intivecode/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 51 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 54 行.
+NOTIC: [2] imagejpeg() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 56 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2019-05-18T14:59:51+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] imagecreatefromjpeg(./Public/invite/intivecode/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 56 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 59 行.
+NOTIC: [2] imagejpeg() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 61 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000431s ]
+
+[ 2019-05-18T15:00:25+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000556s ]
+
+[ 2019-05-18T15:00:47+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] imagecreatefromjpeg(./Public/invite/intivecode/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 56 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 59 行.
+NOTIC: [2] imagejpeg() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 61 行.
+NOTIC: [2] file_get_contents(./Public/invite/intivecode/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 63 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2019-05-18T15:10:11+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] imagecreatefromjpeg(./Public/invite/intivecode/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 62 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 65 行.
+NOTIC: [2] imagejpeg() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 67 行.
+NOTIC: [2] file_get_contents(./Public/invite/intivecode/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 69 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2019-05-18T15:10:32+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=create_qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T15:11:48+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=public%20function%20qrcode()%20{%20//%20if%20(!$this-%3Euser)%20{%20//%20$this-%3Eerror(%27%E8%AF%B7%E7%99%BB%E9%99%86%E5%90%8E%E6%93%8D%E4%BD%9C%EF%BC%81%27,%20U(%27Public/login%27));%20//%20}%20$path%20=%20%22./Public/invite/%22%20.%20date(%27Ym/d%27,%20$this-%3Euser[%27sub_time%27])%20.%20%27/%27%20.%20$this-%3Euser[%27id%27]%20.%20%22.png%22;%20$invite_path%20=%20%22./Public/invite/%22%20.%20date(%27Ym/d%27,%20$this-%3Euser[%27sub_time%27])%20.%20%27/%27%20.%20$this-%3Euser[%27id%27]%20.%20%22_invite.png%22;%20if%20(!is_dir(dirname($path)))%20{%20mkdir(dirname($path),%200777,%201);%20}%20if%20(!file_exists($path))%20{%20$url%20=%20complete_url(U(%27Public/reg?parent=%27%20.%20$this-%3Euser[%27id%27]));%20//%20%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E7%89%87%20if%20(!is_dir(dirname($path)))%20mkdir(dirname($path),%200777,%20true);%20include%20COMMON_PATH%20.%20%27Util/phpqrcode/phpqrcode.php%27;%20\QRcode::png($url,%20$path,%20%27M%27,%2010);%20}%20if%20(!file_exists($invite_path))%20{%20//%20%E5%90%88%E6%88%90%20$im_dst%20=%20imagecreatefromjpeg(%22./Public/images/invite.jpg%22);%20$im_src%20=%20imagecreatefrompng($path);%20//%20%E5%90%88%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81%EF%BC%88%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%A4%A7%E5%B0%8F282*282)%20imagecopyresized($im_dst,%20$im_src,%20204,%20587,%200,%200,%20231,%20231,%20430,%20430);%20//%20%E4%BF%9D%E5%AD%98%20imagejpeg($im_dst,%20$invite_path);%20}%20if%20(IS_MOBILE)%20{%20redirect(%27qrcode.php?url=%27%20.%20urlencode($invite_path));%20}%20else%20{%20header(%22Content-type:%20image/jpeg%22);%20echo%20file_get_contents($invite_path);%20}%20}
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: 非法操作:public function qrcode() { // if (!$this->user) { // $this->error('请登陆后操作！', U('Public/login')); // } $path = "./Public/invite/" . date('Ym/d', $this->user['sub_time']) . '/' . $this->user['id'] . ".png"; $invite_path = "./Public/invite/" . date('Ym/d', $this->user['sub_time']) . '/' . $this->user['id'] . "_invite.png"; if (!is_dir(dirname($path))) { mkdir(dirname($path), 0777, 1); } if (!file_exists($path)) { $url = complete_url(U('Public/reg?parent=' . $this->user['id'])); // 生成二维码图片 if (!is_dir(dirname($path))) mkdir(dirname($path), 0777, true); include COMMON_PATH . 'Util/phpqrcode/phpqrcode.php'; \QRcode::png($url, $path, 'M', 10); } if (!file_exists($invite_path)) { // 合成 $im_dst = imagecreatefromjpeg("./Public/images/invite.jpg"); $im_src = imagecreatefrompng($path); // 合成二维码（二维码大小282*282) imagecopyresized($im_dst, $im_src, 204, 587, 0, 0, 231, 231, 430, 430); // 保存 imagejpeg($im_dst, $invite_path); } if (IS_MOBILE) { redirect('qrcode.php?url=' . urlencode($invite_path)); } else { header("Content-type: image/jpeg"); echo file_get_contents($invite_path); } }
+
+[ 2019-05-18T15:12:06+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=create_qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: 非法操作:create_qrcode
+
+[ 2019-05-18T15:12:13+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] imagecreatefromjpeg(./Public/images/invite.jpg): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 49 行.
+NOTIC: [2] imagecopyresized() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 52 行.
+NOTIC: [2] imagejpeg() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 54 行.
+
+[ 2019-05-18T15:15:41+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=create_qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: 非法操作:create_qrcode
+
+[ 2019-05-18T15:15:45+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T15:18:15+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=create_qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: 非法操作:create_qrcode
+
+[ 2019-05-18T15:18:19+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2019-05-18T15:18:34+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000492s ]
+
+[ 2019-05-18T15:19:18+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000552s ]
+
+[ 2019-05-18T15:20:14+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000556s ]
+
+[ 2019-05-18T15:28:22+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2019-05-18T15:28:45+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2019-05-18T15:28:55+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] imagepng(/phpstudy/www/Gittext/game./Public/invite/2019-05/182.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 56 行.
+NOTIC: [8] Undefined variable: img /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 60 行.
+NOTIC: [2] imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 60 行.
+NOTIC: [2] imagecreatefromjpeg(): '/phpstudy/www/Gittext/game' is not a valid JPEG file /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 60 行.
+NOTIC: [2] imagecopy() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 61 行.
+NOTIC: [2] imagepng() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 66 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 67 行.
+NOTIC: [2] file_get_contents(./Public/invite/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 72 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2019-05-18T15:28:57+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] imagepng(/phpstudy/www/Gittext/game./Public/invite/2019-05/182.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 56 行.
+NOTIC: [8] Undefined variable: img /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 60 行.
+NOTIC: [2] imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 60 行.
+NOTIC: [2] imagecreatefromjpeg(): '/phpstudy/www/Gittext/game' is not a valid JPEG file /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 60 行.
+NOTIC: [2] imagecopy() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 61 行.
+NOTIC: [2] imagepng() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 66 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 67 行.
+NOTIC: [2] file_get_contents(./Public/invite/2019-05/182_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 72 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000486s ]
+
+[ 2019-05-18T15:29:41+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2019-05-18T15:30:11+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2019-05-18T15:31:09+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2019-05-18T15:31:18+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2019-05-18T15:33:05+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2019-05-18T15:33:56+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000606s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2019-05-18T15:35:10+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2019-05-18T15:36:07+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2019-05-18T15:36:21+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2019-05-18T15:36:44+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000550s ]
+
+[ 2019-05-18T15:37:26+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2019-05-18T15:37:51+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000547s ]
+
+[ 2019-05-18T15:38:27+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001172s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001232s ]
+
+[ 2019-05-18T15:38:41+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2019-05-18T15:40:56+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2019-05-18T15:41:03+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000554s ]
+
+[ 2019-05-18T15:44:13+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: file /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 60 行.
+NOTIC: [2] imagecreatefromjpeg(): Filename cannot be empty /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 60 行.
+NOTIC: [2] imagecopyresized() expects parameter 2 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 64 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, boolean given /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 70 行.
+NOTIC: [2] file_get_contents(./Public/invite/2019-05/20_invite.png): failed to open stream: No such file or directory /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 83 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2019-05-18T15:45:29+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2019-05-18T15:45:41+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2019-05-18T15:45:51+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T15:46:29+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0032s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2019-05-18T15:46:52+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2019-05-18T15:47:16+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000495s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2019-05-18T15:49:27+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2019-05-18T15:49:45+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2019-05-18T15:50:07+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2019-05-18T15:50:35+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2019-05-18T16:01:27+08:00 ] 183.3.255.32 /api.php?m=Api&c=Api&a=login&uid=312
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T16:02:25+08:00 ] 61.129.8.179 /api.php?m=Api&c=Api&a=login&uid=312
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T16:04:16+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0037s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000652s ]
+
+[ 2019-05-18T16:05:47+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2019-05-18T16:53:27+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] unlink(./Public/code/123.jpg): No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1596 行.
+NOTIC: [8] Undefined index: ticket /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1532 行.
+NOTIC: [2] copy(https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1544 行.
+NOTIC: [8] Undefined variable: im_dst /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1658 行.
+NOTIC: [2] imagejpeg() expects parameter 1 to be resource, null given /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1658 行.
+NOTIC: [8] Undefined variable: im_src /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1664 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, null given /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1664 行.
+NOTIC: [8] Undefined variable: im_dst /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1667 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, null given /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1667 行.
+
+[ 2019-05-18T16:54:00+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [2] unlink(./Public/code/123.jpg): No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1596 行.
+NOTIC: [8] Undefined index: ticket /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1532 行.
+NOTIC: [2] copy(https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1544 行.
+NOTIC: [8] Undefined variable: im_dst /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1658 行.
+NOTIC: [2] imagejpeg() expects parameter 1 to be resource, null given /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1658 行.
+NOTIC: [8] Undefined variable: im_src /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1664 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, null given /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1664 行.
+NOTIC: [8] Undefined variable: im_dst /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1667 行.
+NOTIC: [2] imagedestroy() expects parameter 1 to be resource, null given /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1667 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2019-05-18T16:58:13+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0029s ]
+NOTIC: [2] unlink(./Public/qrcode/7001/01/_qrcode.jpg): No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1686 行.
+NOTIC: [2] Illegal string offset 'domain' /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1705 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2019-05-18T16:59:10+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2019-05-18T16:59:11+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0014s ]
+NOTIC: [2] unlink(./Public/qrcode/7001/01/_qrcode.jpg): No such file or directory /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 1686 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2019-05-18T17:01:17+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2019-05-18T17:02:02+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004145s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+
+[ 2019-05-18T17:02:05+08:00 ] 113.87.27.206 /api.php?m=Api&c=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-05-18T17:09:01+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+
+[ 2019-05-18T17:09:01+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+
+[ 2019-05-18T17:09:05+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+
+[ 2019-05-18T17:09:18+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2019-05-18T17:10:04+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T17:10:17+08:00 ] 113.87.27.206 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T17:10:48+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0033s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000456s ]
+
+[ 2019-05-18T17:16:20+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2019-05-18T17:17:05+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0015s ]
+
+[ 2019-05-18T17:17:33+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0026s ]
+
+[ 2019-05-18T17:18:52+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: SERVER_ROOT /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 397 行.
+
+[ 2019-05-18T17:19:32+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0023s ]
+
+[ 2019-05-18T17:21:26+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [8] Undefined variable: domain /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 397 行.
+
+[ 2019-05-18T17:23:42+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+
+[ 2019-05-18T17:24:31+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+
+[ 2019-05-18T17:25:06+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+
+[ 2019-05-18T17:25:59+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 123 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+
+[ 2019-05-18T17:26:09+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+
+[ 2019-05-18T17:27:23+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 386 行.
+
+[ 2019-05-18T17:37:49+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 379 行.
+
+[ 2019-05-18T17:37:54+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2019-05-18T17:41:17+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: INSERT INTO `dd_user` (`nickname`) VALUES ('123') [ RunTime:0.0077s ]
+
+[ 2019-05-18T17:42:42+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2019-05-18T17:49:56+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000387s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2019-05-18T17:49:57+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000556s ]
+
+[ 2019-05-18T17:50:02+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: user /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 382 行.
+
+[ 2019-05-18T17:58:37+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: Think\Controller:getcurlurl方法不存在！
+
+[ 2019-05-18T17:58:49+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 33 行.
+
+[ 2019-05-18T17:59:13+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 33 行.
+
+[ 2019-05-18T18:00:47+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+
+[ 2019-05-18T18:01:04+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+
+[ 2019-05-18T18:02:01+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:02:17+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:02:49+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:03:26+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:03:27+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:03:27+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:03:28+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:04:21+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:04:54+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+
+[ 2019-05-18T18:05:11+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:06:18+08:00 ] 113.87.43.215 /api.php?m=Api&c=api&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+
+[ 2019-05-18T18:06:22+08:00 ] 113.87.43.215 /api.php?m=Api&c=Api&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+
+[ 2019-05-18T18:06:38+08:00 ] 113.87.43.215 /api.php?m=Api&c=Api&a=tes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T18:06:50+08:00 ] 113.87.43.215 /api.php?m=Api&c=Api&a=tes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0041s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0029s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 27 行.
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'money2' in 'field list'
+
+[ 2019-05-18T18:08:02+08:00 ] 113.87.43.215 /api.php?m=Api&c=Api&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T18:08:05+08:00 ] 113.87.43.215 /api.php?m=Api&c=api&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+
+[ 2019-05-18T18:08:07+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 1223 LIMIT 1   [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2019-05-18T18:08:08+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 1223 LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2019-05-18T18:08:30+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 1223 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2019-05-18T18:08:31+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 1223 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000477s ]
+
+[ 2019-05-18T18:08:59+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 1223 LIMIT 1   [ RunTime:0.0017s ]
+
+[ 2019-05-18T18:09:28+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:09:29+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:10:08+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:10:09+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:10:09+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:10:09+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:10:10+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:10:30+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000308s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 1223 LIMIT 1   [ RunTime:0.0018s ]
+
+[ 2019-05-18T18:11:10+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:11:51+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: Think\Controller:vget方法不存在！
+
+[ 2019-05-18T18:11:59+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: Think\Controller:cget方法不存在！
+
+[ 2019-05-18T18:12:17+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:12:21+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: 非法操作:qrcode1
+
+[ 2019-05-18T18:13:15+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+ERR: 非法操作:qrcode1
+
+[ 2019-05-18T18:13:18+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:13:22+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:13:54+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:13:55+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:14:35+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant CLI - assumed 'CLI' /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2501 行.
+
+[ 2019-05-18T18:14:57+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant CLI - assumed 'CLI' /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2501 行.
+
+[ 2019-05-18T18:14:58+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant CLI - assumed 'CLI' /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2501 行.
+
+[ 2019-05-18T18:15:07+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:15:08+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:15:56+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:16:17+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Use of undefined constant CLI - assumed 'CLI' /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2501 行.
+
+[ 2019-05-18T18:17:41+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+
+[ 2019-05-18T18:19:03+08:00 ] 113.87.43.215 /api.php?m=Index&c=index&a=qrcode
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+NOTIC: [2048] Declaration of Api\Controller\IndexController::qrcode() should be compatible with Api\Controller\ApiController::qrcode($uid) /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 18 行.
+NOTIC: [8] Undefined index: REQUEST_SCHEME /phpstudy/www/Gittext/game/Application/Common/Common/function.php 第 2695 行.
+
+[ 2019-05-18T20:36:40+08:00 ] 114.220.6.116 /api.php?m=Api&c=Api&a=login&uid=182
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 12 行.
+

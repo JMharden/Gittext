@@ -1,0 +1,1549 @@
+[ 2019-05-15T17:54:07+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2019-05-15T17:54:33+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=upSlime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user_slime` [ RunTime:0.0023s ]
+SQL: SELECT `exp` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `dd_user` SET `candy`=candy-6 WHERE `id` = 182 [ RunTime:0.0092s ]
+SQL: UPDATE `dd_user_slime` SET `exp`=exp+600 WHERE `u_id` = 182 AND `s_id` = 1 [ RunTime:0.0115s ]
+SQL: SELECT `exp`,`blood`,`blue` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0021s ]
+SQL: UPDATE `dd_user_slime` SET `blood`=blood+1 WHERE `u_id` = 182 AND `s_id` = 1 [ RunTime:0.0064s ]
+SQL: UPDATE `dd_user_slime` SET `blue`=blue+1 WHERE `u_id` = 182 AND `s_id` = 1 [ RunTime:0.0061s ]
+SQL: SELECT `blood`,`blue` FROM `dd_user_slime` WHERE `u_id` = 182 AND `s_id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2019-05-15T17:55:02+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2019-05-15T17:55:09+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=joinClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT `club_id`,`nickname` FROM `dd_user` WHERE `id` = 184 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0026s ]
+SQL: SELECT `create_number`,`club_name`,`ower_id` FROM `dd_club_info` WHERE `id` = '3' LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2019-05-15T17:55:11+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=joinClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT `club_id`,`nickname` FROM `dd_user` WHERE `id` = 184 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0026s ]
+SQL: SELECT `create_number`,`club_name`,`ower_id` FROM `dd_club_info` WHERE `id` = '12' LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2019-05-15T17:55:34+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0017s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:55:36+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0016s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:55:37+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0023s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:55:37+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0028s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:55:37+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:55:38+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0016s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:55:38+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0018s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:55:38+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0018s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:56:24+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2019-05-15T17:57:23+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0023s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:57:24+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0016s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:57:24+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0016s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:57:25+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0026s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:57:25+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0017s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:57:25+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0012s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:57:25+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0024s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:57:58+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0025s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T17:58:16+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 157 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2019-05-15T18:01:08+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:02:20+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000504s ]
+
+[ 2019-05-15T18:02:32+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2019-05-15T18:02:37+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:02:39+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000141s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0019s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:02:39+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0023s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:02:39+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0027s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:02:40+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0012s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:02:40+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0019s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:02:44+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0012s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:02:51+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0016s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:03:09+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-05-15T18:03:49+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:04:34+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0018s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:06:02+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2019-05-15T18:06:10+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:06:17+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0037s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
+[ 2019-05-15T18:06:19+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0023s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 562 行.
+NOTIC: [8] Undefined offset: 3 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 564 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 562 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2019-05-15T18:06:38+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0026s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:07:19+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0035s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 183 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 183 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 183 LIMIT 1   [ RunTime:0.0020s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:07:25+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2019-05-15T18:07:41+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+
+[ 2019-05-15T18:08:01+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2019-05-15T18:08:03+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:09:36+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0029s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0029s ]
+
+[ 2019-05-15T18:10:23+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+
+[ 2019-05-15T18:10:36+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0021s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:11:24+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0014s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:12:18+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0018s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:12:41+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0023s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:13:00+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 184 LIMIT 1   [ RunTime:0.0019s ]
+
+[ 2019-05-15T18:13:11+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_user` WHERE `id` = 184 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2019-05-15T18:15:28+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0017s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:16:16+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 155 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0026s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2019-05-15T18:16:20+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=joinClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT `club_id`,`nickname` FROM `dd_user` WHERE `id` = 184 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: SELECT `create_number`,`club_name`,`ower_id` FROM `dd_club_info` WHERE `id` = '3' LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+
+[ 2019-05-15T18:16:47+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=clubs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: club_name /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 155 行.
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`club_name`,`club_head`,`ower_name`,`area`,`create_time`,`declaration`,`club_notice`,`create_number` FROM `dd_club_info` WHERE `club_name` LIKE '%%'  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2019-05-15T18:16:48+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=joinClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `club_id`,`nickname` FROM `dd_user` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0024s ]
+SQL: SELECT `create_number`,`club_name`,`ower_id` FROM `dd_club_info` WHERE `id` = '12' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2019-05-15T18:16:56+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=joinClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT `club_id`,`nickname` FROM `dd_user` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0026s ]
+SQL: SELECT `create_number`,`club_name`,`ower_id` FROM `dd_club_info` WHERE `id` = '12' LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 12 LIMIT 1   [ RunTime:0.0023s ]
+
+[ 2019-05-15T18:24:43+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0013s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'area' in 'field list'
+
+[ 2019-05-15T18:25:20+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0027s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0031s ]
+NOTIC: [8] Undefined variable: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 108 行.
+SQL: SELECT `create_number`,`club_name`,`ower_id` FROM `dd_club_info` WHERE `id` = null LIMIT 1   [ RunTime:0.0026s ]
+
+[ 2019-05-15T18:26:38+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `nickname`,`money`,`headimg` FROM `dd_user` WHERE `id` = 184 LIMIT 1   [ RunTime:0.0018s ]
+
+[ 2019-05-15T18:27:11+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT `nickname`,`money`,`headimg` FROM `dd_user` WHERE `id` = 184 LIMIT 1   [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2019-05-15T18:27:42+08:00 ] 113.87.26.222 /api.php?m=Api&c=Index&a=createClub
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent1` = 184 LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent2` = 184 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `parent3` = 184 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT `nickname`,`money`,`headimg`,`openid` FROM `dd_user` WHERE `id` = 184 LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000552s ]
+
+[ 2019-05-15T18:38:18+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+
+[ 2019-05-15T18:38:19+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+
+[ 2019-05-15T18:39:11+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+
+[ 2019-05-15T18:39:12+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+
+[ 2019-05-15T18:39:27+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0023s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:27+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0037s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0026s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:31+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0018s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:42+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0022s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:51+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0021s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0022s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:52+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0022s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:52+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0018s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:53+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0022s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:53+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0016s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:54+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0015s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:54+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:39:54+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0022s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0022s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:40:06+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0033s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0032s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0042s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0032s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:40:07+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: userInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 20 行.
+NOTIC: [8] Undefined variable: useInfo /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`nickname`,`money`,`rank`,`headimg`,`club_id`,`empiric`,`is_club_owner`,`match_amount`,`win_amount` FROM `dd_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0017s ]
+NOTIC: [2] Division by zero /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 25 行.
+NOTIC: [2048] Non-static method Api\Service\GameService::getDuan() should not be called statically, assuming $this from incompatible context /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 39 行.
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+
+[ 2019-05-15T18:41:14+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: token /phpstudy/www/Gittext/game/Application/Api/Controller/ApiController.class.php 第 10 行.
+
+[ 2019-05-15T18:41:38+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0036s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2019-05-15T18:46:04+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0023s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2019-05-15T18:48:43+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0028s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0038s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = 182  WHERE    ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',182) and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc; [ RunTime:0.0030s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 556 行.
+NOTIC: [8] Undefined offset: 3 /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 558 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 556 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2019-05-15T18:48:44+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '3' LIMIT 1   [ RunTime:0.0022s ]
+
+[ 2019-05-15T18:48:45+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=delEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0020s ]
+NOTIC: [2] Illegal offset type in isset or empty /phpstudy/www/Gittext/game/#DFrame/Library/Think/Model.class.php 第 889 行.
+SQL: UPDATE `dd_message_log` SET `msg_id`='3',`status`='2',`modify_time`='1557917325' WHERE `uid` = '182' AND `msg_id` = '3' [ RunTime:0.0182s ]
+
+[ 2019-05-15T18:48:47+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=readEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `dd_message_log` WHERE `uid` = '182' AND `msg_id` = '1' LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2019-05-15T18:48:47+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=delEmail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `dd_message_log` [ RunTime:0.0025s ]
+NOTIC: [2] Illegal offset type in isset or empty /phpstudy/www/Gittext/game/#DFrame/Library/Think/Model.class.php 第 889 行.
+SQL: UPDATE `dd_message_log` SET `msg_id`='1',`status`='2',`modify_time`='1557917327' WHERE `uid` = '182' AND `msg_id` = '1' [ RunTime:0.0148s ]
+
+[ 2019-05-15T18:48:50+08:00 ] 113.87.26.222 /api.php?m=Index&c=index&a=slime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0019s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 17 行.
+SQL: SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = 182  order by o.id asc ; [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0029s ]
+SQL: SELECT `candy`,`candy1`,`candy2` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000527s ]
+

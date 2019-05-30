@@ -1,0 +1,131 @@
+[ 2019-04-15T19:02:37+08:00 ] 183.3.255.28 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0151s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0194s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0023s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 497 行.
+
+[ 2019-04-15T19:02:43+08:00 ] 183.3.255.28 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 497 行.
+
+[ 2019-04-15T19:02:55+08:00 ] 183.3.255.28 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 497 行.
+
+[ 2019-04-15T19:04:12+08:00 ] 183.3.255.28 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 5 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `club_role`,`headimg`,`is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: club_id /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 497 行.
+
+[ 2019-04-15T19:04:16+08:00 ] 183.3.255.28 /api.php?m=Api&c=Index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0035s ]
+SQL: SELECT `is_club_owner`,`club_id` FROM `dd_user` WHERE `id` = 183 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `dd_club_infomation` [ RunTime:0.0028s ]
+SQL: SELECT c.id,c.status,c.type,c.remark,c.club_id,c.time FROM dd_club_infomation c INNER JOIN dd_email_read e on c.id=e.email_id  WHERE e.user_id = 183 AND e.status <> 1 AND `club_id` = '7' AND c.type <> 1  [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2019-04-15T19:04:20+08:00 ] 183.3.255.28 /api.php?m=Api&c=Index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0027s ]
+SQL: SELECT `is_club_owner`,`club_id` FROM `dd_user` WHERE `id` = 183 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `dd_club_infomation` [ RunTime:0.0020s ]
+SQL: SELECT c.id,c.status,c.type,c.remark,c.club_id,c.time FROM dd_club_infomation c INNER JOIN dd_email_read e on c.id=e.email_id  WHERE e.user_id = 183 AND e.status <> 1 AND `club_id` = '7' AND c.type <> 1  [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2019-04-15T19:04:22+08:00 ] 183.3.255.28 /api.php?m=Api&c=Index&a=clubRecords
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0026s ]
+SQL: SELECT `is_club_owner`,`club_id` FROM `dd_user` WHERE `id` = 183 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `dd_club_infomation` [ RunTime:0.0018s ]
+SQL: SELECT c.id,c.status,c.type,c.remark,c.club_id,c.time FROM dd_club_infomation c INNER JOIN dd_email_read e on c.id=e.email_id  WHERE e.user_id = 183 AND e.status <> 1 AND `club_id` = '7' AND c.type <> 1  [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2019-04-15T19:04:29+08:00 ] 183.3.255.28 /api.php?m=Api&c=Index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`nickname`,`club_role`,`headimg`,`rank`,`win_amount`,`last_login_time` FROM `dd_user` WHERE `club_id` = 5  [ RunTime:0.0021s ]
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 538 行.
+NOTIC: [2] Illegal string offset 'id' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 538 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2019-04-15T19:04:31+08:00 ] 183.3.255.28 /api.php?m=Api&c=Index&a=clubMembers
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+

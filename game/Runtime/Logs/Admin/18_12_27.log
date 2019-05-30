@@ -1,0 +1,2360 @@
+[ 2018-12-27T02:33:03+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+ERR: SQLSTATE[HY000] [2002] ����Ŀ�����������ܾ����޷����ӡ�
+
+
+[ 2018-12-27T02:33:05+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: SQLSTATE[HY000] [2002] ����Ŀ�����������ܾ����޷����ӡ�
+
+
+[ 2018-12-27T02:33:21+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [2002] ����Ŀ�����������ܾ����޷����ӡ�
+
+
+[ 2018-12-27T02:33:24+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0610s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0110s ]
+
+[ 2018-12-27T02:33:24+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 13 行.
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T02:33:32+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 13 行.
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T02:34:37+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=duihuan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+ERR: 非法操作:duihuan
+
+[ 2018-12-27T02:34:59+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=dui
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+ERR: 非法操作:dui
+
+[ 2018-12-27T02:35:08+08:00 ] 127.0.0.1 /index.php?m=Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+
+[ 2018-12-27T02:35:08+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 13 行.
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T02:35:14+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 13 行.
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:13:53+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+
+[ 2018-12-27T03:13:53+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 13 行.
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T03:13:55+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+
+[ 2018-12-27T03:13:56+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0740s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0490s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0640s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0290s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0290s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0410s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0320s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0230s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0230s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:14:01+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Domain&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Controller\DomainController::_list() should be compatible with Admin\Controller\AdminController::_list($table, $where = NULL, $order = NULL) F:\project\www.dazhuanpan.com\Application\Admin\Controller\DomainController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_domain` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dd_domain u WHERE `is_type` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dd_domain` WHERE `is_type` = 0 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: domain F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041698080326eb05155c12f2eaf8a44c.php 第 258 行.
+NOTIC: [8] Undefined index: id F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041698080326eb05155c12f2eaf8a44c.php 第 260 行.
+NOTIC: [8] Undefined index: openid F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041698080326eb05155c12f2eaf8a44c.php 第 283 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:14:08+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Domain&a=edit&id=165
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\DomainController::_list() should be compatible with Admin\Controller\AdminController::_list($table, $where = NULL, $order = NULL) F:\project\www.dazhuanpan.com\Application\Admin\Controller\DomainController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_domain` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_domain` WHERE `id` = 165 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dd_domain` WHERE `id` = 165 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T03:14:32+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Domain&a=edit&id=165
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\DomainController::_list() should be compatible with Admin\Controller\AdminController::_list($table, $where = NULL, $order = NULL) F:\project\www.dazhuanpan.com\Application\Admin\Controller\DomainController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_domain` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_domain` WHERE `id` = 165 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dd_domain` WHERE `id` = 165 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dd_domain` WHERE `id` = 165 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `dd_domain` SET `domain`='http://gametest.com',`is_lock`='0',`is_home`='0',`is_type`='0' WHERE `id` = 165 [ RunTime:0.0270s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T03:14:33+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Domain&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Admin\Controller\DomainController::_list() should be compatible with Admin\Controller\AdminController::_list($table, $where = NULL, $order = NULL) F:\project\www.dazhuanpan.com\Application\Admin\Controller\DomainController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_domain` [ RunTime:0.0280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dd_domain u WHERE `is_type` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dd_domain` WHERE `is_type` = 0 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: domain F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041698080326eb05155c12f2eaf8a44c.php 第 258 行.
+NOTIC: [8] Undefined index: id F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041698080326eb05155c12f2eaf8a44c.php 第 260 行.
+NOTIC: [8] Undefined index: openid F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041698080326eb05155c12f2eaf8a44c.php 第 283 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2018-12-27T03:14:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+
+[ 2018-12-27T03:14:48+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0200s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0210s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0190s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0200s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0190s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0210s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T03:15:24+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0220s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0210s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0200s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0220s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0200s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0190s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0220s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:16:21+08:00 ] 127.0.0.1 /kpan.php?m=Home&c=Index&a=dui
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+ERR: 非法操作:dui
+
+[ 2018-12-27T03:18:02+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=mp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-12-27T03:30:53+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=withdraw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:30:55+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0240s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Admin\Controller\ConfigController.class.php 第 54 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T03:30:57+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0210s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Admin\Controller\ConfigController.class.php 第 54 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T03:32:27+08:00 ] 127.0.0.1 /kpan.php?m=admin&c=product&a=bizhong
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wuguili` [ RunTime:0.0600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_wuguili` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `dd_wuguili` ORDER BY id desc LIMIT 0,25   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:33:22+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=User&a=qiehuan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:33:32+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Domain&a=generalize
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Admin\Controller\DomainController::_list() should be compatible with Admin\Controller\AdminController::_list($table, $where = NULL, $order = NULL) F:\project\www.dazhuanpan.com\Application\Admin\Controller\DomainController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_domain` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dd_domain u WHERE `is_type` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dd_domain` WHERE `is_type` = 1 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: domain F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\2d6b4bf4c096896632e48424cffff4a2.php 第 260 行.
+NOTIC: [8] Undefined index: id F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\2d6b4bf4c096896632e48424cffff4a2.php 第 262 行.
+NOTIC: [8] Undefined index: openid F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\2d6b4bf4c096896632e48424cffff4a2.php 第 285 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:33:35+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Domain&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of Admin\Controller\DomainController::_list() should be compatible with Admin\Controller\AdminController::_list($table, $where = NULL, $order = NULL) F:\project\www.dazhuanpan.com\Application\Admin\Controller\DomainController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_domain` [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dd_domain u WHERE `is_type` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dd_domain` WHERE `is_type` = 0 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: domain F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041698080326eb05155c12f2eaf8a44c.php 第 258 行.
+NOTIC: [8] Undefined index: id F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041698080326eb05155c12f2eaf8a44c.php 第 260 行.
+NOTIC: [8] Undefined index: openid F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041698080326eb05155c12f2eaf8a44c.php 第 283 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:33:38+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=live_pay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T03:33:44+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=web_site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: kaijaing F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\8afb3603cddc1830dd83eeb6cd890006.php 第 271 行.
+NOTIC: [8] Undefined index: subscribe F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\8afb3603cddc1830dd83eeb6cd890006.php 第 295 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-12-27T03:34:26+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0190s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0200s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0190s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0240s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0190s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0200s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T03:42:16+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=withdraw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+
+[ 2018-12-27T03:42:20+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0290s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 13 行.
+NOTIC: [8] Undefined index: name F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\041185b974292283d2f6098acc3220ec.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:42:21+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+
+[ 2018-12-27T03:42:21+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0220s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0210s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0200s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0230s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0230s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0230s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0230s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:42:23+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=withdraw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T03:42:36+08:00 ] 127.0.0.1 /kpan.php?m=admin&c=product&a=bizhong
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wuguili` [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_wuguili` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dd_wuguili` ORDER BY id desc LIMIT 0,25   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:39:22+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.026001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026001s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0060s ]
+
+[ 2018-12-27T04:39:23+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0460s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0230s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0230s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0340s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0310s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0260s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0250s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.103006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.103006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-12-27T04:39:29+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0230s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Admin\Controller\ConfigController.class.php 第 54 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:40:20+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:40:22+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:40:24+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-12-27T04:41:39+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0230s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0230s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0240s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0230s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0210s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0230s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0230s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-12-27T04:44:15+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0170s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0180s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0170s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0180s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0170s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0170s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0180s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-12-27T04:44:16+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:44:18+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2018-12-27T04:44:19+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:44:21+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:44:23+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:46:14+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=withdraw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-12-27T04:46:16+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:46:38+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0170s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0170s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0190s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0200s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0190s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:47:41+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Admin&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE ( `sub_time` >= 1545840000 AND `sub_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_pay_record` [ RunTime:0.0220s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` WHERE ( `ctime` >= 1545840000 AND `ctime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_pay_record` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_withdraw_log` [ RunTime:0.0190s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: out_total_all F:\project\www.dazhuanpan.com\Application\Admin\Controller\AdminController.class.php 第 90 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_user` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_charge_log` [ RunTime:0.0190s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_charge_log` WHERE ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_buylog` [ RunTime:0.0330s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1545840000 AND `starttime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `dd_expense` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545840000 AND `create_time` <= 1545926399  ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545753600 AND `create_time` <= 1545839999  ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1545667200 AND `create_time` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545840000 AND `addtime` <= 1545926399  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1543593600 AND `addtime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545839999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE ( `addtime` >= 1545753600 AND `addtime` <= 1545753599  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_wxpay_log` [ RunTime:0.0190s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` WHERE ( `log_time` >= 1543593600 AND `log_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 AND ( `starttime` >= 1543593600 AND `starttime` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` WHERE ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 AND ( `create_time` >= 1543593600 AND `create_time` <= 1546271999  ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(total_fee) AS tp_sum FROM `dd_wxpay_log` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(yingmoney) AS tp_sum FROM `dd_buylog` WHERE `yingmoney` > 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_expense` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_withdraw_log` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 324 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 359 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 383 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 390 行.
+NOTIC: [8] Undefined variable: qian_win_ext F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 395 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 433 行.
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\3fa9f2e830eaac62a7df4990979ab90d.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:47:43+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=web_site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: kaijaing F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\8afb3603cddc1830dd83eeb6cd890006.php 第 271 行.
+NOTIC: [8] Undefined index: subscribe F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\8afb3603cddc1830dd83eeb6cd890006.php 第 295 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-12-27T04:47:45+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:48:45+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2018-12-27T04:48:45+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:48:45+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-12-27T04:48:47+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Admin&a=clear_cache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+NOTIC: [2] unlink(./Application/Runtime/Temp/1c793bf2a64a8b97606dd6f352646fcb.php): No such file or directory F:\project\www.dazhuanpan.com\#DFrame\Library\Think\Cache\Driver\File.class.php 第 313 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:48:48+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:48:50+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:48:52+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2018-12-27T04:49:10+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-12-27T04:49:11+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-12-27T04:49:12+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:49:19+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-12-27T04:49:20+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:49:21+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:49:23+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=withdraw
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-12-27T04:49:25+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-12-27T04:49:28+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: lirun F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 258 行.
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:49:35+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Admin\Controller\ConfigController.class.php 第 54 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:49:37+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0170s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Admin\Controller\ConfigController.class.php 第 54 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:49:38+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `dd_zhuan` [ RunTime:0.0220s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT SUM(ying) AS tp_sum FROM `dd_zhuan` WHERE `addtime` > 1545840000 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Division by zero F:\project\www.dazhuanpan.com\Application\Admin\Controller\ConfigController.class.php 第 54 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: tou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 348 行.
+NOTIC: [8] Undefined index: chou F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 352 行.
+NOTIC: [8] Undefined index: chou_reward F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 356 行.
+NOTIC: [8] Undefined index: chou_expense F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 360 行.
+NOTIC: [8] Undefined index: chou_body F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\e089353d3177b37e965d353d9ef4f07c.php 第 365 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-12-27T04:49:43+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=User&a=qiehuan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-12-27T04:49:52+08:00 ] 127.0.0.1 /kpan.php?m=Admin&c=Config&a=web_site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: kaijaing F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\8afb3603cddc1830dd83eeb6cd890006.php 第 271 行.
+NOTIC: [8] Undefined index: subscribe F:\project\www.dazhuanpan.com\Application\Runtime\Cache\Admin\8afb3603cddc1830dd83eeb6cd890006.php 第 295 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

@@ -1,0 +1,85 @@
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">编辑植物</h1>
+			<span class="pagedesc"></span>
+        </div><!--pageheader-->
+        
+        <div id="contentwrapper" class="contentwrapper lineheight21">
+        
+        
+            <form class="stdform stdform2" method="post">
+				<table class="form-table" cellspacing="1" border="0">
+					<tr>
+						<th class="title">名称</th>
+						<td>
+							<input type="text" name="name" id="name" value="{$info.name}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">图片<small>显示在首页，建议尺寸600*300px</small></th>
+						<td>
+							<iframe src="{:U('upload', 'event=setPic&url='.$info['pic'])}" scrolling="no" width="100" height="100"></iframe>
+							<input type="hidden" name="pic" id="pic" value="{$info.pic}" class="smallinput" />
+							<script>
+							function setPic(url){
+								document.getElementById('pic').value = url;
+							}
+							</script>
+						</td>
+					</tr>
+					<tr>
+						<th class="title">价格<small></small></th>
+						<td>
+							<input type="text" name="price" id="price" value="{$info.price}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">每天发售数量<small></small></th>
+						<td>
+							<input type="text" name="num" id="num" value="{$info.num}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">采摘价值<small></small></th>
+						<td>
+							<input type="text" name="harvest_value" id="harvest_value" value="{$info.harvest_value}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">生命周期<small></small></th>
+						<td>
+							<input type="text" name="life_cycle" id="life_cycle" value="{$info.life_cycle}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">可以被偷次数<small></small></th>
+						<td>
+							<input type="text" name="can_tou" id="can_tou" value="{$info.can_tou}" class="smallinput" />
+						</td>
+					</tr>
+					<tr>
+						<th class="title">介绍<small></small></th>
+						<td>
+							<textarea name="body" id="body" class="longinput" style="margin: 0px; height: 400px; max-width:640px;">{$info.body}</textarea>
+						</td>
+					</tr>
+				</table>
+				
+				
+				<p class="stdformbutton">
+					<if condition="$info['pid'] neq ''">
+						<input type="hidden" value="{$info.pid}" name="pid" />	
+					</if>
+					<button class="submit radius2">提交</button>
+					<input type="reset" class="reset radius2" value="重置" />
+				</p>
+			</form>
+			<script src="__PUBLIC__/plugins/ueditor1.4.3/ueditor.config.js"></script>
+			<script src="__PUBLIC__/plugins/ueditor1.4.3/ueditor.all.min.js"></script>
+			<script src="__PUBLIC__/plugins/layer-v2.2/layer/layer.js"></script>
+			<script>
+				ue = UE.getEditor('body');
+			</script>
+        
+        </div><!--contentwrapper-->
+        

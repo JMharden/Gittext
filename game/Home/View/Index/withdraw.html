@@ -1,0 +1,133 @@
+
+<!DOCTYPE html><html lang="zh-CN" style="font-size: 122.812px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="dns-prefetch" href="https://static.gtimg.com/">
+		<title>兑换记录</title>
+		 <link rel="stylesheet" type="text/css" href="/res/zhuan/mystyle.css?54">
+		
+		<style type="text/css">
+			a{
+				padding: 5px;
+				color:rgb(167, 73, 56);
+			}
+		</style>
+		
+		
+		
+		
+		
+		
+	</head>
+	<body>
+		
+		<header class="l-hd">
+			 <include file="include/zhuantop" />
+			
+			
+			<div class="toast dialog cpm-hide">
+					<div class="shade"></div>
+					<div class="naChanceMsg_1" style="min-hight:1rem;">
+						<!--<div class="publicClose"></div>-->
+						<p class="pop_context"></p>
+						
+						<div class="btn_stype_1">
+							<p class="goDraw" id="sureDraw">确认
+						</p></div>
+						<div class="btn_stype_2 cpm-hide">
+							<p class="goDraw  sureDraw_left">确认
+								
+							</p><p class="goDraw sureDraw_right">取消
+						</p></div>
+					</div>
+			</div>
+			<div class="toast toast_tk cpm-hide">
+					<div class="shade"></div>
+					<div class="naChanceMsg_tk" style="min-hight:1rem;">
+						<!--<div class="publicClose"></div>-->
+						<p class="pop_context"></p>
+						
+						<div class="btn_stype_1_tk">
+							<p class="goDraw tk">确认
+						</p></div>
+					</div>
+			</div>
+		
+				
+		</header>
+		<div id="ui-view"><div id="etDiv" class="all-contents">
+	<div class="wrap_1">
+
+		<!--<div class="withdraw_deposit">
+			<div class="withdraw_deposit_success">-->
+				<div class="notice">
+					<header class="notice_header">
+						<p>提现记录</p>
+					</header>
+					
+					<div class="notice_table_wrap">
+						
+						
+						<!--提现记录列表-->
+						<div class="notice_table">
+							<h6 class="all_tx">已提现余额:<span class="ye_txAmount">{$sum}</span>金币</h6>
+							
+                        
+							<div class="notice_table_table"><table><tbody>
+                            <volist name="list" id="vo">
+							<tr><td class="td-left"><i>{$vo.money}</i>金币</td><td class="td-middle"><if condition="$vo['status'] eq 1">成功<elseif condition="$vo['status'] eq 0" />失败</if></td><td class="td-right">{$vo.create_time|date="m-d H:i:s",###}</td></tr> </volist>
+							</tbody></table></div>
+                      
+                       
+							 	
+						</div>
+						 <div class="page" style=" padding:5px;color:rgb(167, 73, 56);margin-left: 15px;">
+
+
+		             {$page}
+
+
+		              </div>
+					</div>
+				</div>
+
+			<!--</div>
+		</div>-->
+	</div>
+	<div class="mask_blank cpm-hide"></div>
+	<div class="empty_code"></div>
+	<div class="footer">
+				<ul class="footer_ul">
+					<a href="/">
+                    <li class="footer_li footer_li_1" data-type="pay">
+                       <span></span><p>抽奖</p>  
+                    </li>
+                    </a>
+                    <a href="/kpan.php?m=&c=index&a=tixian">
+                    <li class="footer_li footer_li_2  footer_li_active">
+                     <span></span><p>提现</p>      
+                    </li>
+                    </a>
+                    <a href="/kpan.php?m=&c=index&a=usercode">
+                    <li class="footer_li footer_li_3">
+                      <span></span><p>代理赚钱</p>
+                    </li>
+                    </a>
+                    <a href="/kpan.php?m=&c=index&a=daili">
+                    <li class="footer_li footer_li_4">
+                      <span></span><p>佣金</p>
+                    </li>
+                    </a>
+                    <a href="/kpan.php?m=&c=index&a=kefu">
+                    <li class="footer_li footer_li_5" style="margin-top: -20px;">
+                      <span></span><p>客服</p>
+                    </li>
+                    </a>
+				</ul>
+	</div>
+</div></div>
+
+</body></html>

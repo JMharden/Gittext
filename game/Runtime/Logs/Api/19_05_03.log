@@ -1,0 +1,20 @@
+[ 2019-05-03T17:04:01+08:00 ] 14.127.250.230 /api.php?m=Api&c=Index&a=clubInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `dd_config` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_config`  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: rand /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dd_user` [ RunTime:0.0025s ]
+SQL: SELECT `club_id` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `dd_club_info` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `dd_club_info` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT SUM(active_point) AS tp_sum FROM `dd_user` WHERE `club_id` = 3 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `is_club_owner` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `headimg` FROM `dd_user` WHERE `id` = 182 LIMIT 1   [ RunTime:0.0014s ]
+NOTIC: [2] Illegal string offset 'headimg' /phpstudy/www/Gittext/game/Application/Api/Controller/IndexController.class.php 第 333 行.
+
