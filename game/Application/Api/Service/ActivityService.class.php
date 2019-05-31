@@ -17,34 +17,39 @@ class ActivityService
      * 累计登陆逻辑
      * @return  按用户分组聚合
      */
-    function accuLogin($userId){
-        if ($userId) {
+    function accuLogin($openid,$user_id){
+        if ($openid) {
             $ween = date('w');
             if($ween==0){
                 $ween=7;
             }
             $start = date("Y-m-d 0:0:0",strtotime("-".($ween-1)."day"));
             $end = date("Y-m-d 23:59:59",strtotime("+".(7- $ween)."day"));
-            date("Y-m-d",strtotime("+".(7- date('w'))."day"));
-            date('w');
-            date_add() ;
+            $nowstart = date("Y-m-d 0:0:0");
+            $nowend = date("Y-m-d 23:59:59");
+          
             $maxAccDay=1;
-            $data= M('login_reward')->where(array("user_id" => $userId,"create_date"=>array('between',array($start,$end))))->order('create_date desc')->select();
+
+            $data= M('login_reward')->where(array("openid" => $openid,"create_date"=>array('between',array($start,$end))))->order('create_date desc')->select();
+
+            $datas= M('login_reward')->where(array("openid" => $openid,"create_date"=>array('between',array($nowstart,$nowend))))->order('create_date desc')->find();
+            // var_dump($datas);exit;
             //判断当天是否已经登陆过
-            if($data&& $data[0]['create_date']==date("Y-m-d")){
-                $maxAccDay = $data[0]['accu_login_days'];
+            if($datas){
+                $maxAccDay = $datas['accu_login_days'];
             }else {
-                if($data){
-                    $maxAccDay = $data[0]['accu_login_days']+1;
+                if($datas){
+                    $maxAccDay = $datas['accu_login_days']+1;
                 }
                 $reward =  $this->getLoginRewardList($maxAccDay);
                 $addData =[
-                    "user_id"=>$userId,
+                    'user_id'=>$user_id,
+                    "openid"=>$openid,
                     'accu_login_days'=>$maxAccDay,
                     'reward_num'=>$reward['num'],
                     'reward_type'=>$reward['type'],
                     "create_date"=>date("Y-m-d H:i:s"),
-                    'expire_date'=>$end,
+                    "expire_date"=>$end,
                     'is_draw'=>'N'
                 ];
                 $last = M('login_reward')->add($addData);
@@ -59,12 +64,13 @@ class ActivityService
                     'accu_login_days'=>$maxAccDay,
                     'reward_num'=>$dayreward['num'],
                     'reward_type'=>$dayreward['type'],
-                    'status'=>'N'
-                ];
+                    'status'=>'X'
+                ]; 
             }
 
-            return  array_merge($data,$list);
 
+             return  array_merge($data,$list);
+             
         }
         return null;
     }

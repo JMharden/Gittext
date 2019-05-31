@@ -16,17 +16,113 @@ class IndexController extends ApiController
        // parent::_initialize();
        parent::_load_config();
        // parent::write_log();
-       $rand = $_GET['rand'];
-       if($rand&&S('request_rand_'.$rand)){
-           echo   json_encode(['status' => '-2', 'msg' => '重复提交']);
-           exit;
-       }
-       if($rand){
-           S('request_rand_'.$rand,$rand,300);
-       } 
+       // $token = $_POST['token'];
+       // if($token == null && S($token) == null){
+       //     echo   json_encode(['status' => '403', 'msg' => '重复提交']);
+       //     exit;
+       // }
+        
    }
+//    public function aaa(){
+// $user_id = 183;
+// $openid = 'oH1545GqPe51gS22CrBhTnpCVxB8';
+//         $data = M('slime')->where(array('id'=>1))->find();
+//         // foreach ($data as $k => $v) {
+//           $datas = array(
+//             's_id' => $data['id'],
+//             'name' => $data['name'],
+//             'skill'=> $data['skill'],
+//             'blood'=> $data['blood'],
+//             'blue' => $data['blue'],
+//             'exp' =>  50,
+//             'u_id' => $user_id,
+//             'openid'=>$openid,
+//           );
+//         // $result[] = $datas;
+//         // }
+//         // var_dump($result);exit;
+//         M('user_slime')->add($datas);
+    
+   
+//    }
 
+public function test(){
+   $userId = 182;
+        if ($userId) {
+            $ween = date('w');
+            if($ween==0){
+                $ween=7;
+            }
+            $start = date("Y-m-d 0:0:0",strtotime("-".($ween-1)."day"));
+            $end = date("Y-m-d 23:59:59",strtotime("+".(7- $ween)."day"));
+            $nowstart = date("Y-m-d 0:0:0");
+            $nowend = date("Y-m-d 23:59:59");
+          
+            $maxAccDay=1;
 
+            $data= M('login_reward')->where(array("user_id" => $userId,"create_date"=>array('between',array($start,$end))))->order('create_date desc')->select();
+
+            $datas= M('login_reward')->where(array("user_id" => $userId,"create_date"=>array('between',array($nowstart,$nowend))))->order('create_date desc')->find();
+            // var_dump($datas);exit;
+            //判断当天是否已经登陆过
+            if($datas){
+                $maxAccDay = $datas['accu_login_days'];
+            }else {
+                // if($data){
+                    $maxAccDay = $datas['accu_login_days']+1;
+                // }
+                $reward =  $this->getLoginRewardList($maxAccDay);
+                $addData =[
+                    "user_id"=>$userId,
+                    'accu_login_days'=>$maxAccDay,
+                    'reward_num'=>$reward['num'],
+                    'reward_type'=>$reward['type'],
+
+                    "create_date"=>date("Y-m-d H:i:s"),
+
+                    "create_date"=>date("Y-m-d H:i:s"),
+
+                    'expire_date'=>$end,
+                    'is_draw'=>'N'
+                ];
+                $last = M('login_reward')->add($addData);
+                $addData['id']=$last;
+                $data = array_merge($addData,$data);
+            }
+            //就剩余活动天数的数据返回
+            while($maxAccDay<7){
+                $maxAccDay=$maxAccDay+1;
+                $dayreward = $this->getLoginRewardList($maxAccDay);
+                $list[]=[
+                    'accu_login_days'=>$maxAccDay,
+                    'reward_num'=>$dayreward['num'],
+                    'reward_type'=>$dayreward['type'],
+                    'status'=>'N'
+                ];
+            }
+
+             return  array_merge($data,$list);
+             
+        }
+        return null;
+    
+}
+public function getLoginRewardList($loginDays){
+        $list =[
+            1=>['num'=>5,'type'=>'candy'],
+            2=>['num'=>10,'type'=>'candy'],
+            3=>['num'=>20,'type'=>'candy'],
+            4=>['num'=>5,'type'=>'candy1'],
+            5=>['num'=>10,'type'=>'candy1'],
+            6=>['num'=>15,'type'=>'candy1'],
+            7=>['num'=>10,'type'=>'candy2']
+        ];
+        if($loginDays>0&&$loginDays<8){
+            return $list[$loginDays];
+        }
+        return [];
+
+    }
 
   /**----------------  俱乐部部分start    ---------------------**/
       /**
@@ -628,7 +724,7 @@ public function quitClub(){
      * @return   [type]     [description]
      */
     public function slime(){
-
+      $openid = S($token)[1];
       $user_id = 182;
       $Model = new \Think\Model();
 
@@ -847,6 +943,11 @@ public function quitClub(){
 
         return  current($result);
     }
+    /**
+     * @param $gameNum
+     * @return mixed
+     * @name   游戏综合评分
+     */
     public function score($score){
     	$filter = [
             ['level' => 4,  'min' => 0,     'max' => 1350],
@@ -860,6 +961,8 @@ public function quitClub(){
 
         return  current($result);
     }
+
+    //综合评分
     public function zhScore(){
     	$user_id  =  182;
     	if($user_id == null){
@@ -891,7 +994,7 @@ public function quitClub(){
     	echo json_encode(['statu'=>1,'msg'=>'返回成功','data'=>$result]);
     }
 
-
+   // 竞技赛历史战绩
    public function  playHistory(){
    	$user_id = 182;
    
@@ -920,6 +1023,7 @@ public function quitClub(){
    	 	echo json_encode(['statu'=>-1,'msg'=>'系统错误']);
    	 }	
    }
+   //娱乐赛历史战绩
   public function funHistory(){
     $user_id = 182;
    
@@ -949,6 +1053,15 @@ public function quitClub(){
      }  
    }
    
+   public  function  userFlog(){
+      $user_id = 182;
+      $today = strtotime(date("Y-m-d"),time()); //当天零点
+      $todayEnd = $today+60*60*24;//家一天的时间
+      // var_dump($today);
 
+      //当天新增
+      $todaybonu = M('finance_log')->where(array('user_id'=>$user_id,'create_time'=>array('between',array($today,$todayEnd))))->sum('money');
+      //当月
+   }
 
 }
