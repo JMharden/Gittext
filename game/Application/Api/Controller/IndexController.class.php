@@ -1,5 +1,4 @@
 <?php
-
 namespace Api\Controller;
 use Api\Service\GameService;
 use Api\Service\UserService;
@@ -143,8 +142,8 @@ public function getLoginRewardList($loginDays){
         '_logic' => 'or',
       );
    
-       $subordinate =  M('user')->where($where)->count();   //下级人数
-       $userInfo  = M('user')->alias('a')
+       $subordinate =  M('user_base')->where($where)->count();   //下级人数
+       $userInfo  = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表
                         ->field("a.nickname,a.openid,a.headimg,u.money")
                         ->where(array('a.id'=> $uid))//需要显示的字段
@@ -198,6 +197,7 @@ public function getLoginRewardList($loginDays){
       
           $club_name = $_POST['club_name'];
           $aWhere['club_name'] = array('like','%'.$club_name.'%');
+
           $club = M('club_info')->field('id,club_name,club_head,ower_name,area,create_time,declaration,club_notice,create_number')->where($aWhere)->select();
           $data = array_column($club, 'id');
           // var_dump($data);exit;
@@ -215,6 +215,12 @@ public function getLoginRewardList($loginDays){
         // }
         echo json_encode(array('status'=>1,'msg'=>'返回成功','data'=>$club));
     }
+
+    // public function addAi(){
+    //   $data array(
+    //     array('nickname'=>'123','headimg':'http://tt.wapwei.com/Public/AI/1.jpg');
+    //   );
+    // }
 /**
  * [upload description]
  * @Author   佳民
@@ -225,7 +231,7 @@ public function getLoginRewardList($loginDays){
 public function upload(){
   $user_id = 182;
     if(IS_POST){
-         $type = $_POST['type']; //1为头像  2为二维码 ； 
+         // $type = $_POST['type']; //1为头像  2为二维码 ； 
          $code = $_FILES['file'];//获取小程序传来的图片
           if(is_uploaded_file($_FILES['file']['tmp_name'])) {  
                 //把文件转存到你希望的目录（不要使用copy函数）  
@@ -241,15 +247,16 @@ public function upload(){
              
                 //$move_to_file=$user_path."/".$_FILES['file']['name'];  
                 $file_true_name=$_FILES['file']['name'];  
-                $move_to_file=$user_path."/".date('Y-m-d').'_'.$user_id.'_'.$type.'_'.'club'.'.png';//strrops($file_true,".")查找“.”在字符串中最后一次出现的位置  
+                $move_to_file=$user_path."/".date('Y-m-d').'_'.$user_id.'_'.'_'.'club'.'.png';//strrops($file_true,".")查找“.”在字符串中最后一次出现的位置  
                 $url = "http://tt.wapwei.com".'/'.$move_to_file;
                 //echo "$uploaded_file   $move_to_file";  
                 if(move_uploaded_file($uploaded_file,iconv("utf-8","gb2312",$move_to_file))) { 
-                      if($type == 1){
-                        M('club_info')->where(array('ower_id'=>$user_id))->setField('club_head',$url);
-                      }else{
-                        M('club_info')->where(array('ower_id'=>$user_id))->setField('ercode',$url);
-                      }
+                      // if($type == 1){
+                      //   M('club_info')->where(array('ower_id'=>$user_id))->setField('club_head',$url);
+                      // }else{
+                      //   M('club_info')->where(array('ower_id'=>$user_id))->setField('ercode',$url);
+                      // }
+                      // var_dump(json_encode(['status'=>1,'msg'=>'上传成功','data'=>$url]));exit;
                      echo json_encode(['status'=>1,'msg'=>'上传成功','data'=>$url]);exit;
              
                 } else {  
@@ -296,7 +303,7 @@ public function upload(){
           return false;
         }
         if(IS_POST){
-          $user = M('user')->where(array('id'=>$uid))->field('club_id,nickname')->find();
+          $user = M('user')->where(array('user_id'=>$uid))->field('club_id,nickname')->find();
           $club = M('club_info')->where(array('id'=>$club_id))->field('create_number,club_name,ower_id')->find();
           $club_num = M('user')->where(array('club_id'=>$club_id))->count();
 
@@ -339,7 +346,7 @@ public function upload(){
          $club = M('club_info')->where(array('ower_id'=>$uid))->field('id,club_name')->find();
         if($type == 1){//同意加入
          
-          $res = M('user')->where(array('id'=>$create_user))->setField('club_id',$club['id']);
+          $res = M('user')->where(array('user_id'=>$create_user))->setField('club_id',$club['id']);
           // var_dump($res);exit;
   
           $content = 恭喜您成功加入.$club['club_name'];
@@ -368,9 +375,9 @@ public function quitClub(){
   if(IS_POST){
       $uid = $GLOBALS['current_uid'];
       
-      $user = M('user')->where(array('id'=>$uid))->field('club_id,nickname')->find();
+      $user = M('user')->where(array('user_id'=>$uid))->field('club_id,nickname')->find();
       $club = M('club_info')->where(array('id'=>$user['club_id']))->field('create_number,club_name,ower_id')->find();
-      $quit = M('user')->where(array('id'=>$uid))->setField('club_id',0);
+      $quit = M('user')->where(array('user_id'=>$uid))->setField('club_id',0);
       if($quit){
         $content = $user['nickname'].退出了.$club['club_name'].俱乐部;
         $this->addEmail('成员变动',$content,2,$club['ower_id'],$uid);
@@ -390,12 +397,12 @@ public function quitClub(){
       // var_dump(S('clubinfo_5'));exit;
        // $uid =S($_POST['token'])[2];
        // $club_id = S('user_info_'.$uid)[2];
-
+   
        
        $club_id = 3;  
        if(IS_POST){
            $uid = 182;
-           $club =  M('user')->where(array('id'=>$uid))->getField('club_id');
+           $club =  M('user')->where(array('user_id'=>$uid))->getField('club_id');
            // if($club == 0){
            //    echo json_encode(array('status'=>-2,'msg'=>'暂未加入俱乐部'));exit;
            // }else{
@@ -406,8 +413,8 @@ public function quitClub(){
                   $clubInfo = M('club_info')->where(array('id'=>$club_id))->find();
                   $usernum  = M('user')->where(array('club_id'=>$club_id))->count();
                   $active_point  = M('user')->where(array('club_id'=>$club_id))->sum('active_point');
-                  $is_club_owner =  M('user')->where(array('id'=>$uid))->getField('is_club_owner');
-                  $userInfo =  M('user')->where(array('id'=>$clubInfo['ower_id']))->getField('headimg');
+                  $is_club_owner =  M('user')->where(array('user_id'=>$uid))->getField('is_club_owner');
+                  $headimg =  M('user_base')->where(array('id'=>$clubInfo['ower_id']))->getField('headimg');
                   // $has_club = M('user')->where(array('id'=>$uid))->getField('club_id');
                   $info = array(
                               
@@ -415,7 +422,7 @@ public function quitClub(){
                     'club_name'   => $clubInfo['club_name'],    //俱乐部名称
                     'club_head'   => $clubInfo['club_head'],    //俱乐部头像
                     'club_role'   => $is_club_owner,            //俱乐部身份0
-                    'headimg'     => $userInfo['headimg'],      //创建人头像
+                    'headimg'     => $headimg,      //创建人头像
                     'declaration' => $clubInfo['declaration'],  //宣言
                     'area'        => $clubInfo['area'],         //地区
                     'ercode'      => $clubInfo['ercode'],       //俱乐部二维码
@@ -448,13 +455,18 @@ public function quitClub(){
 
 
       // $club_id = S('user_info_'.$uid)[2];
-      // if(IS_POST){
-        $club_id = 3;
-        // if(S('clubMembers_'.$club_id)){
-        //   // var_dump(S('clubMembers_'.$club_id));exit;
-        //   echo json_encode(S('clubMembers_'.$club_id));
-        // }else{
-          $members = M('user')->where(array('club_id'=>$club_id))->field('id,nickname,is_club_owner,headimg,rank,last_login_time,active_point,slime,match_amount,win_amount')->select();
+      if(IS_POST){
+        $club_id = $_POST['club_id'];
+        if(S('clubMembers_'.$club_id)){
+          // var_dump(S('clubMembers_'.$club_id));exit;
+          echo json_encode(S('clubMembers_'.$club_id));
+        }else{
+          // $members = M('user')->where(array('club_id'=>$club_id))->field('id,nickname,is_club_owner,headimg,rank,last_login_time,active_point,slime,match_amount,win_amount')->select();
+           $members  = M('user_base')->alias('a')
+                        ->join("dd_user u on a.id=u.user_id") //附表连主表
+                        ->field("a.id,a.nickname,a.headimg,u.is_club_owner,u.last_login_time,u.rank,u.active_point,u.slime,u.match_amount,u.win_amount")//需要显示的字段
+                        ->where(array('u.club_id' => $club_id))
+                        ->select();
           $data = array_column($members,'id');
          
           $slime_id = $this->checkSlime();
@@ -471,14 +483,14 @@ public function quitClub(){
           }
           // S('clubMembers_'.$club_id,$members);
           echo json_encode($members);
-        // }
+        }
       
-      // }  
+      }  
         
     }
     public function clubSet(){
-    	$uid = $GLOBALS['current_uid'];
-        $club_id =  M('user')->where(array('id'=>$uid))->getField('club_id');
+    	$user_id = 182;
+        $club_id =  M('user')->where(array('user_id'=>$user_id))->getField('club_id');
       // $club_id = $_POST['club_id'];
       if(IS_POST){
         $result = M('club_info')->where(array('id'=>$club_id))->save($_POST);
@@ -1055,13 +1067,51 @@ public function quitClub(){
    
    public  function  userFlog(){
       $user_id = 182;
+      $where = array(
+        'parent1'=>$user_id,
+        'parent2'=>$user_id,
+        'parent3'=>$user_id,
+        'id'     =>$user_id,
+        '_logic' => 'or',
+      );
+   
+      $users =  M('user_base')->where($where)->field('id')->select();   //下级人数
+      $id = array_column($users, 'id');
+
       $today = strtotime(date("Y-m-d"),time()); //当天零点
-      $todayEnd = $today+60*60*24;//家一天的时间
+      $todayEnd = $today+60*60*24;
+      $weekStime = mktime(0,0,0,date('m'),date('d')-date('w')+1,date('Y'));
+      $weekendtime = mktime(23,59,59,date('m'),date('d')-date('w')+7,date('Y'));
+      $beginThismonth=mktime(0,0,0,date('m'),1,date('Y'));
+      $endThismonth=mktime(23,59,59,date('m'),date('t'),date('Y'));
       // var_dump($today);
 
       //当天新增
       $todaybonu = M('finance_log')->where(array('user_id'=>$user_id,'create_time'=>array('between',array($today,$todayEnd))))->sum('money');
+      //当周
+      $weekbonu  = M('finance_log')->where(array('user_id'=>$user_id,'create_time'=>array('between',array($weekStime,$weekendtime))))->sum('money');
       //当月
+      $monthbonu = M('finance_log')->where(array('user_id'=>$user_id,'create_time'=>array('between',array($beginThismonth,$endThismonth))))->sum('money');
+      $allbonu =  M('finance_log')->where(array('user_id'=>$user_id))->sum('money');
+      $bouns = array(
+        'todaybonu' => $todaybonu,
+        'weekbonu'  => $weekbonu,
+        'monthbonu' => $monthbonu,
+        'allbonu'   => $allbonu,
+      );
+      $result = M('finance_log')->where(array('user_id'=>array('IN',array(implode(',',$id)))))->field('user_id,money,create_time')->select();
+      foreach ($result as $v) {
+        $username = M('user_base')->where(array('id'=>$v['user_id']))->getField('nickname');
+       $data = array(
+        'username' => $username,
+        'money'    =>ceil($v['money']),
+        'content'  => $username.'获得了'.ceil($v['money']).'气泡',
+       );
+       $datas[] = $data; 
+      }
+      // array_merge($datas,$bonus);
+     echo json_encode(['statu'=>1,'msg'=>'返回成功','data'=>$datas,'bonus'=>$bouns]);
+    
    }
 
 }
