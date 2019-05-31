@@ -14,7 +14,7 @@ class IndexController extends ApiController
   public function _initialize(){
        // parent::_initialize();
        parent::_load_config();
-       // parent::write_log();
+       parent::write_log();
        // $token = $_POST['token'];
        // if($token == null && S($token) == null){
        //     echo   json_encode(['status' => '403', 'msg' => '重复提交']);
@@ -27,8 +27,10 @@ class IndexController extends ApiController
     $num = $_POST['num'];
   
       $data = M('jiqiren')->select();
+   
       $datas = array_rand($data, $num);
       foreach($datas as $val){
+       
         $data_rand[]=$data[$val];
       }
        echo json_encode(array('status'=>1,'msg'=>'返回成功','data'=>$data_rand));exit;
@@ -38,67 +40,7 @@ class IndexController extends ApiController
    
    }
 
-public function test(){
-   $userId = 182;
-        if ($userId) {
-            $ween = date('w');
-            if($ween==0){
-                $ween=7;
-            }
-            $start = date("Y-m-d 0:0:0",strtotime("-".($ween-1)."day"));
-            $end = date("Y-m-d 23:59:59",strtotime("+".(7- $ween)."day"));
-            $nowstart = date("Y-m-d 0:0:0");
-            $nowend = date("Y-m-d 23:59:59");
-          
-            $maxAccDay=1;
 
-            $data= M('login_reward')->where(array("user_id" => $userId,"create_date"=>array('between',array($start,$end))))->order('create_date desc')->select();
-
-            $datas= M('login_reward')->where(array("user_id" => $userId,"create_date"=>array('between',array($nowstart,$nowend))))->order('create_date desc')->find();
-            // var_dump($datas);exit;
-            //判断当天是否已经登陆过
-            if($datas){
-                $maxAccDay = $datas['accu_login_days'];
-            }else {
-                // if($data){
-                    $maxAccDay = $datas['accu_login_days']+1;
-                // }
-                $reward =  $this->getLoginRewardList($maxAccDay);
-                $addData =[
-                    "user_id"=>$userId,
-                    'accu_login_days'=>$maxAccDay,
-                    'reward_num'=>$reward['num'],
-                    'reward_type'=>$reward['type'],
-
-                    "create_date"=>date("Y-m-d H:i:s"),
-
-                    "create_date"=>date("Y-m-d H:i:s"),
-
-                    'expire_date'=>$end,
-                    'is_draw'=>'N'
-                ];
-                $last = M('login_reward')->add($addData);
-                $addData['id']=$last;
-                $data = array_merge($addData,$data);
-            }
-            //就剩余活动天数的数据返回
-            while($maxAccDay<7){
-                $maxAccDay=$maxAccDay+1;
-                $dayreward = $this->getLoginRewardList($maxAccDay);
-                $list[]=[
-                    'accu_login_days'=>$maxAccDay,
-                    'reward_num'=>$dayreward['num'],
-                    'reward_type'=>$dayreward['type'],
-                    'status'=>'N'
-                ];
-            }
-
-             return  array_merge($data,$list);
-             
-        }
-        return null;
-    
-}
 public function getLoginRewardList($loginDays){
         $list =[
             1=>['num'=>5,'type'=>'candy'],
@@ -172,7 +114,7 @@ public function getLoginRewardList($loginDays){
                   echo json_encode(array('status'=>1,'msg'=>'创建俱乐部成功'));exit;
                 }
               } 
-      
+		  
           }
        }
     }
@@ -482,7 +424,7 @@ public function quitClub(){
         
     }
     public function clubSet(){
-      $user_id = 182;
+    	$user_id = 182;
         $club_id =  M('user')->where(array('user_id'=>$user_id))->getField('club_id');
       // $club_id = $_POST['club_id'];
       if(IS_POST){
@@ -548,10 +490,10 @@ public function quitClub(){
 
       //  $userId =  $GLOBALS['current_uid'];
        if(IS_POST){
-          $userId = $GLOBALS['current_uid'];
-          $mId =  $_POST['msgId'];
-          $msgId = explode(",", $mId);
-          
+	        $userId = $GLOBALS['current_uid'];
+	        $mId =  $_POST['msgId'];
+	        $msgId = explode(",", $mId);
+	        
          foreach ($msgId as $k => $v) {
               $data = [
                   'msg_id' => $v,
@@ -614,7 +556,7 @@ public function quitClub(){
      */
     public function clubRecords(){
 
-      // $uid =S($_POST['token'])[2];
+    	// $uid =S($_POST['token'])[2];
       $uid = 182;
       $is_club_owner =  M('user')->where(array('user_id'=>$uid))->getField('is_club_owner');
       $Model = new \Think\Model();
@@ -738,8 +680,8 @@ public function quitClub(){
       
         foreach($result as $k=>$v){
            $level = $this->s_level($data[$k]['exp']);
-           $data[$k]['max_exp']=  $level['max']-$level['min'];
-           $data[$k]['exp']=  $data[$k]['exp']-$level['min'];
+      	   $data[$k]['max_exp']=  $level['max']-$level['min'];
+      	   $data[$k]['exp']=  $data[$k]['exp']-$level['min'];
            $data[$k]['level']  = $level['level'];
 
   
@@ -811,14 +753,14 @@ public function quitClub(){
          // var_dump($sid);exit;
         
          $type = $_POST['type'];
-         $candyNum = $_POST['candy'];
-         $exp = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->getField('exp');
-         $nowLevel = $this->s_level($exp)['level'];
+		     $candyNum = $_POST['candy'];
+      	 $exp = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->getField('exp');
+     	   $nowLevel = $this->s_level($exp)['level'];
        // if
-      // var_dump($nowLevel['level']);exit;
-           S('slime_'.$sid,$nowLevel);
-      
-           $this->candy($user_id,$type,$candyNum,$sid);
+     	// var_dump($nowLevel['level']);exit;
+     	     S('slime_'.$sid,$nowLevel);
+     	
+      	   $this->candy($user_id,$type,$candyNum,$sid);
 
            $nowSlime = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->field('exp,blood,blue')->find();
            $level = $this->s_level($nowSlime['exp']);
@@ -830,13 +772,13 @@ public function quitClub(){
            $num = $nowSlime['level']-S('slime_'.$sid);
            // var_dump($num);exit;
            if($num>0){
-                S('slime_'.$sid,null);
-                $blood  = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('blood',1); //增加蓝量，血量 
-                $blue   = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('blue',1); //增加经验值 
-          }
-          $shuxing = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->field('blood,blue')->find();
-          $candy = M('user')->where(array('user_id'=>$user_id))->field('candy,candy1,candy2')->find();
-          $nowSlime['blood']  = $shuxing['blood'];
+               	S('slime_'.$sid,null);
+             		$blood  = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('blood',1); //增加蓝量，血量 
+             		$blue   = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('blue',1); //增加经验值 
+ 		      }
+ 		      $shuxing = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->field('blood,blue')->find();
+	      	$candy = M('user')->where(array('user_id'=>$user_id))->field('candy,candy1,candy2')->find();
+ 		      $nowSlime['blood']  = $shuxing['blood'];
           $nowSlime['blue']   = $shuxing['blue'];
          
            echo json_encode(['status'=>1,'msg'=>'升级成功','data'=>$nowSlime,'candy'=>$candy]);
@@ -856,33 +798,33 @@ public function quitClub(){
 
 
    public function candy($user_id,$type,$candyNum,$sid){
-    // $type = 1;
-      $candy = M('user')->where(array('user_id'=>$user_id))->field('candy,candy1,candy2')->find();
-      if($type == 1){//小糖果
-        if($candy['candy']>=$candyNum && $candyNum != 0){
-          $data = M('user')->where(array('user_id'=>$user_id))->setDec('candy',$candyNum); //扣除用户糖果数量
-              $exps  = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('exp',$candyNum*100); //增加经验值    
-             
-        }else{
-          echo json_encode(['status'=>-1,'msg'=>'糖果不足']);exit;
-        }
-      }else if($type == 2){
-        if($candy['candy1']>=$candyNum && $candyNum != 0){
-          $data = M('user')->where(array('user_id'=>$user_id))->setDec('candy1',$candyNum); //扣除用户糖果数量
-              $exps  = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('exp',$candyNum*200); //增加经验值    
-              
-        }else{
-          echo json_encode(['status'=>-1,'msg'=>'糖果不足']);exit;
-        }
-      }else{
-        if($candy['candy2']>=$candyNum && $candyNum != 0){
-          $data = M('user')->where(array('user_id'=>$user_id))->setDec('candy2',$candyNum); //扣除用户糖果数量
-              $exps  = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('exp',$candyNum*500); //增加经验值    
-              
-        }else{
-          echo json_encode(['status'=>-1,'msg'=>'糖果不足']);exit;
-        }
-      }
+   	// $type = 1;
+	   	$candy = M('user')->where(array('user_id'=>$user_id))->field('candy,candy1,candy2')->find();
+	   	if($type == 1){//小糖果
+	   		if($candy['candy']>=$candyNum && $candyNum != 0){
+	   			$data = M('user')->where(array('user_id'=>$user_id))->setDec('candy',$candyNum); //扣除用户糖果数量
+	            $exps  = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('exp',$candyNum*100); //增加经验值    
+	           
+	   		}else{
+	   			echo json_encode(['status'=>-1,'msg'=>'糖果不足']);exit;
+	   		}
+	   	}else if($type == 2){
+	   		if($candy['candy1']>=$candyNum && $candyNum != 0){
+	   			$data = M('user')->where(array('user_id'=>$user_id))->setDec('candy1',$candyNum); //扣除用户糖果数量
+	            $exps  = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('exp',$candyNum*200); //增加经验值    
+	            
+	   		}else{
+	   			echo json_encode(['status'=>-1,'msg'=>'糖果不足']);exit;
+	   		}
+	   	}else{
+	   		if($candy['candy2']>=$candyNum && $candyNum != 0){
+	   			$data = M('user')->where(array('user_id'=>$user_id))->setDec('candy2',$candyNum); //扣除用户糖果数量
+	            $exps  = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('exp',$candyNum*500); //增加经验值    
+	            
+	   		}else{
+	   			echo json_encode(['status'=>-1,'msg'=>'糖果不足']);exit;
+	   		}
+	   	}
    }
 
    // public function slimeLevel(){
@@ -954,7 +896,7 @@ public function quitClub(){
      * @name   游戏综合评分
      */
     public function score($score){
-      $filter = [
+    	$filter = [
             ['level' => 4,  'min' => 0,     'max' => 1350],
             ['level' => 3,  'min' => 1351,  'max' => 1500],
             ['level' => 2,  'min' => 1501,  'max' => 2000],
@@ -969,64 +911,64 @@ public function quitClub(){
 
     //综合评分
     public function zhScore(){
-      $user_id  =  182;
-      if($user_id == null){
-        echo "参数错误！！！";
-      }
-      $user = M('user')->where(array('user_id'=>$user_id))->field('match_amount,win_amount,fun_amount,fun_win_amount,club_id,rank')->find();
-      $club_name = M('club_info')->where(array('id'=>$user['club_id']))->getField('club_name');
+    	$user_id  =  182;
+    	if($user_id == null){
+    		echo "参数错误！！！";
+    	}
+    	$user = M('user')->where(array('user_id'=>$user_id))->field('match_amount,win_amount,fun_amount,fun_win_amount,club_id,rank')->find();
+    	$club_name = M('club_info')->where(array('id'=>$user['club_id']))->getField('club_name');
 
-      $gameNum = $this->gameNum($user['match_amount'] + $user['fun_amount'])['level'];  //场次评分
-      $game = $user['match_amount'] + $user['fun_amount']; //总场次
-      $win = $user['win_amount'] + $user['fun_win_amount'];//胜场
-      $sl = ($win/$game)*100;
-      $probability = round(($win/$game)*100).'%';
-      $intsl =floor($sl);
-      $shenglv = $this->shenglv($intsl)['level']; //胜率评分
-      $score = M('play_log')->where(array('user_id'=>182))->max('score');//最高步数
+    	$gameNum = $this->gameNum($user['match_amount'] + $user['fun_amount'])['level'];  //场次评分
+    	$game = $user['match_amount'] + $user['fun_amount']; //总场次
+    	$win = $user['win_amount'] + $user['fun_win_amount'];//胜场
+    	$sl = ($win/$game)*100;
+    	$probability = round(($win/$game)*100).'%';
+    	$intsl =floor($sl);
+    	$shenglv = $this->shenglv($intsl)['level']; //胜率评分
+    	$score = M('play_log')->where(array('user_id'=>182))->max('score');//最高步数
 
-      $allScore = $gameNum+$intsl+$user['rank'];
-      $zhScore  = $this->score('$allScore')['level'];
+    	$allScore = $gameNum+$intsl+$user['rank'];
+    	$zhScore  = $this->score('$allScore')['level'];
         $result = array(
-          'club_name'   => $club_name,  //俱乐部名称
-          'gameCount'   => $game,       //总场次
-          'probability' => $probability,//胜率 
-          'shenglv'     => $shenglv, //胜率评分  
-          'gameNum'     => $gameNum, //场次评分 
-          'score'       => $score,   //最高步数
-          'zhScore'     => $zhScore//综合评分
+        	'club_name'   => $club_name,  //俱乐部名称
+        	'gameCount'   => $game,       //总场次
+        	'probability' => $probability,//胜率 
+        	'shenglv'     => $shenglv, //胜率评分  
+        	'gameNum'     => $gameNum, //场次评分 
+        	'score'       => $score,   //最高步数
+        	'zhScore'     => $zhScore//综合评分
         );
-      echo json_encode(['statu'=>1,'msg'=>'返回成功','data'=>$result]);
+    	echo json_encode(['statu'=>1,'msg'=>'返回成功','data'=>$result]);
     }
 
    // 竞技赛历史战绩
    public function  playHistory(){
-    $user_id = 182;
+   	$user_id = 182;
    
-     if(IS_POST){
-        $type = 1;
-        $play = M('play_log')->where(array('user_id'=>$user_id,'type'=>$type,'statu'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->select();
-        foreach ($play as $k => $v) {
-          $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
-      
-          $data = array(
-            'end_time'  => date('m-d H:i',$v['end_time']),
-            'score'     => $v['score'],
-            'rank'      => $v['rank'],
-            'ranks'     => $v['ranks'],
-            'bonu'      => floor($v['bonu']),
-            'userRank'  => $userRank
-          );
-          // $data[] = date('m-d H:i',$v['end_time']); 
-          // $data['score']    = $v['score'];
-          $datas[]  = $data;
-      }
-      
-      echo json_encode(['statu'=>1,'msg'=>'返回成功','data'=>$datas]);
-      // }
-     }else{
-      echo json_encode(['statu'=>-1,'msg'=>'系统错误']);
-     }  
+   	 if(IS_POST){
+     	 	$type = 1;
+     	 	$play = M('play_log')->where(array('user_id'=>$user_id,'type'=>$type,'statu'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->select();
+     	 	foreach ($play as $k => $v) {
+     	 	  $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
+     	
+     	 		$data = array(
+     	 			'end_time'  => date('m-d H:i',$v['end_time']),
+     	 			'score'     => $v['score'],
+     	 			'rank'      => $v['rank'],
+     	 			'ranks'     => $v['ranks'],
+     	 			'bonu'      => floor($v['bonu']),
+     	 			'userRank'  => $userRank
+     	 		);
+     	 		// $data[] = date('m-d H:i',$v['end_time']); 
+     	 		// $data['score']    = $v['score'];
+     	 		$datas[]  = $data;
+	 	  }
+   	 	
+   	 	echo json_encode(['statu'=>1,'msg'=>'返回成功','data'=>$datas]);
+   	 	// }
+   	 }else{
+   	 	echo json_encode(['statu'=>-1,'msg'=>'系统错误']);
+   	 }	
    }
    //娱乐赛历史战绩
   public function funHistory(){

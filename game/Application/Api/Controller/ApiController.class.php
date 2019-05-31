@@ -135,10 +135,13 @@ class ApiController extends Controller {
             //累计登陆奖励
             $activityService =  new ActivityService();
             $acclogin = $activityService->accuLogin($user['openid'],$user['id']);
+            $slime = M('user_slime')->where(array('openid'=>$user['openid']))->select();
+            
             // var_dump($user['openid']);var_dump($acclogin);exit;
             $sessionkey = array($session_key,$openid,$user['id']);
             S($session3rd,$sessionkey,18000);//存入session
           $data =[
+              "slime"   =>$slime, 
               "userInfo"=>$user,
               "accLoginActivity"=>$acclogin
           ]  ;

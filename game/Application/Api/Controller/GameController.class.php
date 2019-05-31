@@ -34,32 +34,46 @@ class GameController extends ApiController
     public function createMatch(){
        try{
            $gameType =  $_POST['gameType'];
-           $playUser =  $_POST['playUser'];
+           $playUser =  explode(',', $_POST['playUser']);
+           $battleAmount= $_POST['battleAmount'];
            $gameService =  new GameService();
-           $data = $gameService->createMatch($playUser,$gameType);
+           $data = $gameService->createMatch($playUser,$gameType,$battleAmount);
            echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
        }catch (Exception  $e){
            echo json_encode(['status' => '-1', 'msg' => $e->getMessage()]);
         }
     }
-
-    public function gameSettle(){
+public function gameSettle(){
         try{
           //  ($matchId, $result, $winner, $winnerId)
             $matchId =  $_POST['matchId'];
-            $winner =  $_POST['winner'];
-            $winnerId =  $_POST['winnerId'];
-            $result =   $_POST['result'];
+            $user_id =  $_POST['user_id'];
+            $rank =  $_POST['rank'];
+            $score =   $_POST['score'];
             $gameService =  new GameService();
-            $data = $gameService->gameSettle($matchId, $result, $winner, $winnerId);
+            $data = $gameService->gameSettle($matchId,$user_id,$rank,$score);
             echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
         }catch (Exception  $e){
             echo json_encode(['status' => '-1', 'msg' => $e->getMessage()]);
         }
     }
-       public function createFunMatch(){
+    // public function gameSettle(){
+    //     try{
+    //       //  ($matchId, $result, $winner, $winnerId)
+    //         $matchId =  $_POST['matchId'];
+    //         $winner =  $_POST['winner'];
+    //         $winnerId =  $_POST['winnerId'];
+    //         $result =   $_POST['result'];
+    //         $gameService =  new GameService();
+    //         $data = $gameService->gameSettle($matchId, $result, $winner, $winnerId);
+    //         echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
+    //     }catch (Exception  $e){
+    //         echo json_encode(['status' => '-1', 'msg' => $e->getMessage()]);
+    //     }
+    // }
+      public function createFunMatch(){
        try{
-            $playUser =  $_POST['playUser'];
+            $playUser =  explode(',', $_POST['playUser']);
             $gameService =  new GameService();
             $data = $gameService->createFunMatch($playUser);
             echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
@@ -71,11 +85,11 @@ class GameController extends ApiController
         try{
           //  ($matchId, $result, $winner, $winnerId)
             $matchId =  $_POST['matchId'];
-            $winner =  $_POST['winner'];
-            $winnerId =  $_POST['winnerId'];
-            $result =   $_POST['result'];
+            $score =  $_POST['score'];
+            $user_id =  $_POST['user_id'];
+            $rank =   $_POST['rank'];
             $gameService =  new GameService();
-            $data = $gameService->funGameSettle($matchId, $result, $winner, $winnerId);
+            $data = $gameService->funGameSettle($matchId,$user_id,$rank,$score);
             echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
         }catch (Exception  $e){
             echo json_encode(['status' => '-1', 'msg' => $e->getMessage()]);
