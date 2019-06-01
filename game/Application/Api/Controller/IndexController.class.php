@@ -946,8 +946,8 @@ public function quitClub(){
    	$user_id = 182;
    
    	 if(IS_POST){
-     	 	$type = 1;
-     	 	$play = M('play_log')->where(array('user_id'=>$user_id,'type'=>$type,'statu'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->select();
+     	 
+     	 	$play = M('play_log')->where(array('user_id'=>$user_id,'statu'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->select();
      	 	foreach ($play as $k => $v) {
      	 	  $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
      	
@@ -975,9 +975,9 @@ public function quitClub(){
     $user_id = 182;
    
      if(IS_POST){
-        $type = 2;
+        
         // if($type == 1){
-        $play = M('play_log')->where(array('user_id'=>$user_id,'type'=>$type,'statu'=>2))->field('rank,score,end_time,user_id')->select();
+        $play = M('fun_play_log')->where(array('user_id'=>$user_id,'statu'=>2))->field('rank,score,end_time,user_id')->select();
         // var_dump($play);exit;/
 
         foreach ($play as $k => $v) {
