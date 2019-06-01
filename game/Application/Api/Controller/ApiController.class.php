@@ -58,7 +58,7 @@ class ApiController extends Controller {
         $signature = $_POST['signature'];
         $rawData   = $_POST['rawData'];
         $iv        = $_POST['iv'];
-        $uid       = 182;//推荐人用户ID
+        $uid       = $_GET['uid'];//推荐人用户ID
         $introduceType = $_GET['source'];
         // var_dump($uid);exit;
         $encryptedData = $_POST['encryptedData'];
@@ -93,6 +93,7 @@ class ApiController extends Controller {
         $userService = new UserService();
         // var_dump($user_info['openId']);exit;
         $user = $userService->getUserFullInfoByOpen($user_info['openId']);
+        $user['is_new'] = 2;
         // var_dump($user);exit;
         $time = date('Y-m-d H:i:s',time());
             if(!$user){//新用户
@@ -125,23 +126,21 @@ class ApiController extends Controller {
                 }
                 
                 $user = $userService->addUser($user_data,$user_info['openId']);
-                
+                $user['is_new'] = 1;
                 $userService->addSlime($user['openid'],$user['id']);
-                // var_dump($user);exit;
+              
             }
             //接口访问令牌
             $user['session3rd'] = $session3rd;
-            // var_dump($user);exit;
+            
             //累计登陆奖励
             $activityService =  new ActivityService();
             $acclogin = $activityService->accuLogin($user['openid'],$user['id']);
-            $slime = M('user_slime')->where(array('openid'=>$user['openid']))->select();
-
-            // var_dump($user['openid']);var_dump($acclogin);exit;
+            
             $sessionkey = array($session_key,$openid,$user['id']);
             S($session3rd,$sessionkey,18000);//存入session
           $data =[
-              "slime"   =>$slime, 
+            
               "userInfo"=>$user,
               "accLoginActivity"=>$acclogin
           ]  ;

@@ -89,14 +89,15 @@ class UserService
                 $rank = GameService::getDuan($userExtr['rank']);
                 $userInfo = [
                     'is_club_owner' => $userExtr['is_club_owner'],
-                    'money' => $userExtr['money'],
+                    'money' => floor($userExtr['money']),
                     'slimeIndex' => 0,
                     'club_id' => $userExtr['club_id'],
                     'advert' => $userExtr['advert'],
                     'stamina' => $userExtr['stamina'],
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
-                    'rankNum'   => $userExtr['rank'] -$rank['min']
+                    'rankNum'   => $userExtr['rank'] -$rank['min'],
+                    'slime'   =>$this->slimeLevel($openid)
                 ];
 
                 if($userExtr){
@@ -130,6 +131,7 @@ class UserService
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
                     'rankNum'   => $userExtr['rank'] -$rank['min']
+
                 ];
                 if($userExtr){
                     $userFull =  array_merge($userBase,$userInfo);
@@ -165,6 +167,56 @@ class UserService
         M('user_slime')->addAll($result);
     
    
+   }
+ /*  史莱姆等级 */
+     function s_level($level){
+      $filter = [
+        ['level' => 1,  'min' => 0,     'max' => 499],
+        ['level' => 2,  'min' => 500,   'max' => 999],
+        ['level' => 3,  'min' => 1000,  'max' => 1499],
+        ['level' => 4,  'min' => 1500,  'max' => 1999],
+        ['level' => 5,  'min' => 2000,  'max' => 2499],
+        ['level' => 6,  'min' => 2500,  'max' => 2999],
+        ['level' => 7,  'min' => 3000,  'max' => 3499],
+        ['level' => 8,  'min' => 3500,  'max' => 3999],
+        ['level' => 9,  'min' => 4000,  'max' => 4499],
+        ['level' => 10, 'min' => 4500,  'max' => 4999],
+        ['level' => 11, 'min' => 5000,  'max' => 5699],
+        ['level' => 12, 'min' => 5700,  'max' => 6399],
+        ['level' => 13, 'min' => 6400,  'max' => 7099],
+        ['level' => 14, 'min' => 7100,  'max' => 7799],
+        ['level' => 15, 'min' => 7800,  'max' => 8499],
+        ['level' => 16, 'min' => 8500,  'max' => 9099],
+        ['level' => 17, 'min' => 9100,  'max' => 9799],
+        ['level' => 18, 'min' => 9800,  'max' => 10499],
+        ['level' => 19, 'min' => 10500, 'max' => 11199],
+        ['level' => 20, 'min' => 11200, 'max' => 11899],
+        ['level' => 21, 'min' => 11900, 'max' => 12899],
+        ['level' => 22, 'min' => 12900, 'max' => 13899],
+        ['level' => 23, 'min' => 13900, 'max' => 14899],
+        ['level' => 24, 'min' => 14900, 'max' => 15899],
+        ['level' => 25, 'min' => 15900, 'max' => 16899],
+        ['level' => 26, 'min' => 16900, 'max' => 17899],
+        ['level' => 27, 'min' => 17900, 'max' => 18899],
+        ['level' => 28, 'min' => 18900, 'max' => 19899],
+        ['level' => 29, 'min' => 19900, 'max' => 20899],
+        ['level' => 30, 'min' => 20900, 'max' => 22000],
+
+      ];
+
+      $result = search($level, $filter);
+
+      return  current($result);
+     }
+   function slimeLevel($openid){
+     $slime = M('user_slime')->where(array('openid'=>$openid))->field('exp')->select();
+     foreach ($slime as  $v) {
+        $level = $this->s_level($v['exp']);
+        $data = $level['level'];
+         # code...
+        $datas[] = $data; 
+     }
+     return $datas;
    }
 
 

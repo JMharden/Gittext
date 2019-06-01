@@ -30,17 +30,19 @@ class ActivityService
           
             $maxAccDay=1;
 
-            $data= M('login_reward')->where(array("openid" => $openid,"create_date"=>array('between',array($start,$end))))->order('create_date desc')->select();
+            $data= M('login_reward')->where(array("openid" => $openid,"create_date"=>array('between',array($start,$end))))->order('create_date asc')->select();
 
-            $datas= M('login_reward')->where(array("openid" => $openid,"create_date"=>array('between',array($nowstart,$nowend))))->order('create_date desc')->find();
+            $allLogin= M('login_reward')->where(array("openid" => $openid,"create_date"=>array('between',array($start,$end))))->count();//统计当周一登陆几天
+
+            $datas= M('login_reward')->where(array("openid" => $openid,"create_date"=>array('between',array($nowstart,$nowend))))->find();
             // var_dump($datas);exit;
             //判断当天是否已经登陆过
             if($datas){
                 $maxAccDay = $datas['accu_login_days'];
             }else {
-                if($datas){
-                    $maxAccDay = $datas['accu_login_days']+1;
-                }
+                // if($datas){
+                    $maxAccDay = $allLogin+1;
+                // }
                 $reward =  $this->getLoginRewardList($maxAccDay);
                 $addData =[
                     'user_id'=>$user_id,
@@ -54,7 +56,8 @@ class ActivityService
                 ];
                 $last = M('login_reward')->add($addData);
                 $addData['id']=$last;
-                $data = array_merge($addData,$data);
+                $data[] = $addData;
+                // var_dump($data);exit;
             }
             //就剩余活动天数的数据返回
             while($maxAccDay<7){

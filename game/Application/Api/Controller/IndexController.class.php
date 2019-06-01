@@ -165,8 +165,7 @@ public function getLoginRewardList($loginDays){
  */
 public function upload(){
   $user_id = 182;
-    if(IS_POST){
-         // $type = $_POST['type']; //1为头像  2为二维码 ； 
+    if(IS_POST){ 
          $code = $_FILES['file'];//获取小程序传来的图片
           if(is_uploaded_file($_FILES['file']['tmp_name'])) {  
                 //把文件转存到你希望的目录（不要使用copy函数）  
@@ -176,15 +175,11 @@ public function upload(){
                 $user_path="./Public/upload/image";  
                 //判断该用户文件夹是否已经有这个文件夹  
                 if(!file_exists($user_path)) {  
-                    //mkdir($user_path); 
                     mkdir($user_path,0777,true); 
                 }  
-             
-                //$move_to_file=$user_path."/".$_FILES['file']['name'];  
                 $file_true_name=$_FILES['file']['name'];  
-                $move_to_file=$user_path."/".date('Y-m-d').'_'.$user_id.'_'.'_'.'club'.'.png';//strrops($file_true,".")查找“.”在字符串中最后一次出现的位置  
+                $move_to_file=$user_path."/".date('Y-m-d').'_'.$user_id.'_'.'_'.'club'.'.png';
                 $url = "http://tt.wapwei.com".'/'.$move_to_file;
-                //echo "$uploaded_file   $move_to_file";  
                 if(move_uploaded_file($uploaded_file,iconv("utf-8","gb2312",$move_to_file))) {          
                      echo json_encode(['status'=>1,'msg'=>'上传成功','data'=>$url]);exit;
                 } else {  
@@ -384,7 +379,9 @@ public function quitClub(){
 
       // $club_id = S('user_info_'.$uid)[2];
       if(IS_POST){
-        $club_id = $_POST['club_id'];
+         $user_id = 182;
+         $club_id =  M('user')->where(array('user_id'=>$user_id))->getField('club_id');
+       
         if(S('clubMembers_'.$club_id)){
           // var_dump(S('clubMembers_'.$club_id));exit;
           echo json_encode(S('clubMembers_'.$club_id));
@@ -392,20 +389,22 @@ public function quitClub(){
           // $members = M('user')->where(array('club_id'=>$club_id))->field('id,nickname,is_club_owner,headimg,rank,last_login_time,active_point,slime,match_amount,win_amount')->select();
            $members  = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表
-                        ->field("a.id,a.nickname,a.headimg,u.is_club_owner,a.last_login_time,u.rank,u.active_point,u.match_amount,u.win_amount")//需要显示的字段
+                        ->field("a.id,a.nickname,a.headimg,u.is_club_owner,a.last_login_time,u.rank,u.active_point,u.fun_amount,u.fun_win_amount,u.match_amount,u.win_amount")//需要显示的字段
                         ->where(array('u.club_id' => $club_id))
                         ->select();
           $data = array_column($members,'id');
          
           $slime_id = $this->checkSlime();
           foreach($data as $k=>$v){
-            $id=$v['id'];
 
+           
+         
+            $score = M('play_log')->where(array('user_id'=>$user_id))->max('score');//最高步数
+            $members[$k]['match_amount'] = $score;
+            $members[$k]['active_point'] = $members[$k]['active_point'];//活跃度
+            $members[$k]['match_amount'] =$members[$k]['fun_amount']+$members[$k]['match_amount'];
             $members[$k]['probability']  = round($members[$k]['win_amount']/$members[$k]['match_amount']*100,2)."%";
-            // $members[$k]['sc'] = M('play_match_log')->where(array('id'=>array('in',)))->count();
-            $slime = json_decode($members[$k]['slime'],true);
-            $members[$k]['s_level']  = $slime[$slime_id]['exp'];  //史莱姆等级
-            $members[$k]['slime']    = $slime[$slime_id]['sid'];  //史莱姆ID
+            
     
             $members[$k]['level']  = GameService::getDuan($members[$k]['rank']);  //段位
           }
@@ -418,6 +417,7 @@ public function quitClub(){
     }
     public function clubSet(){
     	$user_id = 182;
+     
         $club_id =  M('user')->where(array('user_id'=>$user_id))->getField('club_id');
       // $club_id = $_POST['club_id'];
       if(IS_POST){
@@ -918,7 +918,7 @@ public function quitClub(){
     	$probability = round(($win/$game)*100).'%';
     	$intsl =floor($sl);
     	$shenglv = $this->shenglv($intsl)['level']; //胜率评分
-    	$score = M('play_log')->where(array('user_id'=>182))->max('score');//最高步数
+    	$score = M('play_log')->where(array('user_id'=>$user_id))->max('score');//最高步数
 
     	$allScore = $gameNum+$intsl+$user['rank'];
     	$zhScore  = $this->score('$allScore')['level'];
