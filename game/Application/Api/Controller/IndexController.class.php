@@ -185,15 +185,8 @@ public function upload(){
                 $move_to_file=$user_path."/".date('Y-m-d').'_'.$user_id.'_'.'_'.'club'.'.png';//strrops($file_true,".")查找“.”在字符串中最后一次出现的位置  
                 $url = "http://tt.wapwei.com".'/'.$move_to_file;
                 //echo "$uploaded_file   $move_to_file";  
-                if(move_uploaded_file($uploaded_file,iconv("utf-8","gb2312",$move_to_file))) { 
-                      // if($type == 1){
-                      //   M('club_info')->where(array('ower_id'=>$user_id))->setField('club_head',$url);
-                      // }else{
-                      //   M('club_info')->where(array('ower_id'=>$user_id))->setField('ercode',$url);
-                      // }
-                      // var_dump(json_encode(['status'=>1,'msg'=>'上传成功','data'=>$url]));exit;
+                if(move_uploaded_file($uploaded_file,iconv("utf-8","gb2312",$move_to_file))) {          
                      echo json_encode(['status'=>1,'msg'=>'上传成功','data'=>$url]);exit;
-             
                 } else {  
                     echo json_encode(['status'=>-1,'msg'=>'上传失败']);exit;
              
