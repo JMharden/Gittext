@@ -136,7 +136,7 @@ class ApiController extends Controller {
             $activityService =  new ActivityService();
             $acclogin = $activityService->accuLogin($user['openid'],$user['id']);
             $slime = M('user_slime')->where(array('openid'=>$user['openid']))->select();
-            
+
             // var_dump($user['openid']);var_dump($acclogin);exit;
             $sessionkey = array($session_key,$openid,$user['id']);
             S($session3rd,$sessionkey,18000);//存入session
@@ -183,8 +183,10 @@ class ApiController extends Controller {
     }
       //日志写入
     public function write_log(){ 
+
+   $nowUrl = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
         // $data = json_encode(array(date('Y-m-d H:i:s'),$this->getIps(),$this->getUrl(),$this->getPostData()));
-         $data = json_encode(array(date('Y-m-d H:i:s'),getIps(),geturl(),getPostData()));
+         $data = json_encode(array(date('Y-m-d H:i:s'),getonlineip(),$nowUrl,getPostData()));
         $years = date('Y-m');
         //设置路径目录信息
         $url = './Public/log/'.$years.'/'.date('Ymd').'_log.txt';  

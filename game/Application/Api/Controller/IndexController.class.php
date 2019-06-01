@@ -399,7 +399,7 @@ public function quitClub(){
           // $members = M('user')->where(array('club_id'=>$club_id))->field('id,nickname,is_club_owner,headimg,rank,last_login_time,active_point,slime,match_amount,win_amount')->select();
            $members  = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表
-                        ->field("a.id,a.nickname,a.headimg,u.is_club_owner,u.last_login_time,u.rank,u.active_point,u.slime,u.match_amount,u.win_amount")//需要显示的字段
+                        ->field("a.id,a.nickname,a.headimg,u.is_club_owner,a.last_login_time,u.rank,u.active_point,u.match_amount,u.win_amount")//需要显示的字段
                         ->where(array('u.club_id' => $club_id))
                         ->select();
           $data = array_column($members,'id');
@@ -946,8 +946,8 @@ public function quitClub(){
    	$user_id = 182;
    
    	 if(IS_POST){
-     	 	$type = 1;
-     	 	$play = M('play_log')->where(array('user_id'=>$user_id,'type'=>$type,'statu'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->select();
+     	 
+     	 	$play = M('play_log')->where(array('user_id'=>$user_id,'statu'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->select();
      	 	foreach ($play as $k => $v) {
      	 	  $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
      	
@@ -975,9 +975,9 @@ public function quitClub(){
     $user_id = 182;
    
      if(IS_POST){
-        $type = 2;
+        
         // if($type == 1){
-        $play = M('play_log')->where(array('user_id'=>$user_id,'type'=>$type,'statu'=>2))->field('rank,score,end_time,user_id')->select();
+        $play = M('fun_play_log')->where(array('user_id'=>$user_id,'statu'=>2))->field('rank,score,end_time,user_id')->select();
         // var_dump($play);exit;/
 
         foreach ($play as $k => $v) {

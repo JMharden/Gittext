@@ -55,26 +55,16 @@ function funGameSettle($matchId,$user_id,$rank,$score)
           $playNum = $gameLog['player_num'];
           $rankData  = $this -> dealRankByNum($playNum);
 
-          // var_dump($rankData[$rank-1]);exit;
-          // var_dump($rankData);exit;
           $candy = 0;
           if($rank<=count($rankData)){
-
                 $candy= $rankData[$rank-1];
-                // var_dump($rankNow);exit;
-              
                 //排名第一增加胜局数
                 if($rank==1){
                    M('fun_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
                    M('user')->where(array('user_id' => $user_id))->setInc('fun_win_amount',1);
                 }
                 M('user')->where(array('user_id' => $user_id))->setInc('candy',$candy);
-               // var_dump($a);exit;
            }
-        
-    // //游戏结算
-    // // $Model = new \Think\Model();
-    // // $Model->execute("update dd_user set candy1=candy1+".$gameLog['player_num'].", fun_win_amount=fun_win_amount+1 where user_id = ".$winner);
     //记录游戏数据 (个人数据 放单独字段，玩家所有对局记录存 data里)
             
             $datas= array(
@@ -95,10 +85,10 @@ function funGameSettle($matchId,$user_id,$rank,$score)
                 'user_id' => $user_id,
                 'score'=>$score,
                 'rank'=>$rank,//排名
-                'candy'=>$candy//排位分计算
+                'candy'=>$candy//加糖果
                 
             );
-         M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
+        M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
         
         M('fun_play_log')->add($datas);
         return $res;
@@ -162,9 +152,10 @@ function createFunMatch($playUser){
         // $battleAmount = $_POST['battleAmount'];
         $config = $this->getGameConfig($gameType,$battleAmount);
          
-        
+        // var_dump($playUser);exit;
         //处理门票相关逻辑
         $userInfos = $this->dealTicketFee($playUser,$config);
+          // $userInfos = $this->dealTicketFee($playUser,$config);
         //创建比赛
         $matchId = $this->generateRandomString();
         $data = ['match_id' => $matchId,
@@ -194,7 +185,6 @@ function createFunMatch($playUser){
     function gameSettle($matchId, $user_id, $rank,$score)
     {
         $resultJson = json_decode($result,true);
-
         //判断游戏是否存在, 参数是否正常（玩家id能对应上）
         $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
         if (!$gameLog) {
@@ -203,34 +193,24 @@ function createFunMatch($playUser){
         if ($gameLog['status'] == '1') {
            throw new Exception('该对局已结算', 1001);
         }
-       
         $playNum = $gameLog['player_num'];
-
       //  $winBonus = $gameLog['battle_amount'] * $gameLog['player_num'];
         $bonusRatio  = $this -> dealBonus($playNum, $gameLog['battle_amount']);
         $rankData    = $this -> dealRankByNum($playNum);
-
-        //游戏结算
-        //记录游戏数据 (个人数据 放单独字段，玩家所有对局记录存 data里)
-        // foreach ($resultJson as $v) {
-            // $user_id = $user_id;
-            // //个人排名
-            
-            // $rank = $rank;
-            
+         // var_dump($bonusRatio);exit;
             //判断当前排名是否有奖励
             $bonus =0;
             if($rank<=count($bonusRatio)){
                 $bonus= $bonusRatio[$rank-1];
                 // var_dump($bonus);exit;
-                $finLogs[] = array(
+                $finLogs= array(
                     'user_id' => $user_id,
                     'type' => 2,
                     'money' =>$bonus,
                     'create_time' => NOW_TIME,
                     'remark' => '游戏对局',
                     'create_time' => NOW_TIME,
-                    'remark' => $rank
+                    // 'remark' => $rank
                    );
                 //排名第一增加胜局数
                 if($rank==1){
@@ -244,11 +224,8 @@ function createFunMatch($playUser){
             M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
             $res=array(
                 'user_id' => $user_id,
-                // 'winner' => $winner,
                 'score'=>$score,
                 'rank'=>$rank,//排名
-                // 'ranks'=>$ranks,//排位分计算
-                // 'ranks'=>$rankData[$rank-1],//排位分计算
                 'bonus'=>$bonus
             );
              $datas= array(
@@ -263,9 +240,6 @@ function createFunMatch($playUser){
                 'status'=>2,
                 'match_id'=>$matchId
             );
-             // var_dump($datas);exit;
-            
-        // }
 
         M('finance_log')->add($finLogs);
         M('play_log')->add($datas);
