@@ -11,10 +11,10 @@ class AdminController extends Controller
     {
 
 		// 权限判断，Index控制器的不需要登录，其他的必须登录后才可以浏览
-		if (CONTROLLER_NAME != 'Index' && !session('?admin')) {
-			$this -> error('请登陆后操作!', U('Index/login'));
-			exit;
-		}
+		// if (CONTROLLER_NAME != 'Index' && !session('?admin')) {
+		// 	$this -> error('请登陆后操作!', U('Index/login'));
+		// 	exit;
+		// }
 
 		
 		// _开头的函数为内部函数，不能直接访问
@@ -71,11 +71,21 @@ class AdminController extends Controller
      * 俱乐部长周交易记录
      */
 	public function dayReport(){
+         $Model = new \Think\Model();
+      //    $nowtime = date('Y-m-d');
+      //    var_dump($nowtime);exit;
+      // // if($is_club_owner == 1){
+      
 		$today = strtotime(date('Y-m-d'));
         $today_end = $today + 86400 -1;
-
+       
+          // $three =  $Model->query("select  count(a.id) from dd_user_base  a left join dd_user_base  b on a.id =b.id  and  DATE_FORMAT(a.join_time,'%Y-%m-%d') = '2019-05-24'  and b.last_login_time > '2019-05-27' where  DATE_FORMAT(a.join_time,'%Y-%m-%d') ='2019-05-24';");
+          // var_dump($three);exit;
+          $three = M('user_base')->where(array('join_time'=>array('eq','2019-0-24'),'last_login_time'=>array('gt','2019-05-24')))->count();
+           // var_dump($three);exit;
         $data['user_count'] 	= M('user')->where(['sub_time' => [['egt', $today], ['elt', $today_end], 'and']])->count();//今日新增用户
         $data['user_count_all'] = M('user')->count();//总用户
+        $data['usre_three']     = $three;
         $data['game_count']     = M('play_match_info')->where(['create_time' => [['egt', $today], ['elt', $today_end], 'and'],'status'=>1])->count();//今日游戏总场次
         $data['game_count_all'] = M('play_match_info')->where(['status'=>1])->count();//游戏总场次
         $data['game_count_first'] = M('play_match_info')->where(['type'=>1,'status'=>1])->count();//初级场总场次
@@ -88,7 +98,7 @@ class AdminController extends Controller
     }
     public function time(){
         $time=M('play_match_info')->alias('a')
-                ->join("dd_play_log i on a.game_id=i.game_id") //附表连主表
+                ->join("dd_play_log i on a.match_id=i.match_id") //附表连主表
                 ->field("i.start_time,i.end_time")
                 ->where(array('i.status'=>1))//需要显示的字段
                 ->select();
@@ -300,6 +310,7 @@ class AdminController extends Controller
 		$count = $model -> where($where) -> count();
 		$page = new \Think\Page($count, 25);
 		if (!$order) {
+
 			$order = "id desc";
 		}
 

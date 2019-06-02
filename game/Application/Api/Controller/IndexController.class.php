@@ -41,22 +41,6 @@ class IndexController extends ApiController
    }
 
 
-public function getLoginRewardList($loginDays){
-        $list =[
-            1=>['num'=>5,'type'=>'candy'],
-            2=>['num'=>10,'type'=>'candy'],
-            3=>['num'=>20,'type'=>'candy'],
-            4=>['num'=>5,'type'=>'candy1'],
-            5=>['num'=>10,'type'=>'candy1'],
-            6=>['num'=>15,'type'=>'candy1'],
-            7=>['num'=>10,'type'=>'candy2']
-        ];
-        if($loginDays>0&&$loginDays<8){
-            return $list[$loginDays];
-        }
-        return [];
-
-    }
 
   /**----------------  俱乐部部分start    ---------------------**/
       /**
@@ -69,11 +53,11 @@ public function getLoginRewardList($loginDays){
     public function createClub(){
       // var_dump($_POST);exit;
        // $uid =S($_POST['token'])[2];
-       $uid = 182;
+      $user_id = 222;
       $where = array(
-        'parent1'=>$uid,
-        'parent2'=>$uid,
-        'parent3'=>$uid,
+        'parent1'=>$user_id,
+        'parent2'=>$user_id,
+        'parent3'=>$user_id,
         '_logic' => 'or',
       );
    
@@ -81,42 +65,44 @@ public function getLoginRewardList($loginDays){
        $userInfo  = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表
                         ->field("a.nickname,a.openid,a.headimg,u.money")
-                        ->where(array('a.id'=> $uid))//需要显示的字段
+                        ->where(array('a.id'=> $user_id))//需要显示的字段
                         ->find();
-       // echo json_encode($userInfo['money']);
+                        
        if(IS_POST){
-          if($subordinate < 3 || $userInfo['money'] < 600){
+          if($subordinate < 3 || $userInfo['money'] < 1000){
               echo json_encode(array('status'=>-1,'msg'=>'对不起,暂无资格创建俱乐部'));
           }else{
 
-              $data = array(
-                  'ower_id'     => $uid,
-                  'openid'      => $userInfo['openid'],
-                  'ower_name'   => $userInfo['nickname'],
-                  'club_head'   => $userInfo['headimg'], //俱乐部图标
-                  'club_name'   => $_POST['club_name'], //俱乐部名称
-                  'create_fee'  => 500, //创建费用
-                  'create_number'  => 20//创建人数
-             
-              ); 
-              $club_name = M('club_info')->where(array('club_name'=>$_POST['club_name']))->find();
-              if($club_name){
-                 echo json_encode(array('status'=>-2,'msg'=>'该俱乐部已存在'));exit;
-              }else{
-                $result = M('club_info')->add($data);
-                if($result){
-                  $datas = array(
-                    'money' => $userInfo['money']-$data['create_fee'],
-                    'club_id'=>$result,
-                    'is_club_ower'=>1
-                  );
-                  M('user')->where(array('id'=>$uid))->save($datas);
-                  echo json_encode(array('status'=>1,'msg'=>'创建俱乐部成功'));exit;
-                }
-              } 
+                $data = array(
+                    'ower_id'     => $user_id,
+                    'openid'      => $userInfo['openid'],
+                    'ower_name'   => $userInfo['nickname'],
+                    'club_head'   => $userInfo['headimg'], //俱乐部图标
+                    'ercode'      => $userInfo['headimg'], //俱乐部图标
+                    'club_name'   => $_POST['club_name'], //俱乐部名称
+                    'create_fee'  => 1000, //创建费用
+                    'create_number'  => 30//创建人数
+               
+                ); 
+                $club_name = M('club_info')->where(array('club_name'=>$_POST['club_name']))->find();
+                if($club_name){
+                   echo json_encode(array('status'=>-2,'msg'=>'该俱乐部已存在'));exit;
+                }else{
+                  $result = M('club_info')->add($data);
+                  if($result){
+                    $datas = array(
+                      'money' => $userInfo['money']-$data['create_fee'],
+                      'club_id'=>$result,
+                      'is_club_owner'=>1
+                    );
+                    // var_dump($datas);exit;
+                    M('user')->where(array('user_id'=>$user_id))->save($datas);
+                    echo json_encode(array('status'=>1,'msg'=>'创建俱乐部成功'));exit;
+                  }
+                } 
 		  
-          }
-       }
+            }
+        }
     }
     /**
      * [clubs description]
@@ -129,7 +115,6 @@ public function getLoginRewardList($loginDays){
     
         // if(IS_POST){
 
-      
           $club_name = $_POST['club_name'];
           $aWhere['club_name'] = array('like','%'.$club_name.'%');
 
@@ -199,10 +184,10 @@ public function upload(){
 }
     public function addEmail($title,$content,$category,$send_to,$create_user){
       $data = array(
-        'title' => $title,
-        'content' => $content,
+        'title'    => $title,
+        'content'  => $content,
         'category' => $category,
-        'send_to' => $send_to,
+        'send_to'  => $send_to,
         'create_user' => $create_user,
         'create_time' => date('Y-m-d H:i:s',NOW_TIME),
         'expire_time' => date("Y-m-d 23:59:59",strtotime("+7 day"))
@@ -220,13 +205,13 @@ public function upload(){
      * @return   [JSON]     [description]
      */
     public function joinClub(){
-        $uid = $GLOBALS['current_uid'];
+        $user_id = $GLOBALS['current_uid'];
         $club_id = $_POST['club_id'];
         if($club_id == null ){
           return false;
         }
         if(IS_POST){
-          $user = M('user')->where(array('user_id'=>$uid))->field('club_id,nickname')->find();
+          $user = M('user')->where(array('user_id'=>$user_id))->field('club_id,nickname')->find();
           $club = M('club_info')->where(array('id'=>$club_id))->field('create_number,club_name,ower_id')->find();
           $club_num = M('user')->where(array('club_id'=>$club_id))->count();
 
@@ -239,11 +224,11 @@ public function upload(){
               echo json_encode(['status'=>-2,'msg'=>'你当前已有俱乐部']);exit;
             
             }else{
-              if(M('message_info')->where(array('create_user'=>$uid,'category'=>1,'send_to'=>$club['ower_id']))->find()){
+              if(M('message_info')->where(array('create_user'=>$user_id,'category'=>1,'send_to'=>$club['ower_id']))->find()){
                 echo json_encode(['status'=>-3,'msg'=>'请勿重复申请']);exit;
               }else{
                 $content = $user['nickname'].申请加入.$club['club_name'].是否同意？;
-                $this->addEmail('申请信息',$content,1,$club['ower_id'],$uid);          
+                $this->addEmail('申请信息',$content,1,$club['ower_id'],$user_id);          
                 echo json_encode(['status'=>1,'msg'=>'申请成功']);exit;
                 
               }
@@ -261,12 +246,12 @@ public function upload(){
      * @return   [type]     [description]
      */
     public function handle(){
-      $uid = $GLOBALS['current_uid'];
+      $user_id = $GLOBALS['current_uid'];
      
       if(IS_POST){
          $type = $_POST['type'];
            $create_user = M('message_info')->where(array('id'=>$_POST['msgId']))->getField('create_user');//获取申请人ID
-         $club = M('club_info')->where(array('ower_id'=>$uid))->field('id,club_name')->find();
+         $club = M('club_info')->where(array('ower_id'=>$user_id))->field('id,club_name')->find();
         if($type == 1){//同意加入
          
           $res = M('user')->where(array('user_id'=>$create_user))->setField('club_id',$club['id']);
@@ -280,7 +265,7 @@ public function upload(){
 
         }else{
           $content = 俱乐部.$club['club_name'].拒绝了您的请求;
-          $this->addEmail(成员变动,$content,2,$create_user,$uid);
+          $this->addEmail(成员变动,$content,2,$create_user,$user_id);
           // echo json_encode(['status'=>1,'msg'=>'成功']);
         }
        M('message_info')->where(array('id'=>$_POST['msgId']))->delete();//获取申请人ID
@@ -296,19 +281,19 @@ public function upload(){
  */
 public function quitClub(){
   if(IS_POST){
-      $uid = $GLOBALS['current_uid'];
-      
-      $user = M('user')->where(array('user_id'=>$uid))->field('club_id,nickname')->find();
+      $user_id = $GLOBALS['current_uid'];
+      $user = M('user')->where(array('user_id'=>$user_id))->field('club_id,nickname')->find();
       $club = M('club_info')->where(array('id'=>$user['club_id']))->field('create_number,club_name,ower_id')->find();
-      $quit = M('user')->where(array('user_id'=>$uid))->setField('club_id',0);
+      $quit = M('user')->where(array('user_id'=>$user_id))->setField('club_id',0);
       if($quit){
         $content = $user['nickname'].退出了.$club['club_name'].俱乐部;
-        $this->addEmail('成员变动',$content,2,$club['ower_id'],$uid);
+        $this->addEmail('成员变动',$content,2,$club['ower_id'],$user_id);
         echo json_encode(['status'=>1,'msg'=>'退出俱乐部成功']);exit;
       }
 
   }
 }
+
     /**
      * [clubInfo description]
      * @Author   佳民
@@ -317,15 +302,11 @@ public function quitClub(){
      * @return   [JSON]     [description]
      */
     public function clubInfo(){
-      // var_dump(S('clubinfo_5'));exit;
-       // $uid =S($_POST['token'])[2];
-       // $club_id = S('user_info_'.$uid)[2];
+       // $user_id =S($_POST['token'])[2];
    
-       
-       $club_id = 3;  
+       $user_id = 182;
+       $club_id = M('user')->where(array('user_id'=>$user_id))->getField('club_id');
        if(IS_POST){
-           $uid = 182;
-           $club =  M('user')->where(array('user_id'=>$uid))->getField('club_id');
            // if($club == 0){
            //    echo json_encode(array('status'=>-2,'msg'=>'暂未加入俱乐部'));exit;
            // }else{
@@ -336,16 +317,15 @@ public function quitClub(){
                   $clubInfo = M('club_info')->where(array('id'=>$club_id))->find();
                   $usernum  = M('user')->where(array('club_id'=>$club_id))->count();
                   $active_point  = M('user')->where(array('club_id'=>$club_id))->sum('active_point');
-                  $is_club_owner =  M('user')->where(array('user_id'=>$uid))->getField('is_club_owner');
+                  $is_club_owner =  M('user')->where(array('user_id'=>$user_id))->getField('is_club_owner');
                   $headimg =  M('user_base')->where(array('id'=>$clubInfo['ower_id']))->getField('headimg');
-                  // $has_club = M('user')->where(array('id'=>$uid))->getField('club_id');
                   $info = array(
                               
                     'club_id'     => $clubInfo['id'],           //俱乐部ID
                     'club_name'   => $clubInfo['club_name'],    //俱乐部名称
                     'club_head'   => $clubInfo['club_head'],    //俱乐部头像
                     'club_role'   => $is_club_owner,            //俱乐部身份0
-                    'headimg'     => $headimg,      //创建人头像
+                    'headimg'     => $headimg,                  //创建人头像
                     'declaration' => $clubInfo['declaration'],  //宣言
                     'area'        => $clubInfo['area'],         //地区
                     'ercode'      => $clubInfo['ercode'],       //俱乐部二维码
@@ -359,7 +339,7 @@ public function quitClub(){
               }
               S('clubInfo_'.$club_id,$info,1800);
               echo json_encode(array('status'=>1,'msg'=>'俱乐部信息返回成功','data'=>$info));exit;
-           
+          // } 
          
        }else{
           echo json_encode(array('status'=>-1,'msg'=>'系统错误'));
@@ -383,13 +363,11 @@ public function quitClub(){
          $club_id =  M('user')->where(array('user_id'=>$user_id))->getField('club_id');
        
         if(S('clubMembers_'.$club_id)){
-          // var_dump(S('clubMembers_'.$club_id));exit;
           echo json_encode(S('clubMembers_'.$club_id));
         }else{
-          // $members = M('user')->where(array('club_id'=>$club_id))->field('id,nickname,is_club_owner,headimg,rank,last_login_time,active_point,slime,match_amount,win_amount')->select();
-           $members  = M('user_base')->alias('a')
+          $members = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表
-                        ->field("a.id,a.nickname,a.headimg,u.is_club_owner,a.last_login_time,u.rank,u.active_point,u.fun_amount,u.fun_win_amount,u.match_amount,u.win_amount")//需要显示的字段
+                        ->field("a.id,a.nickname,a.headimg,u.is_club_owner,a.last_login_time,u.rank,u.active_point,u.fun_amount,u.fun_win_amount,u.match_amount,u.win_amount")
                         ->where(array('u.club_id' => $club_id))
                         ->select();
           $data = array_column($members,'id');
@@ -400,14 +378,15 @@ public function quitClub(){
            
          
             $score = M('play_log')->where(array('user_id'=>$user_id))->max('score');//最高步数
-            $members[$k]['match_amount'] = $score;
+            $members[$k]['score'] = $score;
             $members[$k]['active_point'] = $members[$k]['active_point'];//活跃度
             $members[$k]['match_amount'] =$members[$k]['fun_amount']+$members[$k]['match_amount'];
             $members[$k]['probability']  = round($members[$k]['win_amount']/$members[$k]['match_amount']*100,2)."%";
             
     
-            $members[$k]['level']  = GameService::getDuan($members[$k]['rank']);  //段位
+            $members[$k]['level']  = GameService::getDuan($members[$k]['rank'])['level'];  //段位
           }
+          // var_dump($members);exit;
           // S('clubMembers_'.$club_id,$members);
           echo json_encode($members);
         }
@@ -442,7 +421,7 @@ public function quitClub(){
       $user_id = $GLOBALS['current_uid'];  //用户ID
       if(IS_POST){
         // if($_POST['type'] == 1){ //将成员踢出俱乐部
-           $result = M('user')->where(array('id'=>$_POST['uid']))->setField('club_id',0);
+           $result = M('user')->where(array('user_id'=>$_POST['uid']))->setField('club_id',0);
            if($result){
               $content = 您被.$club['club_name'].俱乐部部长踢出了俱乐部;
               $this->addEmail('成员变动',$content,2,$_POST['uid'],$user_id);
@@ -484,8 +463,7 @@ public function quitClub(){
       //  $userId =  $GLOBALS['current_uid'];
        if(IS_POST){
 	        $userId = $GLOBALS['current_uid'];
-	        $mId =  $_POST['msgId'];
-	        $msgId = explode(",", $mId);
+	        $msgId = explode(",",$_POST['msgId']);
 	        
          foreach ($msgId as $k => $v) {
               $data = [
@@ -550,11 +528,11 @@ public function quitClub(){
     public function clubRecords(){
 
     	// $uid =S($_POST['token'])[2];
-      $uid = 182;
-      $is_club_owner =  M('user')->where(array('user_id'=>$uid))->getField('is_club_owner');
+      $user_id = 182;
+      $is_club_owner =  M('user')->where(array('user_id'=>$user_id))->getField('is_club_owner');
       $Model = new \Think\Model();
       // if($is_club_owner == 1){
-      $infomation =  $Model->query("SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = ".$uid."  WHERE   ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',".$uid.") and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc;");
+      $infomation =  $Model->query("SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = ".$uid."  WHERE   ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',".$user_id.") and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc;");
           $data = array_column($infomation,'id');
       foreach($data as $k=>$v){
         $id=$v['id'];
@@ -603,44 +581,44 @@ public function quitClub(){
     }
 
     /*  史莱姆等级 */
-     public function s_level($level){
-      $filter = [
-        ['level' => 1,  'min' => 0,     'max' => 499],
-        ['level' => 2,  'min' => 500,   'max' => 999],
-        ['level' => 3,  'min' => 1000,  'max' => 1499],
-        ['level' => 4,  'min' => 1500,  'max' => 1999],
-        ['level' => 5,  'min' => 2000,  'max' => 2499],
-        ['level' => 6,  'min' => 2500,  'max' => 2999],
-        ['level' => 7,  'min' => 3000,  'max' => 3499],
-        ['level' => 8,  'min' => 3500,  'max' => 3999],
-        ['level' => 9,  'min' => 4000,  'max' => 4499],
-        ['level' => 10, 'min' => 4500,  'max' => 4999],
-        ['level' => 11, 'min' => 5000,  'max' => 5699],
-        ['level' => 12, 'min' => 5700,  'max' => 6399],
-        ['level' => 13, 'min' => 6400,  'max' => 7099],
-        ['level' => 14, 'min' => 7100,  'max' => 7799],
-        ['level' => 15, 'min' => 7800,  'max' => 8499],
-        ['level' => 16, 'min' => 8500,  'max' => 9099],
-        ['level' => 17, 'min' => 9100,  'max' => 9799],
-        ['level' => 18, 'min' => 9800,  'max' => 10499],
-        ['level' => 19, 'min' => 10500, 'max' => 11199],
-        ['level' => 20, 'min' => 11200, 'max' => 11899],
-        ['level' => 21, 'min' => 11900, 'max' => 12899],
-        ['level' => 22, 'min' => 12900, 'max' => 13899],
-        ['level' => 23, 'min' => 13900, 'max' => 14899],
-        ['level' => 24, 'min' => 14900, 'max' => 15899],
-        ['level' => 25, 'min' => 15900, 'max' => 16899],
-        ['level' => 26, 'min' => 16900, 'max' => 17899],
-        ['level' => 27, 'min' => 17900, 'max' => 18899],
-        ['level' => 28, 'min' => 18900, 'max' => 19899],
-        ['level' => 29, 'min' => 19900, 'max' => 20899],
-        ['level' => 30, 'min' => 20900, 'max' => 22000],
+    public function s_level($level){
+        $filter = [
+          ['level' => 1,  'min' => 0,     'max' => 499],
+          ['level' => 2,  'min' => 500,   'max' => 999],
+          ['level' => 3,  'min' => 1000,  'max' => 1499],
+          ['level' => 4,  'min' => 1500,  'max' => 1999],
+          ['level' => 5,  'min' => 2000,  'max' => 2499],
+          ['level' => 6,  'min' => 2500,  'max' => 2999],
+          ['level' => 7,  'min' => 3000,  'max' => 3499],
+          ['level' => 8,  'min' => 3500,  'max' => 3999],
+          ['level' => 9,  'min' => 4000,  'max' => 4499],
+          ['level' => 10, 'min' => 4500,  'max' => 4999],
+          ['level' => 11, 'min' => 5000,  'max' => 5699],
+          ['level' => 12, 'min' => 5700,  'max' => 6399],
+          ['level' => 13, 'min' => 6400,  'max' => 7099],
+          ['level' => 14, 'min' => 7100,  'max' => 7799],
+          ['level' => 15, 'min' => 7800,  'max' => 8499],
+          ['level' => 16, 'min' => 8500,  'max' => 9099],
+          ['level' => 17, 'min' => 9100,  'max' => 9799],
+          ['level' => 18, 'min' => 9800,  'max' => 10499],
+          ['level' => 19, 'min' => 10500, 'max' => 11199],
+          ['level' => 20, 'min' => 11200, 'max' => 11899],
+          ['level' => 21, 'min' => 11900, 'max' => 12899],
+          ['level' => 22, 'min' => 12900, 'max' => 13899],
+          ['level' => 23, 'min' => 13900, 'max' => 14899],
+          ['level' => 24, 'min' => 14900, 'max' => 15899],
+          ['level' => 25, 'min' => 15900, 'max' => 16899],
+          ['level' => 26, 'min' => 16900, 'max' => 17899],
+          ['level' => 27, 'min' => 17900, 'max' => 18899],
+          ['level' => 28, 'min' => 18900, 'max' => 19899],
+          ['level' => 29, 'min' => 19900, 'max' => 20899],
+          ['level' => 30, 'min' => 20900, 'max' => 22000],
 
-      ];
+        ];
 
-      $result = $this->search($level, $filter);
+        $result = $this->search($level, $filter);
 
-      return  current($result);
+        return  current($result);
      }
 
   /**
@@ -828,11 +806,12 @@ public function quitClub(){
 
 
   public function feedback()
-  {
+  { 
+    $user_id = 182;
     $start = date('Y-m-d 0:0:0');
     $end   = date('Y-m-d 23:59:59') ;
       if(IS_POST){
-        $num = M('feedback')->where(array('user_id'=>182,'add_time'=>array('between',array($start,$end))))->count();
+        $num = M('feedback')->where(array('user_id'=>$user_id,'add_time'=>array('between',array($start,$end))))->count();
         if($num >= 20){
           echo json_encode(['status'=>-1,'msg'=>'今日反馈次数已达上限!']);exit;
         }

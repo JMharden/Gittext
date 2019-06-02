@@ -97,7 +97,7 @@ class UserService
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
                     'rankNum'   => $userExtr['rank'] -$rank['min'],
-                    'slime'   =>$this->slimeLevel($openid)
+                    
                 ];
 
                 if($userExtr){

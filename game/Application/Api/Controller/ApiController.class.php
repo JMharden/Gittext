@@ -132,18 +132,19 @@ class ApiController extends Controller {
             }
             //接口访问令牌
             $user['session3rd'] = $session3rd;
-            
             //累计登陆奖励
             $activityService =  new ActivityService();
             $acclogin = $activityService->accuLogin($user['openid'],$user['id']);
-            
+            $slime = $userService->slimeLevel($user['openid']);
+   
+            $this->loginLog($user['id'],$souce,$uid);
             $sessionkey = array($session_key,$openid,$user['id']);
             S($session3rd,$sessionkey,18000);//存入session
-          $data =[
-            
-              "userInfo"=>$user,
-              "accLoginActivity"=>$acclogin
-          ]  ;
+            $data =[
+                "slime"   =>$slime, 
+                "userInfo"=>$user,
+                "accLoginActivity"=>$acclogin
+            ];
           echo  json_encode(['status'=>'1','msg'=>'返回成功','data'=>$data]);
     }
     public function vget($url){
@@ -180,12 +181,30 @@ class ApiController extends Controller {
         $result = strtr($result, '+/', '-_');
         return substr($result, 0, $len);
     }
+
+    public function loginLog($user_id,$souce,$uid){
+      $start = strtotime(date('Ymd'));
+      $end = strtotime(date('Ymd'))+ 86400;
+     $isLogin =  M('login_log')->where(array('user_id'=>$user_id,'login_time'=>array('between',array($start,$end))))->find();
+     if($isLogin){
+        return '今天已登录';
+     }else{
+          $data = array(
+            'user_id' => $user_id,
+            'ip'      => getonlineip(),
+            'login_time' => NOW_TIME,
+            'souce'      => $souce,
+            'invite_id'  => $uid
+          );
+          M('login_log')->add($data);
+      }
+    }
       //日志写入
     public function write_log(){ 
 
-   $nowUrl = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
-        // $data = json_encode(array(date('Y-m-d H:i:s'),$this->getIps(),$this->getUrl(),$this->getPostData()));
-         $data = json_encode(array(date('Y-m-d H:i:s'),getonlineip(),$nowUrl,getPostData()));
+        $nowUrl = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
+ 
+        $data = json_encode(array(date('Y-m-d H:i:s'),getonlineip(),$nowUrl,getPostData()));
         $years = date('Y-m');
         //设置路径目录信息
         $url = './Public/log/'.$years.'/'.date('Ymd').'_log.txt';  

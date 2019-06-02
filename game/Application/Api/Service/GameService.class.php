@@ -109,20 +109,21 @@ function createFunMatch($playUser){
     if (!($playUser && sizeof($playUser) >0)) {
        throw new Exception('参数错误。', 1001);
     }
-     $userInfos  = M('user_base')->alias('a')
-                        ->join("dd_user u on a.id=u.user_id") //附表连主表
-                        ->field("a.parent1,a.parent2,a.parent3,u.id")//需要显示的字段
-                        ->where(array('a.id' => array('IN', $playUser), 'u.stamina'=>array('GT',0)))
-                        ->select();
+     // $userInfos  = M('user_base')->alias('a')
+     //                    ->join("dd_user u on a.id=u.user_id") //附表连主表
+     //                    ->field("a.parent1,a.parent2,a.parent3,u.id,u.stamina")//需要显示的字段
+     //                    ->where(array('a.id' => array('IN', $playUser), 'u.stamina'=>array('GT',0)))
+     //                    ->select();
                         // var_dump($userInfos);exit;
     //判断体力是否充足
-    // $userInfos = M('user')->where(array('user_id' => array('IN', $playUser), 'stamina'=>array('GT',0)))->getField('id,parent1,parent2,parent3');
+    $userInfos = M('user')->where(array('user_id' => array('IN', $playUser), 'stamina'=>array('GT',0)))->select();
+    // var_dump(sizeof($userInfos));exit;
     if (sizeof($playUser) > sizeof($userInfos)) {
         throw new Exception('用户体力不足。', 1001);
     }
     //active_point 加5 ，游戏总对局数加1,体力-1
     $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
-    $Model->execute("update dd_user set  active_point=active_point+5,fun_amount =fun_amount +1,stamina = stamina -1 where user_id in (".implode(",",$playUser).")");
+    $Model->execute("update dd_user set  active_point=active_point+5,fun_amount =fun_amount+1,stamina = stamina-1 where user_id in (".implode(",",$playUser).")");
     //创建比赛
     $matchId = $this->generateRandomString();
     $data = ['match_id' => $matchId,
@@ -493,7 +494,8 @@ function createFunMatch($playUser){
         $ticketFee = $config['ticketFee'];
         $battleAmount = $config['battleAmount'];
         // 判断是否所有对战用户都满足条件（ 用户余额>门票费用+对战金额）,体力>1
-        // $userInfos = M('user_base')->where(array('id' => array('IN', $playUser), 'stamina'=>array('GT',0),'money' => array('EGT', $ticketFee + $battleAmount)))->getField('id,parent1,parent2,parent3');
+        // $userInfos = M('user')->where(array('user_id' => array('IN', $playUser), 'stamina'=>array('GT',0),'money' => array('EGT', $ticketFee + $battleAmount)))->field('user_id,club_id')->select();
+        // var_dump($userInfos);exit;
           $userInfos  = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表
                         ->field("a.parent1,a.parent2,a.parent3,u.club_id,u.id")//需要显示的字段

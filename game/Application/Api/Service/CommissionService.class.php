@@ -61,7 +61,7 @@ class CommissionService
      */
     function withDraw($userId, $amount)
     {
-        $userInfos = M('user')->where(array('id' => array('IN', $userId), 'expense_avail' => array('EGT', $amount)))->getField('id,expense_avail');
+        $userInfos = M('user')->where(array('user_id' => array('IN', $userId), 'expense_avail' => array('EGT', $amount)))->getField('id,expense_avail');
         if (!$userInfos) {
             throw new Exception("佣金余额不足");
         }
@@ -74,7 +74,7 @@ class CommissionService
         M('expense_withdraw')->add($data);
         //todo 提现方式待定:是已现金直接发放还是说 兑换到money
         //更新佣金信息
-        M('user')->where(array('id' => $userId))->setInc('expense_withdraw', $amount)->setDec('expense_avail', $amount);
+        M('user')->where(array('user_id' => $userId))->setInc('expense_withdraw', $amount)->setDec('expense_avail', $amount);
 
     }
 

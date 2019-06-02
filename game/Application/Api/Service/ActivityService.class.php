@@ -45,14 +45,15 @@ class ActivityService
                 // }
                 $reward =  $this->getLoginRewardList($maxAccDay);
                 $addData =[
-                    'user_id'=>$user_id,
-                    "openid"=>$openid,
                     'accu_login_days'=>$maxAccDay,
+                    'create_date'=>date("Y-m-d H:i:s"),
+                    'draw_time'=> null,
+                    "expire_date"=>$end,
+                    'is_draw'=>'N',
+                    'openid'=>$openid,
                     'reward_num'=>$reward['num'],
                     'reward_type'=>$reward['type'],
-                    "create_date"=>date("Y-m-d H:i:s"),
-                    "expire_date"=>$end,
-                    'is_draw'=>'N'
+                    'user_id'=>$user_id
                 ];
                 $last = M('login_reward')->add($addData);
                 $addData['id']=$last;
@@ -67,7 +68,7 @@ class ActivityService
                     'accu_login_days'=>$maxAccDay,
                     'reward_num'=>$dayreward['num'],
                     'reward_type'=>$dayreward['type'],
-                    'status'=>'X'
+                    'is_draw'=>'X'
                 ]; 
             }
 
@@ -111,10 +112,10 @@ class ActivityService
     function fetchLoginReward($userId,$activityId)
     {
         //判断领取的奖励是否存在，是否过期
-        $data = M('login_reward')->where(array("user_id"=>$userId,id=>$activityId,'is_draw'=>'N',"expire_date"=>array("EGT", date("Y-m-d"))))->find();
+        $data = M('login_reward')->where(array("user_id"=>$userId,'id'=>$activityId,'is_draw'=>'N',"expire_date"=>array("EGT", date("Y-m-d"))))->find();
         if($data){
             //更新领取记录
-            M('login_reward')->where(array(id=>$activityId))->save(array("is_draw"=>"Y","draw_time"=>date("Y-m-d H:i:s")));
+            M('login_reward')->where(array('id'=>$activityId))->save(array("is_draw"=>"Y","draw_time"=>date("Y-m-d H:i:s")));
             //更新用户奖励
             $num = $data['reward_num'];
             $type = $data['reward_type'];
