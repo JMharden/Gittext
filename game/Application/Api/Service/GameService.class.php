@@ -228,7 +228,8 @@ function createFunMatch($playUser){
                    );
                 //排名第一增加胜局数
                 if($rank==1){
-                   M('play_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
+                //暂时去掉该逻辑
+                    //   M('play_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
                     M('user')->where(array('user_id' => $user_id))->setInc('win_amount',1 );
                 }
                 M('user')->where(array('user_id' => $user_id))->setInc('money',$bonus);
