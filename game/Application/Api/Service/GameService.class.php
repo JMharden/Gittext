@@ -185,14 +185,27 @@ function createFunMatch($playUser){
      */
     function gameSettle($matchId, $user_id, $rank,$score)
     {
-        $resultJson = json_decode($result,true);
+        //$resultJson = json_decode($result,true);
         //判断游戏是否存在, 参数是否正常（玩家id能对应上）
         $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
         if (!$gameLog) {
             throw new Exception('未查找到对应的游戏对局', 1001);
         }
+        $players = explode(",", $gameLog['players']);
+        //判断用户id是否正确
+        if(!in_array($user_id, $players)){
+            throw new Exception('参数错误', 1003);
+        }
         if ($gameLog['status'] == '1') {
-           throw new Exception('该对局已结算', 1001);
+           throw new Exception('该对局已结算', 1002);
+        }
+        $dealedPlayers = explode(",", $gameLog['dealed_players']);
+       //判断是否已经结算过
+        if(in_array($user_id, $dealedPlayers)){
+            throw new Exception('该用户已结算', 1003);
+        }else{
+            M('play_match_info')->where(array("match_id" => $matchId))->save(array("dealed_players" => $gameLog['dealed_players'].$user_id.','));
+
         }
         $playNum = $gameLog['player_num'];
       //  $winBonus = $gameLog['battle_amount'] * $gameLog['player_num'];
