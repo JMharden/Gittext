@@ -193,7 +193,7 @@ function createFunMatch($playUser){
      */
     function gameSettle($matchId, $user_id, $rank,$score)
     {
-        $resultJson = json_decode($result,true);
+        //$resultJson = json_decode($result,true);
         //判断游戏是否存在, 参数是否正常（玩家id能对应上）
         $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
         $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
