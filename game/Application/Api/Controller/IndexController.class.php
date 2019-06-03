@@ -136,11 +136,7 @@ class IndexController extends ApiController
         echo json_encode(array('status'=>1,'msg'=>'返回成功','data'=>$club));
     }
 
-    // public function addAi(){
-    //   $data array(
-    //     array('nickname'=>'123','headimg':'http://tt.wapwei.com/Public/AI/1.jpg');
-    //   );
-    // }
+
 /**
  * [upload description]
  * @Author   佳民
@@ -148,40 +144,40 @@ class IndexController extends ApiController
  * @Function [function]
  * @return   [type]     [description]
  */
-public function upload(){
-  $user_id = 182;
-    if(IS_POST){ 
-         $code = $_FILES['file'];//获取小程序传来的图片
-          if(is_uploaded_file($_FILES['file']['tmp_name'])) {  
-                //把文件转存到你希望的目录（不要使用copy函数）  
-                $uploaded_file=$_FILES['file']['tmp_name'];  
-              
-                //我们给每个用户动态的创建一个文件夹  
-                $user_path="./Public/upload/image";  
-                //判断该用户文件夹是否已经有这个文件夹  
-                if(!file_exists($user_path)) {  
-                    mkdir($user_path,0777,true); 
-                }  
-                $file_true_name=$_FILES['file']['name'];  
-                $move_to_file=$user_path."/".date('Y-m-d').'_'.$user_id.'_'.'_'.'club'.'.png';
-                $url = "http://tt.wapwei.com".'/'.$move_to_file;
-                if(move_uploaded_file($uploaded_file,iconv("utf-8","gb2312",$move_to_file))) {          
-                     echo json_encode(['status'=>1,'msg'=>'上传成功','data'=>$url]);exit;
+    public function upload(){
+      $user_id = 182;
+        if(IS_POST){ 
+             $code = $_FILES['file'];//获取小程序传来的图片
+              if(is_uploaded_file($_FILES['file']['tmp_name'])) {  
+                    //把文件转存到你希望的目录（不要使用copy函数）  
+                    $uploaded_file=$_FILES['file']['tmp_name'];  
+                  
+                    //我们给每个用户动态的创建一个文件夹  
+                    $user_path="./Public/upload/image";  
+                    //判断该用户文件夹是否已经有这个文件夹  
+                    if(!file_exists($user_path)) {  
+                        mkdir($user_path,0777,true); 
+                    }  
+                    $file_true_name=$_FILES['file']['name'];  
+                    $move_to_file=$user_path."/".date('Y-m-d').'_'.$user_id.'_'.'_'.'club'.'.png';
+                    $url = "http://tt.wapwei.com".'/'.$move_to_file;
+                    if(move_uploaded_file($uploaded_file,iconv("utf-8","gb2312",$move_to_file))) {          
+                         echo json_encode(['status'=>1,'msg'=>'上传成功','data'=>$url]);exit;
+                    } else {  
+                        echo json_encode(['status'=>-1,'msg'=>'上传失败']);exit;
+                 
+                    }  
                 } else {  
-                    echo json_encode(['status'=>-1,'msg'=>'上传失败']);exit;
-             
-                }  
-            } else {  
-                echo json_encode(['status'=>-1,'msg'=>'上传失败']);exit; 
-            }
+                    echo json_encode(['status'=>-1,'msg'=>'上传失败']);exit; 
+                }
 
-    }else{
-      echo json_encode(['status'=>0,'msg'=>'系统错误']);exit;
+        }else{
+          echo json_encode(['status'=>0,'msg'=>'系统错误']);exit;
+        }
+
+        
+        
     }
-
-    
-    
-}
     public function addEmail($title,$content,$category,$send_to,$create_user){
       $data = array(
         'title'    => $title,
@@ -304,7 +300,7 @@ public function quitClub(){
     public function clubInfo(){
        // $user_id =S($_POST['token'])[2];
    
-       $user_id = 182;
+       $user_id = 183;
        $club_id = M('user')->where(array('user_id'=>$user_id))->getField('club_id');
        if(IS_POST){
            // if($club == 0){
@@ -359,7 +355,7 @@ public function quitClub(){
 
       // $club_id = S('user_info_'.$uid)[2];
       if(IS_POST){
-         $user_id = 182;
+         $user_id = 183;
          $club_id =  M('user')->where(array('user_id'=>$user_id))->getField('club_id');
        
         if(S('clubMembers_'.$club_id)){
@@ -395,12 +391,28 @@ public function quitClub(){
         
     }
     public function clubSet(){
-    	$user_id = 182;
+    	$user_id = 183;
      
         $club_id =  M('user')->where(array('user_id'=>$user_id))->getField('club_id');
+        $clubinfo = M('club_info')->where(array('id'=>$club_id))->find();
+        $data = array(
+          'club_head'   => $_POST['club_head'],
+          'ercode'      => $_POST['ercode'],
+          'declaration' => $_POST['declaration'],
+          'club_notice' => $_POST['club_notice']
+        );
+        if($_POST['club_head'] == null){
+           $data['club_head'] = $clubinfo['club_head'];
+        }
+        if($_POST['ercode'] == null){
+          $data['ercode'] = $clubinfo['ercode'];
+
+        }
       // $club_id = $_POST['club_id'];
+
+        // var_dump($_POST);exit;
       if(IS_POST){
-        $result = M('club_info')->where(array('id'=>$club_id))->save($_POST);
+        $result = M('club_info')->where(array('id'=>$club_id))->save($data);
 
         if($result){
           S('clubInfo_'.$club_id,null);
@@ -532,7 +544,7 @@ public function quitClub(){
       $is_club_owner =  M('user')->where(array('user_id'=>$user_id))->getField('is_club_owner');
       $Model = new \Think\Model();
       // if($is_club_owner == 1){
-      $infomation =  $Model->query("SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = ".$uid."  WHERE   ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',".$user_id.") and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc;");
+      $infomation =  $Model->query("SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = ".$user_id."  WHERE   ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',".$user_id.") and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc;");
           $data = array_column($infomation,'id');
       foreach($data as $k=>$v){
         $id=$v['id'];
