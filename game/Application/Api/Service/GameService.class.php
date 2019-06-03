@@ -33,7 +33,7 @@ class GameService
 
     /**娱乐赛游戏结算
 
- *  //参数 { 'matchId':'12avas123'，'winner':'1232','data':[ { userId:'' , result:'', } ] }
+
  * @param $matchId
  * @param $result
  * @param $winner
