@@ -3,7 +3,7 @@
  * Created by IntelliJ IDEA.
  * User: zhuhangan
  * Date: 2019/3/7
- * Time: 17:40
+ * Time: 17:40 xxxxxxxxxxxxxxxx
  */
 
 namespace Api\Service;
@@ -11,8 +11,7 @@ namespace Api\Service;
 
 use Think\Exception;
 
-class
-GameService
+class GameService
 {
     /**
      *
@@ -25,87 +24,51 @@ GameService
             exit;
         }
         //体力上限为50
-        M('user')->where(array('stamina' => array('LT', 50),'id' => $userId))->setInc('stamina', 1);
+        M('user')->where(array('stamina' => array('LT', 50),'user_id' => $userId))->setInc('stamina', 1);
         S("recovery_task_".$userId,"task",["expire"=>300]);
         echo "success";
         exit;
     }
-    /**娱乐赛游戏结算
- *  //参数 { 'matchId':'12avas123'，'winner':'1232','data':[ { userId:'' , result:'', } ] }
- * @param $matchId
- * @param $result
- * @param $winner
- * @param $winnerId
- * @return  返回游戏结果用于前端展示
- * @throws Exception
- */
-function funGameSettle($matchId, $result, $winner, $winnerId)
-{
-    $resultJson = json_decode( $result,true);
-    //判断游戏是否存在, 参数是否正常（玩家id能对应上）
-    $gameLog = M('fun_match_info')->where(array("match_id" => $matchId))->find();
-    if (!$gameLog) {
-        throw new Exception('未查找到对应的游戏对局', 1001);
-    }
-    if ($gameLog[status] == '1') {
-        //    throw new Exception('该对局已结算', 1001);
-    }
-    M('fun_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
-    $winBonus = $gameLog['battle_amount'] * $gameLog['player_num'];
-    //游戏结算
-    $Model = new \Think\Model();
-    $Model->execute("update dd_user set candy=candy+".$gameLog['player_num'].", fun_win_amount=fun_win_amount+1 where id = ".$winner);
-    //记录游戏数据 (个人数据 放单独字段，玩家所有对局记录存 data里)
-    foreach ($resultJson as $v) {
-        $uid = $v['userId'];
-        $datas[] = array(
-            'user_id' => $uid,
-            'game_id' => 0,
-            'result' => $result,
-            'score' => $v['score'],
-            'start_time' => $gameLog['create_time'],
-            'end_time' => NOW_TIME,//游戏开始时间
-            'challenge_id'=> '',
-            'type'=>$gameLog['type'],
-            'status'=>2,
-            'winner' => $winner,
-            'winner_id' => $winnerId,
-            'match_id'=>$matchId
-        );
-        //rank分计算
-        $rank =$this ->dealRank($gameLog['type'],$uid,$winnerId,$v['score']);
-        M('user')->where(array('id' => $uid))->setInc('rank',$rank );
-    }
-    M('play_log')->addAll($datas);
-    return $result;
 
-}
+
+ 
+
+
+
 /**
  * 创建娱乐赛
  * @param $playUser
  * @throws Exception
  */
 
+
 function createFunMatch($playUser){
-    if (!($playUser && sizeof($playUser) >1)) {
-        throw new Exception('参数错误。', 1001);
+    if (!($playUser && sizeof($playUser) >0)) {
+       throw new Exception('参数错误。', 1001);
     }
+    
     //判断体力是否充足
-    $userInfos = M('user')->where(array('id' => array('IN', $playUser), 'stamina'=>array('GT',0)))->getField('id,parent1,parent2,parent3,club_Id');
+    $userInfos = M('user')->where(array('user_id' => array('IN', $playUser), 'stamina'=>array('GT',0)))->select();
+    // var_dump(sizeof($userInfos));exit;
     if (sizeof($playUser) > sizeof($userInfos)) {
         throw new Exception('用户体力不足。', 1001);
     }
     //active_point 加5 ，游戏总对局数加1,体力-1
     $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
-    $Model->execute("update dd_user set  active_point=active_point+5,fun_amount =fun_amount +1,stamina = stamina -1 where id in (".implode(",",$playUser).")");
+    $Model->execute("update dd_user set  active_point=active_point+5,fun_amount =fun_amount+1,stamina = stamina-1 where user_id in (".implode(",",$playUser).")");
     //创建比赛
     $matchId = $this->generateRandomString();
     $data = ['match_id' => $matchId,
         'player_num' => sizeof($playUser),
         'players' => implode(",",$playUser),
         'create_time' => NOW_TIME,
+        'expaire_time'=>time()+1*60*60,
+        'type'    =>   1,//娱乐赛
+
     ];
     M('fun_match_info')->add($data);
+
+    return $data;
 }
     /**
      * 创建对局
@@ -114,14 +77,19 @@ function createFunMatch($playUser){
      * @return
      * @throws Exception
      */
-    function createMatch($playUser, $gameType)
+    function createMatch($playUser, $gameType,$battleAmount)
     {
-        if (!($playUser&& $gameType && sizeof($playUser) >1)) {
+     
+         if (!($playUser || $gameType || sizeof($playUser) >1)) {
             throw new Exception('参数错误。', 1001);
         }
-         $config = $this->getGameConfig($gameType);
+        // $battleAmount = $_POST['battleAmount'];
+        $config = $this->getGameConfig($gameType,$battleAmount);
+         
+        // var_dump($playUser);exit;
         //处理门票相关逻辑
-        $userInfos = $this->dealTicketFee($playUser, $config);
+        $userInfos = $this->dealTicketFee($playUser,$config);
+          // $userInfos = $this->dealTicketFee($playUser,$config);
         //创建比赛
         $matchId = $this->generateRandomString();
         $data = ['match_id' => $matchId,
@@ -130,7 +98,8 @@ function createFunMatch($playUser){
             'players' => implode(",",$playUser),
             'battle_amount' => $config['battleAmount'],
             'create_time' => NOW_TIME,
-            'type'=>$gameType
+            'expaire_time'=>time()+1*60*60,
+            'type'=>$gameType//初中高级场
         ];
         M('play_match_info')->add($data);
         //处理佣金相关逻辑
@@ -148,79 +117,170 @@ function createFunMatch($playUser){
      * @return  返回游戏结果用于前端展示
      * @throws Exception
      */
-    function gameSettle($matchId, $result, $winner, $winnerId)
+    function gameSettle($matchId, $user_id, $rank,$score)
     {
-        $resultJson = json_decode( $result,true);
+        $resultJson = json_decode($result,true);
         //判断游戏是否存在, 参数是否正常（玩家id能对应上）
+        $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
         $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
         if (!$gameLog) {
             throw new Exception('未查找到对应的游戏对局', 1001);
         }
-        if ($gameLog[status] == '1') {
-        //    throw new Exception('该对局已结算', 1001);
+        $players = explode(",", $gameLog['players']);
+        //判断用户id是否正确
+        if(!in_array($user_id, $players)){
+            throw new Exception('参数错误', 1003);
         }
-        M('play_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
+        if(time()>$gameLog['expaire_time']){
+            M('play_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
+        } 
+        if ($gameLog['status'] == '1' || time()>$gameLog['expaire_time']) {
+           throw new Exception('该对局已结算', 1002);
+        }
+        
+        $dealedPlayers = explode(",", $gameLog['dealed_players']);
+       //判断是否已经结算过
+        if(in_array($user_id, $dealedPlayers)){
+            throw new Exception('该用户已结算', 1003);
+        }else{
+            M('play_match_info')->where(array("match_id" => $matchId))->save(array("dealed_players" => $gameLog['dealed_players'].$user_id.','));
+
+        }
         $playNum = $gameLog['player_num'];
       //  $winBonus = $gameLog['battle_amount'] * $gameLog['player_num'];
-        $bonusRatio  =$this -> dealBonus($playNum, $gameLog['battle_amount']);
-        $rankData =$this -> dealRankByNum($playNum);
-        //游戏结算
-        //记录游戏数据 (个人数据 放单独字段，玩家所有对局记录存 data里)
-        foreach ($resultJson as $v) {
-            $uid = $v['userId'];
-            //个人排名
-            $rank = $v['rank'];
-            $datas[] = array(
-                'user_id' => $uid,
-                'game_id' => 0,
-                'result' => $result,
-                'score' => $v['score'],
-                'rank' => $v['rank'],
-                'start_time' => $gameLog['create_time'],
-                'end_time' => NOW_TIME,//游戏开始时间
-                'challenge_id'=> '',
-                'type'=>$gameLog['type'],
-                'status'=>2,
-                'winner' => $winner,
-                'winner_id' => $winnerId,
-                'match_id'=>$matchId
-            );
+        $bonusRatio  = $this -> dealBonus($playNum, $gameLog['battle_amount']);
+        $rankData    = $this -> dealRankByNum($playNum);
+         // var_dump($bonusRatio);exit;
             //判断当前排名是否有奖励
             $bonus =0;
             if($rank<=count($bonusRatio)){
-                $bonus= $bonusRatio[$rank];
-                $finLogs[] = array(
-                    'user_id' => $uid,
+                $bonus= $bonusRatio[$rank-1];
+                // var_dump($bonus);exit;
+                $finLogs= array(
+                    'user_id' => $user_id,
                     'type' => 2,
                     'money' =>$bonus,
-                    'action' => '游戏对局',
                     'create_time' => NOW_TIME,
-                    'remark' => $v['rank']
-                );
+                    'remark' => '游戏对局',
+                    'create_time' => NOW_TIME,
+                    // 'remark' => $rank
+                   );
                 //排名第一增加胜局数
                 if($rank==1){
-                    M('user')->where(array('id' => $uid))->setInc('win_amount',1 );
+                   
+                    M('user')->where(array('user_id' => $user_id))->setInc('win_amount',1 );
                 }
-                M('user')->where(array('id' => $uid))->setInc('money',$bonus );
+                M('user')->where(array('user_id' => $user_id))->setInc('money',$bonus);
             }
-            //rank分计 算
-            $ranks =$this ->dealRank($gameLog['type'],$v['score'],$rank,$rankData);
-            M('user')->where(array('id' => $uid))->setInc('rank',$ranks );
-            $res[]=array(
-                'user_id' => $uid,
-                'winner' => $winner,
-                'score'=>$v['score'],
+            //rank分计算
+            $ranks =$this ->dealRank($gameLog['type'],$rank,$playNum);
+            M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
+            $res=array(
+                'user_id' => $user_id,
+                'score'=>$score,
                 'rank'=>$rank,//排名
-                'ranks'=>$ranks,//排位分计算
                 'bonus'=>$bonus
             );
-        }
-
-        M('finance_log')->addAll($finLogs);
-        M('play_log')->addAll($datas);
+             $datas= array(
+                'user_id' => $user_id,
+                'score' => $score,
+                'rank' =>  $rank ,
+                'ranks'=>$rankData[$rank-1],//排位分计算
+                'bonu'=>$bonus,
+                'start_time' => $gameLog['create_time'],
+                'end_time' => NOW_TIME,//游戏开始时间
+                'type'=>$gameLog['type'],
+                'status'=>2,
+                'match_id'=>$matchId
+            );
+            
+        M('finance_log')->add($finLogs);
+        M('play_log')->add($datas);
         return $res;
 
     }
+       /**娱乐赛游戏结算
+
+ *  //参数 { 'matchId':'12avas123'，'winner':'1232','data':[ { userId:'' , result:'', } ] }
+ * @param $matchId
+ * @param $result
+ * @param $winner
+ * @param $winnerId
+ * @return  返回游戏结果用于前端展示
+ * @throws Exception
+ */
+function funGameSettle($matchId,$user_id,$rank,$score)
+{
+    // $resultJson = json_decode($result,true);
+    //判断游戏是否存在, 参数是否正常（玩家id能对应上）
+    $gameLog = M('fun_match_info')->where(array("match_id" => $matchId))->find();
+    if (!$gameLog) {
+            throw new Exception('未查找到对应的游戏对局', 1001);
+        }
+        $players = explode(",", $gameLog['players']);
+        //判断用户id是否正确
+        if(!in_array($user_id, $players)){
+            throw new Exception('参数错误', 1003);
+        }
+
+        if(time()>$gameLog['expaire_time']){
+            M('play_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
+        } 
+        if ($gameLog['status'] == '1' || time()>$gameLog['expaire_time']) {
+           throw new Exception('该对局已结算', 1002);
+        }
+        
+        $dealedPlayers = explode(",", $gameLog['dealed_players']);
+       //判断是否已经结算过
+        if(in_array($user_id, $dealedPlayers)){
+            throw new Exception('该用户已结算', 1003);
+        }else{
+            M('fun_match_info')->where(array("match_id" => $matchId))->save(array("dealed_players" => $gameLog['dealed_players'].$user_id.','));
+
+        }
+          $playNum = $gameLog['player_num'];
+          $rankData  = $this -> dealRankByNum($playNum);
+
+          $candy = 0;
+          if($rank<=count($rankData)){
+                $candy= $rankData[$rank-1];
+                //排名第一增加胜局数
+                if($rank==1){
+                   // M('fun_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
+                   M('user')->where(array('user_id' => $user_id))->setInc('fun_win_amount',1);
+                }
+                M('user')->where(array('user_id' => $user_id))->setInc('candy',$candy);
+           }
+    //记录游戏数据 (个人数据 放单独字段，玩家所有对局记录存 data里)
+            
+            $datas= array(
+                'user_id' => $user_id,
+                'score' => $score,
+                'rank' => $rank,
+                'start_time' => $gameLog['create_time'],
+                'end_time' => NOW_TIME,//游戏开始时间
+                'type'=>$gameLog['type'],
+                'status'=>2,
+                'ranks'=>$rankData[$rank-1],//排位分计算
+                // 'winner_id' => $winnerId,
+                'match_id'=>$matchId
+            );
+        //rank分计算
+        $ranks =$this ->dealRank($gameLog['type'],$rank,$rankData);
+        $res=array(
+                'user_id' => $user_id,
+                'score'=>$score,
+                'rank'=>$rank,//排名
+                'candy'=>$candy//加糖果
+                
+            );
+        M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
+        
+        M('fun_play_log')->add($datas);
+        return $res;
+
+
+}
 
     /**
      * 奖金分配
@@ -238,22 +298,22 @@ function createFunMatch($playUser){
         $second =0;
         $third =0;
         $fourth =0;
-        if($playerNum<4){
+        if($playerNum<5){
             $first =$playerNum*$battleAmount;
         }else if ($playerNum<9){
             $first = (($playerNum-4)*0.5 +3)*$battleAmount;
             $second = (($playerNum-4)*0.5 +1)*$battleAmount;
         }else if ($playerNum<15){
-            $first = round((($playerNum-9)*0.3 +5)*$battleAmount,1);
+            $first  = round((($playerNum-9)*0.3 +5)*$battleAmount,1);
             $second =  round(($playerNum-9)*0.3 +3*$battleAmount,1);
-            $third = $playerNum*$battleAmount-$first-$second;
+            $third  = $playerNum*$battleAmount-$first-$second;
         }else{
             $first =  round(($playerNum-15)*0.25 +6.5*$battleAmount,1);
             $second = round(($playerNum-15)*0.25 +4.5*$battleAmount,1);
             $third =round( ($playerNum-15)*0.25 +3*$battleAmount,1);
             $fourth =  $playerNum*$battleAmount-$first-$second-$third;
         }
-       $data =array($first,$second,$third,$fourth);
+        $data =array($first,$second,$third,$fourth);
         return $data;
     }
 
@@ -267,10 +327,10 @@ function createFunMatch($playUser){
             $first =15;
         }else if ($playerNum<9){
             $first = 20;
-            $second = 15;
+            $second= 15;
         }else if ($playerNum<15){
             $first = 25;
-            $second =  20;
+            $second= 20;
             $third = 15;
         }else{
             $first = 30;
@@ -294,20 +354,20 @@ function createFunMatch($playUser){
      * @param $playNum  比赛人数，排名 也决定rank分
      * @return int|void
      */
-        function dealRank($gameType,$score,$rank,$playNum){
+        function dealRank($gameType,$rank,$playNum){
             $scorePlu =0;
             $rankAdd =0;
             $gameTypePlu =0;
           if($rank<=count($playNum)){
               $rankAdd =$playNum[$rank];
           }
-            if($score =='S'){
-                $scorePlu= 5;
-            }
+            // if($score =='S'){
+            //     $scorePlu= 5;
+            // }
             //如果输 直接扣掉15分
-            if($rank<count($playNum)){
-                return -15+$scorePlu;
-            }
+            // if($rank<count($playNum)){
+            //     return -15+$scorePlu;
+            // }
             if($gameType==1){
                 $gameTypePlu =5;
             } else if($gameType==2){
@@ -317,6 +377,7 @@ function createFunMatch($playUser){
             }
             return $rankAdd+$gameTypePlu+$scorePlu;
         }
+
 
     /**rank分转换为段位
      *
@@ -331,78 +392,36 @@ function createFunMatch($playUser){
      * @param $rank
      *
      */
-        function getDuan($rank){
-            if(0 <= $rank&$rank <=1320){
-                // if(0 <= $rank&$rank <=1240){
-                //     return '青铜III';
-                // }elseif (1241 <= $rank&$rank <= 1280){
-                //     return '青铜II';
-                // }else{
-                //     return '青铜I';
-                // }
-                return '青铜';
-               
-            }elseif (1321 <= $rank&$rank <= 1500){
-                // if(1321 <= $rank&$rank <=1380){
-                //     return '白银III';
-                // }elseif (1381 <= $rank&$rank <= 1440){
-                //     return '白银II';
-                // }else{
-                //     return '白银I';
-                // }
-                return '白银';
-            }elseif (1501 <= $rank&$rank <= 1800){
-                if(1501 <= $rank&$rank  <= 1680){
-                    return '黄金III';
-                }elseif (1681 <= $rank&$rank <= 1740){
-                    return '黄金II';
-                }else{
-                    return '黄金I';
-                }
-                // if(1501 <= $rank&$rank <=1560 || 1561 <= $rank&$rank <= 1620 || 1621 <= $rank&$rank <= 1680){
-                //     return '黄金V';
-                // }elseif (1561 <= $rank&$rank <= 1620){
-                //     return '黄金IV';
-                // }elseif (1621 <= $rank&$rank <= 1680){
-                //     return '黄金III';
-                // }elseif (1681 <= $rank&$rank <= 1740){
-                //     return '黄金II';
-                // }else{
-                //     return '黄金I';
-                // }
-             
-            }elseif (1801 <= $rank&$rank <= 1980){
-                if(1801 <= $rank&$rank <= 1980){
-                    return '铂金II';
-                }else{
-                    return '铂金I';
-                }
-                
-            }elseif (2101 <= $rank&$rank <= 2600){
-                if(2101 <= $rank&$rank <= 2400){
-                    return '钻石II';
-                }else{
-                    return '钻石I';
-                }
-               
-            }elseif (2601 <= $rank&$rank <= 2800){
-                return '大师';
-            }else{
-                return '王者';
-            }
+      function getDuan($level){
+          $filter = [
+            ['level' => '青铜',  'min' => 0,  'max' => 1320],
+            ['level' => '白银',  'min' => 1321,  'max' => 1500],
+            ['level' => '黄金',  'min' => 1501,  'max' => 1800],
+            ['level' => '铂金',  'min' => 1801,  'max' => 2000],
+            ['level' => '钻石',  'min' => 2001,  'max' => 2600],
+            ['level' => '王者',  'min' => 2601,  'max' => 3000],
+          ];
 
-        }
+          $result = search($level, $filter);
+
+          return  current($result);
+     }
+
 
     /**
      * @param $gameType 1:初级场 ，2 ：中级场  3 ：高级场 （不同类型对应的门票费用不同）
      * @return
      * @throws Exception
      */
-    function getGameConfig($gameType)
+    function getGameConfig($gameType,$battleAmount)
     {
+       
         $ticketFee = $GLOBALS['_CFG']['site']['lirun' . $gameType];
+        // var_dump($battleAmount);exit;
+
         //输赢大小 是否由前端传入？（暂定由后端配置）
-        $battleAmount = $GLOBALS['_CFG']['site']['battleAmount' . $gameType];
+       
+        // $battleAmount = $GLOBALS['_CFG']['site']['battleAmount' . $gameType];
         if ($ticketFee && $battleAmount) {
             return ['ticketFee' => $ticketFee,
                     'battleAmount' => $battleAmount
@@ -412,7 +431,7 @@ function createFunMatch($playUser){
         }
         return;
     }
-
+// [{"userId":"182","score":"666","rank":"1"},{"userId":"183","score":"350","rank":"2"}] 
     /**处理门票相关逻辑
      * @param $playUser
      * @param $config
@@ -421,17 +440,31 @@ function createFunMatch($playUser){
      */
     function dealTicketFee($playUser, $config)
     {
+
         $ticketFee = $config['ticketFee'];
         $battleAmount = $config['battleAmount'];
         // 判断是否所有对战用户都满足条件（ 用户余额>门票费用+对战金额）,体力>1
-        $userInfos = M('user')->where(array('id' => array('IN', $playUser), 'stamina'=>array('GT',0),'money' => array('EGT', $ticketFee + $battleAmount)))->getField('id,parent1,parent2,parent3,club_Id');
+        // $userInfos = M('user')->where(array('user_id' => array('IN', $playUser), 'stamina'=>array('GT',0),'money' => array('EGT', $ticketFee + $battleAmount)))->field('user_id,club_id')->select();
+        // var_dump($userInfos);exit;
+          $userInfos  = M('user_base')->alias('a')
+                        ->join("dd_user u on a.id=u.user_id") //附表连主表
+                        ->field("a.parent1,a.parent2,a.parent3,u.club_id,u.id")//需要显示的字段
+                        ->where(array('a.id' => array('IN', $playUser),'u.stamina'=>array('GT',0),'u.money' => array('EGT', $ticketFee + $battleAmount)))
+                        ->select();
+
+                        // var_dump(sizeof($userInfos));exit;
         if (sizeof($playUser) > sizeof($userInfos)) {
             throw new Exception('用户余额不足。', 1001);
         }
+
         //扣除用户门票以及对战金额费用。（对战金额提前扣除等结算时补回）active_point 加10 ，游戏总对局数加1,体力-1
         $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
-        $Model->execute("update dd_user set money=money-".($ticketFee + $battleAmount).", active_point=active_point+10,match_amount =match_amount +1,stamina = stamina -1 where id in (".implode(",",$playUser).")");
-       // M('user')->where(array('id' => array('IN', $playUser)))->setDec('money', $ticketFee + $battleAmount)->setInc('active_point', 10)->setInc('match_amount', 1);
+        $Model->execute("update dd_user set money=money-".($ticketFee + $battleAmount).", active_point=active_point+10,match_amount =match_amount +1,stamina = stamina -1 where user_id in (".implode(",",$playUser).")");
+        // $Model->execute("update dd_user set money=money-".($ticketFee + $battleAmount).", active_point=active_point+10,match_amount =match_amount +1,stamina = stamina -1 where user_id in (".implode(",",$playUser).")");
+
+
+        // var_dump
+       // M('user')->where(array('user_id' => array('IN', $playUser)))->setDec('money', $ticketFee + $battleAmount)->setInc('active_point', 10)->setInc('match_amount', 1);
      //   M('user')->where(array('id' => array('IN', $playUser)))->save($data);
         flog($playUser, 1, $ticketFee + $battleAmount, "门票支出+下注金额");
         return $userInfos;
@@ -445,7 +478,7 @@ function createFunMatch($playUser){
      * @param $action
      * @param null $remark
      */
-    function flog($user_ids, $type, $money, $action, $remark = null)
+    function flog($user_ids, $type, $money, $remark)
     {
         if (CLI === true) {
             $time = time();
@@ -454,12 +487,13 @@ function createFunMatch($playUser){
         }
         if (sizeof($user_ids) > 0) {
             foreach ($user_ids as $user_id) {
-                $dataList[] = ['user_id' => $user_id,
+                $dataList[] = [
+                    'user_id' => $user_id,
                     'type' => $type,
                     'money' => $money,
-                    'action' => $action,
                     'create_time' => $time,
-                    'remark' => $remark];
+                    'remark' => $remark
+                  ];
             }
             M('finance_log')->addAll($dataList);
         }
@@ -475,3 +509,5 @@ function createFunMatch($playUser){
         return $randomString;
     }
 }
+
+
