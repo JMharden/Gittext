@@ -444,8 +444,6 @@ function funGameSettle($matchId,$user_id,$rank,$score)
         $ticketFee = $config['ticketFee'];
         $battleAmount = $config['battleAmount'];
         // 判断是否所有对战用户都满足条件（ 用户余额>门票费用+对战金额）,体力>1
-        // $userInfos = M('user')->where(array('user_id' => array('IN', $playUser), 'stamina'=>array('GT',0),'money' => array('EGT', $ticketFee + $battleAmount)))->field('user_id,club_id')->select();
-        // var_dump($userInfos);exit;
           $userInfos  = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表
                         ->field("a.parent1,a.parent2,a.parent3,u.club_id,u.id")//需要显示的字段
@@ -460,12 +458,6 @@ function funGameSettle($matchId,$user_id,$rank,$score)
         //扣除用户门票以及对战金额费用。（对战金额提前扣除等结算时补回）active_point 加10 ，游戏总对局数加1,体力-1
         $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
         $Model->execute("update dd_user set money=money-".($ticketFee + $battleAmount).", active_point=active_point+10,match_amount =match_amount +1,stamina = stamina -1 where user_id in (".implode(",",$playUser).")");
-        // $Model->execute("update dd_user set money=money-".($ticketFee + $battleAmount).", active_point=active_point+10,match_amount =match_amount +1,stamina = stamina -1 where user_id in (".implode(",",$playUser).")");
-
-
-        // var_dump
-       // M('user')->where(array('user_id' => array('IN', $playUser)))->setDec('money', $ticketFee + $battleAmount)->setInc('active_point', 10)->setInc('match_amount', 1);
-     //   M('user')->where(array('id' => array('IN', $playUser)))->save($data);
         flog($playUser, 1, $ticketFee + $battleAmount, "门票支出+下注金额");
         return $userInfos;
     }
