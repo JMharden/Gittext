@@ -82,10 +82,12 @@ class UserService
         if ($openId) {
 
             $userBase = $this->getUserBaseInfoByOpen($openId);
-            // var_dump($userBase);exit;
+            
             if ($userBase) {
+
                 $openid = $userBase['openid'];
                 $userExtr = M('user')->where(array('openid' => $openid))->find();
+
                 $rank = GameService::getDuan($userExtr['rank']);
                 $userInfo = [
                     'is_club_owner' => $userExtr['is_club_owner'],
@@ -94,6 +96,7 @@ class UserService
                     'club_id' => $userExtr['club_id'],
                     'advert' => $userExtr['advert'],
                     'stamina' => $userExtr['stamina'],
+                    'share'   => $userExtr['share'],
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
                     'rankNum'   => $userExtr['rank'] -$rank['min'],

@@ -15,20 +15,28 @@ class IndexController extends ApiController
        // parent::_initialize();
        parent::_load_config();
        parent::write_log();
-       // $token = $_POST['token'];
+       $token = $_POST['token'];
+      
        // if($token == null && S($token) == null){
-       //     echo   json_encode(['status' => '403', 'msg' => '重复提交']);
+       //     echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
        //     exit;
        // }
+       $GLOBALS['token'] = S($token);
+   
         
    }
  public function randAi(){
   if(IS_POST){
-    $num = $_POST['num'];
-  
+      $num = $_POST['num'];
+
       $data = M('jiqiren')->select();
-   
+      if($num == 1){
+
+        
+        $data_rand  =  $data[18];
+      }
       $datas = array_rand($data, $num);
+      // var_dump($data);exit;
       foreach($datas as $val){
        
         $data_rand[]=$data[$val];
@@ -40,7 +48,7 @@ class IndexController extends ApiController
    
    }
 
-
+  
 
   /**----------------  俱乐部部分start    ---------------------**/
       /**
@@ -52,8 +60,9 @@ class IndexController extends ApiController
      */
     public function createClub(){
       // var_dump($_POST);exit;
-       // $uid =S($_POST['token'])[2];
-      $user_id = 222;
+       $user_id = $GLOBALS['token'][2];
+
+      // $user_id = 222;
       $where = array(
         'parent1'=>$user_id,
         'parent2'=>$user_id,
@@ -145,7 +154,8 @@ class IndexController extends ApiController
  * @return   [type]     [description]
  */
     public function upload(){
-      $user_id = 182;
+      $user_id =$GLOBALS['token'][2];
+      //  $user_id =$GLOBALS['token'][2];
         if(IS_POST){ 
              $code = $_FILES['file'];//获取小程序传来的图片
               if(is_uploaded_file($_FILES['file']['tmp_name'])) {  
@@ -201,7 +211,7 @@ class IndexController extends ApiController
      * @return   [JSON]     [description]
      */
     public function joinClub(){
-        $user_id = $GLOBALS['current_uid'];
+       $user_id =$GLOBALS['token'][2];
         $club_id = $_POST['club_id'];
         if($club_id == null ){
           return false;
@@ -242,7 +252,7 @@ class IndexController extends ApiController
      * @return   [type]     [description]
      */
     public function handle(){
-      $user_id = $GLOBALS['current_uid'];
+      $user_id =$GLOBALS['token'][2];
      
       if(IS_POST){
          $type = $_POST['type'];
@@ -277,7 +287,7 @@ class IndexController extends ApiController
  */
 public function quitClub(){
   if(IS_POST){
-      $user_id = $GLOBALS['current_uid'];
+      $user_id =$GLOBALS['token'][2];
       $user = M('user')->where(array('user_id'=>$user_id))->field('club_id,nickname')->find();
       $club = M('club_info')->where(array('id'=>$user['club_id']))->field('create_number,club_name,ower_id')->find();
       $quit = M('user')->where(array('user_id'=>$user_id))->setField('club_id',0);
@@ -298,9 +308,8 @@ public function quitClub(){
      * @return   [JSON]     [description]
      */
     public function clubInfo(){
-       // $user_id =S($_POST['token'])[2];
-   
-       $user_id = 183;
+       // $user_id =$GLOBALS['token'][2];
+   $user_id =$GLOBALS['token'][2];
        $club_id = M('user')->where(array('user_id'=>$user_id))->getField('club_id');
        if(IS_POST){
            // if($club == 0){
@@ -355,7 +364,7 @@ public function quitClub(){
 
       // $club_id = S('user_info_'.$uid)[2];
       if(IS_POST){
-         $user_id = 183;
+         $user_id =$GLOBALS['token'][2];
          $club_id =  M('user')->where(array('user_id'=>$user_id))->getField('club_id');
        
         if(S('clubMembers_'.$club_id)){
@@ -391,8 +400,8 @@ public function quitClub(){
         
     }
     public function clubSet(){
-    	$user_id = 183;
-     
+     $user_id =$GLOBALS['token'][2];
+     if(IS_POST){
         $club_id =  M('user')->where(array('user_id'=>$user_id))->getField('club_id');
         $clubinfo = M('club_info')->where(array('id'=>$club_id))->find();
         $data = array(
@@ -411,7 +420,7 @@ public function quitClub(){
       // $club_id = $_POST['club_id'];
 
         // var_dump($_POST);exit;
-      if(IS_POST){
+      
         $result = M('club_info')->where(array('id'=>$club_id))->save($data);
 
         if($result){
@@ -430,7 +439,7 @@ public function quitClub(){
      * @return   [JSON]     [description]
      */
     public function memberSet(){
-      $user_id = $GLOBALS['current_uid'];  //用户ID
+      $user_id =$GLOBALS['token'][2];
       if(IS_POST){
         // if($_POST['type'] == 1){ //将成员踢出俱乐部
            $result = M('user')->where(array('user_id'=>$_POST['uid']))->setField('club_id',0);
@@ -449,7 +458,7 @@ public function quitClub(){
     public function readEmail(){
       if(IS_POST){
 
-        $userId = $GLOBALS['current_uid'];
+       $user_id =$GLOBALS['token'][2];
         $msgId =  $_POST['msgId'];
         $has_message =M('message_log')->where(array('uid'=>$userId,'msg_id'=>$msgId))->find();
         if($has_message){
@@ -474,7 +483,7 @@ public function quitClub(){
 
       //  $userId =  $GLOBALS['current_uid'];
        if(IS_POST){
-	        $userId = $GLOBALS['current_uid'];
+	        $user_id =$GLOBALS['token'][2];
 	        $msgId = explode(",",$_POST['msgId']);
 	        
          foreach ($msgId as $k => $v) {
@@ -539,8 +548,8 @@ public function quitClub(){
      */
     public function clubRecords(){
 
-    	// $uid =S($_POST['token'])[2];
-      $user_id = 182;
+    	// $uid =$GLOBALS['token'][2];
+      $user_id =$GLOBALS['token'][2];
       $is_club_owner =  M('user')->where(array('user_id'=>$user_id))->getField('is_club_owner');
       $Model = new \Think\Model();
       // if($is_club_owner == 1){
@@ -654,8 +663,9 @@ public function quitClub(){
      * @return   [type]     [description]
      */
     public function slime(){
-      $openid = S($token)[1];
-      $user_id = 182;
+      $openid = $GLOBALS['token'][1];
+      $user_id= $GLOBALS['token'][2];
+
       $Model = new \Think\Model();
 
         $data =  $Model->query("SELECT  g.s_id,g.u_id,g.blue,g.blood,g.exp,o.id,o.name,o.skill,o.skill_introduction,o.slime_introduction FROM   dd_slime  o   LEFT JOIN dd_user_slime g ON o.id = g.s_id  AND g.u_id = ".$user_id."  order by o.id asc ;");
@@ -664,7 +674,7 @@ public function quitClub(){
         foreach($result as $k=>$v){
            $level = $this->s_level($data[$k]['exp']);
       	   $data[$k]['max_exp']=  $level['max']-$level['min'];
-      	   $data[$k]['exp']=  $data[$k]['exp']-$level['min'];
+      	   $data[$k]['exp']= $data[$k]['exp'] -$level['min'];
            $data[$k]['level']  = $level['level'];
 
   
@@ -681,7 +691,7 @@ public function quitClub(){
 
 
     public function addslime(){
-      $user_id = 183;
+       $user_id =$GLOBALS['token'][2];
       $result = M('slime')->where(array('id'=>3))->find();
       // var_dump($result);exit;
       $data  = array(
@@ -706,7 +716,7 @@ public function quitClub(){
      * @return   [type]     [description]
      */
     public function unlockSlime(){
-       $user_id = 182;
+        $user_id =$GLOBALS['token'][2];
       if(IS_POST){
         $candy = $this->candyNum($user_id,$_POST['candy']);
         if($candy == false){
@@ -730,17 +740,33 @@ public function quitClub(){
      * @return   [type]     [description]
      */
     public function upSlime(){
-      $user_id = 182;
+       $user_id =$GLOBALS['token'][2];
       if(IS_POST){
          $sid = $_POST['s_id'];
-         // var_dump($sid);exit;
-        
+       
          $type = $_POST['type'];
 		     $candyNum = $_POST['candy'];
       	 $exp = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->getField('exp');
+         $suoxu = 22000 - $exp;
+         if($type == 1){
+            $candy = round($suoxu/100);
+           
+         }else if($type == 2){
+            $candy = $suoxu/300;
+           
+         }else{
+            $candy = $suoxu/500;
+            
+         }
+         if($candyNum > $candy){
+            $candyNum = $candy;
+         }
      	   $nowLevel = $this->s_level($exp)['level'];
-       // if
-     	// var_dump($nowLevel['level']);exit;
+        if($exp >= 22000){
+           
+           echo json_encode(['status'=>2,'msg'=>'已升至满级']);exit;
+         }
+
      	     S('slime_'.$sid,$nowLevel);
      	
       	   $this->candy($user_id,$type,$candyNum,$sid);
@@ -748,7 +774,9 @@ public function quitClub(){
            $nowSlime = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->field('exp,blood,blue')->find();
            $level = $this->s_level($nowSlime['exp']);
            // var_dump($level);exit;
-           $nowSlime['exp']     = $nowSlime['exp']- $level['min'];
+          
+            $nowSlime['exp'] = $nowSlime['exp']-$level['min'];
+
            $nowSlime['min_exp'] = $level['min'];
            $nowSlime['max_exp'] = $level['max']-$level['min'];
            $nowSlime['level']   = $level['level'];
@@ -819,7 +847,7 @@ public function quitClub(){
 
   public function feedback()
   { 
-    $user_id = 182;
+    $user_id =$GLOBALS['token'][2];
     $start = date('Y-m-d 0:0:0');
     $end   = date('Y-m-d 23:59:59') ;
       if(IS_POST){
@@ -895,7 +923,8 @@ public function quitClub(){
 
     //综合评分
     public function zhScore(){
-    	$user_id  =  182;
+    	 $user_id =$GLOBALS['token'][2];
+      // $user_id =232;
     	if($user_id == null){
     		echo "参数错误！！！";
     	}
@@ -927,11 +956,13 @@ public function quitClub(){
 
    // 竞技赛历史战绩
    public function  playHistory(){
-   	$user_id = 182;
-   
+      $user_id = $GLOBALS['token'][2];
+      if($user_id == null){
+          echo "参数错误！！！";
+      }
    	 if(IS_POST){
      	 
-     	 	$play = M('play_log')->where(array('user_id'=>$user_id,'statu'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->select();
+     	 	$play = M('play_log')->where(array('user_id'=>$user_id,'status'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->order('end_time desc')->select();
      	 	foreach ($play as $k => $v) {
      	 	  $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
      	
@@ -943,8 +974,6 @@ public function quitClub(){
      	 			'bonu'      => floor($v['bonu']),
      	 			'userRank'  => $userRank
      	 		);
-     	 		// $data[] = date('m-d H:i',$v['end_time']); 
-     	 		// $data['score']    = $v['score'];
      	 		$datas[]  = $data;
 	 	  }
    	 	
@@ -956,12 +985,14 @@ public function quitClub(){
    }
    //娱乐赛历史战绩
   public function funHistory(){
-    $user_id = 182;
-   
+    $user_id =$GLOBALS['token'][2];
+    if($user_id == null){
+        echo "参数错误！！！";
+      }
      if(IS_POST){
         
         // if($type == 1){
-        $play = M('fun_play_log')->where(array('user_id'=>$user_id,'statu'=>2))->field('rank,score,end_time,user_id')->select();
+        $play = M('fun_play_log')->where(array('user_id'=>$user_id,'status'=>2))->field('rank,score,end_time,user_id')->order('end_time desc')->select();
         // var_dump($play);exit;/
 
         foreach ($play as $k => $v) {
@@ -972,8 +1003,6 @@ public function quitClub(){
             'score'     => $v['score'],
             'rank'      => $v['rank'],
           );
-          // $data[] = date('m-d H:i',$v['end_time']); 
-          // $data['score']    = $v['score'];
           $datas[]  = $data;
        }
       
@@ -985,7 +1014,8 @@ public function quitClub(){
    }
    
    public  function  userFlog(){
-      $user_id = 182;
+    // $user_id = 232;
+       $user_id =$GLOBALS['token'][2];
       $where = array(
         'parent1'=>$user_id,
         'parent2'=>$user_id,
@@ -1010,6 +1040,7 @@ public function quitClub(){
       $weekbonu  = M('finance_log')->where(array('user_id'=>$user_id,'create_time'=>array('between',array($weekStime,$weekendtime))))->sum('money');
       //当月
       $monthbonu = M('finance_log')->where(array('user_id'=>$user_id,'create_time'=>array('between',array($beginThismonth,$endThismonth))))->sum('money');
+
       $allbonu =  M('finance_log')->where(array('user_id'=>$user_id))->sum('money');
       $bouns = array(
         'todaybonu' => $todaybonu,
@@ -1030,6 +1061,35 @@ public function quitClub(){
       // array_merge($datas,$bonus);
      echo json_encode(['statu'=>1,'msg'=>'返回成功','data'=>$datas,'bonus'=>$bouns]);
     
+   }
+
+   public function share(){
+     $user_id =$GLOBALS['token'][2];
+    $share = M('user')->where(array('user_id'=>$user_id))->getField('share');
+    
+    $nowUrl = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
+    // var_dump($nowUrl);exit;
+      if(IS_POST){
+        $type = $_POST['type'];
+        if($type == 1){
+          if($share < 1){
+            echo json_encode(['statu'=>-1,'msg'=>'分享次数不足']);exit;
+          }
+        }
+        
+          $data= array(
+            'user_id' => $user_id,
+            'action'  => $nowUrl,
+            'type'    => $type,
+            'create_time' => date('Y-m-d H:i:s')
+          );
+        $result = M('action_log')->add($data);
+        if($type == 1 && $result){ //娱乐赛分享 
+            M('user')->where(array('user_id'=>$user_id))->setInc('stamina',3);
+            M('user')->where(array('user_id'=>$user_id))->setDec('share',1);
+        }
+        echo json_encode(['statu'=>1,'msg'=>'分享成功']);exit;
+      }
    }
 
 }

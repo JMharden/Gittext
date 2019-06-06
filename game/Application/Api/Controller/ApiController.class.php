@@ -46,8 +46,10 @@ class ApiController extends Controller {
         // $APPID = 'wx1234d2031a772642';//自己配置
         // $AppSecret = '15a280992dba65df7986bed3b168ebef';//自己配置
         $this->_load_config();
-        $APPID = $this->_mp['appid'];
-        $AppSecret = $this->_mp['appsecret'];
+        $APPID = $this->_bei_mp['appid'];
+        $AppSecret = $this->_bei_mp['appsecret'];
+        // $APPID = $this->_mp['appid'];
+        // $AppSecret = $this->_mp['appsecret'];
         // var_dump($APPID);exit;
         $code = $_POST['code'];
         // session('code',null);
@@ -91,12 +93,15 @@ class ApiController extends Controller {
         $session3rd = $this->randomFromDev(16);
         $user_info['session3rd'] = $session3rd;
         $userService = new UserService();
-        // var_dump($user_info['openId']);exit;
+       
         $user = $userService->getUserFullInfoByOpen($user_info['openId']);
+        $isNew = $userService->getUserBaseInfoByOpen($user_info['openId']);
+        // var_dump(expression)
         $user['is_new'] = 2;
-        // var_dump($user);exit;
+        
         $time = date('Y-m-d H:i:s',time());
-            if(!$user){//新用户
+            if(!$isNew){//新用户
+                // var_dump(123);exit;
                 $user_data['openid']    = $user_info['openId'];
                 $user_data['nickname']  = $user_info['nickName'];
                 $user_data['headimg']   = $user_info['avatarUrl'];
@@ -109,7 +114,9 @@ class ApiController extends Controller {
                 // var_dump($user_info);exit;
                 //获取推荐关系
                 if($uid){
+                  
                          $intro1User =  $userService->getUserBaseInfo($uid);
+                         
                          if($intro1User){
                              $parent2= $intro1User['parent1'];
                              $parent3= M('user_base')->where(array('id'=>$intro1User['parent1']))->getField('parent1');
@@ -125,13 +132,17 @@ class ApiController extends Controller {
                     ));
                 }
                 
-                $user = $userService->addUser($user_data,$user_info['openId']);
+                $users = $userService->addUser($user_data,$user_info['openId']);
+                $user = $userService->getUserFullInfoByOpen($users['openid']);
+                // array_merge($user,$users)
                 $user['is_new'] = 1;
                 $userService->addSlime($user['openid'],$user['id']);
               
             }
             //接口访问令牌
             $user['session3rd'] = $session3rd;
+
+            // $user = $userService->getUserFullInfoByOpen($user_info['openId']);
             //累计登陆奖励
             $activityService =  new ActivityService();
             $acclogin = $activityService->accuLogin($user['openid'],$user['id']);
