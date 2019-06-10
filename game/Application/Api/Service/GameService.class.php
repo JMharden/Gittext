@@ -31,45 +31,6 @@ class GameService
     }
 
 
- 
-
-
-
-/**
- * 创建娱乐赛
- * @param $playUser
- * @throws Exception
- */
-
-
-function createFunMatch($playUser){
-    if (!($playUser && sizeof($playUser) >0)) {
-       throw new Exception('参数错误。', 1001);
-    }
-    
-    //判断体力是否充足
-    $userInfos = M('user')->where(array('user_id' => array('IN', $playUser), 'stamina'=>array('GT',0)))->select();
-    // var_dump(sizeof($userInfos));exit;
-    if (sizeof($playUser) > sizeof($userInfos)) {
-        throw new Exception('用户体力不足。', 1001);
-    }
-    //active_point 加5 ，游戏总对局数加1,体力-1
-    $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
-    $Model->execute("update dd_user set  active_point=active_point+5,fun_amount =fun_amount+1,stamina = stamina-1 where user_id in (".implode(",",$playUser).")");
-    //创建比赛
-    $matchId = $this->generateRandomString();
-    $data = ['match_id' => $matchId,
-        'player_num' => sizeof($playUser),
-        'players' => implode(",",$playUser),
-        'create_time' => NOW_TIME,
-        'expaire_time'=>time()+1*60*60,
-        'type'    =>   1,//娱乐赛
-
-    ];
-    M('fun_match_info')->add($data);
-
-    return $data;
-}
     /**
      * 创建对局
      * @param $playUser
@@ -199,6 +160,41 @@ function createFunMatch($playUser){
         return $res;
 
     }
+    /**
+ * 创建娱乐赛
+ * @param $playUser
+ * @throws Exception
+ */
+
+
+function createFunMatch($playUser){
+    if (!($playUser && sizeof($playUser) >0)) {
+       throw new Exception('参数错误。', 1001);
+    }
+    
+    //判断体力是否充足
+    $userInfos = M('user')->where(array('user_id' => array('IN', $playUser), 'stamina'=>array('GT',0)))->select();
+    // var_dump(sizeof($userInfos));exit;
+    if (sizeof($playUser) > sizeof($userInfos)) {
+        throw new Exception('用户体力不足。', 1001);
+    }
+    //active_point 加5 ，游戏总对局数加1,体力-1
+    $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
+    $Model->execute("update dd_user set  active_point=active_point+5,fun_amount =fun_amount+1,stamina = stamina-1 where user_id in (".implode(",",$playUser).")");
+    //创建比赛
+    $matchId = $this->generateRandomString();
+    $data = ['match_id' => $matchId,
+        'player_num' => sizeof($playUser),
+        'players' => implode(",",$playUser),
+        'create_time' => NOW_TIME,
+        'expaire_time'=>time()+1*60*60,
+        'type'    =>   1,//娱乐赛
+
+    ];
+    M('fun_match_info')->add($data);
+
+    return $data;
+}
        /**娱乐赛游戏结算
 
  *  //参数 { 'matchId':'12avas123'，'winner':'1232','data':[ { userId:'' , result:'', } ] }
@@ -224,7 +220,8 @@ function funGameSettle($matchId,$user_id,$rank,$score)
         }
 
         if(time()>$gameLog['expaire_time']){
-            M('play_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
+
+            M('fun_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
         } 
         if ($gameLog['status'] == '1' || time()>$gameLog['expaire_time']) {
            throw new Exception('该对局已结算', 1002);
@@ -237,7 +234,8 @@ function funGameSettle($matchId,$user_id,$rank,$score)
         }else{
             M('fun_match_info')->where(array("match_id" => $matchId))->save(array("dealed_players" => $gameLog['dealed_players'].$user_id.','));
 
-        }
+        }    
+
           $playNum = $gameLog['player_num'];
           $rankData  = $this -> dealRankByNum($playNum);
 
@@ -277,6 +275,10 @@ function funGameSettle($matchId,$user_id,$rank,$score)
         M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
         
         M('fun_play_log')->add($datas);
+        // if(sizeof($gameLog['players']) == sizeof($gameLog['dealed_players'])){
+        //    M('fun_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
+        // }
+        
         return $res;
 
 

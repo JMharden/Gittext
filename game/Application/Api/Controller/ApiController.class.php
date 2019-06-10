@@ -141,7 +141,7 @@ class ApiController extends Controller {
             }
             //接口访问令牌
             $user['session3rd'] = $session3rd;
-
+            $user['firstLogin'] = $this->firstLogin($user['id']);
             // $user = $userService->getUserFullInfoByOpen($user_info['openId']);
             //累计登陆奖励
             $activityService =  new ActivityService();
@@ -192,23 +192,34 @@ class ApiController extends Controller {
         $result = strtr($result, '+/', '-_');
         return substr($result, 0, $len);
     }
+    public function firstLogin($user_id){
+       $start = strtotime(date('Ymd'));
+       $end = strtotime(date('Ymd'))+ 86400;
 
+       $isLogin =  M('login_log')->where(array('user_id'=>$user_id,'login_time'=>array('between',array($start,$end))))->find();
+
+       if($isLogin){
+          return 2;
+       }else{
+          return 1;
+       }
+    }
     public function loginLog($user_id,$souce,$uid){
-      $start = strtotime(date('Ymd'));
-      $end = strtotime(date('Ymd'))+ 86400;
-     $isLogin =  M('login_log')->where(array('user_id'=>$user_id,'login_time'=>array('between',array($start,$end))))->find();
-     if($isLogin){
-        return '今天已登录';
-     }else{
-          $data = array(
-            'user_id' => $user_id,
-            'ip'      => getonlineip(),
-            'login_time' => NOW_TIME,
-            'souce'      => $souce,
-            'invite_id'  => $uid
-          );
-          M('login_log')->add($data);
-      }
+       $start = strtotime(date('Ymd'));
+       $end = strtotime(date('Ymd'))+ 86400;
+       $isLogin =  M('login_log')->where(array('user_id'=>$user_id,'login_time'=>array('between',array($start,$end))))->find();
+       if($isLogin){
+          return '今天已登录';
+       }else{
+            $data = array(
+              'user_id' => $user_id,
+              'ip'      => getonlineip(),
+              'login_time' => NOW_TIME,
+              'souce'      => $souce,
+              'invite_id'  => $uid
+            );
+            M('login_log')->add($data);
+        }
     }
       //日志写入
     public function write_log(){ 

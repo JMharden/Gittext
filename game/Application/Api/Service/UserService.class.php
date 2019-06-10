@@ -94,12 +94,12 @@ class UserService
                     'money' => floor($userExtr['money']),
                     'slimeIndex' => 0,
                     'club_id' => $userExtr['club_id'],
-                    'advert' => $userExtr['advert'],
+                    'advert'  => $userExtr['advert'],
                     'stamina' => $userExtr['stamina'],
                     'share'   => $userExtr['share'],
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
-                    'rankNum'   => $userExtr['rank'] -$rank['min'],
+                    'rankNum' => $userExtr['rank'] -$rank['min'],
                     
                 ];
 

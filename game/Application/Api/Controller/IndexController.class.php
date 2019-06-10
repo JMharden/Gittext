@@ -16,11 +16,11 @@ class IndexController extends ApiController
        parent::_load_config();
        parent::write_log();
        $token = $_POST['token'];
-      
-       // if($token == null && S($token) == null){
-       //     echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
-       //     exit;
-       // }
+      // var_dump($token);exit;
+       if($token == null && S($token) == null){
+           echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
+           exit;
+       }
        $GLOBALS['token'] = S($token);
    
         
@@ -33,10 +33,9 @@ class IndexController extends ApiController
       if($num == 1){
 
         
-        $data_rand  =  $data[18];
+        $data_rand[]  =  $data[18];
       }
       $datas = array_rand($data, $num);
-      // var_dump($data);exit;
       foreach($datas as $val){
        
         $data_rand[]=$data[$val];
@@ -78,7 +77,7 @@ class IndexController extends ApiController
                         ->find();
                         
        if(IS_POST){
-          if($subordinate < 3 || $userInfo['money'] < 1000){
+          if($subordinate < 3 || $userInfo['money'] < 500){
               echo json_encode(array('status'=>-1,'msg'=>'对不起,暂无资格创建俱乐部'));
           }else{
 
@@ -89,7 +88,7 @@ class IndexController extends ApiController
                     'club_head'   => $userInfo['headimg'], //俱乐部图标
                     'ercode'      => $userInfo['headimg'], //俱乐部图标
                     'club_name'   => $_POST['club_name'], //俱乐部名称
-                    'create_fee'  => 1000, //创建费用
+                    'create_fee'  => 500, //创建费用
                     'create_number'  => 30//创建人数
                
                 ); 
@@ -665,6 +664,7 @@ public function quitClub(){
     public function slime(){
       $openid = $GLOBALS['token'][1];
       $user_id= $GLOBALS['token'][2];
+      // var_dump($user_id);exit;
 
       $Model = new \Think\Model();
 
@@ -847,7 +847,8 @@ public function quitClub(){
 
   public function feedback()
   { 
-    $user_id =$GLOBALS['token'][2];
+    $user_id = $GLOBALS['token'][2];
+    $openid  = $GLOBALS['token'][1];
     $start = date('Y-m-d 0:0:0');
     $end   = date('Y-m-d 23:59:59') ;
       if(IS_POST){
@@ -855,7 +856,8 @@ public function quitClub(){
         if($num >= 20){
           echo json_encode(['status'=>-1,'msg'=>'今日反馈次数已达上限!']);exit;
         }
-        $data = ['user_id'=>182,'content'=>$_POST['content']];
+        $nickname = M('user_base')->where(['id'=>$user_id])->getField('nickname');
+        $data = ['user_id'=>$user_id,'openid'=>$openid,'nickname'=>$nickname,'content'=>$_POST['content']];
         $result = M('feedback')->add($data);
         if($result){
           echo json_encode(['status'=>1,'msg'=>'感谢您的反馈,我们将尽快处理!']);exit;
@@ -1064,7 +1066,7 @@ public function quitClub(){
    }
 
    public function share(){
-     $user_id =$GLOBALS['token'][2];
+    $user_id =$GLOBALS['token'][2];
     $share = M('user')->where(array('user_id'=>$user_id))->getField('share');
     
     $nowUrl = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
