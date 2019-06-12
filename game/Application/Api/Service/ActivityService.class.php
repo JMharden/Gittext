@@ -23,11 +23,12 @@ class ActivityService
             if($ween==0){
                 $ween=7;
             }
-            $start = date("Y-m-d 0:0:0",strtotime("-".($ween-1)."day"));
+            $start = date("Y-m-d 00:00:00",strtotime("-".($ween-1)."day"));
             $end = date("Y-m-d 23:59:59",strtotime("+".(7- $ween)."day"));
-            $nowstart = date("Y-m-d 0:0:0");
+            // var_dump($start);var_dump($end);
+            $nowstart = date("Y-m-d 00:00:00");
             $nowend = date("Y-m-d 23:59:59");
-          
+          	// var_dump($nowstart);var_dump($nowend);
             $maxAccDay=1;
 
             $data= M('login_reward')->where(array("openid" => $openid,'user_id'=>$user_id,"create_date"=>array('between',array($start,$end))))->order('create_date asc')->select();
@@ -35,7 +36,7 @@ class ActivityService
             $allLogin= M('login_reward')->where(array("openid" => $openid,'user_id'=>$user_id,"create_date"=>array('between',array($start,$end))))->count();//统计当周一登陆几天
          
             $datas= M('login_reward')->where(array("openid" => $openid,'user_id'=>$user_id,"create_date"=>array('between',array($nowstart,$nowend))))->find();
-            
+            // var_dump($allLogin);exit;
             //判断当天是否已经登陆过
             if($datas){
                 $maxAccDay = $datas['accu_login_days'];

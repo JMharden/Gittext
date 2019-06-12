@@ -92,7 +92,7 @@ class UserService
                 $userInfo = [
                     'is_club_owner' => $userExtr['is_club_owner'],
                     'money' => floor($userExtr['money']),
-                    'slimeIndex' => 0,
+                    'slimeIndex' => $userExtr['lastest_slime'],
                     'club_id' => $userExtr['club_id'],
                     'advert'  => $userExtr['advert'],
                     'stamina' => $userExtr['stamina'],

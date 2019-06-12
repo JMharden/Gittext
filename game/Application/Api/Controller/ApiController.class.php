@@ -147,7 +147,7 @@ class ApiController extends Controller {
             $activityService =  new ActivityService();
             $acclogin = $activityService->accuLogin($user['openid'],$user['id']);
             $slime = $userService->slimeLevel($user['openid']);
-   
+            $this->write_log();
             $this->loginLog($user['id'],$souce,$uid);
             $sessionkey = array($session_key,$openid,$user['id']);
             S($session3rd,$sessionkey,18000);//存入session

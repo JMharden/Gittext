@@ -13,22 +13,7 @@ use Think\Exception;
 
 class GameService
 {
-    /**
-     *
-     */
-    public function recovery($userId)
-    {
-        //要不要针对频率进行限制?
-        if(S("recovery_task_".$userId)){
-            echo "limit exec per 5min";
-            exit;
-        }
-        //体力上限为50
-        M('user')->where(array('stamina' => array('LT', 50),'user_id' => $userId))->setInc('stamina', 1);
-        S("recovery_task_".$userId,"task",["expire"=>300]);
-        echo "success";
-        exit;
-    }
+   
 
 
     /**
@@ -78,7 +63,7 @@ class GameService
      * @return  返回游戏结果用于前端展示
      * @throws Exception
      */
-    function gameSettle($matchId, $user_id, $rank,$score)
+    function gameSettle($matchId, $user_id, $rank,$score,$slime_id)
     {
         $resultJson = json_decode($result,true);
         //判断游戏是否存在, 参数是否正常（玩家id能对应上）
@@ -156,6 +141,7 @@ class GameService
             );
             
         M('finance_log')->add($finLogs);
+        M('user')->where(array('user_id' => $user_id))->setField('lastest_slime',$slime_id);
         M('play_log')->add($datas);
         return $res;
 
@@ -205,7 +191,7 @@ function createFunMatch($playUser){
  * @return  返回游戏结果用于前端展示
  * @throws Exception
  */
-function funGameSettle($matchId,$user_id,$rank,$score)
+function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
 {
     // $resultJson = json_decode($result,true);
     //判断游戏是否存在, 参数是否正常（玩家id能对应上）
@@ -273,7 +259,7 @@ function funGameSettle($matchId,$user_id,$rank,$score)
                 
             );
         M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
-        
+        M('user')->where(array('user_id' => $user_id))->setField('lastest_slime',$slime_id);
         M('fun_play_log')->add($datas);
         // if(sizeof($gameLog['players']) == sizeof($gameLog['dealed_players'])){
         //    M('fun_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
@@ -300,12 +286,12 @@ function funGameSettle($matchId,$user_id,$rank,$score)
         $second =0;
         $third =0;
         $fourth =0;
-        if($playerNum<5){
+        if($playerNum<3){
             $first =$playerNum*$battleAmount;
-        }else if ($playerNum<9){
+        }else if ($playerNum<6){
             $first = (($playerNum-4)*0.5 +3)*$battleAmount;
             $second = (($playerNum-4)*0.5 +1)*$battleAmount;
-        }else if ($playerNum<15){
+        }else if ($playerNum<9){
             $first  = round((($playerNum-9)*0.3 +5)*$battleAmount,1);
             $second =  round(($playerNum-9)*0.3 +3*$battleAmount,1);
             $third  = $playerNum*$battleAmount-$first-$second;
@@ -325,12 +311,12 @@ function funGameSettle($matchId,$user_id,$rank,$score)
         $second =0;
         $third =0;
         $fourth =0;
-        if($playerNum<4){
+        if($playerNum<3){
             $first =15;
-        }else if ($playerNum<9){
+        }else if ($playerNum<6){
             $first = 20;
             $second= 15;
-        }else if ($playerNum<15){
+        }else if ($playerNum<9){
             $first = 25;
             $second= 20;
             $third = 15;
