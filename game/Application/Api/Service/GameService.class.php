@@ -68,7 +68,6 @@ class GameService
         $resultJson = json_decode($result,true);
         //判断游戏是否存在, 参数是否正常（玩家id能对应上）
         $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
-        $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
         if (!$gameLog) {
             throw new Exception('未查找到对应的游戏对局', 1001);
         }
