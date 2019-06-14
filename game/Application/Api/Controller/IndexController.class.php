@@ -16,10 +16,10 @@ class IndexController extends ApiController
        parent::_load_config();
        parent::write_log();
        $token = $_POST['token'];
-       if($token == null || S($token) == null){
+      /* if($token == null || S($token) == null){
            echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
            exit;
-       }
+       }*/
        $GLOBALS['token'] = S($token);
 
    }
