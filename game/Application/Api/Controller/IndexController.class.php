@@ -135,6 +135,7 @@ class IndexController extends ApiController
             $active=M('user')->where(array('club_id'=>$v))->sum('active_point');
             $club[$k]['active']=$active;//俱乐部活跃度
             $club[$k]['create_number']=$user.'/'.$club[$k]['create_number'];
+            $club[$k]['create_time'] = date('Y-m-d',strtotime($v['create_time'])) //创建时间
           }
           $active = array_column($club,'active');
           array_multisort($active,SORT_DESC,$club);
@@ -744,10 +745,10 @@ public function quitClub(){
             $candy = round($suoxu/100);
            
          }else if($type == 2){
-            $candy = $suoxu/300;
+            $candy = round($suoxu/200);
            
          }else{
-            $candy = $suoxu/500;
+            $candy = round($suoxu/400);
             
          }
          if($candyNum > $candy){
