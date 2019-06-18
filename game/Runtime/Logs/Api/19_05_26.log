@@ -1,8 +1,0 @@
-[ 2019-05-26T09:40:58+08:00 ] 14.116.137.166 /api.php?m=Api&c=Index&a=clubs
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
-

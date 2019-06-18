@@ -139,6 +139,7 @@ class ApiController extends Controller {
                 $userService->addSlime($user['openid'],$user['id']);
               
             }
+            M('user_base')->where(array('openid'=>$user['openid']))->setField('last_login_time',$time);
             //接口访问令牌
             $user['session3rd'] = $session3rd;
             $user['firstLogin'] = $this->firstLogin($user['id']);
