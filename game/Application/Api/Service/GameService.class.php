@@ -23,7 +23,7 @@ class GameService
      * @return
      * @throws Exception
      */
-    function createMatch($playUser, $gameType,$battleAmount)
+    function createMatch($playUser, $gameType,$battleAmount,$slime_id)
     {
      
          if (!($playUser || $gameType || sizeof($playUser) >1)) {
@@ -41,7 +41,7 @@ class GameService
         $data = ['match_id' => $matchId,
             'ticket_fee' => $config['ticketFee'],
             'player_num' => sizeof($playUser),
-            'players' => implode(",",$playUser),
+            'players'  => implode(",",$playUser),
             'battle_amount' => $config['battleAmount'],
             'create_time' => NOW_TIME,
             'expaire_time'=>time()+1*60*60,
@@ -152,7 +152,7 @@ class GameService
  */
 
 
-function createFunMatch($playUser){
+function createFunMatch($playUser,$slime_id){
     if (!($playUser && sizeof($playUser) >0)) {
        throw new Exception('参数错误。', 1001);
     }
@@ -404,7 +404,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
     {
        
         $ticketFee = $GLOBALS['_CFG']['site']['lirun' . $gameType];
-        // var_dump($battleAmount);exit;
+      
 
         //输赢大小 是否由前端传入？（暂定由后端配置）
        
@@ -430,6 +430,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
 
         $ticketFee = $config['ticketFee'];
         $battleAmount = $config['battleAmount'];
+
         // 判断是否所有对战用户都满足条件（ 用户余额>门票费用+对战金额）,体力>1
           $userInfos  = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表

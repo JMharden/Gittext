@@ -43,16 +43,13 @@ class ApiController extends Controller {
     {
         session_start();
         // 开发者使用登陆凭证 code 获取 session_key 和 openid
-        // $APPID = 'wx1234d2031a772642';//自己配置
-        // $AppSecret = '15a280992dba65df7986bed3b168ebef';//自己配置
+
         $this->_load_config();
         $APPID = $this->_bei_mp['appid'];
         $AppSecret = $this->_bei_mp['appsecret'];
-        // $APPID = $this->_mp['appid'];
-        // $AppSecret = $this->_mp['appsecret'];
-        // var_dump($APPID);exit;
+      
         $code = $_POST['code'];
-        // session('code',null);
+
         if($code == null ){
            echo json_encode(['status'=>'-2','msg'=>'code不能为空']);
            exit;
@@ -62,7 +59,7 @@ class ApiController extends Controller {
         $iv        = $_POST['iv'];
         $uid       = $_GET['uid'];//推荐人用户ID
         $introduceType = $_GET['source'];
-        // var_dump($uid);exit;
+
         $encryptedData = $_POST['encryptedData'];
         $url = "https://api.weixin.qq.com/sns/jscode2session?appid=" . $APPID . "&secret=" . $AppSecret . "&js_code=" . $code . "&grant_type=authorization_code";
         $arr = $this->vget($url);  // 一个使用curl实现的get方法请求

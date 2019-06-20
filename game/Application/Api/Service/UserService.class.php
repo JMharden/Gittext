@@ -92,7 +92,7 @@ class UserService
                 $userInfo = [
                     'is_club_owner' => $userExtr['is_club_owner'],
                     'money' => floor($userExtr['money']),
-                    'slimeIndex' => $userExtr['lastest_slime'],
+                    'slimeIndex' => 0,
                     'club_id' => $userExtr['club_id'],
                     'advert'  => $userExtr['advert'],
                     'stamina' => $userExtr['stamina'],
@@ -100,7 +100,8 @@ class UserService
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
                     'rankNum' => $userExtr['rank'] -$rank['min'],
-                    
+                    'probability' => round(($userExtr['win_amount']/$userExtr['match_amount'])*100)."%",
+
                 ];
 
                 if($userExtr){
