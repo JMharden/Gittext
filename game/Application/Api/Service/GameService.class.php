@@ -93,7 +93,7 @@ class GameService
         }
         $playNum = $gameLog['player_num'];
       //  $winBonus = $gameLog['battle_amount'] * $gameLog['player_num'];
-        $bonusRatio  = $this -> dealBonus($playNum, $gameLog['battle_amount']);
+        $bonusRatio  = $this -> dealBonus($playNum, $gameLog['battle_amount']-$gameLog['ticket_fee']);
         $rankData    = $this -> dealRankByNum($playNum);
          // var_dump($bonusRatio);exit;
             //判断当前排名是否有奖励
@@ -311,7 +311,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
         $fourth = 0;
         if($playerNum<3){
             $first =$playerNum*$battleAmount;
-        }else if ($playerNum<6){
+        }else if ($playerNum<8){
             $first = (($playerNum-4)*0.5 +3)*$battleAmount;
             $second = (($playerNum-4)*0.5 +1)*$battleAmount;
         }else if ($playerNum<9){
