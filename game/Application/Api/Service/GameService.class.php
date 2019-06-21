@@ -23,7 +23,7 @@ class GameService
      * @return
      * @throws Exception
      */
-    function createMatch($playUser, $gameType,$battleAmount)
+    function createMatch($playUser, $gameType,$battleAmount,$slime_id)
     {
      
          if (!($playUser || $gameType || sizeof($playUser) >1)) {
@@ -41,7 +41,7 @@ class GameService
         $data = ['match_id' => $matchId,
             'ticket_fee' => $config['ticketFee'],
             'player_num' => sizeof($playUser),
-            'players' => implode(",",$playUser),
+            'players'  => implode(",",$playUser),
             'battle_amount' => $config['battleAmount'],
             'create_time' => NOW_TIME,
             'expaire_time'=>time()+1*60*60,
@@ -174,7 +174,7 @@ class GameService
  */
 
 
-function createFunMatch($playUser){
+function createFunMatch($playUser,$slime_id){
     if (!($playUser && sizeof($playUser) >0)) {
        throw new Exception('参数错误。', 1001);
     }
@@ -244,11 +244,12 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
         }    
 
           $playNum = $gameLog['player_num'];
+          $rankDatas  = $this -> dealCandyByNum($playNum);
           $rankData  = $this -> dealRankByNum($playNum);
 
-          $candy = 0;
-          if($rank<=count($rankData)){
-                $candy= $rankData[$rank-1];
+          $candy = 1;
+          if($rank<=count($rankDatas)){
+                $candy= $rankDatas[$rank-1];
                 //排名第一增加胜局数
                 if($rank==1){
                    // M('fun_match_info')->where(array("match_id" => $matchId))->save(array("status" => 1));
@@ -275,10 +276,11 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
         $res=array(
                 'user_id' => $user_id,
                 'score'=>$score,
-                'rank'=>$rank,//排名
+                'rank' =>$rank,//排名
                 'candy'=>$candy//加糖果
                 
             );
+        // var_dump($res);exit;
         M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
         M('user')->where(array('user_id' => $user_id))->setField('lastest_slime',$slime_id);
         M('fun_play_log')->add($datas);
@@ -303,10 +305,10 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
      * @return array
      */
     function dealBonus($playerNum,$battleAmount){
-        $first=0;
-        $second =0;
-        $third =0;
-        $fourth =0;
+        $first  = 0;
+        $second = 0;
+        $third  = 0;
+        $fourth = 0;
         if($playerNum<3){
             $first =$playerNum*$battleAmount;
         }else if ($playerNum<6){
@@ -326,7 +328,29 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
         return $data;
     }
 
-
+    function dealCandyByNum($playerNum){
+        $first  = 1;
+        $second = 1;
+        $third  = 1;
+        $fourth = 1;
+        if($playerNum<3){
+            $first = 10;
+        }else if ($playerNum<6){
+            $first = 15;
+            $second= 10;
+        }else if ($playerNum<9){
+            $first = 20;
+            $second= 15;
+            $third = 10;
+        }else{
+            $first  = 25;
+            $second = 20;
+            $third  = 15;
+            $fourth = 10;
+        }
+        $data =array($first,$second,$third,$fourth);
+        return $data;
+    }
     function dealRankByNum($playerNum){
         $first=0;
         $second =0;
@@ -430,7 +454,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
     {
        
         $ticketFee = $GLOBALS['_CFG']['site']['lirun' . $gameType];
-        // var_dump($battleAmount);exit;
+      
 
         //输赢大小 是否由前端传入？（暂定由后端配置）
        
@@ -456,6 +480,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
 
         $ticketFee = $config['ticketFee'];
         $battleAmount = $config['battleAmount'];
+
         // 判断是否所有对战用户都满足条件（ 用户余额>门票费用+对战金额）,体力>1
           $userInfos  = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表

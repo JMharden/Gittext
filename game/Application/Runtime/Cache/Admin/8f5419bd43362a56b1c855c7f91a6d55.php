@@ -282,29 +282,22 @@
         <td><?php echo ($user_count_all); ?>个</td>
       </tr>
       <tr>
-        <td>用户留存</td>
+        <td>新增三日留存</td>
+        <td><?php echo ($usre_three); ?>个</td>
+      </tr>
+       <tr>
+        <td>活跃三日留存</td>
         <td><?php echo ($user_count); ?>个</td>
       </tr>
       <tr>
-        <td>平均在线时长</td>
+        <td>用户游玩时长统计</td>
         <td><?php echo ($user_count); ?>个</td>
       </tr>
-<!--       <tr>
-        <td>今日充值</td>
-        <td><?php echo ($pay_total); ?>元</td>
-      </tr>
-      <tr>
-        <td>充值总数</td>
-        <td><?php echo ($pay_total_all); ?>元</td>
-      </tr>
-      <tr>
-        <td>今日提现</td>
-        <td><?php echo ($out_total); ?>元</td>
-      </tr>
-      <tr>
-        <td>提现总数</td>
-        <td><?php echo ($out_total_all); ?>元</td>
+     <!--  <tr>
+        <td> 当天用户在线时间段的分布</td>
+        <td></td>
       </tr> -->
+    
     </tbody>
   </table>
   <div class="contentwrapper lineheight21"></div>
@@ -317,11 +310,11 @@
     </thead>
     <tbody>
       <tr>
-        <td>总对局场次</td>
+        <td>竞技赛总场次</td>
         <td><?php echo ($game_count_all); ?></td>
       </tr>
       <tr>
-        <td>今日对局场次</td>
+        <td>今日竞技赛场次</td>
         <td><?php echo ($game_count); ?></td>
       </tr>
       <tr>
@@ -329,22 +322,24 @@
         <td><?php echo ($game_aver_time); ?></td>
       </tr>
       <tr>
-        <td>总对局场次</td>
+        <td>总竞技赛场次</td>
         <td>初级场总场次:<?php echo ($game_count_first); ?> ;中级场总场次:<?php echo ($game_count_middle); ?> ;高级场总场次:<?php echo ($game_count_high); ?> ;</td>
       </tr>
-<!--       <tr>
-        <td>今日支出</td>
-        <td><?php echo ($today_out); ?></td>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>娱乐赛总场次</td>
+        <td><?php echo ($fun_game_count_all); ?></td>
       </tr>
       <tr>
-        <td>今日净利润</td>
-        <td><?php echo ($today_in-$today_out); ?></td>
+        <td>今日娱乐赛场次</td>
+        <td><?php echo ($fun_game_count); ?></td>
       </tr>
       <tr>
-        <td>利润率</td>
-        <td>
-          <?php echo sprintf("%.2f",(($xiadan - $ying - $today_win_ext)/$xiadan)) * 100 ?>%</td>
-      </tr> -->
+        <td>比赛平均时长</td>
+        <td><?php echo ($game_fun_time); ?></td>
+      </tr>
+     
     </tbody>
   </table>
   <div class="contentwrapper lineheight21"></div>

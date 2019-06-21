@@ -36,7 +36,7 @@ class IndexController extends AdminController
 					cookie('admin_user', $_POST['user']);
 				}
 
-				redirect(U('Admin/welcome'));
+				redirect(U('Admin/dayReport'));
 				exit;
 			} else {
 				$this -> assign('errmsg', $this -> _user['pass']);
@@ -72,7 +72,7 @@ class IndexController extends AdminController
 					cookie('admin_user', $_POST['user']);
 				}
 
-				redirect(U('Admin/welcome'));
+				redirect(U('Admin/dayReport'));
 				exit;
 			}else{
 				$this -> assign('errmsg', '账号或密码不对');
