@@ -371,13 +371,16 @@ public function quitClub(){
          
           // $slime_id = $this->checkSlime();
           foreach($data as $k=>$v){
-            if(M('play_log')->where(array('user_id'=>$members[$k]['id']))->count()){
-                $score = M('play_log')->where(array('user_id'=>$members[$k]['id']))->max('score');//最高步数
-            }else{
-                $score = M('fun_play_log')->where(array('user_id'=>$members[$k]['id']))->max('score');//最高步数
-            }
+            $funscore = M('play_log')->where(array('user_id'=>$members[$k]['id']))->field('score')->select();//最高步数
+            $playscore = M('fun_play_log')->where(array('user_id'=>$members[$k]['id']))->field('score')->select();//最高步数
+            $score =   array_merge($funscore,$playscore);
+            // if(M('play_log')->where(array('user_id'=>$members[$k]['id']))->count()){
+            //     $score = M('play_log')->where(array('user_id'=>$members[$k]['id']))->max('score');//最高步数
+            // }else{
+            //     $score = M('fun_play_log')->where(array('user_id'=>$members[$k]['id']))->max('score');//最高步数
+            // }
             // $score = M('play_log')->where(array('user_id'=>$user_id))->max('score');//最高步数
-            $members[$k]['score'] = $score;
+            $members[$k]['score'] = max($score)['score'];
             $members[$k]['active_point'] = $members[$k]['active_point'];//活跃度
             $members[$k]['match_amount'] =$members[$k]['fun_amount']+$members[$k]['match_amount'];
             $members[$k]['win_amount'] =$members[$k]['fun_win_amount']+$members[$k]['win_amount'];
@@ -885,12 +888,15 @@ public function upSlime(){
 
       // var_dump($match);var_dump($fun);exit;
       $steps = round(($match+$fun)/$game);
-      // var_dump($game);exit;
-      if(M('play_log')->where(array('user_id'=>$user_id))->count()){
-        $score = M('play_log')->where(array('user_id'=>$user_id))->max('score');//最高步数
-      }else{
-        $score = M('fun_play_log')->where(array('user_id'=>$user_id))->max('score');//最高步数
-      }
+      // // var_dump($game);exit;
+      // if(M('play_log')->where(array('user_id'=>$user_id))->count()){
+      //   $score = M('play_log')->where(array('user_id'=>$user_id))->max('score');//最高步数
+      // }else{
+      //   $score = M('fun_play_log')->where(array('user_id'=>$user_id))->max('score');//最高步数
+      // }
+      $funscore = M('play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
+      $playscore = M('fun_play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
+      $score =   array_merge($funscore,$playscore);
     	$allScore = $gameNum+$intsl+$user['rank'];
     	$zhScore  = $this->score($allScore)['level'];
         $result = array(
@@ -899,7 +905,7 @@ public function upSlime(){
         	'probability' => $probability,//胜率 
         	'shenglv'     => $shenglv,    //胜率评分  
         	'gameNum'     => $gameNum,    //场次评分 
-        	'score'       => $score,      //最高步数
+        	'score'       => max($score)['score'],      //最高步数
         	'zhScore'     => $zhScore,     //综合评分
           'zhScore1'    => $allScore,     //综合评分数字
           // 'gameCount1'  => $game, 

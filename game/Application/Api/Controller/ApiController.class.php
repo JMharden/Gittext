@@ -93,31 +93,31 @@ class ApiController extends Controller {
        
         $user = $userService->getUserFullInfoByOpen($user_info['openId']);
         $isNew = $userService->getUserBaseInfoByOpen($user_info['openId']);
-        // var_dump(expression)
+
         $user['is_new'] = 2;
         
         $time = date('Y-m-d H:i:s',time());
             if(!$isNew){//新用户
-                // var_dump(123);exit;
+                
                 $user_data['openid']    = $user_info['openId'];
                 $user_data['nickname']  = $user_info['nickName'];
                 $user_data['headimg']   = $user_info['avatarUrl'];
                 $user_data['sex']       = $user_info['gender'];
-                $user_data['sub_time']  = time();
+                $user_data['area']      = $user_info['city'];
                 $user_data['join_time'] = $time;
                 $user_data['last_login_time'] = $time;
                 //用户引入方式
                 $user_data['source'] = $introduceType;
-                // var_dump($user_info);exit;
+              
                 //获取推荐关系
                 if($uid){
                   
-                         $intro1User =  $userService->getUserBaseInfo($uid);
-                         
-                         if($intro1User){
-                             $parent2= $intro1User['parent1'];
-                             $parent3= M('user_base')->where(array('id'=>$intro1User['parent1']))->getField('parent1');
-                         }
+                   $intro1User =  $userService->getUserBaseInfo($uid);
+                   
+                   if($intro1User){
+                       $parent2= $intro1User['parent1'];
+                       $parent3= M('user_base')->where(array('id'=>$intro1User['parent1']))->getField('parent1');
+                   }
                     $user_data['parent1'] = $uid;
                     $user_data['parent2'] = $parent2;
                     $user_data['parent3'] = $parent3;

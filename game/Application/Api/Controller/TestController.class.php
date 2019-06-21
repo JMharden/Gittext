@@ -33,41 +33,22 @@ class TestController extends ApiController
       }
 
 
-       //娱乐赛历史战绩
-  public function funHistory(){
-    $user_id =232;
-    if($user_id == null){
-        echo "参数错误！！！";
-      }
-     // if(IS_POST){
-        
-        if(S('funHistory_' . $user_id)){
-          $datas = S('funHistory_' . $user_id);
-          // var_dump($datas);exit;
-          
-        }else{
-          $play = M('fun_play_log')->where(array('user_id'=>$user_id,'status'=>2))->field('rank,score,end_time,user_id')->order('end_time desc')->select();
-                  
-          foreach ($play as $k => $v) {
-            $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
-        
-            $data = array(
-              'end_time'  => date('m-d H:i',$v['end_time']),
-              'score'     => $v['score'],
-              'rank'      => $v['rank'],
-            );
-            $datas[]  = $data;
-          }
-          S('funHistory_' . $user_id, $datas, 18000);
-        }
-        
-      
-        echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$datas]);
-     //  // }
-     // }else{
-     //    echo json_encode(['status'=>-1,'msg'=>'系统错误']);
-     // }  
-   }
+  //综合评分
+    public function zhScore(){
+      $user_id = 232;
+     
 
+      // var_dump($match);var_dump($fun);exit;
+      $steps = round(($match+$fun)/$game);
+      // var_dump($game);exit;
+  
+        $score1 = M('play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
+ 
+        $score = M('fun_play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
+   $a =   array_merge($score,$score1);
+
+var_dump(max($a));exit;
+        return $result;
+    }
 
 }

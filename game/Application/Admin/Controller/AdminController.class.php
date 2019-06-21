@@ -78,10 +78,8 @@ class AdminController extends Controller
       
 		$today = strtotime(date('Y-m-d'));
         $today_end = $today + 86400 -1;
-       
-          // $three =  $Model->query("select  count(a.id) from dd_user_base  a left join dd_user_base  b on a.id =b.id  and  DATE_FORMAT(a.join_time,'%Y-%m-%d') = '2019-05-24'  and b.last_login_time > '2019-05-27' where  DATE_FORMAT(a.join_time,'%Y-%m-%d') ='2019-05-24';");
-          // var_dump($three);exit;
-          $three = M('user_base')->where(array('join_time'=>array('eq','2019-0-24'),'last_login_time'=>array('gt','2019-05-24')))->count();
+                                                   
+        $three = M('user_base')->where(array('join_time'=>array('eq','2019-05-24'),'last_login_time'=>array('gt','2019-05-24')))->count();
            // var_dump($three);exit;
         $data['user_count'] 	= M('user')->where(['sub_time' => [['egt', $today], ['elt', $today_end], 'and']])->count();//今日新增用户
         $data['user_count_all'] = M('user')->count();//总用户
@@ -91,12 +89,16 @@ class AdminController extends Controller
         $data['game_count_first'] = M('play_match_info')->where(['type'=>1,'status'=>1])->count();//初级场总场次
         $data['game_count_middle'] = M('play_match_info')->where(['type'=>2,'status'=>1])->count();//中级场总场次
         $data['game_count_high'] = M('play_match_info')->where(['type'=>3,'status'=>1])->count();//高级场总场次
-        $data['game_aver_time']  = $this->time();//游戏平均时长
+        $data['fun_game_count']     = M('fun_match_info')->where(['create_time' => [['egt', $today], ['elt', $today_end], 'and'],'status'=>1])->count();//今日游戏总场次
+        $data['fun_game_count_all'] = M('fun_match_info')->where(['status'=>1])->count();//游戏总场次
+        $data['game_aver_time']  = $this->match_time();//竞技赛游戏平均时长
+        $data['game_fun_time']  = $this->fun_time();//竞技赛游戏平均时长
 		$this -> assign($data);
 		$this -> display();
 
     }
-    public function time(){
+    //竞技赛平均时长
+    public function match_time(){
         $time=M('play_match_info')->alias('a')
                 ->join("dd_play_log i on a.match_id=i.match_id") //附表连主表
                 ->field("i.start_time,i.end_time")
@@ -115,145 +117,34 @@ class AdminController extends Controller
         $a = $diff/$times;
         $minute = floor($a%86400/60);
         $second = floor($a%86400%60);
-        return $minute.'分'.$times.'秒';
+        return $minute.'分'.$second.'秒';
    
     }
-	// 后台首界面
-	public function welcome()
-	{
-	    $today = strtotime(date('Y-m-d'));
-        $today_end = $today + 86400 -1;
+    //娱乐赛平均时长
+	  public function fun_time(){
+        $time=M('fun_match_info')->alias('a')
+                ->join("dd_fun_play_log i on a.match_id=i.match_id") //附表连主表
+                ->field("i.start_time,i.end_time")
+                ->where(array('i.status'=>2))//需要显示的字段
+                ->select();
+        $times = count($time);
+        $diff = 0;
 
+        foreach ($time as $key => $value) {
 
-        // 名称块
-        $data['user_count'] 	= M('user')->where(['sub_time' => [['egt', $today], ['elt', $today_end], 'and']])->count();
-        $data['user_count_all'] = M('user')->count();
-
-        $data['pay_total'] 		= M('pay_record')->where(['ctime' => [['egt', $today], ['elt', $today_end], 'and']])->sum('total_fee');
-        $data['pay_total_all']	= M('pay_record')->sum('total_fee');
-        if (!$data['pay_total']) {
-        	$data['pay_total'] = 0;
+            // $time[$key]['start_time'] = strtotime($time[$key]['start_time']);
+            // $time[$key]['end_time'] = strtotime($time[$key]['end_time']);
+            $time['diff'] =$time[$key]['end_time']-$time[$key]['start_time'];
+            $diff+=$time['diff'];
         }
-        if (!$data['pay_total_all']) {
-        	$data['pay_total_all'] = 0;
-        }
-
-        $data['out_total'] 		= M('withdraw_log')->where(['status' => 1, 'create_time' => [['egt', $today], ['elt', $today_end], 'and']])->sum('money');
-        $data['out_count_all'] 	= M('withdraw_log')->where(['status' => 1])->sum('money');
-        if (!$data['out_total']) {
-        	$data['out_total'] = 0;
-        }
-        if (!$data['out_total_all']) {
-        	$data['out_total_all'] = 0;
-        }
-
-        // $data['buy_count'] 		= M('buylog')->where(array('starttime'=>array(array('egt',$today),array('elt',$today_end),'and')))->count();
-        // $data['buy_count_all'] 	= M('buylog')->count();
-
-
-  		// 今日盈亏块
-        $data['user_in'] 		= M('user')->sum('money');
-		// $data['today_in'] = M('charge_log')->where(array('create_time'=>array(array('egt',$today),array('elt',$today_end),'and'),'status'=>1))->sum('money');
-        $data['today_in'] 		= M('charge_log')->where(['status' => 1])->sum('money');
-        if (!$data['today_in']) {
-            $data['today_in'] = 0;
-        }
-
-        $data['zuo_in'] = M('charge_log')->where(array('create_time'=>array(array('egt',$today-3600*24),array('elt',$today_end-3600*24),'and'),'status'=>1))->sum('money');
-        if (!$data['zuo_in']) {
-            $data['zuo_in'] = 0;
-        }
-
-        $data['qian_in'] = M('charge_log')->where(array('create_time'=>array(array('egt',$today-3600*24*2),array('elt',$today_end-3600*24*2),'and'),'status'=>1))->sum('money');
-        if (empty($data['qian_in'])) {
-            $data['qian_in'] = 0;
-        } else {
-            $data['qian_in'] = $data['qian_in'] / 100;
-        }
-
-        $data['today_win'] = M('buylog')->where(array('yingmoney'=>array('gt',0),'starttime'=>array(array('egt',$today),array('elt',$today_end),'and')))->sum('yingmoney');
-        if (!$data['today_win']) {
-            $data['today_win'] = 0;
-        }
-
-        $data['today_win_ext'] 	= M('expense')->where(array('create_time'=>array(array('egt',$today),array('elt',$today_end),'and')))->sum('money');
-        $data['today_win_ext'] 	= empty($data['today_win_ext']) ? 0 : $data['today_win_ext'];
-        $data['zuo_win_ext'] 	= M('expense')->where(array('create_time'=>array(array('egt',$today-3600*24),array('elt',$today_end-3600*24),'and')))->sum('money');
-        $data['zuo_win_ext'] 	= empty($data['zuo_win_ext']) ? 0 : $data['zuo_win_ext'];
-        // $data['today_win']  	= $data['today_win'] + $data['today_win_ext'];
-        $data['today_out'] 		= M('withdraw_log')->where(array('status'=>1,'create_time'=>array(array('egt',$today),array('elt',$today_end),'and')))->sum('money');
-        $data['today_out'] 		= M('withdraw_log')->where(array('status'=>1))->sum('money');
-        if (!$data['today_out']) {
-            $data['today_out'] = 0;
-        }
-
-        $data['zuo_out'] = M('withdraw_log')->where(array('status'=>1,'create_time'=>array(array('egt',$today-3600*24),array('elt',$today_end-3600*24),'and')))->sum('money');
-        if (empty($data['zuo_out'])) {
-            $data['zuo_out'] = 0;
-        }
-
-        $data['qian_out'] = M('withdraw_log')->where(array('status'=>1,'create_time'=>array(array('egt',$today-3600*24*2),array('elt',$today_end-3600*24*2),'and')))->sum('money');
-        if (empty($data['qian_out'])) {
-            $data['qian_out'] = 0;
-        }
-
-        $month 				= strtotime(date('Y-m').'-01');
-        $month_end 			= strtotime($this->GetMonth(0).'01') - 1;
-        $data['xiadan'] 	= M('zhuan')->where(array('addtime'=>array(array('egt',$today),array('elt',$today_end),'and')))->sum('money');
-        $data['ying'] 		= M('zhuan')->where(array('addtime'=>array(array('egt',$today),array('elt',$today_end),'and')))->sum('ying');
-        $data['yue_xiadan'] = M('zhuan')->where(array('addtime'=>array(array('egt',$month),array('elt',$month_end),'and')))->sum('money');
-        $data['yue_ying'] 	= M('zhuan')->where(array('addtime'=>array(array('egt',$month),array('elt',$month_end),'and')))->sum('ying');
-        $data['zuo_xiadan'] = M('zhuan')->where(array('addtime'=>array(array('egt',$today-3600*24),array('elt',$today_end-3600*24),'and')))->sum('money');
-        $data['zuo_ying'] 	= M('zhuan')->where(array('addtime'=>array(array('egt',$today-3600*24),array('elt',$today_end-3600*24),'and')))->sum('ying');
-        $data['qian_xiadan']= M('zhuan')->where(array('addtime'=>array(array('egt',$today-3600*24),array('elt',$today_end-3600*24*2),'and')))->sum('money');
-        $data['qian_ying'] 	= M('zhuan')->where(array('addtime'=>array(array('egt',$today-3600*24),array('elt',$today_end-3600*24*2),'and')))->sum('ying'); 
-        $data['all_xiadan'] = M('zhuan')->sum('money');
-        $data['all_ying'] 	= M('zhuan')->sum('ying'); 
+      
+        $a = $diff/$times;
         
-        $data['month_in'] 	= M('wxpay_log')->where(array('log_time'=>array(array('egt',$month),array('elt',$month_end),'and')))->sum('total_fee');
-        if (empty($data['month_in'])) {
-            $data['month_in'] = 0;
-        } else {
-            $data['month_in'] = $data['month_in'] / 100;
-        }
-
-        $data['month_win'] = M('buylog')->where(array('yingmoney'=>array('gt',0),'starttime'=>array(array('egt',$month),array('elt',$month_end),'and')))->sum('yingmoney');
-        if (empty($data['month_win'])) {
-            $data['month_win'] = 0;
-        }
-
-        $data['month_win_ext'] 	= M('expense')->where(array('create_time'=>array(array('egt',$month),array('elt',$month_end),'and')))->sum('money');
-        $data['month_win_ext'] 	= empty($data['month_win_ext']) ? 0 : $data['month_win_ext'];
-        //$data['month_win']  = $data['month_win'] + $data['month_win_ext'];
-        $data['month_out'] 		= M('withdraw_log')->where(array('status'=>1,'create_time'=>array(array('egt',$month),array('elt',$month_end),'and')))->sum('money');
-        if (empty($data['month_out'])) {
-            $data['month_out'] = 0;
-        }
-
-        $data['all_in'] = M('wxpay_log')->sum('total_fee');
-        if (empty($data['all_in'])) {
-            $data['all_in'] = 0;
-        } else {
-            $data['all_in'] = $data['all_in'] / 100;
-        }
-
-        $data['all_win'] = M('buylog')->where(array('yingmoney'=>array('gt',0)))->sum('yingmoney');
-        $data['all_win_ext'] = M('expense')->sum('money');
-        $data['all_win_ext'] = empty($data['all_win_ext']) ? 0 : $data['all_win_ext'];
-        if (empty($data['all_win'])) {
-            $data['all_win'] = 0;
-        }
-
-        //$data['all_win']  = $data['all_win'] + $data['all_win_ext'];
-        $data['all_out'] = M('withdraw_log')->where(array('status'=>1))->sum('money');
-        if (empty($data['all_out'])) {
-            $data['all_out'] = 0;
-        }
-
-        //dump($data);
-		$this -> assign($data);
-		$this -> display();
-	}
+        $minute = floor($a%86400/60);
+        $second = floor($a%86400%60);
+        return $minute.'分'.$second.'秒';
+   
+    }
 
 
 	private function GetMonth($sign="1")
