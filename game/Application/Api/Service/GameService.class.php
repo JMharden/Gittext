@@ -30,19 +30,25 @@ class GameService
             throw new Exception('参数错误。', 1001);
         }
         // $battleAmount = $_POST['battleAmount'];
-        $config = $this->getGameConfig($gameType,$battleAmount);
+       // $config = $this->getGameConfig($gameType,$battleAmount);
          
         // var_dump($playUser);exit;
         //处理门票相关逻辑
         $userInfos = $this->dealTicketFee($playUser,$config);
+        if($battleAmount<100){
+            $ticketFee =$battleAmount*0.2;
+        }else{
+            $ticketFee =$battleAmount*0.1;
+        }
+
           // $userInfos = $this->dealTicketFee($playUser,$config);
         //创建比赛
         $matchId = $this->generateRandomString();
         $data = ['match_id' => $matchId,
-            'ticket_fee' => $config['ticketFee'],
+            'ticket_fee' => $ticketFee,
             'player_num' => sizeof($playUser),
             'players'  => implode(",",$playUser),
-            'battle_amount' => $config['battleAmount'],
+            'battle_amount' => $battleAmount,
             'create_time' => NOW_TIME,
             'expaire_time'=>time()+1*60*60,
             'type'=>$gameType//初中高级场
@@ -309,22 +315,67 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
         $second = 0;
         $third  = 0;
         $fourth = 0;
+        $five = 0;
+        $six=0;
+        $seven=0;
+        $eight=0;
+        $night=0;
         if($playerNum<3){
             $first =$playerNum*$battleAmount;
-        }else if ($playerNum<8){
-            $first = (($playerNum-4)*0.5 +3)*$battleAmount;
-            $second = (($playerNum-4)*0.5 +1)*$battleAmount;
+        }else if ($playerNum<7){
+            $first = round($playerNum*$battleAmount*0.6);
+            $second = round($playerNum * $battleAmount * 0.4);
         }else if ($playerNum<9){
-            $first  = round((($playerNum-9)*0.3 +5)*$battleAmount,1);
-            $second =  round(($playerNum-9)*0.3 +3*$battleAmount,1);
+            $first = round($playerNum*$battleAmount*0.5);
+            $second = round($playerNum*$battleAmount*0.3);
             $third  = $playerNum*$battleAmount-$first-$second;
-        }else{
-            $first =  round(($playerNum-15)*0.25 +6.5*$battleAmount,1);
-            $second = round(($playerNum-15)*0.25 +4.5*$battleAmount,1);
-            $third =round( ($playerNum-15)*0.25 +3*$battleAmount,1);
+        }else if ($playerNum<12){
+            $first = round($playerNum*$battleAmount*0.4);
+            $second = round($playerNum*$battleAmount*0.3);
+            $third  = round($playerNum*$battleAmount*0.2);;
             $fourth =  $playerNum*$battleAmount-$first-$second-$third;
+        }else if ($playerNum<14){
+            $first = round($playerNum*$battleAmount*0.3);
+            $second = round($playerNum*$battleAmount*0.3);
+            $third  = round($playerNum*$battleAmount*0.2);
+            $fourth  = round($playerNum*$battleAmount*0.1);
+            $five =  $playerNum*$battleAmount-$first-$second-$third-$fourth;
+        }else if ($playerNum<17){
+            $first = round($playerNum*$battleAmount*0.3);
+            $second = round($playerNum*$battleAmount*0.2);
+            $third  = round($playerNum*$battleAmount*0.2);
+            $fourth  = round($playerNum*$battleAmount*0.1);
+            $five =  round($playerNum*$battleAmount*0.1);
+            $six =  $playerNum*$battleAmount-$first-$second-$third-$fourth-$five;
+        }else if ($playerNum<19){
+            $first = round($playerNum*$battleAmount*0.25);
+            $second = round($playerNum*$battleAmount*0.2);
+            $third  = round($playerNum*$battleAmount*0.1);
+            $fourth  = round($playerNum*$battleAmount*0.1);
+            $five =  round($playerNum*$battleAmount*0.1);
+            $six =  round($playerNum*$battleAmount*0.1);
+            $seven =  $playerNum*$battleAmount-$first-$second-$third-$fourth-$five-$six;
+        }else if ($playerNum<22){
+            $first = round($playerNum*$battleAmount*0.25);
+            $second = round($playerNum*$battleAmount*0.15);
+            $third  = round($playerNum*$battleAmount*0.15);
+            $fourth  = round($playerNum*$battleAmount*0.15);
+            $five =  round($playerNum*$battleAmount*0.1);
+            $six =  round($playerNum*$battleAmount*0.1);
+            $seven =  round($playerNum*$battleAmount*0.05);
+            $eight =  $playerNum*$battleAmount-$first-$second-$third-$fourth-$five-$six-$seven;
+        }else {
+            $first = round($playerNum*$battleAmount*0.25);
+            $second = round($playerNum*$battleAmount*0.15);
+            $third  = round($playerNum*$battleAmount*0.15);
+            $fourth  = round($playerNum*$battleAmount*0.10);
+            $five =  round($playerNum*$battleAmount*0.1);
+            $six =  round($playerNum*$battleAmount*0.1);
+            $seven =  round($playerNum*$battleAmount*0.05);
+            $eight =  round($playerNum*$battleAmount*0.05);
+            $night =  $playerNum*$battleAmount-$first-$second-$third-$fourth-$five-$six-$seven-$night;
         }
-        $data =array($first,$second,$third,$fourth);
+        $data =array($first,$second,$third,$fourth,$five,$six,$seven,$eight,$night);
         return $data;
     }
 
