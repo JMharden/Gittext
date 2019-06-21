@@ -65,7 +65,7 @@ class GameService
      */
     function gameSettle($matchId, $user_id, $rank,$score,$slime_id)
     {
-        $resultJson = json_decode($result,true);
+        //$resultJson = json_decode($result,true);
         //判断游戏是否存在, 参数是否正常（玩家id能对应上）
         $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
         if (!$gameLog) {
@@ -98,6 +98,8 @@ class GameService
          // var_dump($bonusRatio);exit;
             //判断当前排名是否有奖励
             $bonus =0;
+            $rank =0;
+            $userUpdateInfo = array();
             if($rank<=count($bonusRatio)){
                 $bonus= $bonusRatio[$rank-1];
                 // var_dump($bonus);exit;
@@ -112,14 +114,25 @@ class GameService
                    );
                 //排名第一增加胜局数
                 if($rank==1){
-                   
-                    M('user')->where(array('user_id' => $user_id))->setInc('win_amount',1 );
+                    if($gameLog['type']==4){
+                        $userUpdateInfo["invite_win_amount"] = 1;
+                    }else{
+
+                        $userUpdateInfo["win_amount"] = 1;
+                    }
+
+                    //     M('user')->where(array('user_id' => $user_id))->setInc('win_amount',1 );
                 }
-                M('user')->where(array('user_id' => $user_id))->setInc('money',$bonus);
+              //  M('user')->where(array('user_id' => $user_id))->setInc('money',$bonus);
             }
+
             //rank分计算
             $ranks =$this ->dealRank($gameLog['type'],$rank,$playNum);
-            M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
+            if($ranks>0){
+                $userUpdateInfo["rank"] = $ranks;
+            }
+            $userUpdateInfo["lastest_slime"] = $slime_id;
+       //     M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
             $res=array(
                 'user_id' => $user_id,
                 'score'=>$score,
@@ -140,7 +153,16 @@ class GameService
             );
             
         M('finance_log')->add($finLogs);
-        M('user')->where(array('user_id' => $user_id))->setField('lastest_slime',$slime_id);
+      //  M('user')->where(array('user_id' => $user_id))->setField('lastest_slime',$slime_id);
+      //批量更新用户信息
+       $sql = "update dd_user set ";
+        foreach($userUpdateInfo as $key=>$value)
+        {
+            $sql=$sql.$key.'='.$key.'+'.$value.',';
+       }
+
+        $Model = new \Think\Model();
+        $Model->execute( substr($sql, 0, -1).'where user_id='.$user_id);
         M('play_log')->add($datas);
         return $res;
 
@@ -345,6 +367,10 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
             $scorePlu =0;
             $rankAdd =0;
             $gameTypePlu =0;
+            //邀请赛不计算排位分
+            if($gameType==4){
+                return 0;
+            }
           if($rank<=count($playNum)){
               $rankAdd =$playNum[$rank];
           }
