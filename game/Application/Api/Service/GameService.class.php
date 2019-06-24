@@ -55,7 +55,7 @@ class GameService
         ];
         M('play_match_info')->add($data);
         //处理佣金相关逻辑
-        CommissionService::dealDraw($userInfos, $matchId,$config['ticketFee']);
+        CommissionService::dealDraw($userInfos, $matchId,$ticketFee);
 
         return $data;
     }
