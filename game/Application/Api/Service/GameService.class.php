@@ -30,26 +30,32 @@ class GameService
             throw new Exception('参数错误。', 1001);
         }
         // $battleAmount = $_POST['battleAmount'];
-        $config = $this->getGameConfig($gameType,$battleAmount);
+       // $config = $this->getGameConfig($gameType,$battleAmount);
          
         // var_dump($playUser);exit;
         //处理门票相关逻辑
         $userInfos = $this->dealTicketFee($playUser,$config);
+        if($battleAmount<100){
+            $ticketFee =$battleAmount*0.2;
+        }else{
+            $ticketFee =$battleAmount*0.1;
+        }
+
           // $userInfos = $this->dealTicketFee($playUser,$config);
         //创建比赛
         $matchId = $this->generateRandomString();
         $data = ['match_id' => $matchId,
-            'ticket_fee' => $config['ticketFee'],
+            'ticket_fee' => $ticketFee,
             'player_num' => sizeof($playUser),
             'players'  => implode(",",$playUser),
-            'battle_amount' => $config['battleAmount'],
+            'battle_amount' => $battleAmount,
             'create_time' => NOW_TIME,
             'expaire_time'=>time()+1*60*60,
             'type'=>$gameType//初中高级场
         ];
         M('play_match_info')->add($data);
         //处理佣金相关逻辑
-        CommissionService::dealDraw($userInfos, $matchId,$config['ticketFee']);
+        CommissionService::dealDraw($userInfos, $matchId,$ticketFee);
 
         return $data;
     }
@@ -65,7 +71,7 @@ class GameService
      */
     function gameSettle($matchId, $user_id, $rank,$score,$slime_id)
     {
-        $resultJson = json_decode($result,true);
+        //$resultJson = json_decode($result,true);
         //判断游戏是否存在, 参数是否正常（玩家id能对应上）
         $gameLog = M('play_match_info')->where(array("match_id" => $matchId))->find();
         if (!$gameLog) {
@@ -93,11 +99,13 @@ class GameService
         }
         $playNum = $gameLog['player_num'];
       //  $winBonus = $gameLog['battle_amount'] * $gameLog['player_num'];
-        $bonusRatio  = $this -> dealBonus($playNum, $gameLog['battle_amount']);
-        $rankData    = $this -> dealRankByNum($playNum);
+        $bonusRatio  = $this -> dealBonus($playNum, $gameLog['battle_amount']-$gameLog['ticket_fee']);
+        $rankData    = $this -> dealRankByNum($playNum,$rank);
          // var_dump($bonusRatio);exit;
             //判断当前排名是否有奖励
             $bonus =0;
+            $rank =0;
+            $userUpdateInfo = array();
             if($rank<=count($bonusRatio)){
                 $bonus= $bonusRatio[$rank-1];
                 // var_dump($bonus);exit;
@@ -112,25 +120,34 @@ class GameService
                    );
                 //排名第一增加胜局数
                 if($rank==1){
-                   
-                    M('user')->where(array('user_id' => $user_id))->setInc('win_amount',1 );
+                    if($gameLog['type']==4){
+                        $userUpdateInfo["invite_win_amount"] = 1;
+                    }else{
+                        $userUpdateInfo["win_amount"] = 1;
+                    }
+                    //     M('user')->where(array('user_id' => $user_id))->setInc('win_amount',1 );
                 }
-                M('user')->where(array('user_id' => $user_id))->setInc('money',$bonus);
+              //  M('user')->where(array('user_id' => $user_id))->setInc('money',$bonus);
             }
+
             //rank分计算
-            $ranks =$this ->dealRank($gameLog['type'],$rank,$playNum);
-            M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
+         //   $ranks =$this ->dealRank($gameLog['type'],$rank,$playNum);
+            if($rankData!=0){
+                $userUpdateInfo["rank"] = $rankData;
+            }
+            $userUpdateInfo["lastest_slime"] = $slime_id;
+       //     M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
             $res=array(
                 'user_id' => $user_id,
                 'score'=>$score,
                 'rank'=>$rank,//排名
                 'bonus'=>$bonus
             );
-             $datas= array(
+             $datas[]= array(
                 'user_id' => $user_id,
                 'score' => $score,
                 'rank' =>  $rank ,
-                'ranks'=>$rankData[$rank-1],//排位分计算
+                'ranks'=>$rankData,//排位分计算
                 'bonu'=>$bonus,
                 'start_time' => $gameLog['create_time'],
                 'end_time' => NOW_TIME,//游戏开始时间
@@ -138,10 +155,37 @@ class GameService
                 'status'=>2,
                 'match_id'=>$matchId
             );
-            
+        //处理掉线玩家逻辑
+        $offline =  array_diff($players,$dealedPlayers);
+        foreach($offline as $ind=> $id){
+            if($offline!=$user_id){
+                $datas[]= array(
+                    'user_id' => $user_id,
+                    'score' => $score,
+                    'rank' =>  $rank ,
+                    'ranks'=>'-20',//排位分计算
+                    'bonu'=>0,
+                    'start_time' => $gameLog['create_time'],
+                    'end_time' => NOW_TIME,//游戏开始时间
+                    'type'=>$gameLog['type'],
+                    'status'=>3,//掉线
+                    'match_id'=>$matchId
+                );
+            }
+
+       }
         M('finance_log')->add($finLogs);
-        M('user')->where(array('user_id' => $user_id))->setField('lastest_slime',$slime_id);
-        M('play_log')->add($datas);
+      //  M('user')->where(array('user_id' => $user_id))->setField('lastest_slime',$slime_id);
+      //批量更新用户信息
+       $sql = "update dd_user set ";
+        foreach($userUpdateInfo as $key=>$value)
+        {
+            $sql=$sql.$key.'='.$key.'+'.$value.',';
+       }
+
+        $Model = new \Think\Model();
+        $Model->execute( substr($sql, 0, -1).'where user_id='.$user_id);
+        M('play_log')->addAll($datas);
         return $res;
 
     }
@@ -223,8 +267,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
 
           $playNum = $gameLog['player_num'];
           $rankDatas  = $this -> dealCandyByNum($playNum);
-          $rankData  = $this -> dealRankByNum($playNum);
-
+         // $rankData  = $this -> dealRankByNum($playNum);
           $candy = 1;
           if($rank<=count($rankDatas)){
                 $candy= $rankDatas[$rank-1];
@@ -245,12 +288,12 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
                 'end_time' => NOW_TIME,//游戏开始时间
                 'type'=>$gameLog['type'],
                 'status'=>2,
-                'ranks'=>$rankData[$rank-1],//排位分计算
+                'ranks'=>0,//排位分计算
                 // 'winner_id' => $winnerId,
                 'match_id'=>$matchId
             );
         //rank分计算
-        $ranks =$this ->dealRank($gameLog['type'],$rank,$rankData);
+      //  $ranks =$this ->dealRank($gameLog['type'],$rank,$rankData);
         $res=array(
                 'user_id' => $user_id,
                 'score'=>$score,
@@ -259,7 +302,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
                 
             );
         // var_dump($res);exit;
-        M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
+       // M('user')->where(array('user_id' => $user_id))->setInc('rank',$ranks);
         M('user')->where(array('user_id' => $user_id))->setField('lastest_slime',$slime_id);
         M('fun_play_log')->add($datas);
         // if(sizeof($gameLog['players']) == sizeof($gameLog['dealed_players'])){
@@ -287,22 +330,67 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
         $second = 0;
         $third  = 0;
         $fourth = 0;
+        $five = 0;
+        $six=0;
+        $seven=0;
+        $eight=0;
+        $night=0;
         if($playerNum<3){
             $first =$playerNum*$battleAmount;
-        }else if ($playerNum<6){
-            $first = (($playerNum-4)*0.5 +3)*$battleAmount;
-            $second = (($playerNum-4)*0.5 +1)*$battleAmount;
+        }else if ($playerNum<7){
+            $first = round($playerNum*$battleAmount*0.6);
+            $second = round($playerNum * $battleAmount * 0.4);
         }else if ($playerNum<9){
-            $first  = round((($playerNum-9)*0.3 +5)*$battleAmount,1);
-            $second =  round(($playerNum-9)*0.3 +3*$battleAmount,1);
+            $first = round($playerNum*$battleAmount*0.5);
+            $second = round($playerNum*$battleAmount*0.3);
             $third  = $playerNum*$battleAmount-$first-$second;
-        }else{
-            $first =  round(($playerNum-15)*0.25 +6.5*$battleAmount,1);
-            $second = round(($playerNum-15)*0.25 +4.5*$battleAmount,1);
-            $third =round( ($playerNum-15)*0.25 +3*$battleAmount,1);
+        }else if ($playerNum<12){
+            $first = round($playerNum*$battleAmount*0.4);
+            $second = round($playerNum*$battleAmount*0.3);
+            $third  = round($playerNum*$battleAmount*0.2);;
             $fourth =  $playerNum*$battleAmount-$first-$second-$third;
+        }else if ($playerNum<14){
+            $first = round($playerNum*$battleAmount*0.3);
+            $second = round($playerNum*$battleAmount*0.3);
+            $third  = round($playerNum*$battleAmount*0.2);
+            $fourth  = round($playerNum*$battleAmount*0.1);
+            $five =  $playerNum*$battleAmount-$first-$second-$third-$fourth;
+        }else if ($playerNum<17){
+            $first = round($playerNum*$battleAmount*0.3);
+            $second = round($playerNum*$battleAmount*0.2);
+            $third  = round($playerNum*$battleAmount*0.2);
+            $fourth  = round($playerNum*$battleAmount*0.1);
+            $five =  round($playerNum*$battleAmount*0.1);
+            $six =  $playerNum*$battleAmount-$first-$second-$third-$fourth-$five;
+        }else if ($playerNum<19){
+            $first = round($playerNum*$battleAmount*0.25);
+            $second = round($playerNum*$battleAmount*0.2);
+            $third  = round($playerNum*$battleAmount*0.1);
+            $fourth  = round($playerNum*$battleAmount*0.1);
+            $five =  round($playerNum*$battleAmount*0.1);
+            $six =  round($playerNum*$battleAmount*0.1);
+            $seven =  $playerNum*$battleAmount-$first-$second-$third-$fourth-$five-$six;
+        }else if ($playerNum<22){
+            $first = round($playerNum*$battleAmount*0.25);
+            $second = round($playerNum*$battleAmount*0.15);
+            $third  = round($playerNum*$battleAmount*0.15);
+            $fourth  = round($playerNum*$battleAmount*0.15);
+            $five =  round($playerNum*$battleAmount*0.1);
+            $six =  round($playerNum*$battleAmount*0.1);
+            $seven =  round($playerNum*$battleAmount*0.05);
+            $eight =  $playerNum*$battleAmount-$first-$second-$third-$fourth-$five-$six-$seven;
+        }else {
+            $first = round($playerNum*$battleAmount*0.25);
+            $second = round($playerNum*$battleAmount*0.15);
+            $third  = round($playerNum*$battleAmount*0.15);
+            $fourth  = round($playerNum*$battleAmount*0.10);
+            $five =  round($playerNum*$battleAmount*0.1);
+            $six =  round($playerNum*$battleAmount*0.1);
+            $seven =  round($playerNum*$battleAmount*0.05);
+            $eight =  round($playerNum*$battleAmount*0.05);
+            $night =  $playerNum*$battleAmount-$first-$second-$third-$fourth-$five-$six-$seven-$night;
         }
-        $data =array($first,$second,$third,$fourth);
+        $data =array($first,$second,$third,$fourth,$five,$six,$seven,$eight,$night);
         return $data;
     }
 
@@ -329,7 +417,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
         $data =array($first,$second,$third,$fourth);
         return $data;
     }
-    function dealRankByNum($playerNum){
+    function dealRankByNum($playerNum,$rank){
         $first=0;
         $second =0;
         $third =0;
@@ -350,7 +438,11 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
             $fourth = 15;
         }
         $data =array($first,$second,$third,$fourth);
-        return $data;
+        if(count($data)<$rank){
+            return -20;
+        }else{
+            return $data[$rank];
+        }
     }
     /**处理游戏rank分
      * +20 -15        初级场
@@ -369,6 +461,10 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
             $scorePlu =0;
             $rankAdd =0;
             $gameTypePlu =0;
+            //邀请赛不计算排位分
+            if($gameType==4){
+                return 0;
+            }
           if($rank<=count($playNum)){
               $rankAdd =$playNum[$rank];
           }
