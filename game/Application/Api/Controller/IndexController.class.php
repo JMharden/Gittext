@@ -533,7 +533,7 @@ public function quitClub(){
     public function clubRecords(){
 
     	// $uid =$GLOBALS['token'][2];
-      $user_id =$GLOBALS['token'][2];
+      $user_id = $GLOBALS['token'][2];
       $is_club_owner =  M('user')->where(array('user_id'=>$user_id))->getField('is_club_owner');
       $Model = new \Think\Model();
       // if($is_club_owner == 1){
@@ -542,7 +542,7 @@ public function quitClub(){
       foreach($data as $k=>$v){
         $id=$v['id'];
         
-        $infomation[$k]['create_time']= $this->getTime($infomation[$v]['create_time']);
+        $infomation[$k]['create_time']= $this->getTime($infomation[$k]['create_time']);
 
       }
       echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$infomation]);
@@ -720,17 +720,15 @@ public function quitClub(){
      * @return   [type]     [description]
      */
 public function upSlime(){
-      $user_id =$GLOBALS['token'][2];
+      $user_id = $GLOBALS['token'][2];
 
 
       if(IS_POST){
-         $sid = $_POST['s_id'];
-        if($sid == 0){
-          $sid =1;
-        };
+         $sid = $_POST['s_id']+1;
+        
          $candy1  = (int)$_POST['candy'];
-         $candy2 = $_POST['candy1'];
-         $candy3 = $_POST['candy2'];
+         $candy2  = (int)$_POST['candy1'];
+         $candy3  = (int)$_POST['candy2'];
 
         // var_dump($user_id);var_dump($sid);exit;
         $result = $this->hasCandy($user_id,$candy1,$candy2,$candy3,$sid);
@@ -756,11 +754,11 @@ public function upSlime(){
     // $type = 1;
       $candyNum = M('user')->where(array('user_id'=>$user_id))->field('candy,candy1,candy2')->find();
       
-      if($candy > $candyNum['candy'] || $candy1 > $candyNum['candy1'] || $candy2 > (int)$candyNum['candy2']){
+      if($candy > (int)$candyNum['candy'] || $candy1 > (int)$candyNum['candy1'] || $candy2 > (int)$candyNum['candy2']){
            echo json_encode(['status'=>-1,'msg'=>'糖果不足']);exit;
       }else{
           $exp = ($candy*100) + ($candy1*200) + ($candy2*400);
-          
+        
           $candys = array(
             'candy' => $candyNum['candy'] - $candy,
             'candy1'=> $candyNum['candy1'] - $candy1,
@@ -989,7 +987,7 @@ public function upSlime(){
         'monthbonu' => $monthbonu,
         'allbonu'   => $allbonu,
       );
-      $result = M('finance_log')->where(array('user_id'=>array('IN',array(implode(',',$id)))))->field('user_id,money,create_time')->select();
+      $result = M('finance_log')->where(array('user_id'=>array('IN',array(implode(',',$id)))))->field('user_id,money,create_time')->order('id desc')->select();
       foreach ($result as $v) {
         $username = M('user_base')->where(array('id'=>$v['user_id']))->getField('nickname');
        $data = array(
@@ -1012,6 +1010,8 @@ public function upSlime(){
     // var_dump($nowUrl);exit;
       if(IS_POST){
         $type = $_POST['type'];
+        $results = $this->shareType($type);
+        
         if($type == 1){
           if($share < 1){
             echo json_encode(['status'=>-1,'msg'=>'分享次数不足']);exit;
@@ -1029,13 +1029,13 @@ public function upSlime(){
             M('user')->where(array('user_id'=>$user_id))->setInc('stamina',3);
             
         }
-        echo json_encode(['status'=>1,'msg'=>'分享成功']);exit;
+        echo json_encode(['status'=>1,'msg'=>'分享成功','data'=>$results]);exit;
       }
    }
 
-   public function shareType(){
-    if(IS_POST){
-      $type = $_POST['type'];
+   public function shareType($type){
+    // if(IS_POST){
+      // $type = $_POST['type'];
       $result = M('share')->select();
       if($type == 1){
         $data = $result[0];
@@ -1044,8 +1044,9 @@ public function upSlime(){
       }else{
         $data = $result[2];
       }
-      echo json_encode(['status'=>1,'msg'=>'分享成功','data'=>$data]);
-    }
+      return $data;
+      // echo json_encode(['status'=>1,'msg'=>'分享成功','data'=>$data]);
+    // }
     
    }
 
