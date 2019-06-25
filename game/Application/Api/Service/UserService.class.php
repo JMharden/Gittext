@@ -68,7 +68,7 @@ class UserService
             } else {
                 $user = M('user_base')->where(array('openid' => $openId))->find();
                 if($user){
-                    $userId = $user['userId'];
+                    $userId = $user['id'];
                     S('user_info_base' . $userId, $userInfo, 18000);//用户信息存入Redis
                 }
                 S('user_info_base' .$openId , $userInfo, 18000);//用户信息存入Redis
