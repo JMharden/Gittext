@@ -87,6 +87,7 @@ class ApiController extends Controller {
         // 7.生成第三方3rd_session，以 $session3rd 为key，sessionKey+openId为value，写入memcached
        
         $user_info = json_decode($data,true);
+      
         $session3rd = $this->randomFromDev(16);
         $user_info['session3rd'] = $session3rd;
         $userService = new UserService();

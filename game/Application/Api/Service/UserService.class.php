@@ -96,7 +96,7 @@ class UserService
                     'club_id' => $userExtr['club_id'],
                     'advert'  => $userExtr['advert'],
                     'stamina' => $userExtr['stamina'],
-                    'area'    => $userExtr['area'],
+                    // 'area'    => $userExtr['area'],
                     'share'   => $userExtr['share'],
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
