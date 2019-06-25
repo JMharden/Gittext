@@ -335,7 +335,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
         $seven=0;
         $eight=0;
         $night=0;
-        if($playerNum<3){
+        if($playerNum<4){
             $first =$playerNum*$battleAmount;
         }else if ($playerNum<7){
             $first = round($playerNum*$battleAmount*0.6);
