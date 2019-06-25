@@ -1,2 +1,0 @@
-#每日初始化分享次数
-0 0 * * * curl 'http://47.102.145.210/kpan.php?m=Admin&c=TimedTask&a=share'
