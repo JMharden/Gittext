@@ -1,0 +1,4 @@
+'["2019-06-09 19:42:17","117.136.79.128","http:\\/\\/tt.wapwei.com\\/api.php?m=Index&c=index&a=zhScore","=undefined&v=09965776724968036"]'
+'["2019-06-09 19:42:17","117.136.79.128","http:\\/\\/tt.wapwei.com\\/api.php?m=Index&c=index&a=funHistory","=undefined&v=03371241373078764"]'
+'["2019-06-09 19:42:17","117.136.79.128","http:\\/\\/tt.wapwei.com\\/api.php?m=Index&c=index&a=userFlog","=undefined&v=07880585554674571"]'
+'["2019-06-09 19:42:17","117.136.79.128","http:\\/\\/tt.wapwei.com\\/api.php?m=Index&c=index&a=playHistory","=undefined&v=028339834029124944"]'
