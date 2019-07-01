@@ -17,10 +17,10 @@ class IndexController extends ApiController
        parent::write_log();
        $token = $_POST['token'];
 
-       // if($token == null || S($token) == null){
-       //     echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
-       //     exit;
-       // }
+       if($token == null || S($token) == null){
+           echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
+           exit;
+       }
        $GLOBALS['token'] = S($token);
 
    }
@@ -107,7 +107,7 @@ class IndexController extends ApiController
                     echo json_encode(array('status'=>1,'msg'=>'创建俱乐部成功'));exit;
                   }
                 } 
-		  
+      
             }
         }
     }
@@ -471,8 +471,8 @@ public function quitClub(){
     public function delEmail(){
 
        if(IS_POST){
-	        $userId =$GLOBALS['token'][2];
-	        $msgId = $_POST['msgId'];
+          $userId =$GLOBALS['token'][2];
+          $msgId = $_POST['msgId'];
           $data = [
               'msg_id' => $msgId,
               'status' => 2,
@@ -532,7 +532,7 @@ public function quitClub(){
      */
     public function clubRecords(){
 
-    	// $uid =$GLOBALS['token'][2];
+      // $uid =$GLOBALS['token'][2];
       $user_id = $GLOBALS['token'][2];
       $is_club_owner =  M('user')->where(array('user_id'=>$user_id))->getField('is_club_owner');
       $Model = new \Think\Model();
@@ -845,7 +845,7 @@ public function upSlime(){
      * @name   游戏综合评分
      */
     public function score($score){
-    	$filter = [
+      $filter = [
             ['level' => 4,  'min' => 0,     'max' => 1350],
             ['level' => 3,  'min' => 1351,  'max' => 1500],
             ['level' => 2,  'min' => 1501,  'max' => 2000],
@@ -872,15 +872,15 @@ public function upSlime(){
     //综合评分
     public function zhScore($user_id){
     
-    	$user = M('user')->where(array('user_id'=>$user_id))->field('match_amount,win_amount,fun_amount,fun_win_amount,club_id,rank')->find();
-    	$club_name = M('club_info')->where(array('id'=>$user['club_id']))->getField('club_name');
-    	$gameNum = $this->gameNum($user['match_amount'] + $user['fun_amount'])['level'];  //场次评分
-    	$game = $user['match_amount'] + $user['fun_amount']; //总场次
-    	$win = $user['win_amount'] + $user['fun_win_amount'];//胜场
-    	$sl = ($win/$game)*100;
-    	$probability = round(($win/$game)*100).'%';
-    	$intsl =floor($sl);
-    	$shenglv = $this->shenglv($intsl)['level']; //胜率评分
+      $user = M('user')->where(array('user_id'=>$user_id))->field('match_amount,win_amount,fun_amount,fun_win_amount,club_id,rank')->find();
+      $club_name = M('club_info')->where(array('id'=>$user['club_id']))->getField('club_name');
+      $gameNum = $this->gameNum($user['match_amount'] + $user['fun_amount'])['level'];  //场次评分
+      $game = $user['match_amount'] + $user['fun_amount']; //总场次
+      $win = $user['win_amount'] + $user['fun_win_amount'];//胜场
+      $sl = ($win/$game)*100;
+      $probability = round(($win/$game)*100).'%';
+      $intsl = floor($sl);
+      $shenglv = $this->shenglv($intsl)['level']; //胜率评分
       $match = M('play_log')->where(array('user_id'=>$user_id))->sum('score');
       $fun   = M('fun_play_log')->where(array('user_id'=>$user_id))->sum('score');
 
@@ -892,21 +892,21 @@ public function upSlime(){
       // }else{
       //   $score = M('fun_play_log')->where(array('user_id'=>$user_id))->max('score');//最高步数
       // }
-      $funscore = M('play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
+      $funscore  = M('play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
       $playscore = M('fun_play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
-      $score =   array_merge($funscore,$playscore);
-    	$allScore = $gameNum+$intsl+$user['rank'];
-    	$zhScore  = $this->score($allScore)['level'];
+      $score    =  array_merge($funscore,$playscore);
+      $allScore = $gameNum+$intsl+$user['rank'];
+      $zhScore  = $this->score($allScore)['level'];
         $result = array(
-        	'club_name'   => $club_name,  //俱乐部名称
-        	'gameCount'   => $game,       //总场次
-        	'probability' => $probability,//胜率 
-        	'shenglv'     => $shenglv,    //胜率评分  
-        	'gameNum'     => $gameNum,    //场次评分 
-        	'score'       => max($score)['score'],      //最高步数
-        	'zhScore'     => $zhScore,     //综合评分
+          'club_name'   => $club_name,  //俱乐部名称
+          'gameCount'   => $game,       //总场次
+          'probability' => $probability,//胜率 
+          'shenglv'     => $shenglv,    //胜率评分  
+          'gameNum'     => $gameNum,    //场次评分 
+          'score'       => max($score)['score'],      //最高步数
+          'zhScore'     => $zhScore,     //综合评分
           'zhScore1'    => $allScore,     //综合评分数字
-          // 'gameCount1'  => $game, 
+          // 'gameCount1'  => $game,  
           'aveSteps'    => $steps
         );
 
@@ -916,19 +916,19 @@ public function upSlime(){
    // 竞技赛历史战绩
    public function  playHistory($user_id){
 
-   	 	$play = M('play_log')->where(array('user_id'=>$user_id,'status'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->order('end_time desc')->limit(20)->select();
-   	 	foreach ($play as $k => $v) {
-   	 	  $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
-   	
-   	 		$data = array(
-   	 			'end_time'  => date('m-d H:i',$v['end_time']),
-   	 			'score'     => $v['score'],
-   	 			'rank'      => $v['rank'],
-   	 			'ranks'     => $v['ranks'],
-   	 			'bonu'      => floor($v['bonu']),
-   	 			'userRank'  => $userRank
-   	 		);
-   	 		$datas[]  = $data;
+      $play = M('play_log')->where(array('user_id'=>$user_id,'status'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->order('end_time desc')->limit(20)->select();
+      foreach ($play as $k => $v) {
+        $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
+    
+        $data = array(
+          'end_time'  => date('m-d H:i',$v['end_time']),
+          'score'     => $v['score'],
+          'rank'      => $v['rank'],
+          'ranks'     => $v['ranks'],
+          'bonu'      => floor($v['bonu']),
+          'userRank'  => $userRank
+        );
+        $datas[]  = $data;
       }
      return $datas;
    }
@@ -1003,11 +1003,9 @@ public function upSlime(){
    }
 
    public function share(){
-    $user_id =$GLOBALS['token'][2];
-    // var_dump($user_id);exit;
-    $share = M('user')->where(array('user_id'=>$user_id))->getField('share');
-    $nowUrl = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
-    // var_dump($nowUrl);exit;
+      $user_id =$GLOBALS['token'][2];
+      $share = M('user')->where(array('user_id'=>$user_id))->getField('share');
+      $nowUrl = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
       if(IS_POST){
         $type = $_POST['type'];
         $results = $this->shareType($type);
@@ -1050,4 +1048,23 @@ public function upSlime(){
     
    }
 
+//排行榜
+    public function rankList(){
+        
+        $data = M('user_base')->alias('a')
+                        ->join("dd_user u on a.id=u.user_id") //附表连主表
+                        ->field('a.nickname,a.headimg,u.money')
+                        ->limit(0,10)
+                        ->order('u.money desc')
+                        ->select();
+      foreach ($data as $k => $v) {
+       
+        $data[$k]['money']    = (int)$v['money'];
+       
+      }    
+
+   
+      echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);
+      
+    }
 }

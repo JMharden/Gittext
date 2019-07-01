@@ -60,7 +60,7 @@ class GameController extends ApiController
             $user_id =  $_POST['user_id'];
             $rank    =  $_POST['rank'];
             $score   =  $_POST['score'];
-            $slime_id =   $_POST['slime_id'];
+            $slime_id = $_POST['slime_id'];
             $gameService =  new GameService();
             $data = $gameService->gameSettle($matchId,$user_id,$rank,$score,$slime_id);
             echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
@@ -73,11 +73,14 @@ class GameController extends ApiController
        try{
             $playUser =  explode(',', $_POST['playUser']);
             $slime_id =   explode(',', $_POST['slime_id']);
+           
             $datas = array_combine($playUser,$slime_id);
+             
              foreach ($datas as $k => $v) {
+               $v = $v+1;
+         
                $level = M('user_slime')->where(array('s_id' => $v,'u_id' => $k))->field('exp')->find();
                $levles[] = $level['exp'];
-
              }
             $gameService =  new GameService();
             $data = $gameService->createFunMatch($playUser,$slime_id);

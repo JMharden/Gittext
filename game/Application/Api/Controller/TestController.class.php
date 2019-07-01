@@ -1,7 +1,7 @@
 <?php
 
 namespace Api\Controller;
-
+use Think\Controller;
 
 /**
  *
@@ -32,23 +32,37 @@ class TestController extends ApiController
          echo json_encode(['status'=>1,'msg'=>'返回成功','candy'=>$candy]);
       }
 
-
-  //综合评分
-    public function zhScore(){
-      $user_id = 232;
-     
-
-      // var_dump($match);var_dump($fun);exit;
-      $steps = round(($match+$fun)/$game);
-      // var_dump($game);exit;
-  
-        $score1 = M('play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
  
-        $score = M('fun_play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
-   $a =   array_merge($score,$score1);
 
-var_dump(max($a));exit;
-        return $result;
-    }
+      //排行榜
+      // public function rankList(){
+        
+      //   $data = M('user_base')->alias('a')
+      //                   ->join("dd_user u on a.id=u.user_id") //附表连主表
+      //                   ->field('a.nickname,a.headimg,u.money')
+      //                   ->limit(0,10)
+      //                   ->order('u.money desc')
+      //                   ->select();
+      //   $Model = new \Think\Model();
+      //   $funscore =  $Model->query("SELECT  a.score,a.user_id   FROM    dd_fun_play_log a left join dd_fun_play_log b on a.user_id = b.user_id  group by a.score having a.score=max(b.score) order by score desc limit 0,10;");
+
+      //   $playscore =  $Model->query("SELECT  a.score,a.user_id   FROM    dd_play_log a inner join dd_play_log b on a.user_id = b.user_id  group by a.score having a.score=max(b.score) order by score desc limit 0,10;");
+
+      //   $score   =  array_merge($funscore,$playscore);
+
+      //  array_flip(arsort($score));
+      //  array_keys($score);
+      
+      //  foreach ($score as $k => $v) {
+      //   $user = M('user_base')->where(array('id'=>$v['user_id']))->field('nickname,headimg')->find();
+      //   $datas['nickname'] = $user['nickname'];
+      //   $datas['headimg']  = $user['headimg'];
+      //   $datas['score']    = $v['score'];
+      //   $result[]  =  $datas; 
+      //    # code...
+      //  }
+      //  var_dump($result);
+      // }
+    
 
 }
