@@ -59,6 +59,9 @@ class ApiController extends Controller {
         $iv        = $_POST['iv'];
         $uid       = $_GET['uid'];//推荐人用户ID
         $introduceType = $_GET['source'];
+        // if(!$introduceType){
+        //     $introduceType = 8;
+        // }
 
         $encryptedData = $_POST['encryptedData'];
         $url = "https://api.weixin.qq.com/sns/jscode2session?appid=" . $APPID . "&secret=" . $AppSecret . "&js_code=" . $code . "&grant_type=authorization_code";
@@ -87,6 +90,7 @@ class ApiController extends Controller {
         // 7.生成第三方3rd_session，以 $session3rd 为key，sessionKey+openId为value，写入memcached
        
         $user_info = json_decode($data,true);
+        // var_dump($user_info);exit;
       
         $session3rd = $this->randomFromDev(16);
         $user_info['session3rd'] = $session3rd;
@@ -106,13 +110,15 @@ class ApiController extends Controller {
                 $user_data['sex']       = $user_info['gender'];
                 $user_data['area']      = $user_info['city'];
                 $user_data['join_time'] = $time;
-                $user_data['last_login_time'] = $time;
+                
                 //用户引入方式
+
                 $user_data['source'] = $introduceType;
+
               
                 //获取推荐关系
                 if($uid){
-                  
+
                    $intro1User =  $userService->getUserBaseInfo($uid);
                    
                    if($intro1User){
@@ -129,7 +135,7 @@ class ApiController extends Controller {
                         'create_time' => $time
                     ));
                 }
-                
+                // var_dump($user_data);exit;
                 $users = $userService->addUser($user_data,$user_info['openId']);
                 $user = $userService->getUserFullInfoByOpen($users['openid']);
                 // array_merge($user,$users)
@@ -137,7 +143,10 @@ class ApiController extends Controller {
                 $userService->addSlime($user['openid'],$user['id']);
               
             }
-            M('user_base')->where(array('openid'=>$user['openid']))->setField('last_login_time',$time);
+             $save['area']      = $user_info['city'];
+             $save['last_login_time']      = $time;
+
+            M('user_base')->where(array('openid'=>$user['openid']))->save($save);
             //接口访问令牌
             $user['session3rd'] = $session3rd;
             $user['firstLogin'] = $this->firstLogin($user['id']);
@@ -169,6 +178,7 @@ class ApiController extends Controller {
         curl_close($info);
         return $output;
     }
+
     /**
      * 读取/dev/urandom获取随机数
      * @param $len
@@ -220,6 +230,8 @@ class ApiController extends Controller {
             M('login_log')->add($data);
         }
     }
+   
+
       //日志写入
     public function write_log(){ 
 
@@ -262,7 +274,7 @@ class ApiController extends Controller {
         }
         if (!file_exists($invite_path)) {
           
-            $im_dst = imagecreatefromjpeg("./Public/images/bg.jpg");
+            // $im_dst = imagecreatefromjpeg("./Public/images/bg.jpg");
             $im_src = imagecreatefrompng($path);
             list($width, $height) = getimagesize($path);
              // 合成二维码（二维码大小282*282)

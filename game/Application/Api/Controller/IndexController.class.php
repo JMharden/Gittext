@@ -17,10 +17,10 @@ class IndexController extends ApiController
        parent::write_log();
        $token = $_POST['token'];
 
-       if($token == null || S($token) == null){
-           echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
-           exit;
-       }
+       // if($token == null || S($token) == null){
+       //     echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
+       //     exit;
+       // }
        $GLOBALS['token'] = S($token);
 
    }
@@ -1010,7 +1010,7 @@ public function upSlime(){
         $type = $_POST['type'];
         $results = $this->shareType($type);
         
-        if($type == 1){
+        if($type == 2){
           if($share < 1){
             echo json_encode(['status'=>-1,'msg'=>'分享次数不足']);exit;
           }
@@ -1022,8 +1022,8 @@ public function upSlime(){
           'create_time' => date('Y-m-d H:i:s')
         );
         $result = M('action_log')->add($data);
-        if($type == 1 && $result){ //娱乐赛分享 
-          M('user')->where(array('user_id'=>$user_id))->setDec('share',1);
+        if($type == 2 && $result){ //娱乐赛分享 
+            M('user')->where(array('user_id'=>$user_id))->setDec('share',1);
             M('user')->where(array('user_id'=>$user_id))->setInc('stamina',3);
             
         }
@@ -1035,12 +1035,26 @@ public function upSlime(){
     // if(IS_POST){
       // $type = $_POST['type'];
       $result = M('share')->select();
-      if($type == 1){
+      if($type == 2){
+
         $data = $result[0];
-      }elseif ($type == 2) {
+
+      }elseif ($type == 3) {
+
         $data = $result[1];
-      }else{
+
+      }elseif ($type == 4){
+
         $data = $result[2];
+
+      }elseif ($type == 5){
+
+        $data = $result[1];
+
+      }else{
+        
+        $data = $result[0];
+
       }
       return $data;
       // echo json_encode(['status'=>1,'msg'=>'分享成功','data'=>$data]);

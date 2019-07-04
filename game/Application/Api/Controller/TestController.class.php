@@ -63,6 +63,69 @@ class TestController extends ApiController
       //  }
       //  var_dump($result);
       // }
-    
+public function haha(){
+  $a = 1234567890;
+  echo number_format($a);
+}
+    function bubble_sort(){
+          $array = ['1','2','3','4','5','6'];
+          $count = count($array);
+
+          if ($count <= 0) return false;
+
+          for($i=0; $i<$count; $i++){
+
+               for($j=$count-1; $j>$i; $j–){
+
+                   if ($array[$j] < $array[$j-1]){
+
+                       $tmp = $array[$j];
+
+                       $array[$j] = $array[$j-1];
+
+                       $array[$j-1] = $tmp;
+
+                   }
+
+               }
+
+          }
+
+        echo $array;
+
+      }
+
+      function quick_sort($array) {
+// $array = ['1','2','3','4','5','6'];
+        if (count($array) <= 1) return $array;
+
+        $key = $array[0];
+
+        $left_arr = array();
+
+        $right_arr = array();
+
+        for ($i=1; $i;$i++){    
+
+            if ($array[$i] <= $key){
+
+                $left_arr[] = $array[$i];
+
+            }else{  
+
+                $right_arr[] = $array[$i];
+
+            }
+
+        }
+
+        $left_arr = quick_sort($left_arr);
+
+        $right_arr = quick_sort($right_arr);
+
+        return array_merge($left_arr, array($key), $right_arr);
+
+        }
+          
 
 }
