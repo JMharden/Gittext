@@ -24,7 +24,45 @@ class TestController extends ApiController
 
 
       }
+      public function shareType(){
+    // if(IS_POST){
+      // $type = $_POST['type'];
+         $time = date('Y-m-d H:i:s',time());
+         var_dump($time);exit;
+      $result = M('share')->limit(1)->order('rand()')->find();
     
+      return $result;
+      // echo json_encode(['status'=>1,'msg'=>'分享成功','data'=>$data]);
+    // }
+    
+   }
+   public function share(){
+      $user_id =2142;
+      $share = M('user')->where(array('user_id'=>$user_id))->getField('share');
+      $nowUrl = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
+      // if(IS_POST){
+        $type = $_POST['type'];
+        $results = $this->shareType();
+        if($type == 2){
+          if($share < 1){
+            echo json_encode(['status'=>-1,'msg'=>'分享次数不足']);exit;
+          }
+        }
+        $data= array(
+          'user_id' => $user_id,
+          'action'  => $nowUrl,
+          'type'    => $type,
+          'create_time' => date('Y-m-d H:i:s')
+        );
+        $result = M('action_log')->add($data);
+        if($type == 2 && $result){ //娱乐赛分享 
+            M('user')->where(array('user_id'=>$user_id))->setDec('share',1);
+            M('user')->where(array('user_id'=>$user_id))->setInc('stamina',3);
+            
+        }
+        echo json_encode(['status'=>1,'msg'=>'分享成功','data'=>$results]);exit;
+      // }
+   }
       public function one(){
          $candy = M('user')->where(array('user_id'=>232))->field('candy,candy1,candy2')->find();
          sort($candy);

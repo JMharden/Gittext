@@ -860,7 +860,7 @@ public function upSlime(){
     public function userInfo(){
       $user_id = $GLOBALS['token'][2];;
       if($user_id == null){
-        echo "参数错误！！！";
+        echo "请先登录！";exit;
       }
       $zhScore = $this->zhScore($user_id);
       $playHistory = $this->playHistory($user_id);
@@ -1004,11 +1004,14 @@ public function upSlime(){
 
    public function share(){
       $user_id =$GLOBALS['token'][2];
+      if($user_id == null){
+        echo "请先登录！";exit;
+      }
       $share = M('user')->where(array('user_id'=>$user_id))->getField('share');
       $nowUrl = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
       if(IS_POST){
         $type = $_POST['type'];
-        $results = $this->shareType($type);
+        $results = $this->shareType();
         
         if($type == 2){
           if($share < 1){
@@ -1031,53 +1034,88 @@ public function upSlime(){
       }
    }
 
-   public function shareType($type){
-    // if(IS_POST){
-      // $type = $_POST['type'];
-      $result = M('share')->select();
-      if($type == 2){
+    public function shareType(){
+      $result = M('share')->limit(1)->order('rand()')->find();
+      
+      return $result;
+    }
 
-        $data = $result[0];
-
-      }elseif ($type == 3) {
-
-        $data = $result[1];
-
-      }elseif ($type == 4){
-
-        $data = $result[2];
-
-      }elseif ($type == 5){
-
-        $data = $result[1];
-
-      }else{
-        
-        $data = $result[0];
-
-      }
-      return $data;
-      // echo json_encode(['status'=>1,'msg'=>'分享成功','data'=>$data]);
-    // }
-    
-   }
+    public function advert(){
+    	$user_id = $GLOBALS['token'][2];
+    	if($user_id == null){
+        	echo "请先登录！";exit;
+      	}
+    	$nowUrl = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
+	   	if(IS_POST){
+	   	    $type   = $_POST['type'];
+	   	    $status = $_POST['status'];
+	   	    $data= array(
+	          'user_id' => $user_id,
+	          'action'  => $nowUrl,
+	          'type'    => $type,
+	          'status'  => $status, 
+	          'create_time' => date('Y-m-d H:i:s')
+	        );
+	        $result = M('action_log')->add($data);
+	   	 	if($type == 6 && $status == 2){//娱乐赛广告
+	   	 		M('user')->where(array('user_id'=>$user_id))->setInc('stamina',6);
+	   	 		echo json_encode(['status'=>1,'msg'=>'观看成功']);exit;
+	   	 	}else if($type == 7 && $status == 2){
+	   	 		M('user')->where(array('user_id'=>$user_id))->setInc('money',5);
+	   	 		echo json_encode(['status'=>1,'msg'=>'观看成功']);exit;
+	   	 	}else{
+	   	 		echo json_encode(['status'=>-1,'msg'=>'未观看完视频']);
+	   	 	}
+	   	 	
+	   	 	
+	        // echo json_encode(['status'=>1,'msg'=>'successful']);
+	   	}
+    }
 
 //排行榜
     public function rankList(){
-        
-        $data = M('user_base')->alias('a')
+
+      
+      	$data = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表
-                        ->field('a.nickname,a.headimg,u.money')
+                        ->field('a.nickname,a.headimg,u.money,u.rank')
                         ->limit(0,10)
                         ->order('u.money desc')
                         ->select();
-      foreach ($data as $k => $v) {
-       
-        $data[$k]['money']    = (int)$v['money'];
-       
-      }    
-
+      	foreach ($data as $k => $v) {
+	        $data[$k]['money']   = (int)$v['money'];
+      	}  
    
+        
+      echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);
+      
+    }
+     public function rankLists(){
+
+      if($_POST['type'] == 1){
+      	$data = M('user_base')->alias('a')
+                        ->join("dd_user u on a.id=u.user_id") //附表连主表
+                        ->field('a.nickname,a.headimg,u.money,u.rank')
+                        ->limit(0,10)
+                        ->order('u.money desc')
+                        ->select();
+      	foreach ($data as $k => $v) {
+	        $data[$k]['money']   = (int)$v['money'];
+      	}  
+      }else{
+      	
+      	$data = M('user_base')->alias('a')
+                        ->join("dd_user u on a.id=u.user_id") //附表连主表
+                        ->field('a.nickname,a.headimg,u.rank')
+                        ->limit(0,10)
+                        ->order('u.rank desc')
+                        ->select();
+      	foreach ($data as $k => $v) {
+	        $data[$k]['rank']   = (int)$v['rank'];
+	        $data[$k]['level']   = GameService::getDuan($v['rank'])['level'];  //段位;
+      	}
+      }  
+        
       echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);
       
     }
