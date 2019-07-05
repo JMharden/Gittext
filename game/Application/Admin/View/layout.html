@@ -8,12 +8,12 @@
 		<title>网站后台</title>
 		<link rel="stylesheet" href="__PUBLIC__/admin/css/style.default.css" type="text/css" />
 		<link rel="stylesheet" href="__PUBLIC__/plugins/bootstrap/css/bootstrap.font.css" type="text/css" />
-				<script type="text/javascript" src="../../../Public/admin/js/plugins/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../../Public/admin/js/plugins/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/admin/js/plugins/jquery-ui.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/admin/js/plugins/jquery.cookie.js"></script>
-       <script type="text/javascript" src="__PUBLIC__/admin/js/plugins/jquery-plugin.js"></script>
-		<script type="text/javascript" src="../../../Public/admin/js/custom/jquery.cookie.js">
-				<script type="text/javascript" src="__PUBLIC__/admin/js/custom/general.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/admin/js/plugins/jquery-plugin.js"></script>
+		<script type="text/javascript" src="../../../Public/admin/js/custom/jquery.cookie.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/admin/js/custom/general.js"></script>
 
 		</script>
 		
@@ -45,10 +45,10 @@
 		<aside class="main-sidebar">
 			<section class="sidebar">
 				<ul class="sidebar-menu">
-					<li class="header">开心大转盘</li>
+					<li class="header">蹦蹦史莱姆</li>
 
 					<li>
-						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
+						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=dayReport"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
 					</li>
 
 					<li class="treeview" onclick="index(0)">
@@ -144,21 +144,8 @@
 							<!-- <li><a href="#"><i class="fa fa-circle-o"></i> Editors</a></li> -->
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(6)">
-						<a href="#">
-							<i class="fa fa-gamepad"></i>
-							<span>活动管理</span>
-							<i class="fa fa-angle-left pull-right"></i>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="/index.php?m=Admin&c=Activity&a=index"><i class="fa fa-circle-o"></i>活动列表</a>
-							</li>
-							
-							
-						</ul>
-					</li>
-					<li class="treeview" onclick="index(7)">
+				
+					<!-- <li class="treeview" onclick="index(7)">
 						<a href="#">
 							<i class="fa fa-pie-chart"></i> <span>报表查看</span>
 							<i class="fa fa-angle-left pull-right"></i>
@@ -183,7 +170,7 @@
 								<a href="/index.php?m=Admin&c=Finance&a=payorder"><i class="fa fa-circle-o"></i> 充值记录</a>
 							</li>
 						</ul>
-					</li>
+					</li> -->
 
 					<li class="header">其他功能</li>
 					<li>
@@ -256,6 +243,7 @@
 				setCookie(key, '', -1);
 			}
 		</script>
+
 		<script src="__PUBLIC__/admin/dist/sidebar-menu.js"></script>
 		<script>
 			$.sidebarMenu($('.sidebar'))

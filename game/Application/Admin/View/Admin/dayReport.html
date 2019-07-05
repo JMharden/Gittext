@@ -5,34 +5,43 @@
     <thead>
       <tr>
         <th class="head1"  colspan="2">*用户相关</th>
-        <!-- <th class="head1">内容</th> -->
       </tr>
     </thead>
     <tbody>
+     
       <tr>
-        <td>今日新增用户统计</td>
+        <td>今日新增用户</td>
         <td>{$user_count}个</td>
-      </tr>
-      <tr>
         <td>用户总数</td>
         <td>{$user_count_all}个</td>
+        <td>自然注册人数</td>
+        <td>{$user_nature}个</td>
       </tr>
       <tr>
-        <td>新增三日留存</td>
-        <td>{$usre_three}个</td>
-      </tr>
-       <tr>
-        <td>活跃三日留存</td>
-        <td>{$user_count}个</td>
+        <td>广告注册人数</td>
+        <td>个</td>
+        <td>邀请注册人数</td>
+        <td>{$user_invite}个</td>
+        <td>分享注册人数</td>
+        <td>{$user_share}个</td>
       </tr>
       <tr>
-        <td>用户游玩时长统计</td>
-        <td>{$user_count}个</td>
-      </tr>
-     <!--  <tr>
-        <td> 当天用户在线时间段的分布</td>
+        <td>新增留存率(1-2-3-4-5-6-7-15-30-60-90日留存率)</td>
+        <br/>
         <td></td>
-      </tr> -->
+      </tr>
+      <tr>
+        <td>活跃留存率(1-2-3-4-5-6-7-15-30-60-90日留存率)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>在线时长(1-5-10-30-60-120min的在线时长分布)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>用户在线时间段分布(2个小时为时间段进行划分统计)</td>
+        <td></td>
+      </tr>
     
     </tbody>
   </table>
@@ -41,189 +50,78 @@
   <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
     <thead>
       <tr>
-        <th class="head1" colspan="2">* 对局相关</th>
+        <th class="head1" colspan="2">*游戏平台(娱乐赛)</th>
       </tr>
     </thead>
     <tbody>
+
       <tr>
-        <td>竞技赛总场次</td>
-        <td>{$game_count_all}</td>
-      </tr>
-      <tr>
-        <td>今日竞技赛场次</td>
-        <td>{$game_count}</td>
-      </tr>
-      <tr>
-        <td>比赛平均时长</td>
-        <td>{$game_aver_time}</td>
-      </tr>
-      <tr>
-        <td>总竞技赛场次</td>
-        <td>初级场总场次:{$game_count_first} ;中级场总场次:{$game_count_middle} ;高级场总场次:{$game_count_high} ;</td>
-      </tr>
-    </tbody>
-    <tbody>
-      <tr>
-        <td>娱乐赛总场次</td>
-        <td>{$fun_game_count_all}</td>
-      </tr>
-      <tr>
-        <td>今日娱乐赛场次</td>
-        <td>{$fun_game_count}</td>
-      </tr>
-      <tr>
-        <td>比赛平均时长</td>
-        <td>{$game_fun_time}</td>
+        <td>分享点击人数</td>
+        <td>{$fun_share_people}人</td>
+        <td>分享点击次数</td>
+        <td>{$fun_share_num}次</td>
       </tr>
      
+      <tr>
+        <td>浏览广告人数</td>
+        <td>{$fun_advert_people}人</td>
+        <td>浏览广告次数</td>
+        <td>{$fun_advert_num}次</td>
+      </tr>
+      <tr>
+
+      <tr>
+        <td>开始游戏人数</td>
+        <td></td>
+        <td>开始游戏次数(开局1次，2次，3次，5次，10次，20次，30次，50次，50次以上的人数占比)</td>
+        <td></td>
+      </tr>
+      <tr>
+      <tr>
+        <td>对局房间总数</td>
+        <td>{$fun_game_count}个</td>
+        <td>对局总人数</td>
+        <td>{$fun_people_count}人</td>
+      </tr>
+    </tbody>
+  </table>
+  <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+    <thead>
+      <tr>
+        <th class="head1" colspan="2">*游戏平台(竞技赛)</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>浏览广告人数</td>
+        <td>{$play_advert_people}人</td>
+        <td>浏览广告次数</td>
+        <td>{$play_advert_num}次</td>
+      </tr>
+      <tr>
+        <td>10气泡数对局房间数</td>
+        <td>{$ten_game_count}个</td>
+        <td>10气泡数对局房间人数</td>
+        <td>{$ten_people_count}人</td>
+      </tr>
+      <tr>
+        <td>50气泡数对局房间数</td>
+        <td>{$fifty_game_count}个</td>
+        <td>50气泡数对局房间人数</td>
+        <td>{$fifty_people_count}人</td>
+      </tr>
+      <tr>
+        <td>100气泡数对局房间数</td>
+        <td>{$hundred_game_count}个</td>
+        <td>100气泡数对局房间人数</td>
+        <td>{$hundred_people_count}人</td>
+      </tr>
     </tbody>
   </table>
   <div class="contentwrapper lineheight21"></div>
 
-  <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
-    <thead>
-      <tr>
-        <th class="head1" colspan="2">* 提成相关  </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>总门票收入</td>
-        <td>{$zuo_in}</td>
-      </tr>
-      <tr>
-        <td>提成收入</td>
-        <td>{$zuo_xiadan}</td>
-      </tr>
-      <tr>
-        <td>俱乐部提成收入</td>
-        <td>中奖:{$zuo_ying} 佣金:{$zuo_win_ext} 合计:{$zuo_ying + $zuo_win_ext}</td>
-      </tr>
-      <tr>
-        <td>上级提成收入</td>
-        <td>{$zuo_out}</td>
-      </tr>
-<!--          <tr>
-          <td>昨日净利润</td>
-          <td>{$zuo_xiadan - $zuo_ying - $zuo_win_ext}</td>
-        </tr>
-        <tr>
-          <td>利润率</td>
-          <td>
-            <php>echo sprintf("%.2f",(($zuo_xiadan - $zuo_ying - $zuo_win_ext)/$zuo_xiadan)) * 100</php>%</td>
-        </tr> -->
-    </tbody>
-  </table>
-
-  <div class="contentwrapper lineheight21"></div>
-
-  <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
-    <thead>
-      <tr>
-        <th class="head1" colspan="2">* 金币相关  </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>总金币</td>
-        <td>{$qian_in}</td>
-      </tr>
-      <tr>
-        <td>玩家留存金币</td>
-        <td>{$qian_xiadan}</td>
-      </tr>
-      <tr>
-        <td>代理商留存金币</td>
-        <td>中奖:{$qian_ying} 佣金:{$qian_win_ext} 合计:{$qian_ying + $qian_win_ext}</td>
-      </tr>
-      <tr>
-        <td>总门票收入</td>
-        <td>{$qian_out}</td>
-        <tr>
-          <td>玩家总充值金额</td>
-          <td>{$qian_xiadan - $qian_ying - $qian_win_ext}</td>
-        </tr>
-       </tr>
-        <!-- <tr>
-          <td>利润率</td>
-          <td>
-            <php>echo sprintf("%.2f",(($qian_xiadan - $qian_ying - $qian_win_ext)/$qian_xiadan)) * 100</php>%</td>
-        </tr> -->
-    </tbody>
-  </table>
-
-  <!-- <div class="contentwrapper lineheight21"></div>
-  <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
-    <thead>
-      <tr>
-        <th class="head1" colspan="2">本月盈亏</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>本月收入</td>
-        <td>{$month_in}</td>
-      </tr>
-      <tr>
-        <td>用户下单金额</td>
-  
-        <td>{$yue_xiadan}</td>
-      </tr>
-  
-      <tr>
-        <td>用户总收益</td>
-        <td>中奖:{$yue_ying} 佣金:{$month_win_ext} 合计:{$yue_ying + $month_win_ext}</td>
-      </tr>
-      <tr>
-        <td>本月支出</td>
-        <td>{$month_out}</td>
-      </tr>
-      <tr>
-        <td>本月净利润</td>
-        <td>{$yue_xiadan- $yue_ying - $month_win_ext} </td>
-      </tr>
-      <tr>
-        <td>利润率</td>
-        <td>
-          <php>echo sprintf("%.2f",($yue_xiadan- $yue_ying - $month_win_ext)/$yue_xiadan) * 100</php>%</td>
-      </tr>
-    </tbody>
-  </table> -->
-
-  <div class="contentwrapper lineheight21"></div>
-<!--   <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
-    <thead>
-      <tr>
-        <th class="head1" colspan="2">总盈亏</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>总收入</td>
-        <td>{$all_in}</td>
-      </tr>
-      <td>用户下单金额</td>
-
-      <td>{$all_xiadan}</td>
-      </tr>
-      <tr>
-        <td>用户总收益</td>
-        <td>中奖:{$all_ying} 佣金:{$all_win_ext} 合计:{$all_ying + $all_win_ext}</td>
-      </tr>
-      <tr>
-        <td>总支出</td>
-        <td>{$all_out}</td>
-      </tr>
-      <tr>
-        <td>净利润</td>
-        <td>{$all_in - $all_ying - $all_win_ext} </td>
-      </tr>
-      <tr>
-        <td>利润率</td>
-        <td>
-          <php>echo sprintf("%.2f",($all_in - $all_ying - $all_win_ext)/$all_in) * 100</php>%</td>
-      </tr>
-    </tbody>
-  </table> -->
+ 
 </div>
+
 <!--contentwrapper

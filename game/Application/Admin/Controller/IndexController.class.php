@@ -14,7 +14,7 @@ class IndexController extends AdminController
     {
 		// 入口，已登录调到首页，未登录跳转到登陆
 		if(session('?admin'))
-			redirect(U('Admin/welcome'));
+			redirect(U('Admin/dayReport'));
 		else
 			redirect(U('Index/login'));
     }

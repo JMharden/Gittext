@@ -71,26 +71,36 @@ class AdminController extends Controller
      * 俱乐部长周交易记录
      */
 	public function dayReport(){
-         $Model = new \Think\Model();
-      //    $nowtime = date('Y-m-d');
-      //    var_dump($nowtime);exit;
-      // // if($is_club_owner == 1){
-      
-		$today = strtotime(date('Y-m-d'));
-        $today_end = $today + 86400 -1;
-                                                   
-        $three = M('user_base')->where(array('join_time'=>array('eq','2019-05-24'),'last_login_time'=>array('gt','2019-05-24')))->count();
-           // var_dump($three);exit;
-        $data['user_count'] 	= M('user')->where(['sub_time' => [['egt', $today], ['elt', $today_end], 'and']])->count();//今日新增用户
-        $data['user_count_all'] = M('user')->count();//总用户
-        $data['usre_three']     = $three;
-        $data['game_count']     = M('play_match_info')->where(['create_time' => [['egt', $today], ['elt', $today_end], 'and'],'status'=>1])->count();//今日游戏总场次
-        $data['game_count_all'] = M('play_match_info')->where(['status'=>1])->count();//游戏总场次
-        $data['game_count_first'] = M('play_match_info')->where(['type'=>1,'status'=>1])->count();//初级场总场次
-        $data['game_count_middle'] = M('play_match_info')->where(['type'=>2,'status'=>1])->count();//中级场总场次
-        $data['game_count_high'] = M('play_match_info')->where(['type'=>3,'status'=>1])->count();//高级场总场次
-        $data['fun_game_count']     = M('fun_match_info')->where(['create_time' => [['egt', $today], ['elt', $today_end], 'and'],'status'=>1])->count();//今日游戏总场次
-        $data['fun_game_count_all'] = M('fun_match_info')->where(['status'=>1])->count();//游戏总场次
+
+		$today = strtotime(date('Y-m-d'));//时间戳
+        $today_end = $today + 86400 -1;   
+        $start = date('Y-m-d 0:0:0'); //日期
+        $end   = date('Y-m-d 23:59:59');
+
+        $data['user_count'] 	= M('user_base')->where(array('join_time'=>array('between',array($start,$end))))->count();//今日新增用户
+        $data['user_count_all'] = M('user_base')->count();               //总用户
+        $data['user_nature']    = M('user_base')->where(array('source'=>1))->count(); //自然登录注册
+        $data['user_share']     = M('user_base')->where(array('source'=>array('in',array(2,3))))->count(); //分享注册用户
+        $data['user_invite']    = M('user_base')->where(array('source'=>4))->count();   //邀请注册用户
+        //娱乐赛
+        $data['fun_share_people'] = M('action_log')->where(array('type'=>1))->count('distinct(user_id)');//分享人数
+        $data['fun_share_num'] = M('action_log')->where(array('type'=>1))->count();  //分享次数
+        $data['fun_advert_people'] = M('action_log')->where(array('type'=>6))->count('distinct(user_id)');//广告人数
+        $data['fun_advert_num'] = M('action_log')->where(array('type'=>6))->count();  //广告次数
+        $data['fun_game_count']   = M('fun_match_info')->count();//娱乐赛房间总数
+        $data['fun_people_count'] = M('fun_play_log')->count('distinct(user_id)');//娱乐赛游戏人数
+
+
+       //竞技赛赛
+        $data['play_advert_people'] = M('action_log')->where(array('type'=>7))->count('distinct(user_id)');//广告人数
+        $data['play_advert_num']    = M('action_log')->where(array('type'=>7))->count();  //广告次数
+    	$data['ten_game_count']     = M('fun_match_info')->where(array('type'=>1))->count();//娱乐赛房间总数
+    	$data['ten_people_count']     = M('play_log')->where(array('type'=>1))->count();//娱乐赛房间人数
+    	$data['fifty_game_count']   = M('fun_match_info')->where(array('type'=>2))->count();//娱乐赛房间总数
+    	$data['fifty_people_count']     = M('play_log')->where(array('type'=>2))->count();//娱乐赛房间人数
+    	$data['hundred_game_count'] = M('fun_match_info')->where(array('type'=>3))->count();//娱乐赛房间总数
+    	$data['hundred_people_count']     = M('play_log')->where(array('type'=>3))->count();//娱乐赛房间人数
+        
         $data['game_aver_time']  = $this->match_time();//竞技赛游戏平均时长
         $data['game_fun_time']  = $this->fun_time();//竞技赛游戏平均时长
 		$this -> assign($data);
