@@ -29,7 +29,8 @@ class GameService
          if (!($playUser || $gameType || sizeof($playUser) >1)) {
             throw new Exception('参数错误。', 1001);
         }
-         // $config = $this->getGameConfig($gameType,$battleAmount);
+        // $config = $this->getGameConfig($gameType,$battleAmount);
+
         
         //处理门票相关逻辑
         // $userInfos = $this->dealTicketFee($playUser,$config);
@@ -38,6 +39,7 @@ class GameService
         }else{
             $ticketFee = $battleAmount*0.1;
         }
+      
 
           $userInfos = $this->dealTicketFee($playUser,$ticketFee,$battleAmount);
         //创建比赛
@@ -526,7 +528,7 @@ function funGameSettle($matchId,$user_id,$rank,$score,$slime_id)
 
         //输赢大小 是否由前端传入？（暂定由后端配置）
        
-        // $battleAmount = $GLOBALS['_CFG']['site']['battleAmount' . $gameType];
+        $battleAmount = $GLOBALS['_CFG']['site']['battleAmount' . $gameType];
         if ($ticketFee && $battleAmount) {
             return ['ticketFee' => $ticketFee,
                     'battleAmount' => $battleAmount
