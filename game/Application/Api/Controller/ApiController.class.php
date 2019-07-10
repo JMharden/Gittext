@@ -123,7 +123,8 @@ class ApiController extends Controller {
                    
                    if($intro1User){
                        $parent2= $intro1User['parent1'];
-                       $parent3= M('user_base')->where(array('id'=>$intro1User['parent1']))->getField('parent1');
+                       $parent3= $intro1User['parent2'];
+                       // $parent3= M('user_base')->where(array('id'=>$intro1User['parent1']))->getField('parent1');
                    }
                     $user_data['parent1'] = $uid;
                     $user_data['parent2'] = $parent2;

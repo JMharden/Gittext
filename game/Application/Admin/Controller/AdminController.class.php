@@ -76,7 +76,7 @@ class AdminController extends Controller
         $today_end = $today + 86400 -1;   
         $start = date('Y-m-d 0:0:0'); //日期
         $end   = date('Y-m-d 23:59:59');
-
+        $liucun = $this->liucun();
         $data['user_count'] 	= M('user_base')->where(array('join_time'=>array('between',array($start,$end))))->count();//今日新增用户
         $data['user_count_all'] = M('user_base')->count();               //总用户
         $data['user_nature']    = M('user_base')->where(array('source'=>1))->count(); //自然登录注册
@@ -101,10 +101,32 @@ class AdminController extends Controller
     	$data['hundred_game_count'] = M('fun_match_info')->where(array('type'=>3))->count();//娱乐赛房间总数
     	$data['hundred_people_count']     = M('play_log')->where(array('type'=>3))->count();//娱乐赛房间人数
         
-        $data['game_aver_time']  = $this->match_time();//竞技赛游戏平均时长
-        $data['game_fun_time']  = $this->fun_time();//竞技赛游戏平均时长
+        $data['one'] = $liucun[0]['one']*100;
+        $data['two'] = $liucun[1]['two']*100;
+        $data['three'] = $liucun[2]['three']*100;
+        $data['four'] = $liucun[3]['four']*100;
+        $data['five'] = $liucun[4]['three']*100;
+        $data['six'] = $liucun[5]['four']*100;
+        $data['seven'] = $liucun[6]['three']*100;
+   
+        
 		$this -> assign($data);
 		$this -> display();
+
+    }
+
+    public function liucun(){
+    	$Model = new \Think\Model();
+    	$one = $Model->query("SELECT count(b.user_id)/count(a.id) as one FROM dd_user_base a LEFT JOIN dd_login_log b ON a.id = b.user_id  AND DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30'  AND FROM_UNIXTIME( b.login_time, '%Y-%m-%d' ) = '2019-07-01' WHERE DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30';");
+
+    	$two = $Model->query("SELECT count(b.user_id)/count(a.id) as two FROM dd_user_base a LEFT JOIN dd_login_log b ON a.id = b.user_id  AND DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30'  AND FROM_UNIXTIME( b.login_time, '%Y-%m-%d' ) = '2019-07-02' WHERE DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30';");
+    	$three = $Model->query("SELECT count(b.user_id)/count(a.id) as three FROM dd_user_base a LEFT JOIN dd_login_log b ON a.id = b.user_id  AND DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30'  AND FROM_UNIXTIME( b.login_time, '%Y-%m-%d' ) = '2019-07-03' WHERE DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30';");
+    	$four = $Model->query("SELECT count(b.user_id)/count(a.id) as four FROM dd_user_base a LEFT JOIN dd_login_log b ON a.id = b.user_id  AND DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30'  AND FROM_UNIXTIME( b.login_time, '%Y-%m-%d' ) = '2019-07-04' WHERE DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30';");
+    	$five = $Model->query("SELECT count(b.user_id)/count(a.id) as five FROM dd_user_base a LEFT JOIN dd_login_log b ON a.id = b.user_id  AND DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30'  AND FROM_UNIXTIME( b.login_time, '%Y-%m-%d' ) = '2019-07-05' WHERE DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30';");
+    	$six = $Model->query("SELECT count(b.user_id)/count(a.id) as six FROM dd_user_base a LEFT JOIN dd_login_log b ON a.id = b.user_id  AND DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30'  AND FROM_UNIXTIME( b.login_time, '%Y-%m-%d' ) = '2019-07-06' WHERE DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30';");
+    	$seven = $Model->query(" SELECT count(b.user_id)/count(a.id) as seven FROM dd_user_base a LEFT JOIN dd_login_log b ON a.id = b.user_id  AND DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30'  AND FROM_UNIXTIME( b.login_time, '%Y-%m-%d' ) = '2019-07-07' WHERE DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30';");
+    	$data = array_merge($one,$two,$three,$four,$five,$six,$seven);
+    	return $data;
 
     }
     //竞技赛平均时长

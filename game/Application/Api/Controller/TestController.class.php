@@ -2,6 +2,7 @@
 
 namespace Api\Controller;
 use Think\Controller;
+use Think\Db;
 
 /**
  *
@@ -13,17 +14,31 @@ class TestController extends ApiController
 
   
     public function test(){
-        // echo "123";exit;
-       $val =  $_POST['val'];
-       // var_dump($val);exit;
-        if($val){
-            // $data = M('user')->where(array('user_id'=>232))->find();
-           echo json_encode(['status' => '1', 'msg' => 'OK','data'=>121123213213]);
-        
-        }
+       $Model = new \Think\Model();
+// select  count(b.id)/count(a.id)  from dd_user_base  a left join dd_user_base  b on a.id =b.id  and  DATE_FORMAT(a.join_time,'%Y-%m-%d') = '2019-07-01'  and b.last_login_time >'2019-07-04' where  DATE_FORMAT(a.join_time,'%Y-%m-%d') ='2019-07-01';
+// select  count(*) from dd_user_base  where  DATE_FORMAT(last_time,'%Y-%m-%d') ='2019-07-04';
+        $a =  $Model->query("SELECT  count(*) from dd_user_base  where  DATE_FORMAT(join_time,'%Y-%m-%d') ='2019-07-05';");
+      $b =  $Model->query("SELECT  count(*) from dd_user_base  where  DATE_FORMAT(last_login_time,'%Y-%m-%d') ='2019-07-06';");
+      $time = "2019-06-01";
+
+      
+//       $c = $Model->query("SELECT  
+// ((SELECT  count(*) from dd_user_base  where  DATE_FORMAT(last_login_time,'%Y-%m-%d') ='2019-06-02')/
+// (SELECT  count(*) from dd_user_base  where  DATE_FORMAT(join_time,'%Y-%m-%d') ='2019-06-01'))*100 as three;");
 
 
-      }
+      $c = $Model->query(" SELECT count( b.user_id ) / count( a.id ) FROM dd_user_base a LEFT JOIN dd_login_log b ON a.id = b.user_id  AND DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30'  AND FROM_UNIXTIME( b.login_time, '%Y-%m-%d' ) = '2019-07-01' WHERE DATE_FORMAT( a.join_time, '%Y-%m-%d' ) = '2019-06-30';");
+      
+      var_dump($a);
+      echo '<br/>';
+      var_dump($b);
+      echo' <br/>';
+      var_dump($c);
+     
+      exit;
+
+
+    }
       public function shareType(){
     // if(IS_POST){
       // $type = $_POST['type'];

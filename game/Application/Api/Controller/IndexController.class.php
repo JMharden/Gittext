@@ -385,7 +385,8 @@ public function quitClub(){
             $members[$k]['match_amount'] =$members[$k]['fun_amount']+$members[$k]['match_amount'];
             $members[$k]['win_amount'] =$members[$k]['fun_win_amount']+$members[$k]['win_amount'];
             $members[$k]['probability']  = round($members[$k]['win_amount']/$members[$k]['match_amount']*100,2)."%";
-            $members[$k]['level']  = GameService::getDuan($members[$k]['rank'])['level'];  //段位
+            $members[$k]['level']  = 
+             //段位
           }
           // var_dump($members);exit;
           echo json_encode($members);
