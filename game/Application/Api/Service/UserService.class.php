@@ -68,7 +68,7 @@ class UserService
             } else {
                 $user = M('user_base')->where(array('openid' => $openId))->find();
                 if($user){
-                    $userId = $user['id'];
+                    $userId = $user['userId'];
                     S('user_info_base' . $userId, $userInfo, 18000);//用户信息存入Redis
                 }
                 S('user_info_base' .$openId , $userInfo, 18000);//用户信息存入Redis
@@ -96,7 +96,7 @@ class UserService
                     'club_id' => $userExtr['club_id'],
                     'advert'  => $userExtr['advert'],
                     'stamina' => $userExtr['stamina'],
-                    // 'area'    => $userExtr['area'],
+                    'crystal'    => $userExtr['crystal'],
                     'share'   => $userExtr['share'],
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
@@ -128,15 +128,17 @@ class UserService
                 $rank = GameService::getDuan($userExtr['rank']);
                 $userInfo = [
                     'is_club_owner' => $userExtr['is_club_owner'],
-                    'money' => $userExtr['money'],
+                    'money' => floor($userExtr['money']),
                     'slimeIndex' => 0,
                     'club_id' => $userExtr['club_id'],
                     'advert'  => $userExtr['advert'],
-                    'area'    => $userExtr['area'],
                     'stamina' => $userExtr['stamina'],
+                    'crystal'    => $userExtr['crystal'],
+                    'share'   => $userExtr['share'],
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
-                    'rankNum'   => $userExtr['rank'] -$rank['min']
+                    'rankNum' => $userExtr['rank'] -$rank['min'],
+                    'probability' => round(($userExtr['win_amount']/$userExtr['match_amount'])*100)."%",
 
                 ];
                 if($userExtr){
@@ -168,11 +170,14 @@ class UserService
             'openid'=>$openid
           );
           $result[] = $datas;
-      }
+        }
       
         M('user_slime')->addAll($result);
-    
-   
+
+   }
+   function addReceive($user_id){
+         $data['user_id'] = $user_id;
+        M('receive')->add($data);
    }
  /*  史莱姆等级 */
      function s_level($level){

@@ -113,7 +113,7 @@ class ActivityService
     function fetchLoginReward($userId,$activityId)
     {
         //判断领取的奖励是否存在，是否过期
-        $data = M('login_reward')->where(array("user_id"=>$userId,'id'=>$activityId,'is_draw'=>'N',"expire_date"=>array("EGT", date("Y-m-d"))))->find();
+      $data = M('login_reward')->where(array("user_id"=>$userId,'id'=>$activityId,'is_draw'=>'N',"expire_date"=>array("EGT", date("Y-m-d"))))->find();
         if($data){
             //更新领取记录
             M('login_reward')->where(array('id'=>$activityId))->save(array("is_draw"=>"Y","draw_time"=>date("Y-m-d H:i:s")));

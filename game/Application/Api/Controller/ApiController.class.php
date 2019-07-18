@@ -96,7 +96,7 @@ class ApiController extends Controller {
         $user_info['session3rd'] = $session3rd;
         $userService = new UserService();
        
-        $user = $userService->getUserFullInfoByOpen($user_info['openId']);
+        $user  = $userService->getUserFullInfoByOpen($user_info['openId']);
         $isNew = $userService->getUserBaseInfoByOpen($user_info['openId']);
 
         $user['is_new'] = 2;
@@ -115,7 +115,6 @@ class ApiController extends Controller {
 
                 $user_data['source'] = $introduceType;
 
-              
                 //获取推荐关系
                 if($uid){
 
@@ -142,6 +141,7 @@ class ApiController extends Controller {
                 // array_merge($user,$users)
                 $user['is_new'] = 1;
                 $userService->addSlime($user['openid'],$user['id']);
+                $userService->addReceive($user['id']);
               
             }
              $save['area']      = $user_info['city'];
@@ -293,7 +293,7 @@ class ApiController extends Controller {
   //获取用户推广海报路径
      public  function get_qrcode_path($uid){
           // $this->_load_config();
-          $url = $GLOBALS['_CFG']['web_site']['url'];;
+          $url = $GLOBALS['_CFG']['web_site']['url'];
           $path = './Public/invite/'.date('Y-m').'/';
            return array(
               'path'      => $path,
