@@ -30,7 +30,6 @@ class GameService
             throw new Exception('参数错误。', 1001);
         }
         // $config = $this->getGameConfig($gameType,$battleAmount);
-
         
         //处理门票相关逻辑
         // $userInfos = $this->dealTicketFee($playUser,$config);
@@ -40,8 +39,7 @@ class GameService
             $ticketFee = $battleAmount*0.1;
         }
       
-
-          $userInfos = $this->dealTicketFee($playUser,$ticketFee,$battleAmount);
+        $userInfos = $this->dealTicketFee($playUser,$ticketFee,$battleAmount);
         //创建比赛
         $matchId = $this->generateRandomString();
 
