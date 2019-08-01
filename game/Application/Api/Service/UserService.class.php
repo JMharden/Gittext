@@ -153,13 +153,51 @@ class UserService
 
     }
 
-  function addSlime($openid,$user_id){
-    if($openid == null || $user_id == null){
-        echo "参数错误";exit;
-    }
-          $data = M('slime')->select();
-        foreach ($data as $k => $v) {
-          $datas = array(
+  // function addSlime($openid,$user_id){
+  //   if($openid == null || $user_id == null){
+  //       echo "参数错误";exit;
+  //   }
+  //         $data = M('slime')->select();
+  //       foreach ($data as $k => $v) {
+  //         $datas = array(
+  //           's_id' => $v['id'],
+  //           'name' => $v['name'],
+  //           'skill'=> $v['skill'],
+  //           'blood'=> $v['blood'],
+  //           'blue' => $v['blue'],
+  //           'exp' =>  50,
+  //           'u_id' => $user_id,
+  //           'openid'=>$openid
+  //         );
+  //         $result[] = $datas;
+  //       }
+      
+  //       M('user_slime')->addAll($result);
+
+  //  }
+     function addReceive($user_id){
+         $data['user_id'] = $user_id;
+        M('receive')->add($data);
+   }
+
+    function addSlime($openid,$user_id){
+          $data = M('slime')->where(array('id'=>1))->find();
+          $other = M('slime')->where(array('id'=>array('GT',1)))->select();
+          $add[] = array(
+            's_id' => $data['id'],
+            'name' => $data['name'],
+            'skill'=> $data['skill'],
+            'blood'=> $data['blood'],
+            'blue' => $data['blue'],
+            'exp' =>  50,
+            'u_id' => $user_id,
+            'openid'=>$openid,
+            'is_lock'=>1,
+            'is_check'=>1
+          );
+        
+        foreach ($other as $k => $v) {
+          $others = array(
             's_id' => $v['id'],
             'name' => $v['name'],
             'skill'=> $v['skill'],
@@ -167,18 +205,16 @@ class UserService
             'blue' => $v['blue'],
             'exp' =>  50,
             'u_id' => $user_id,
-            'openid'=>$openid
+            'openid'=>$openid,
+            'is_lock'=>0,
+            'is_check'=>0
           );
-          $result[] = $datas;
+          $result[] = $others;
         }
-      
+        array_splice($result,0,0,$add);
         M('user_slime')->addAll($result);
-
-   }
-   function addReceive($user_id){
-         $data['user_id'] = $user_id;
-        M('receive')->add($data);
-   }
+    }
+   
  /*  史莱姆等级 */
      function s_level($level){
       $filter = [

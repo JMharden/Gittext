@@ -59,9 +59,6 @@ class ApiController extends Controller {
         $iv        = $_POST['iv'];
         $uid       = $_GET['uid'];//推荐人用户ID
         $introduceType = $_GET['source'];
-        // if(!$introduceType){
-        //     $introduceType = 8;
-        // }
 
         $encryptedData = $_POST['encryptedData'];
         $url = "https://api.weixin.qq.com/sns/jscode2session?appid=" . $APPID . "&secret=" . $AppSecret . "&js_code=" . $code . "&grant_type=authorization_code";
@@ -90,12 +87,146 @@ class ApiController extends Controller {
         // 7.生成第三方3rd_session，以 $session3rd 为key，sessionKey+openId为value，写入memcached
        
         $user_info = json_decode($data,true);
-        // var_dump($user_info);exit;
+
+
+        if($user_info['city']){
+          $area = $user_info['city'];
+        }else if($user_info['country']){
+          $area = $user_info['country'];
+        }else{
+          $area = '中国';
+        }
+
+        $session3rd = $this->randomFromDev(16);
+        $user_info['session3rd'] = $session3rd;
+        $userService = new UserService();
+        // $user  = $userService->getUserFullInfoByOpen($user_info['openId']);
+        $isNew = $userService->getUserBaseInfoByOpen($user_info['openId']);
+        $time = date('Y-m-d H:i:s',time());
+        if(!$isNew){//新用户
+            
+            $user_data['openid']    = $user_info['openId'];
+            $user_data['nickname']  = $user_info['nickName'];
+            $user_data['headimg']   = $user_info['avatarUrl'];
+            $user_data['sex']       = $user_info['gender'];
+            $user_data['area']      = $area;
+            $user_data['join_time'] = $time;
+            $user_data['source'] = $introduceType;//用户引入方式
+            
+            //获取推荐关系
+            if($uid){
+               $intro1User =  $userService->getUserBaseInfo($uid);                   
+               if($intro1User){
+                   $parent2= $intro1User['parent1'];
+                   $parent3= $intro1User['parent2'];
+               }
+                $user_data['parent1'] = $uid;
+                $user_data['parent2'] = $parent2;
+                $user_data['parent3'] = $parent3;
+                M('relation')->add(array(
+                    'openid' => $user_data['openid'],
+                    'parent_id' => $uid,
+                    'create_time' => $time
+                ));
+            }
+            $users = $userService->addUser($user_data,$user_info['openId']);
+            $user = $userService->getUserFullInfoByOpen($users['openid']);
+            $user['is_new'] = 1;
+            $userService->addSlime($user['openid'],$user['id']);
+            $userService->addReceive($user['id']);
+
+        }else{
+            $save['area']      = $area;
+            $save['nickname']  = $user_info['nickName'];
+            $save['headimg']   = $user_info['avatarUrl'];
+            $save['last_login_time']      = $time;
+            M('user_base')->where(array('openid'=>$user['openid']))->save($save);
+            $user = $userService->getUserFullInfoByOpen($user_info['openId']);
+            $user['firstLogin'] = $this->firstLogin($user['id']);
+            $user['is_new'] = 2;
+        }
+
+        $user['session3rd'] = $session3rd;
+        $user['firstLogin'] = $this->firstLogin($user['id']);
+        //累计登陆奖励
+        $activityService =  new ActivityService();
+        $acclogin = $activityService->accuLogin($user['openid'],$user['id']);
+        $slime = $userService->slimeLevel($user['openid']);
+        $this->write_log();
+        $this->loginLog($user['id'],$introduceType,$uid);
+        $sessionkey = array($session_key,$openid,$user['id']);
+        S($session3rd,$sessionkey,18000);//存入session
+        $data =[
+            "slime"   =>$slime, 
+            "userInfo"=>$user,
+            "accLoginActivity"=>$acclogin
+        ];
+        echo  json_encode(['status'=>'1','msg'=>'返回成功','data'=>$data]);
+    }
+    //线下
+    public function devLogin()
+    {
+        session_start();
+        // 开发者使用登陆凭证 code 获取 session_key 和 openid
+
+        $this->_load_config();
+        $APPID = $this->_bei_mp['appid'];
+        $AppSecret = $this->_bei_mp['appsecret'];
+      
+        $code = $_POST['code'];
+
+        if($code == null ){
+           echo json_encode(['status'=>'-2','msg'=>'code不能为空']);
+           exit;
+        }
+        $signature = $_POST['signature'];
+        $rawData   = $_POST['rawData'];
+        $iv        = $_POST['iv'];
+        $uid       = $_GET['uid'];//推荐人用户ID
+        $introduceType = $_GET['source'];
+
+
+        $encryptedData = $_POST['encryptedData'];
+        $url = "https://api.weixin.qq.com/sns/jscode2session?appid=" . $APPID . "&secret=" . $AppSecret . "&js_code=" . $code . "&grant_type=authorization_code";
+        $arr = $this->vget($url);  // 一个使用curl实现的get方法请求
+        
+        $arr = json_decode($arr, true);
+        
+        $openid = $arr['openid'];
+        $session_key = $arr['session_key'];
+        // 数据签名校验
+       
+        $signature2 = sha1($rawData . $session_key);//签名密钥
+        
+        if ($signature != $signature2) {
+            echo json_encode(['status'=>'0', 'msg' => '数据签名验证失败！']);exit;
+        }
+        Vendor("PHP.wxBizDataCrypt");  //加载解密文件，在官方有下载
+        
+        $pc = new \WXBizDataCrypt($APPID, $session_key);
+        $errCode = $pc->decryptData($encryptedData, $iv, $data);  //其中$data包含用户的所有数据
+        
+        if ($errCode !== 0) {
+           echo json_encode(['status'=>'-1','msg'=>'数据为空']);
+           exit;
+        }
+        // 7.生成第三方3rd_session，以 $session3rd 为key，sessionKey+openId为value，写入memcached
+       
+        $user_info = json_decode($data,true);
+        
+
+        if($user_info['city']){
+          $area = $user_info['city'];
+        }else if($user_info['country']){
+          $area = $user_info['country'];
+        }else{
+          $area = '中国';
+        }
+        
       
         $session3rd = $this->randomFromDev(16);
         $user_info['session3rd'] = $session3rd;
         $userService = new UserService();
-       
         $user  = $userService->getUserFullInfoByOpen($user_info['openId']);
         $isNew = $userService->getUserBaseInfoByOpen($user_info['openId']);
 
@@ -108,7 +239,7 @@ class ApiController extends Controller {
                 $user_data['nickname']  = $user_info['nickName'];
                 $user_data['headimg']   = $user_info['avatarUrl'];
                 $user_data['sex']       = $user_info['gender'];
-                $user_data['area']      = $user_info['city'];
+                $user_data['area']      = $area;
                 $user_data['join_time'] = $time;
                 
                 //用户引入方式
@@ -135,23 +266,25 @@ class ApiController extends Controller {
                         'create_time' => $time
                     ));
                 }
-                // var_dump($user_data);exit;
+             
                 $users = $userService->addUser($user_data,$user_info['openId']);
                 $user = $userService->getUserFullInfoByOpen($users['openid']);
                 // array_merge($user,$users)
                 $user['is_new'] = 1;
                 $userService->addSlime($user['openid'],$user['id']);
                 $userService->addReceive($user['id']);
+                M('receive')->add($user['id']);
               
             }
-             $save['area']      = $user_info['city'];
-             $save['last_login_time']      = $time;
-
+            $save['area']      = $area;
+            $save['nickname']  = $user_info['nickName'];
+            $save['headimg']   = $user_info['avatarUrl'];
+            $save['last_login_time']      = $time;
             M('user_base')->where(array('openid'=>$user['openid']))->save($save);
             //接口访问令牌
             $user['session3rd'] = $session3rd;
             $user['firstLogin'] = $this->firstLogin($user['id']);
-            // $user = $userService->getUserFullInfoByOpen($user_info['openId']);
+            $user = $userService->getUserFullInfoByOpen($user_info['openId']);
             //累计登陆奖励
             $activityService =  new ActivityService();
             $acclogin = $activityService->accuLogin($user['openid'],$user['id']);

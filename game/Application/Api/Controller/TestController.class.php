@@ -17,19 +17,132 @@ class TestController extends ApiController
        
 
    }
-  public function test(){
-     
+      public function isTime($now,$user_id){
+        $times =  [
+              ['start' => strtotime(date('Y-m-d 12:00:00')),'end'=>strtotime(date('Y-m-d 12:30:00'))],
+              ['start' => strtotime(date('Y-m-d 16:00:00')),'end'=>strtotime(date('Y-m-d 18:30:00'))],
+        ];
+        $now = strtotime(date('Y-m-d H:i:s'));
+        $robbone = M('robbing')->where(array('user_id'=>$user_id,'time'=>array('between',array($times[0]['start'],$times[0]['end']))))->find();
+        $robbtwo = M('robbing')->where(array('user_id'=>$user_id,'time'=>array('between',array($times[1]['start'],$times[1]['end']))))->find();
+   
+          if($times[0]['start'] <= $now && $now <= $times[0]['end']){
+            if($robbone){
+               return false;
+              // echo json_encode(['status'=>-2,'msg'=>'您已参与，请明日再来！']);exit;
+            }else{
+              return ture;        
+            }
+          }elseif($times[1]['start'] <= $now && $now <= $times[1]['end']){
+            if($robbtwo){
+               return false;
+              // echo json_encode(['status'=>-2,'msg'=>'您已参与，请明日再来！']);exit;
+            }else{
+              return ture;       
+            }
 
-     M('user')->where(array('id'=>array('GT',0)))->setfield('crystal',100);
-     // M('slime')->where(array('s_id'=>2))->setfield('s_id',1);
-     // M('slime')->where(array('s_id'=>3))->setfield('s_id',1);
-     // M('slime')->where(array('s_id'=>4))->setfield('s_id',2);
-     // M('slime')->where(array('s_id'=>5))->setfield('s_id',4);
-     // M('slime')->where(array('s_id'=>6))->setfield('s_id',5);
-     // // $data['number']  = $_POST['number'];
-     // $data['type']    = $_POST['type'];
-     // $data['price']   = intval($_POST['price']);
-     // echo json_encode(['status'=>1,'msg'=>'OK','data'=>$data]);exit;
+          }else{
+              return false;
+          }
+      
+        
+                
+      }
+      public function robbing(){
+        $user_id = 231;
+        if(IS_POST){
+          $time = $this->isTime($now,$user_id);
+          $type    = intval($_POST['type']);
+          // $crystal = intval($_POST['crystal']);
+          $crystal = S('robbing'.$user_id);
+          // var_dump($crystal);exit;
+          if($time){
+              if($type == 1){ //开始
+                $crystal = rand(10,100);
+                S('robbing'.$user_id,$crystal,1800);
+                echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$crystal]);exit;                  
+              }else{//结束       
+                if($crystal == null){
+                  echo json_encode(['status'=>2,'msg'=>'参数错误']);exit;
+                } 
+                 $data = array(
+                  'user_id' => $user_id,
+                  'time'    => time(),
+                  'crystal' => $crystal
+                );
+                M('robbing')->add($data);
+                M('user')->where(array('user_id'=>$user_id))->setInc('crystal',$crystal);
+                S('robbing'.$user_id,null);
+              }
+              echo json_encode(['status'=>2,'msg'=>'恭喜获得','data'=>$crystal]);exit;
+          }else{
+             echo json_encode(['status'=>-1,'msg'=>'暂未开放']);exit;
+          }
+        }
+    }
+    public function addSlime(){
+    
+          $data = M('slime')->where(array('id'=>1))->find();
+          // var_dump($data);exit;
+          $other = M('slime')->where(array('id'=>array('GT',1)))->select();
+          $add[] = array(
+            's_id' => $data['id'],
+            'name' => $data['name'],
+            'skill'=> $data['skill'],
+            'blood'=> $data['blood'],
+            'blue' => $data['blue'],
+            'exp' =>  50,
+            'u_id' => $user_id,
+            'openid'=>$openid,
+            'is_lock'=>1,
+            'is_check'=>1
+          );
+        
+        foreach ($other as $k => $v) {
+          $others = array(
+            's_id' => $v['id'],
+            'name' => $v['name'],
+            'skill'=> $v['skill'],
+            'blood'=> $v['blood'],
+            'blue' => $v['blue'],
+            'exp' =>  50,
+            'u_id' => $user_id,
+            'openid'=>$openid,
+            'is_lock'=>0,
+            'is_check'=>0
+          );
+          $result[] = $others;
+        }
+        array_splice($result,0,0,$add);
+
+        M('user_slime')->addAll($result);
+
+   }
+   public function clubRecords(){
+
+   
+      $user_id = 231;
+      $is_club_owner =  M('user')->where(array('user_id'=>$user_id))->getField('is_club_owner');
+      $Model = new \Think\Model();
+      // if($is_club_owner == 1){
+      $infomation =  $Model->query("SELECT  o.id, o.title,o.content,o.create_time,o.category,o.create_user,   g.`status`   FROM   dd_message_info o   LEFT JOIN dd_message_log g ON o.id = g.msg_id    AND g.uid = ".$user_id."  WHERE   ( g.msg_id IS NULL or g.status='1') and  o.send_to  in ('all',".$user_id.") and o.category in(1,2) and o.send_time < CURRENT_TIMESTAMP AND o.expire_time > CURRENT_TIMESTAMP order by id desc;");
+          $data = array_column($infomation,'id');
+      foreach($data as $k=>$v){
+        $id=$v['id'];
+        
+        $infomation[$k]['create_time']= $this->getTime($infomation[$k]['create_time']);
+
+      }
+      echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$infomation]);
+      
+    }
+  public function test(){
+     $time = $_GET['time'];
+     echo json_encode(['status'=>1,'data'=>$time]);
+  }
+  public function test1(){
+     $time = $_POST['time'];
+     echo json_encode(['status'=>1,'data'=>$time]);
   }
    //离线时间
   public function leaveTime(){
@@ -104,19 +217,20 @@ class TestController extends ApiController
           }else{
             echo json_encode(['status'=>-2,'msg'=>'参数错误']);exit;
           }
-              $crystals = M('user')->where(array('user_id'=>$user_id))->setDec('crystal',$price);
-              if($crystals){
-                $buyinfo = array(
-                  'user_id' => $user_id,
-                  'p_num'   => $number,
-                  'type'    => $type,
-                  'money'   => $price
-                );
-                $buy_log = M('buy_log')->add($buyinfo);
-                if($buy_log){
-                  echo json_encode(['status'=>1,'msg'=>'购买成功']);exit;
-                }            
-              }
+
+          $crystals = M('user')->where(array('user_id'=>$user_id))->setDec('crystal',$price);
+          if($crystals){
+            $buyinfo = array(
+              'user_id' => $user_id,
+              'p_num'   => $number,
+              'type'    => $type,
+              'money'   => $price
+            );
+            $buy_log = M('buy_log')->add($buyinfo);
+            if($buy_log){
+              echo json_encode(['status'=>1,'msg'=>'购买成功']);exit;
+            }            
+          }
            
         }else{
             echo json_encode(['status'=>-3,'msg'=>'您的钻石不足']);exit;
@@ -279,6 +393,7 @@ class TestController extends ApiController
 
     }
   
+    
 
 
 
