@@ -72,45 +72,46 @@ class AdminController extends Controller
      */
 	public function dayReport(){
 
-		$today = strtotime(date('Y-m-d'));//时间戳
-        $today_end = $today + 86400 -1;   
-        $start = date('Y-m-d 0:0:0'); //日期
-        $end   = date('Y-m-d 23:59:59');
-        $liucun = $this->liucun();
-        $data['user_count'] 	= M('user_base')->where(array('join_time'=>array('between',array($start,$end))))->count();//今日新增用户
-        $data['user_count_all'] = M('user_base')->count();               //总用户
-        $data['user_nature']    = M('user_base')->where(array('source'=>1))->count(); //自然登录注册
-        $data['user_share']     = M('user_base')->where(array('source'=>array('in',array(2,3))))->count(); //分享注册用户
-        $data['user_invite']    = M('user_base')->where(array('source'=>4))->count();   //邀请注册用户
-        //娱乐赛
-        $data['fun_share_people'] = M('action_log')->where(array('type'=>1))->count('distinct(user_id)');//分享人数
-        $data['fun_share_num'] = M('action_log')->where(array('type'=>1))->count();  //分享次数
-        $data['fun_advert_people'] = M('action_log')->where(array('type'=>6))->count('distinct(user_id)');//广告人数
-        $data['fun_advert_num'] = M('action_log')->where(array('type'=>6))->count();  //广告次数
-        $data['fun_game_count']   = M('fun_match_info')->count();//娱乐赛房间总数
-        $data['fun_people_count'] = M('fun_play_log')->count('distinct(user_id)');//娱乐赛游戏人数
-
-
-       //竞技赛赛
-        $data['play_advert_people'] = M('action_log')->where(array('type'=>7))->count('distinct(user_id)');//广告人数
-        $data['play_advert_num']    = M('action_log')->where(array('type'=>7))->count();  //广告次数
-    	$data['ten_game_count']     = M('fun_match_info')->where(array('type'=>1))->count();//娱乐赛房间总数
-    	$data['ten_people_count']     = M('play_log')->where(array('type'=>1))->count();//娱乐赛房间人数
-    	$data['fifty_game_count']   = M('fun_match_info')->where(array('type'=>2))->count();//娱乐赛房间总数
-    	$data['fifty_people_count']     = M('play_log')->where(array('type'=>2))->count();//娱乐赛房间人数
-    	$data['hundred_game_count'] = M('fun_match_info')->where(array('type'=>3))->count();//娱乐赛房间总数
-    	$data['hundred_people_count']     = M('play_log')->where(array('type'=>3))->count();//娱乐赛房间人数
+		// $today = strtotime(date('Y-m-d'));//时间戳
+  //       $today_end = $today + 86400 -1;   
+  //       $start = date('Y-m-d 0:0:0'); //日期
+  //       $end   = date('Y-m-d 23:59:59');
+  //       $liucun = $this->liucun();
         
-        $data['one'] = $liucun[0]['one']*100;
-        $data['two'] = $liucun[1]['two']*100;
-        $data['three'] = $liucun[2]['three']*100;
-        $data['four'] = $liucun[3]['four']*100;
-        $data['five'] = $liucun[4]['three']*100;
-        $data['six'] = $liucun[5]['four']*100;
-        $data['seven'] = $liucun[6]['three']*100;
+  //       $data['user_count'] 	= M('user_base')->where(array('join_time'=>array('between',array($start,$end))))->count();//今日新增用户
+  //       $data['user_count_all'] = M('user_base')->count();               //总用户
+  //       $data['user_nature']    = M('user_base')->where(array('source'=>1,'join_time'=>array('between',array($start,$end))))->count(); //自然登录注册
+  //       $data['user_share']     = M('user_base')->where(array('source'=>array('in',array(2,3))))->count(); //分享注册用户
+  //       $data['user_invite']    = M('user_base')->where(array('source'=>4))->count();   //邀请注册用户
+  //       //娱乐赛
+  //       $data['fun_share_people'] = M('action_log')->where(array('type'=>1))->count('distinct(user_id)');//分享人数
+  //       $data['fun_share_num'] = M('action_log')->where(array('type'=>1))->count();  //分享次数
+  //       $data['fun_advert_people'] = M('action_log')->where(array('type'=>6))->count('distinct(user_id)');//广告人数
+  //       $data['fun_advert_num'] = M('action_log')->where(array('type'=>6))->count();  //广告次数
+  //       $data['fun_game_count']   = M('fun_match_info')->count();//娱乐赛房间总数
+  //       $data['fun_people_count'] = M('fun_play_log')->count('distinct(user_id)');//娱乐赛游戏人数
+
+
+  //      //竞技赛赛
+  //       $data['play_advert_people'] = M('action_log')->where(array('type'=>7))->count('distinct(user_id)');//广告人数
+  //       $data['play_advert_num']    = M('action_log')->where(array('type'=>7))->count();  //广告次数
+  //   	$data['ten_game_count']     = M('fun_match_info')->where(array('type'=>1))->count();//娱乐赛房间总数
+  //   	$data['ten_people_count']     = M('play_log')->where(array('type'=>1))->count();//娱乐赛房间人数
+  //   	$data['fifty_game_count']   = M('fun_match_info')->where(array('type'=>2))->count();//娱乐赛房间总数
+  //   	$data['fifty_people_count']     = M('play_log')->where(array('type'=>2))->count();//娱乐赛房间人数
+  //   	$data['hundred_game_count'] = M('fun_match_info')->where(array('type'=>3))->count();//娱乐赛房间总数
+  //   	$data['hundred_people_count']     = M('play_log')->where(array('type'=>3))->count();//娱乐赛房间人数
+        
+  //       $data['one'] = $liucun[0]['one']*100;
+  //       $data['two'] = $liucun[1]['two']*100;
+  //       $data['three'] = $liucun[2]['three']*100;
+  //       $data['four'] = $liucun[3]['four']*100;
+  //       $data['five'] = $liucun[4]['three']*100;
+  //       $data['six'] = $liucun[5]['four']*100;
+  //       $data['seven'] = $liucun[6]['three']*100;
    
         
-		$this -> assign($data);
+		// $this -> assign($data);
 		$this -> display();
 
     }

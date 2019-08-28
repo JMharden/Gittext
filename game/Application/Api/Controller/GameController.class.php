@@ -25,6 +25,27 @@ class GameController extends ApiController
 
    }
 
+   public function randAi(){
+        if(IS_POST){
+            $num = $_POST['num'];
+
+            $data = M('jiqiren')->select();
+            if($num == 1){
+
+              
+              $data_rand[]  =  $data[18];
+            }
+            $datas = array_rand($data, $num);
+            foreach($datas as $val){
+             
+              $data_rand[]=$data[$val];
+            }
+            echo json_encode(array('status'=>1,'msg'=>'返回成功','data'=>$data_rand));exit;
+        }else{
+            echo json_encode(array('status'=>-1,'msg'=>'系统错误'));exit;
+        }
+     
+    }
     public function recovery(){
 
             $userId =  $_GET['userId'];
@@ -33,73 +54,103 @@ class GameController extends ApiController
             echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
 
     }
+     public function isMatchTime(){
+        $times =  [
+              ['start' => strtotime(date('Y-m-d 12:00:00')),'end'=>strtotime(date('Y-m-d 14:00:00'))],
+              ['start' => strtotime(date('Y-m-d 14:00:00')),'end'=>strtotime(date('Y-m-d 21:00:00'))],
+        ];
+
+        $now = strtotime(date('Y-m-d H:i:s'));
+
+        if($times[0]['start'] <= $now && $now <= $times[0]['end']){
+     
+             echo json_encode(['status'=>1,'msg'=>'已开放']);exit;
+        
+        }elseif($times[1]['start'] <= $now && $now <= $times[1]['end']){
+         
+             echo json_encode(['status'=>1,'msg'=>'已开放']);exit;
+          
+        }else{
+            if($now  < $times[0]['start'] || $now  > $times[1]['end']){
+                $msg = '下次开放时间为12点';
+            
+            }else{
+                $msg = '下次开放时间为19点';
+            }
+             echo json_encode(['status'=>-1,'msg'=>$msg]);exit;
+  
+        }    
+    }
+
+    //创建竞技赛
     public function createMatch(){
        try{
-           $gameType =  $_POST['gameType'];
-           $playUser =  explode(',', $_POST['playUser']);
+           $gameType = $_POST['gameType'];
            $battleAmount= $_POST['battleAmount'];
-           $slime_id =   explode(',',$_POST['slime_id']);
-           $datas = array_combine($playUser,$slime_id);
-           foreach ($datas as $k => $v) {
-             $level = M('user_slime')->where(array('s_id' => $v,'u_id' => $k))->field('exp')->find();
-             $levles[] = $level['exp'];
-
+           $playUser =  explode(',',$_POST['playUser']);
+           // $slime_id =  explode(',',$_POST['slime_id']);
+           // $datas = array_combine($playUser,$slime_id);
+           foreach ($playUser as $k => $v) {
+             $slime = M('user_slime')->where(array('u_id'=>$v,'is_check'=>1,'is_lock'=>1))->field('u_id,s_id,level,hat')->find();
+             // $level = M('user_slime')->where(array('s_id' => $v,'u_id' => $k))->field('exp')->find();
+             $levles[] = $slime;
            }
            $gameService =  new GameService();
-           $data = $gameService->createMatch($playUser,$gameType,$battleAmount,$slime_id);
+           $data = $gameService->createMatch($playUser,$gameType,$battleAmount);
            $data['slime_level'] = $levles;
+           // var_dump($data);exit;
            echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
        }catch (Exception  $e){
            echo json_encode(['status' => '-1', 'msg' => $e->getMessage()]);
-        }
+       }
     }
+    //竞技赛结算
     public function gameSettle(){
         try{
-          //  ($matchId, $result, $winner, $winnerId)
+      
             $matchId =  $_POST['matchId'];
             $user_id =  $_POST['user_id'];
             $rank    =  $_POST['rank'];
             $score   =  $_POST['score'];
-            $slime_id = $_POST['slime_id'];
+            $is_finish   =  $_POST['is_finish'];
             $gameService =  new GameService();
-            $data = $gameService->gameSettle($matchId,$user_id,$rank,$score,$slime_id);
+            $data = $gameService->gameSettle($matchId,$user_id,$rank,$score,$is_finish);
             echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
         }catch (Exception  $e){
             echo json_encode(['status' => '-1', 'msg' => $e->getMessage()]);
         }
     }
     
-      public function createFunMatch(){
+    //创建娱乐赛
+    public function createFunMatch(){
        try{
-            $playUser =  explode(',', $_POST['playUser']);
-            $slime_id =   explode(',', $_POST['slime_id']);
            
-            $datas = array_combine($playUser,$slime_id);
-             
-             foreach ($datas as $k => $v) {
-               $v = $v+1;
-         
-               $level = M('user_slime')->where(array('s_id' => $v,'u_id' => $k))->field('exp')->find();
-               $levles[] = $level['exp'];
+            $playUser =  explode(',', $_POST['playUser']);
+            // $slime_id =  explode(',', $_POST['slime_id']);
+            // $datas = array_combine($playUser,$slime_id);
+             foreach ($playUser as $k => $v) {
+               $slime = M('user_slime')->where(array('u_id'=>$v,'is_check'=>1,'is_lock'=>1))->field('u_id,s_id,level,hat')->find();
+               // $level = M('user_slime')->where(array('s_id' => $v,'u_id' => $k))->field('exp')->find();
+               $levles[] = $slime;
              }
             $gameService =  new GameService();
-            $data = $gameService->createFunMatch($playUser,$slime_id);
+            $data = $gameService->createFunMatch($playUser);
             $data['slime_level'] = $levles;
             echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
         }catch (Exception  $e){
             echo json_encode(['status' => '-1', 'msg' => $e->getMessage()]);
         }
     }
+    //娱乐赛结算
     public function funGameSettle(){
         try{
-          //  ($matchId, $result, $winner, $winnerId)
             $matchId =  $_POST['matchId'];
             $score =  $_POST['score'];
             $user_id =  $_POST['user_id'];
             $rank =   $_POST['rank'];
-            $slime_id =   $_POST['slime_id'];
+            $is_finish   =  $_POST['is_finish'];
             $gameService =  new GameService();
-            $data = $gameService->funGameSettle($matchId,$user_id,$rank,$score,$slime_id);
+            $data = $gameService->funGameSettle($matchId,$user_id,$rank,$score,$is_finish);
             echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
         }catch (Exception  $e){
             echo json_encode(['status' => '-1', 'msg' => $e->getMessage()]);

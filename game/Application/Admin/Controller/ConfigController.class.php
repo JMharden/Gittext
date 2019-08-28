@@ -37,6 +37,37 @@ class ConfigController extends AdminController {
 		$this -> _save();
 		$this -> display();
     }
+    	// 大转盘设置
+	public function hongbao()
+	{
+		if (IS_POST) {
+			// if (isset($_POST['xiao19']) && isset($_POST['xiao01'])) {
+		        // if ($_POST['xiao19']+$_POST['xiao01']!=1) {
+		        // 	$this->error('小盘概率设置错误，要相加等于1');
+		        // }
+	    	// }
+	    	// if (isset($_POST['zhong01']) && isset($_POST['zhong05']) && isset($_POST['zhong21']) && isset($_POST['zhong36'])) {
+		        if (($_POST['zhong01']+$_POST['zhong05']+$_POST['zhong21']+$_POST['zhong36'])<1) {
+		        	$zhong = ($_POST['zhong01']+$_POST['zhong05']+$_POST['zhong21']+$_POST['zhong36']);
+		        	$this->error('中盘概率'.$zhong.'设置错误，要相加等于1');
+		        }
+	    	// }
+	    	// if (isset($_POST['da005']) && isset($_POST['da01']) && isset($_POST['da02']) && isset($_POST['da03']) && isset($_POST['da05']) && isset($_POST['da11']) && isset($_POST['da2']) && isset($_POST['da3']) && isset($_POST['da5']) && isset($_POST['da6']) && isset($_POST['da8']) && isset($_POST['da10'])) {
+		        // if (($_POST['da005']+$_POST['da01']+$_POST['da02']+$_POST['da03']+$_POST['da05']+$_POST['da11']+$_POST['da2']+$_POST['da3']+$_POST['da5']+$_POST['da6']+$_POST['da8']+$_POST['da10'])<1) {
+		        // 	$da = $_POST['da005']+$_POST['da01']+$_POST['da02']+$_POST['da03']+$_POST['da05']+$_POST['da11']+$_POST['da2']+$_POST['da3']+$_POST['da5']+$_POST['da6']+$_POST['da8']+$_POST['da10'];
+		        // 	$this->error('大盘概率'.$da.'设置错误，要相加等于1');
+		        // }
+		    // }
+        }  
+		$this -> _save();
+        $daytime = strtotime(date("Y-m-d",time()));
+        $shouru = M('zhuan')->where(array('addtime'=>array('gt',$daytime)))->sum('money');
+
+        $zhichu = M('zhuan')->where(array('addtime'=>array('gt',$daytime)))->sum('ying');
+        $lirun = ($shouru-$zhichu)/$shouru;
+        $this->assign('lirun',$lirun);
+		$this -> display();
+    }
 
 
 	

@@ -88,13 +88,13 @@ class ActivityService
      */
     function getLoginRewardList($loginDays){
         $list =[
-            1=>['num'=>5,'type'=>'candy'],
-            2=>['num'=>10,'type'=>'candy'],
-            3=>['num'=>20,'type'=>'candy'],
-            4=>['num'=>5,'type'=>'candy1'],
-            5=>['num'=>10,'type'=>'candy1'],
-            6=>['num'=>15,'type'=>'candy1'],
-            7=>['num'=>10,'type'=>'candy2']
+            1=>['num'=>15,'type'=>'crystal'],
+            2=>['num'=>25,'type'=>'crystal'],
+            3=>['num'=>35,'type'=>'crystal'],
+            4=>['num'=>50,'type'=>'crystal'],
+            5=>['num'=>60,'type'=>'crystal'],
+            6=>['num'=>60,'type'=>'crystal'],
+            7=>['num'=>75,'type'=>'crystal']
         ];
         if($loginDays>0&&$loginDays<8){
             return $list[$loginDays];
@@ -118,7 +118,7 @@ class ActivityService
             //更新领取记录
             M('login_reward')->where(array('id'=>$activityId))->save(array("is_draw"=>"Y","draw_time"=>date("Y-m-d H:i:s")));
             //更新用户奖励
-            $num = $data['reward_num'];
+            $num  = $data['reward_num'];
             $type = $data['reward_type'];
             if($num&&$type){
                 $result = M('user')->where(array("user_id"=>$userId))->setInc($type,$num);

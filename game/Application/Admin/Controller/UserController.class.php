@@ -5,7 +5,7 @@ use Think\Controller;
 
 class UserController extends AdminController 
 {
-
+	//用户列表
 	public function index(){
 		$_GET = array_merge($_GET,$_POST);
 		$where = array();
@@ -13,7 +13,7 @@ class UserController extends AdminController
 		if (!empty($_GET['nickname'])) {
 			$where['nickname'] = array('like','%'.$_GET['nickname'].'%');
 		}
-		 if(!empty($_GET['money'])){
+		if(!empty($_GET['money'])){
             $order = $order.' money '.$_GET['money'].', ';
         }
 
@@ -24,7 +24,7 @@ class UserController extends AdminController
         if(!empty($_GET['rank'])){
             $order = $order.' rank '.$_GET['rank'].', ';
         }
-		$order = $order.' id desc';
+		$order = $order.'id desc';
 		$model = M('user_base');
 		$count = $model -> where($where) -> count();
 		$page = new \Think\Page($count, 25);
@@ -32,17 +32,39 @@ class UserController extends AdminController
 	  
        $list  = M('user_base')->alias('a')
                         ->join("dd_user u on a.id=u.user_id") //附表连主表
-                        ->field("a.nickname,a.sex,a.id,a.parent1,a.parent2,a.parent3,a.join_time,u.active_point,u.rank,u.money")
+                        ->field("a.id,a.nickname,a.sex,a.id,a.parent1,a.parent2,a.parent3,a.join_time,u.club_id,u.active_point,u.rank,u.money")
                         ->where($where)//需要显示的字段
                         ->order($order)//需要显示的字段
                         ->limit($page -> firstRow . ',' . $page -> listRows )
                         ->select(); 
-                       
+        foreach ($list as $k => $v) {
+        	$list[$k]['fun_game'] =  M('fun_play_log')->where(array('user_id'=>$v['id']))->count();//娱乐赛房间总数
+        	$list[$k]['play_game']=  M('play_log')->where(array('user_id'=>$v['id']))->count();//竞技赛房间总数
+        	$list[$k]['advert']   =  M('action_log')->where(array('type'=>array('in',array(6,7))))->count();  //广告次数
+        	$list[$k]['share']    =  M('action_log')->where(array('user_id'=>$v['id'],'type'=>array('in',array(1,2))))->count();
+			if($list[$k]['club_id']){
+				$list[$k]['club_id'] = M('club_info')->where(array('id'=>$v['club_id']))->getField('club_name');
+			}else{
+				$list[$k]['club_id'] = "无";
+			}
+        }
+       
         $this -> assign('list',$list);
         $this -> assign('page',$page -> show());
 		$this -> display();
 	}
+	public function feedback() 
+    {
+		$_GET = array_merge($_GET,$_POST);
+		$where = array();
 
+		if (!empty($_GET['number'])) {
+			$where['number'] = array('like','%'.$_GET['number'].'%');
+			
+		}
+		$this -> _list('feedback',$where,'id desc');
+	}
+	//导出用户数据
 	public function excelUser(){
 		$aList = M('user_base')->alias('a')
                     ->join("dd_user u on a.id=u.user_id") //附表连主表
@@ -76,12 +98,13 @@ class UserController extends AdminController
         }
 
     
-     	
-		$aHead = array('UID','注册时间','昵称','性别','等级','体力值', '货币剩余', '所属公会','娱乐赛参与次数','竞技赛参与次数','广告点击次数','分享次数','最近一次登录时间');
-		// $dd = new \Common\Util\excel();
-		
+     	 Vendor("Excel.excel");  //加载解密文件，在官方有下载
         
-        $excel = A('Excel');
+        $excel = new \excel();
+		$aHead = array('UID','注册时间','昵称','性别','等级','体力值', '货币剩余', '所属公会','娱乐赛参与次数','竞技赛参与次数','广告点击次数','分享次数','最近一次登录时间');
+
+        
+        // $excel = A('Excel');
         
         
         
@@ -90,7 +113,7 @@ class UserController extends AdminController
         // Excel::arr2ExcelDownload($aList,$aHead,'会员信息');
 	}
 
-public function getDuan($level){
+	public function getDuan($level){
           $filter = [
             ['level' => '青铜',  'min' => 0,  'max' => 1320],
             ['level' => '白银',  'min' => 1321,  'max' => 1500],
@@ -104,117 +127,7 @@ public function getDuan($level){
 
           return  current($result);
      }
-    // 列表
-	public function indexs()
-	{
-		$_GET = array_merge($_GET,$_POST);
-		$where = array();
-
-		if (!empty($_GET['id'])) {
-			$where['id'] = intval($_GET['id']);
-		}
-
-		if (!empty($_GET['openid'])) {
-			echo($where['openid|bopenid'] = $_GET['openid']);
-		}
-
-		/*if (!empty($_GET['mobile'])) {
-			$where['mobile'] = $_GET['mobile'];
-		}
-
-		if(!empty($_GET['name'])){
-			$where['name'] = $_GET['name'];
-		}*/
-
-		if (IS_POST) {
-			if ($_POST['id']) {
-				$id = '';
-				foreach ($_POST['id'] as $vo) {
-					$ids = $vo.','.$ids;
-				}
-
-				$ids = substr($ids,0,strlen($ids)-1);
-				if ($_POST['tongdao']) {
-				  if ($_POST['tongdao']=='拉黑会员') {
-                    $up['is_tong'] = 1;
-				  } else {
-                    $up['is_tong'] = 0;
-				  }
-				  M('user')->where(['id' => ['in',$ids]])->save($up);
-
-				  // 取消拉黑同时删掉投诉记录
-				  if (!$up['is_tong']) {
-				  	M('suggest')->where(['uid' => ['in',$ids]])->delete();
-				  }
-
-                  $this->success('设置成功');
-                  die; 
-				}
-
-				if ($_POST['gongpai']) {
-	                if ($_POST['gongpai'] == '增加一个公排会员') {
-	                    foreach($_POST['id'] as $vo){
-	                    	$userinfo  = M('user')->where(array('id'=>$vo))->find();
-	                    	//执行公排
-	                    	//$is_gong = is_gongpai($userinfo['id']); //检查是否已经公排
-	                    	//if( !$is_gong ){
-	                           paiwei($userinfo);
-	                    	//}
-	                    }
-					}
-
-				  	if ($_POST['gongpai']=='删除一个公排会员') {
-	                    //删除公排信息
-	                    foreach($_POST['id'] as $vo){
-	                    	$gong  = M('tree')->where(array('user_id'=>$vo))->order('id desc')->find();
-	                    	M('tree')->where(array('id'=>$gong['id']))->delete();
-
-	                    	$gong  = M('tree')->where(array('user_id'=>$vo))->order('id desc')->find();
-	                    	//如果用户已经没有公排位置
-	                    	if(! $gong){
-	                    	 M('land')->where(array('user_id'=>$vo))->delete();
-	                    	}
-	                    }
-				  	}
-				}
-			//	$this->success('操作成功','/bst_admin.php?m=Admin&c=User&a=index');
-			}
-		}
-
-        $order = null;
-
-        if(!empty($_GET['money_order'])){
-            $order = $order.' money '.$_GET['money_order'].', ';
-        }
-
-        if(!empty($_GET['yingkui_order'])){
-            $order = $order.' yingkui '.$_GET['yingkui_order'].', ';
-        }
-
-        if(!empty($_GET['num_order'])){
-            $order = $order.' num '.$_GET['num_order'].', ';
-        }
-
-        if(!empty($_GET['withdraw_order'])){
-            $order = $order.' withdraw '.$_GET['withdraw_order'].', ';
-        }
-
-        if(!empty($_GET['count_money_order'])){
-            $order = $order.' count_money '.$_GET['count_money_order'].', ';
-        }
-
-        if(!empty($_GET['expense_order'])){
-            $order = $order.' expense '.$_GET['expense_order'].', ';
-        }
-
-        $order = $order.' id desc';
-
-		// if(!IS_POST){
-		// 	$data['user_count'] = M('')->where()->count();
-		// }
-
-		$this -> _list('user',$where,$order);
-	}
+ 
 
 	
     public function qiehuan()
@@ -250,7 +163,9 @@ public function getDuan($level){
 	{
 
 		$id = intval($_GET['id']);
-		$info = M('user') -> find($id);
+
+		$info = M('user')->where(array('id'=>$id))->find();
+		// var_dump($info);exit;
 		if(!$info){
 			$this -> error('操作错误');
 		}
@@ -282,9 +197,16 @@ public function getDuan($level){
 
 	// 删除商品
 	public function del()
-	{
-		$this -> _del('user', $_GET['id']);
-		$this -> success('删除成功！');
+	{	
+		// $this -> _del('user', $_GET['id']);
+	  $user_id= $_GET['id'];
+	  $user = M('user')->where(array('user_id'=>$user_id))->delete();
+      $userBase = M('user_base')->where(array('id'=>$user_id))->delete();
+      $userSlime = M('user_slime')->where(array('u_id'=>$user_id))->delete();
+      if($user && $userBase && $userSlime){
+        $this -> success($user_id.'用户删除成功！');
+      }
+		
 	}
 
 
@@ -337,40 +259,7 @@ public function getDuan($level){
 	}
 
 
-	// 充值
-	public function charge()
-	{
-       //$this->error('该功能已关闭');
-		/*if (IS_POST) {
-			$user_id = intval($_POST['user_id']);
-			$find = M('user') -> find($user_id);
-			if(!$find){
-				$this -> error('用户不存在');
-			}
-
-			$money = floatval($_POST['money']);
-
-			M('charge_log') -> add(array(
-				'user_id' => $user_id,
-				'money' => $money,
-				'chou' => 1,
-				'remark' => $_POST['remark'],
-				'create_time' => NOW_TIME
-			));
-
-			M('user') -> save(array(
-				'id' => $user_id,
-				'money' => array('exp','money+'.$money)
-			));
-
-			flog($user_id,'money',$money,7);
-
-			$this -> success('操作成功');
-			exit;
-		}
-
-		$this -> display();*/
-	}
+	
 
 
 

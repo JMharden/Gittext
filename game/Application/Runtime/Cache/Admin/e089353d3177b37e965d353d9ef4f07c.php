@@ -8,12 +8,12 @@
 		<title>网站后台</title>
 		<link rel="stylesheet" href="/Public/admin/css/style.default.css" type="text/css" />
 		<link rel="stylesheet" href="/Public/plugins/bootstrap/css/bootstrap.font.css" type="text/css" />
-				<script type="text/javascript" src="../../../Public/admin/js/plugins/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../../Public/admin/js/plugins/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="/Public/admin/js/plugins/jquery-ui.js"></script>
 		<script type="text/javascript" src="/Public/admin/js/plugins/jquery.cookie.js"></script>
-       <script type="text/javascript" src="/Public/admin/js/plugins/jquery-plugin.js"></script>
-		<script type="text/javascript" src="../../../Public/admin/js/custom/jquery.cookie.js">
-				<script type="text/javascript" src="/Public/admin/js/custom/general.js"></script>
+        <script type="text/javascript" src="/Public/admin/js/plugins/jquery-plugin.js"></script>
+		<script type="text/javascript" src="../../../Public/admin/js/custom/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/Public/admin/js/custom/general.js"></script>
 
 		</script>
 		
@@ -46,10 +46,10 @@
 		<aside class="main-sidebar">
 			<section class="sidebar">
 				<ul class="sidebar-menu">
-					<li class="header">开心大转盘</li>
+					<li class="header">蹦蹦史莱姆</li>
 
 					<li>
-						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
+						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=dayReport"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
 					</li>
 
 					<li class="treeview" onclick="index(0)">
@@ -60,16 +60,33 @@
 						</a>
 						<ul class="treeview-menu" style="display: none;">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
 							</li>
 							<!-- <li><a href="/index.php?m=Admin&c=Config&a=pay_mp"><i class="fa fa-circle-o"></i>支付公众号</a></li> -->
 					</li>
-					</ul>
-					</li>
+
+
+				</ul>
 					<li class="treeview" onclick="index(1)">
+						<a href="#">
+							<i class="fa fa-user "></i> <span>用户管理</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="/index.php?m=Admin&c=User&a=index"><i class="fa fa-circle-o"></i> 会员管理</a>
+							</li>
+							<li>
+								<a href="/index.php?m=Admin&c=User&a=feedback"><i class="fa fa-circle-o"></i>用户反馈</a>
+							</li>
+						
+						</ul>
+					</li>
+					</li>
+					<li class="treeview" onclick="index(2)">
 						<a href="#">
 							<i class="fa fa-gamepad"></i>
 							<span>游戏设置</span>
@@ -77,17 +94,17 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 大转盘</a>
+								<a href="/index.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 大转盘</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 佣金设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=hongbao"><i class="fa fa-circle-o"></i>红包设置</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=withdraw"><i class="fa fa-circle-o"></i> 提现设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=withdraw"><i class="fa fa-circle-o"></i> 提现设置</a>
 							</li>
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(2)">
+					<li class="treeview" onclick="index(3)">
 						<a href="#">
 							<i class="fa fa-comments"></i>
 							<span>公众号设置</span>
@@ -95,14 +112,14 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=mp"><i class="fa fa-circle-o"></i> 主公众号</a>
+								<a href="/index.php?m=Admin&c=Config&a=mp"><i class="fa fa-circle-o"></i> 主公众号</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=bei_mp"><i class="fa fa-circle-o"></i> 备份公众号</a>
+								<a href="/index.php?m=Admin&c=Config&a=bei_mp"><i class="fa fa-circle-o"></i> 备份公众号</a>
 							</li>
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(3)">
+					<li class="treeview" onclick="index(4)">
 						<a href="#">
 							<i class="fa fa-credit-card-alt"></i>
 							<span>支付设置</span>
@@ -110,12 +127,12 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=live_pay"><i class="fa fa-circle-o"></i> 生活圈支付</a>
+								<a href="/index.php?m=Admin&c=Config&a=live_pay"><i class="fa fa-circle-o"></i> 生活圈支付</a>
 							</li>
 						</ul>
 					</li>
 
-					<li class="treeview" onclick="index(4)">
+					<li class="treeview" onclick="index(5)">
 						<a href="#">
 							<i class="fa fa-cloud"></i>
 							<span>域名设置</span>
@@ -123,72 +140,35 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Domain&a=index"><i class="fa fa-circle-o"></i> 游戏域名</a>
+								<a href="/index.php?m=Admin&c=Domain&a=index"><i class="fa fa-circle-o"></i> 游戏域名</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Domain&a=generalize"><i class="fa fa-circle-o"></i> 推广域名</a>
+								<a href="/index.php?m=Admin&c=Domain&a=generalize"><i class="fa fa-circle-o"></i> 推广域名</a>
 							</li>
-						</ul>
-					</li>
-					<li class="treeview" onclick="index(5)">
-						<a href="#">
-							<i class="fa fa-user "></i> <span>用户管理</span>
-							<i class="fa fa-angle-left pull-right"></i>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="/kpan.php?m=Admin&c=User&a=index"><i class="fa fa-circle-o"></i> 会员管理</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=User&a=qiehuan"><i class="fa fa-circle-o"></i> 调整会员数据</a>
-							</li>
-							<!-- <li><a href="#"><i class="fa fa-circle-o"></i> Editors</a></li> -->
 						</ul>
 					</li>
 					<li class="treeview" onclick="index(6)">
 						<a href="#">
-							<i class="fa fa-gamepad"></i>
-							<span>活动管理</span>
+							<i class="fa fa-cloud"></i>
+							<span>商品管理</span>
 							<i class="fa fa-angle-left pull-right"></i>
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Activity&a=index"><i class="fa fa-circle-o"></i>活动列表</a>
+								<a href="/index.php?m=Admin&c=Product&a=index"><i class="fa fa-circle-o"></i> 商品列表</a>
 							</li>
-							
-							
+							<!-- <li>
+								<a href="/index.php?m=Admin&c=Domain&a=generalize"><i class="fa fa-circle-o"></i> 推广域名</a>
+							</li> -->
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(7)">
-						<a href="#">
-							<i class="fa fa-pie-chart"></i> <span>报表查看</span>
-							<i class="fa fa-angle-left pull-right"></i>
-						</a>
-						<ul class="treeview-menu" ;>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Product&a=buy"><i class="fa fa-circle-o"></i> 购买列表</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=admin&c=product&a=zhong&money=5.00"><i class="fa fa-circle-o"></i> 中奖列表</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=admin&c=product&a=bizhong"><i class="fa fa-circle-o"></i> 必中列表</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Finance&a=withdraw"><i class="fa fa-circle-o"></i> 提现记录</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Finance&a=expense"><i class="fa fa-circle-o"></i> 佣金记录</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Finance&a=payorder"><i class="fa fa-circle-o"></i> 充值记录</a>
-							</li>
-						</ul>
-					</li>
+					
+				
+				
 
 					<li class="header">其他功能</li>
 					<li>
-						<a href="/kpan.php?m=Admin&c=Admin&a=clear_cache"><i class="fa fa-recycle text-yellow"></i> <span>[清除缓存]</span></a>
+						<a href="/index.php?m=Admin&c=Admin&a=clear_cache"><i class="fa fa-recycle text-yellow"></i> <span>[清除缓存]</span></a>
 					</li>
 					<li>
 						<a href="/index.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
@@ -257,6 +237,7 @@
 				setCookie(key, '', -1);
 			}
 		</script>
+
 		<script src="/Public/admin/dist/sidebar-menu.js"></script>
 		<script>
 			$.sidebarMenu($('.sidebar'))
@@ -267,118 +248,58 @@
             <span class="pagedesc">设置游戏的基本信息</span>
         </div><!--pageheader-->
         <div id="contentwrapper" class="contentwrapper lineheight21">
-            <form class="stdform stdform2" method="post">          
+            <form class="stdform stdform2" method="post">
                 <p>
-					<label>利润比率 (此刻利润值为：<span style="color:#f65c20"><?php echo ($lirun); ?></span>)<small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="lirun" id="lirun" value="<?php echo ($_CFG["site"]["lirun"]); ?>" class="smallinput" /></span>
+                    <label>time<span style="color:#f65c20"><?php echo ($battleAmount1); ?></span>)<small>time</small></label>
+                    <span class="field"><input type="datetime-local" name="datetime-local" id="datetime-local" value="" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>初级场对战金额<span style="color:#f65c20"><?php echo ($battleAmount1); ?></span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="battleAmount1" id="battleAmount1" value="<?php echo ($_CFG["site"]["battleAmount1"]); ?>" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>初级场利润比率 (此刻利润值为：<span style="color:#f65c20"><?php echo ($lirun1); ?></span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="lirun1" id="lirun1" value="<?php echo ($_CFG["site"]["lirun1"]); ?>" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>中级场对战金额<span style="color:#f65c20"><?php echo ($battleAmount2); ?></span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="battleAmount2" id="battleAmount2" value="<?php echo ($_CFG["site"]["battleAmount2"]); ?>" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>中级场利润比率 (此刻利润值为：<span style="color:#f65c20"><?php echo ($lirun2); ?></span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="lirun2" id="lirun2" value="<?php echo ($_CFG["site"]["lirun2"]); ?>" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>高级场对战金额<span style="color:#f65c20"><?php echo ($battleAmount3); ?></span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="battleAmount3" id="battleAmount3" value="<?php echo ($_CFG["site"]["battleAmount3"]); ?>" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>高级场利润比率 (此刻利润值为：<span style="color:#f65c20"><?php echo ($lirun3); ?></span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="lirun3" id="lirun3" value="<?php echo ($_CFG["site"]["lirun3"]); ?>" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>邀请赛利润比率 (此刻利润值为：<span style="color:#f65c20"><?php echo ($lirun4); ?></span>)<small>每把要扣除的门票费用</small></label>
+                    <span class="field"><input type="text" name="lirun4" id="lirun4" value="<?php echo ($_CFG["site"]["lirun4"]); ?>" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>抽成总比率不能大于等1</small></label>
+                </p>
+				<p>
+					<label>俱乐部抽成比例<small>比如：0.2表示20%</small></label>
+					<span class="field"><input type="text" name="clubRatio" id="clubRatio" value="<?php echo ($_CFG["site"]["clubRatio"]); ?>" class="smallinput" /></span>
 				</p>
 				<p>
-					<label>新盘前3000ID第一轮必中的金额<small>比如：2;5;10;2元5元10元</small></label>
-					<span class="field"><input type="text" name="bizhong" id="bizhong" value="<?php echo ($_CFG["site"]["bizhong"]); ?>" class="smallinput" /></span>
+					<label>第一级抽成比例 <small>比如：0.2表示20%</small></label>
+					<span class="field"><input type="text" name="firstRatio" id="firstRatio" value="<?php echo ($_CFG["site"]["firstRatio"]); ?>" class="smallinput" /></span>
 				</p>
-				<p>
-					<label>邀请每满N人以上就会必中奖一回 <small>比如：20人就必中一次</small></label>
-					<span class="field"><input type="text" name="meiman" id="meiman" value="<?php echo ($_CFG["site"]["meiman"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>无规律必中一次，例如第4  第9 第14</label>
-					<span class="field"><input type="text" name="wuguili" id="wuguili" value="<?php echo ($_CFG["site"]["wuguili"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>小盘1.9倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="xiao19" id="xiao19" value="<?php echo ($_CFG["site"]["xiao19"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>小盘0.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="xiao01" id="xiao01" value="<?php echo ($_CFG["site"]["xiao01"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>中盘0.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="zhong01" id="zhong01" value="<?php echo ($_CFG["site"]["zhong01"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>中盘0.5倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="zhong05" id="zhong05" value="<?php echo ($_CFG["site"]["zhong05"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>中盘2.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="zhong21" id="zhong21" value="<?php echo ($_CFG["site"]["zhong21"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>中盘3.6倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="zhong36" id="zhong36" value="<?php echo ($_CFG["site"]["zhong36"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.05倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da005" id="da005" value="<?php echo ($_CFG["site"]["da005"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da01" id="da01" value="<?php echo ($_CFG["site"]["da01"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.2倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da02" id="da02" value="<?php echo ($_CFG["site"]["da02"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.3倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da03" id="da03" value="<?php echo ($_CFG["site"]["da03"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘0.5倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da05" id="da05" value="<?php echo ($_CFG["site"]["da05"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘1.1倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da11" id="da11" value="<?php echo ($_CFG["site"]["da11"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘2倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da2" id="da2" value="<?php echo ($_CFG["site"]["da2"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘3倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da3" id="da3" value="<?php echo ($_CFG["site"]["da3"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘5倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da5" id="da5" value="<?php echo ($_CFG["site"]["da5"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘6倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da6" id="da6" value="<?php echo ($_CFG["site"]["da6"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘8倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da8" id="da8" value="<?php echo ($_CFG["site"]["da8"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>大盘10倍中率 <small>比如：0.2表示20%</small></label>
-					<span class="field"><input type="text" name="da10" id="da10" value="<?php echo ($_CFG["site"]["da10"]); ?>" class="smallinput" /></span>
-				</p>
-				<!-- 
-				<p>
-					<label>偷菜比率<small>比如：被偷后收益减少比率(%)</small></label>
-					<span class="field"><input type="text" name="tou" id="tou" value="<?php echo ($_CFG["site"]["tou"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>抽抽乐价格<small>参与抽抽乐需要支付的积分</small></label>
-					<span class="field"><input type="text" name="chou" id="chou" value="<?php echo ($_CFG["site"]["chou"]); ?>" class="smallinput" /></span>
-				</p> 
-				<p>
-					<label>抽抽乐奖金<small>百分比（%）</small></label>
-					<span class="field"><input type="text" name="chou_reward" id="chou_reward" value="<?php echo ($_CFG["site"]["chou_reward"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>抽抽乐推荐奖<small>百分比（%）</small></label>
-					<span class="field"><input type="text" name="chou_expense" id="chou_expense" value="<?php echo ($_CFG["site"]["chou_expense"]); ?>" class="smallinput" /></span>
-				</p>
-				<p>
-					<label>抽抽乐规则说明<small></small></label>
-					<span class="field">
-						<textarea name="chou_body" id="chou_body" style=" height:300px;"><?php echo ($_CFG["site"]["chou_body"]); ?></textarea>
-					</span>
-				</p> -->
+                <p>
+                    <label>第二级抽成比例 <small>比如：0.2表示20%</small></label>
+                    <span class="field"><input type="text" name="secondRatio" id="secondRatio" value="<?php echo ($_CFG["site"]["secondRatio"]); ?>" class="smallinput" /></span>
+                </p>
+                <p>
+                    <label>第三级抽成比例 <small>比如：0.2表示20%</small></label>
+                    <span class="field"><input type="text" name="thirdRatio" id="thirdRatio" value="<?php echo ($_CFG["site"]["thirdRatio"]); ?>" class="smallinput" /></span>
+                </p>
 				<p class="stdformbutton">
 					<button class="submit radius2">提交</button>
 					<input type="reset" class="reset radius2" value="重置" />

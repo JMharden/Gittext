@@ -2,6 +2,7 @@
 namespace Api\Controller;
 use Api\Service\GameService;
 use Api\Service\UserService;
+use Api\Service\ActivityService;
 use Think\Controller;
 
 /**
@@ -16,13 +17,27 @@ class IndexController extends ApiController
        parent::write_log();
        $token = $_POST['token'];
 
-       if($token == null || S($token) == null){
-           echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
-           exit;
-       }
+       // if($token == null || S($token) == null){
+       //     echo   json_encode(['status' => '403', 'msg' => 'token不能为空']);
+       //     exit;
+       // }
        $GLOBALS['token'] = S($token);
 
    }
+    public function activity(){
+        $openid  = $GLOBALS['token'][1];
+        $user_id = $GLOBALS['token'][2];
+        // $openid  = 'oRRcp4-ZeVnUyHeQOohCSdt4TEuk';
+        // $user_id = 2139;
+        $activityService =  new ActivityService();
+        $data = $activityService->accuLogin($openid,$user_id);
+        if($data){
+            echo json_encode(['status' => '1', 'msg' => '返回成功', 'data' => $data]);
+        }else{
+            echo json_encode(['status' => '-1', 'msg' => '返回失败']);
+        }
+
+    }
    /**
     随机AI
    */
@@ -298,8 +313,9 @@ class IndexController extends ApiController
      * @return   [JSON]     [description]
      */
     public function clubInfo(){
-       // $user_id =$GLOBALS['token'][2];
-       $user_id =$GLOBALS['token'][2];
+       
+       // $user_id = $GLOBALS['token'][2];
+        $user_id = $GLOBALS['token'][2];
        $club_id = M('user')->where(array('user_id'=>$user_id))->getField('club_id');
        if(IS_POST){
           if(S('clubinfo_'.$club_id)){
@@ -601,22 +617,6 @@ class IndexController extends ApiController
         return  current($result);
      }
 
-  /**
-     * [checkSlime description]
-     * @Author   佳民
-     * @DateTime 2019-04-26
-     * @Function [检测当前史莱姆]
-     * @return   [type]     [description]
-     */
-    public function checkSlime(){
-      $user_id= $GLOBALS['token'][2];;
-      $slimeId = $_POST['slime_id'];
-
-      $exp = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$slimeId))->getField('exp');
-      $level = $this->s_level($exp)['level'];
-      echo  $level;
-
-    }
 
 
     /**
@@ -644,7 +644,7 @@ class IndexController extends ApiController
     }
 
     public function addslime(){
-       $user_id =$GLOBALS['token'][2];
+      $user_id =$GLOBALS['token'][2];
       $result = M('slime')->where(array('id'=>3))->find();
       // var_dump($result);exit;
       $data  = array(
@@ -687,22 +687,23 @@ class IndexController extends ApiController
      * @Function [升级史莱姆]
      * @return   [type]     [description]
      */
-    public function upSlime(){
-      $user_id = $GLOBALS['token'][2];
-      if(IS_POST){
-         $sid = $_POST['s_id']+1;
+    // public function upSlime(){
+    //   $user_id = $GLOBALS['token'][2];
+    //   if(IS_POST){
+    //      $sid = $_POST['s_id']+1;
         
-         $candy1  = (int)$_POST['candy'];
-         $candy2  = (int)$_POST['candy1'];
-         $candy3  = (int)$_POST['candy2'];
-        $result = $this->hasCandy($user_id,$candy1,$candy2,$candy3,$sid);
+    //      $candy1  = (int)$_POST['candy'];
+    //      $candy2  = (int)$_POST['candy1'];
+    //      $candy3  = (int)$_POST['candy2'];
+    //     $result = $this->hasCandy($user_id,$candy1,$candy2,$candy3,$sid);
         
-        if($result){
-          echo json_encode(['status'=>1,'msg'=>'升级成功']);
-        }
+    //     if($result){
+    //       echo json_encode(['status'=>1,'msg'=>'升级成功']);
+    //     }
 
-      }
-    }
+    //   }
+    // }
+
   
      /**
      * [candyNum description]
@@ -795,8 +796,8 @@ class IndexController extends ApiController
      */
     public function shenglv($shenglv){
         $filter = [
-            ['level' => 4,  'min' => 0,     'max' => 20],
-            ['level' => 3,  'min' => 21,   'max' => 40],
+            ['level' => 4,  'min' => 0,   'max' => 20],
+            ['level' => 3,  'min' => 21,  'max' => 40],
             ['level' => 2,  'min' => 41,  'max' => 60],
             ['level' => 1,  'min' => 61,  'max' => 85],
             ['level' => 0,  'min' => 86,  'max' => 100],
@@ -824,8 +825,15 @@ class IndexController extends ApiController
 
         return  current($result);
     }
+    /**
+     * [综合评分及历史战绩 description]
+     * @Author   duke
+     * @DateTime 2019-08-23T18:30:33+0800
+     * @return   [type]                   [description]
+     */
     public function userInfo(){
-      $user_id = $GLOBALS['token'][2];;
+      $user_id =$GLOBALS['token'][2];
+      // $user_id = 3858;
       if($user_id == null){
         echo "请先登录！";exit;
       }
@@ -836,7 +844,13 @@ class IndexController extends ApiController
       echo json_encode(['status'=>1,'msg'=>'返回成功','zhScore'=>$zhScore,'playHistory'=>$playHistory,'funHistory'=>$funHistory]);
 
     }
-    //综合评分
+    /**
+     * [综合评分]
+     * @Author   duke
+     * @DateTime 2019-08-07T10:10:09+0800
+     * @param    [type]                   $user_id [description]
+     * @return   [type]                            [description]
+     */
     public function zhScore($user_id){
     
       $user = M('user')->where(array('user_id'=>$user_id))->field('match_amount,win_amount,fun_amount,fun_win_amount,club_id,rank')->find();
@@ -848,61 +862,104 @@ class IndexController extends ApiController
       $probability = round(($win/$game)*100).'%';
       $intsl = floor($sl);
       $shenglv = $this->shenglv($intsl)['level']; //胜率评分
+
       $match = M('play_log')->where(array('user_id'=>$user_id))->sum('score');
       $fun   = M('fun_play_log')->where(array('user_id'=>$user_id))->sum('score');
       $steps = round(($match+$fun)/$game);
-      $funscore  = M('play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
-      $playscore = M('fun_play_log')->where(array('user_id'=>$user_id))->field('score')->select();//最高步数
+
+      $matchrank = M('play_log')->where(array('user_id'=>$user_id))->sum('rank');
+      $funrank   = M('fun_play_log')->where(array('user_id'=>$user_id))->sum('rank');
+      $ranks = round(($matchrank+$funrank)/$game);
+
       $score    =  array_merge($funscore,$playscore);
       $allScore = $gameNum+$intsl+$user['rank'];
       $zhScore  = $this->score($allScore)['level'];
-        $result = array(
-          'club_name'   => $club_name,  //俱乐部名称
-          'gameCount'   => $game,       //总场次
-          'probability' => $probability,//胜率 
-          'shenglv'     => $shenglv,    //胜率评分  
-          'gameNum'     => $gameNum,    //场次评分 
-          'score'       => max($score)['score'],      //最高步数
-          'zhScore'     => $zhScore,     //综合评分
-          'zhScore1'    => $allScore,     //综合评分数字
-          // 'gameCount1'  => $game,  
-          'aveSteps'    => $steps
-        );
+
+      $result = array(
+        'club_name'   => $club_name,  //俱乐部名称
+        'gameCount'   => $game,       //总场次
+        'probability' => $probability,//胜率 
+        'shenglv'     => $shenglv,    //胜率评分  
+        'gameNum'     => $gameNum,    //场次评分 
+        'score'       => $ranks,      //平均排名
+        'zhScore'     => $zhScore,     //综合评分
+        'zhScore1'    => $allScore,     //综合评分数字
+        'aveSteps'    => $steps
+      );
 
         return $result;
     }
+    public function secTime($time){
+   
+      if(is_numeric($time)){
+        $value = array(
+          
+          "minutes" => 0, "seconds" => 0,
+        );
 
-   // 竞技赛历史战绩
+        if($time >= 60){
+          $value["minutes"] = floor($time/60);
+          $time = ($time%60);
+        }
+        $value["seconds"] = floor($time);
+        //return (array) $value;
+        $t=$value["minutes"] ."分".$value["seconds"]."秒";
+        return $t;
+      }else{
+        return false;
+      }
+   }
+   /**
+    * [竞技赛历史战绩]
+    * @Author   duke
+    * @DateTime 2019-08-07T10:09:45+0800
+    * @param    [type]                   $user_id [description]
+    * @return   [type]                            [description]
+    */
    public function  playHistory($user_id){
 
-      $play = M('play_log')->where(array('user_id'=>$user_id,'status'=>2))->field('rank,score,bonu,ranks,end_time,user_id')->order('end_time desc')->limit(20)->select();
+      $play = M('play_log')->where(array('user_id'=>$user_id,'status'=>2))->field('rank,score,bonu,end_time,user_id,is_finish')->order('end_time desc')->limit(20)->select();
       foreach ($play as $k => $v) {
-        $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
-    
+       
+        if($v['is_finish'] == 1){
+          $score = $this->secTime($v['score']);
+        }else{
+          $score = '未完成';
+        }
         $data = array(
           'end_time'  => date('m-d H:i',$v['end_time']),
-          'score'     => $v['score'],
-          'rank'      => $v['rank'],
-          'ranks'     => $v['ranks'],
-          'bonu'      => floor($v['bonu']),
-          'userRank'  => $userRank
+          'score'     => $score,           //完成时间
+          'rank'      => $v['rank'],       //排名
+          'bonu'      => floor($v['bonu']),//水晶
         );
         $datas[]  = $data;
       }
      return $datas;
    }
-   //娱乐赛历史战绩
+   /**
+    * [排位赛历史战绩]
+    * @Author   duke
+    * @DateTime 2019-08-07T10:09:25+0800
+    * @param    [type]                   $user_id [description]
+    * @return   [type]                            [description]
+    */
   public function funHistory($user_id){
 
-      $play = M('fun_play_log')->where(array('user_id'=>$user_id,'status'=>2))->field('rank,score,end_time,user_id')->order('end_time desc')->limit(20)->select();  
+      $play = M('fun_play_log')->where(array('user_id'=>$user_id,'status'=>2))->field('rank,score,ranks,crystal,is_finish,end_time,user_id')->order('end_time desc')->limit(20)->select();  
 
       foreach ($play as $k => $v) {
-        $userRank = M('user')->where(array('user_id'=>$v['user_id']))->getField('rank');
-    
+       
+        if($v['is_finish'] == 1){
+          $score = $this->secTime($v['score']);
+        }else{
+          $score = '未完成';
+        }
         $data = array(
           'end_time'  => date('m-d H:i',$v['end_time']),
-          'score'     => $v['score'],
-          'rank'      => $v['rank'],
+          'score'     => $score,            //完成情况
+          'rank'      => $v['rank'],       //排名
+          'ranks'     => $v['ranks'],      //段位分
+          'crystal'   => $v['crystal'],    //水晶
         );
         $datas[]  = $data;
       }
@@ -910,7 +967,7 @@ class IndexController extends ApiController
   }
    
 
-   //用户收益记录
+   //
    public  function  userFlog(){
    
       $user_id =$GLOBALS['token'][2];
@@ -960,7 +1017,12 @@ class IndexController extends ApiController
      echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$datas,'bonus'=>$bouns]);
     
    }
-
+   /**
+    * [用户分享 description]
+    * @Author   duke
+    * @DateTime 2019-08-07T10:07:12+0800
+    * @return   [type]                   [description]
+    */
    public function share(){
       $user_id =$GLOBALS['token'][2];
       if($user_id == null){
@@ -970,7 +1032,7 @@ class IndexController extends ApiController
       $nowUrl = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];
       if(IS_POST){
         $type = $_POST['type'];
-        $results = $this->shareType();
+        $results = $this->shareType($type);
         
         if($type == 2){
           if($share < 1){
@@ -993,12 +1055,35 @@ class IndexController extends ApiController
       }
    }
 
-    public function shareType(){
-      $result = M('share')->limit(1)->order('rand()')->find();
+    // public function shareType(){
+    //   $result = M('share')->limit(1)->order('rand()')->find();
       
+    //   return $result;
+    // }
+    public function shareType($type){
+      // $type =$_POST['type'];
+      if($type == 1){//右上角
+        $result = M('share')->limit(1)->order('rand()')->where(array('id'=>array('IN',array(3,5,6))))->find();
+      }else if ($type == 2){//娱乐赛
+        $result = M('share')->where(array('id'=>4))->find();
+      }else if ($type == 3){//开黑
+        $result = M('share')->limit(1)->order('rand()')->where(array('id'=>array('IN',array(2,3))))->find();
+      }
+      else if ($type == 4){//累计收益
+        $result = M('share')->where(array('id'=>6))->find();
+      }else{
+        $result = M('share')->limit(1)->order('rand()')->where(array('id'=>array('IN',array(1,2))))->find();
+      }
       return $result;
+      // echo json_encode(['status'=>1,'msg'=>'success','data'=>$result]);exit;
     }
 
+    /**
+     * [浏览广告 description]
+     * @Author   duke
+     * @DateTime 2019-08-07T10:06:53+0800
+     * @return   [type]                   [description]
+     */
     public function advert(){
     	$user_id = $GLOBALS['token'][2];
     	if($user_id == null){
@@ -1017,18 +1102,39 @@ class IndexController extends ApiController
 	        );
 	        $result = M('action_log')->add($data);
 	   	 	if($type == 6 && $status == 2){//娱乐赛广告
-	   	 		M('user')->where(array('user_id'=>$user_id))->setInc('stamina',6);
-	   	 		echo json_encode(['status'=>1,'msg'=>'观看成功']);exit;
+
+          $advert = M('user')->where(array('user_id'=>$user_id,'advert'=>array('GT',0)))->setDec('advert',1);
+          if($advert){
+            M('user')->where(array('user_id'=>$user_id))->setInc('stamina',3);
+            echo json_encode(['status'=>1,'msg'=>'娱乐赛观看成功']);exit;
+          }else{
+            echo json_encode(['status'=>-2,'msg'=>'娱乐赛观看次数不足']);exit;
+          }
+	   	 		
+	   	 		
 	   	 	}else if($type == 7 && $status == 2){
-	   	 		M('user')->where(array('user_id'=>$user_id))->setInc('money',5);
-	   	 		echo json_encode(['status'=>1,'msg'=>'观看成功']);exit;
-	   	 	}else{
+          $advert_match = M('user')->where(array('user_id'=>$user_id,'advert_match'=>array('GT',0)))->setDec('advert_match',1);
+          if($advert_match){
+            M('user')->where(array('user_id'=>$user_id))->setInc('ctrstal',20);
+            echo json_encode(['status'=>1,'msg'=>'竞技赛观看成功']);exit;
+          }else{
+            echo json_encode(['status'=>-1,'msg'=>'竞技赛观看次数不足']);exit;
+          }
+	   	 		  
+	   	 	}else if($type == 9 && $status == 2){//领取收益
+          echo json_encode(['status'=>1,'msg'=>'观看成功']);exit;
+        }else{
 	   	 		echo json_encode(['status'=>-1,'msg'=>'未观看完视频']);
 	   	 	}
 	   	}
     }
 
-//排行榜
+    /**
+     * [排行榜 description]
+     * @Author   duke
+     * @DateTime 2019-08-07T10:06:30+0800
+     * @return   [type]                   [description]
+     */
     public function rankList(){
 
       
@@ -1074,302 +1180,345 @@ class IndexController extends ApiController
       }  
         
       echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);
-      
+       
     }
 
-    /**商品相关**/
-    // public function product(){
-    //   $data = M('product')->field('number,type,price')->order('id desc')->select();
-    //   echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);
-    // }
 
 
 
     /**         新增功能开始                **/
-        //离线时间
-        public function leaveTime(){
-            $user_id = $GLOBALS['token'][2];
-            $data = M('user_base')->alias('a')
-                                ->join("dd_receive u on a.id=u.user_id") //附表连主表
-                                ->field('a.last_login_time,u.receive_time')
-                                ->where(array('u.user_id'=>$user_id))
-                                ->find();
-                                
-            $start = strtotime($data['receive_time']);
-            $end   = strtotime($data['last_login_time']);
+       /**
+        * [用户离线时间 description]
+        * @Author   duke
+        * @DateTime 2019-08-07T10:05:35+0800
+        * @return   [type]                   [description]
+        */
+      public function leaveTime(){
+          $user_id = $GLOBALS['token'][2];
+           // $user_id = 3858;
+          $data = M('user_base')->alias('a')
+                              ->join("dd_user u on a.id=u.user_id") //附表连主表
+                              ->field('a.last_login_time,u.receive_time')
+                              ->where(array('u.user_id'=>$user_id))
+                              ->find();
+                              
+          $start = $data['receive_time'];
+          $end   = strtotime($data['last_login_time']);
+          $leaveTime = $end - $start;
+          if($leaveTime >= 172800){
+            $leaveTime = 172800;
+          }else{
             $leaveTime = $end - $start;
-            if($leaveTime >= 172800){
-              $leaveTime = 172800;
-            }
-            echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$leaveTime]);exit;          
-        }
+          }
+          echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$leaveTime]);exit;          
+      }
 
-        //用户金币
-        public function currency(){
-            $user_id = $GLOBALS['token'][2];
-            $data = M('user')->where(array('user_id'=>$user_id))->field('money,stamina,crystal')->find();
-            echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);exit;
-        }
-       //用户收益领取
-        public function receive(){
-            $user_id = $GLOBALS['token'][2];
-            if(IS_POST){
-              $money = $_POST['money'];
-              $type  = $_POST['type'];
-              if($type == 1){
-                $rmoney = $money;
-              }elseif($type == 2){
-                $rmoney = $money*2;
-              }else{
-                $rmoney = $money*4;
-              }
-              $data = M('user')->where(array('user_id'=>$user_id))->setInc('money',$rmoney);
-              if($data){
-                echo json_encode(['status'=>1,'msg'=>'领取成功']);exit;
-              }else{
-                echo json_encode(['status'=>1,'msg'=>'领取失败']);exit;
-              }
+      /**
+       * [用户金币 description]
+       * @Author   duke
+       * @DateTime 2019-08-07T10:05:02+0800
+       * @return   [type]                   [description]
+       */
+      public function currency(){
+          $user_id = $GLOBALS['token'][2];
+          $data = M('user')->where(array('user_id'=>$user_id))->field('money,stamina,crystal')->find();
+         
+          echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);exit;
+      }
+     /**
+      * [用户收益领取 description]
+      * @Author   duke
+      * @DateTime 2019-08-07T10:03:33+0800
+      * @return   [type]                   [description]
+      */
+      public function receive(){
+          
+          $user_id = $GLOBALS['token'][2];
+          if(IS_POST){
+            if(is_numeric($_POST['money'])){
+              $money = intval($_POST['money']);
+            }else{
+              echo json_encode(['status'=>-1,'msg'=>'参数错误']);exit;
             }
-            
-        }
 
-        //购买商品
-        public function buy(){
-            if(IS_POST){ 
-              $number  = $_POST['number'];
-              $type    = $_POST['type'];
-              $price   = intval($_POST['price']);
-              $user_id = $GLOBALS['token'][2];  
-              
-              if(empty($_POST['number']) || empty($_POST['type']) || empty($_POST['price'])){
+            $data = M('user')->where(array('user_id'=>$user_id))->setInc('money',$money);
+            if($data){
+              M('user')->where(array('user_id'=>$user_id))->setfield('receive_time',time());
+              echo json_encode(['status'=>1,'msg'=>'领取成功']);exit;
+            }else{
+              echo json_encode(['status'=>1,'msg'=>'领取失败']);exit;
+            }
+          }
+          
+      }
+
+      /**
+       * [购买商品 description]
+       * @Author   duke
+       * @DateTime 2019-08-07T09:58:29+0800
+       * @return   [type]                   [description]
+       */
+      public function buy(){
+          if(IS_POST){ 
+            $user_id = $GLOBALS['token'][2];  
+            $number  = $_POST['number'];
+            $type    = $_POST['type'];
+            $price   = intval($_POST['price']);
+            if(empty($_POST['number']) || empty($_POST['type']) || empty($_POST['price'])){
+              echo json_encode(['status'=>-2,'msg'=>'参数错误']);exit;
+            }
+            $product = M('product')->where(array('number'=>$number,'type'=>$type))->find();
+            if(!$product){
+             echo json_encode(['status'=>-1,'msg'=>'商品不存在']);exit;
+            }
+            $crystal = M('user')->where(array('user_id'=>$user_id))->getField('crystal');
+            if($crystal>=$price){
+              if($type == 1){//购买史莱姆
+                M('user_slime')->where(array('s_id'=>$number+1,'u_id'=>$user_id))->setfield('is_lock',1);        
+                
+              }elseif($type == 2){//购买饰品
+                 $robe = M('robe')->where(array('user_id'=>$user_id))->find();
+                  $result = array(
+                  'user_id' => $user_id,
+                  'hat'     => $robe['hat'].$number.','
+                );
+                 if($robe){
+                      M('robe')->where(array('user_id'=>$user_id))->save($result);
+                 }else{
+                      M('robe')->add($result);
+                 }
+              }else{
                 echo json_encode(['status'=>-2,'msg'=>'参数错误']);exit;
               }
-              $product = M('product')->where(array('number'=>$number,'type'=>$type))->find();
-              if(!$product){
-               echo json_encode(['status'=>-1,'msg'=>'商品不存在']);exit;
+              
+              $crystals = M('user')->where(array('user_id'=>$user_id))->setDec('crystal',$price);
+              if($crystals){
+                $buyinfo = array(
+                  'user_id' => $user_id,
+                  'p_num'   => $number,
+                  'type'    => $type,
+                  'money'   => $price
+                );
+                $buy_log = M('buy_log')->add($buyinfo);
+                if($buy_log){
+                  echo json_encode(['status'=>1,'msg'=>'购买成功']);exit;
+                }            
               }
-              $crystal = M('user')->where(array('user_id'=>$user_id))->getField('crystal');
-              if($crystal>=$price){
-                if($type == 1){//购买史莱姆
-                  M('user_slime')->where(array('s_id'=>$number+1,'u_id'=>$user_id))->setfield('is_lock',1);        
-                  
-                }elseif($type == 2){//购买饰品
-                   $robe = M('robe')->where(array('user_id'=>$user_id))->find();
-                    $result = array(
-                    'user_id' => $user_id,
-                    'hat'     => $robe['hat'].$number.','
-                  );
-                   if($robe){
-                        M('robe')->where(array('user_id'=>$user_id))->save($result);
-                   }else{
-                        M('robe')->add($result);
-                   }
-                }else{
-                  echo json_encode(['status'=>-2,'msg'=>'参数错误']);exit;
-                }
-                    $crystals = M('user')->where(array('user_id'=>$user_id))->setDec('crystal',$price);
-                    if($crystals){
-                      $buyinfo = array(
-                        'user_id' => $user_id,
-                        'p_num'   => $number,
-                        'type'    => $type,
-                        'money'   => $price
-                      );
-                      $buy_log = M('buy_log')->add($buyinfo);
-                      if($buy_log){
-                        echo json_encode(['status'=>1,'msg'=>'购买成功']);exit;
-                      }            
-                    }
-                 
-              }else{
-                  echo json_encode(['status'=>-3,'msg'=>'您的钻石不足']);exit;
-              }
-                   
+               
+            }else{
+                echo json_encode(['status'=>-3,'msg'=>'您的钻石不足']);exit;
             }
+                 
+          }
+      }
+
+     /**
+      * [商品列表 description]
+      * @Author   duke
+      * @DateTime 2019-08-07T09:58:51+0800
+      * @return   [type]                   [description]
+      */
+      public function product(){
+        $data = M('product')->field('number,type,price')->order('id desc')->select();
+        echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);
+      }
+      /**
+       * [史莱姆列表 description]
+       * @Author   duke
+       * @DateTime 2019-08-07T09:59:06+0800
+       * @return   [type]                   [description]
+       */
+      public function slimeList(){
+        
+          $user_id = $GLOBALS['token'][2];
+           // $user_id = 3858;
+          $slime = M('user_slime')->where(array('u_id'=>$user_id))->field('s_id,is_lock,level,is_check,hat')->select();
+          foreach ($slime as $k => $v) {
+            $slime[$k]['s_id'] = $slime[$k]['s_id'] - 1 ;
+          }
+          $slime_robe = M('robe')->where(array('user_id'=>$user_id))->field('hat')->find();   
+          $slime_robe['hat'] = array_filter(split(',', $slime_robe['hat']));
+          $slimes =  M('user_slime')->where(array('u_id'=>$user_id,'is_check'=>1,'is_lock'=>1))->field('s_id,hat')->find();  
+          $data = array('slime_list'=>$slime,'slime_robe'=>$slime_robe,'is_check_slime'=>intval($slimes['s_id'])-1,'is_check_hat'=>$slimes['hat']);
+          echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);
+      }
+      /**
+       * [升级史莱姆 description]
+       * @Author   duke
+       * @DateTime 2019-08-07T09:59:27+0800
+       * @return   [type]                   [description]
+       */
+      public function upSlime(){
+        
+        $user_id = $GLOBALS['token'][2];
+        if(IS_POST){
+          $sid = $_POST['s_id']+1;
+          $price  = intval($_POST['price']);
+          $money = M('user')->where(array('user_id'=>$user_id))->getField('money');
+          $level = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->getField('level');
+          // $level = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->getField('level');
+        
+          if($price > $money){
+            echo json_encode(['status'=>-1,'msg'=>'气泡不足']);exit;
+          }else if($level == 30){
+            echo json_encode(['status'=>-2,'msg'=>'已升至满级']);exit;
+          }else{
+              
+            $data = M('user')->where(array('user_id'=>$user_id))->setDec('money',$price); //扣除用户糖果数量
+            $up = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('level',1); //升级史莱姆
+
+            if($up){
+               echo json_encode(['status'=>1,'msg'=>'升级成功']);exit;
+
+            }else{
+               echo json_encode(['status'=>-2,'msg'=>'升级失败']);exit;
+            }
+          }
+        }
+      }
+      /**
+       * [选择出战slime description]
+       * @Author   duke
+       * @DateTime 2019-08-07T09:57:50+0800
+       * @return   [type]                   [description]
+       */
+      public function checkSlime(){
+        if(IS_POST){
+          $user_id  = $GLOBALS['token'][2];
+          $slime_id = $_POST['slime_id']+1;
+          $result = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$slime_id,'is_lock'=>1))->setfield('is_check',1);
+          if($result){
+            $is_check = M('user_slime')->where(array('u_id'=>$user_id,'is_lock'=>1,'s_id'=>array('neq',$slime_id)))->setfield('is_check',0);
+            if($is_check){
+              echo json_encode(['status'=>1,'msg'=>'切换成功']);exit;
+            }else{
+              echo json_encode(['status'=>1,'msg'=>'切换失败']);exit;
+            }
+          }
+        }
+      } 
+      /**
+       * [装扮饰品 description]
+       * @Author   duke
+       * @DateTime 2019-08-07T09:57:28+0800
+       * @return   [type]                   [description]
+       */
+      public function checkRobe(){
+        if(IS_POST){
+          $slime_id = $_POST['slime_id']+1;
+          $user_id = $GLOBALS['token'][2];
+          $data = array(
+            'hat'=>$_POST['hat']
+          );
+          $hat = M('robe')->where(array('user_id'=>$user_id))->getField('hat');
+          if(!$hat){
+            echo json_encode(['status'=>-1,'msg'=>'暂无该饰品']);exit;
+          }else{
+            $result = M('user_slime')->where(array('s_id'=>$slime_id,'u_id'=>$user_id))->save($data);
+            if($result){
+              echo json_encode(['status'=>1,'msg'=>'装扮成功']);exit;
+            }
+          }
+        }
+      }
+
+      /**
+       * [钻石抽奖 description]
+       * @Author   duke
+       * @DateTime 2019-08-07T09:57:12+0800
+       * @return   [type]                   [description]
+       */
+      public function   chou(){
+        $user_id  = $GLOBALS['token'][2];
+        if(IS_POST){
+          $crystal = intval($_POST['crystal']);
+          $money =M('user')->where(array('user_id'=>$user_id,'crystal'=>array('EGT',$crystal)))->setDec('crystal',$crystal);
+          // var_dump($money);exit;
+          // $money = M('user')->where(array('user_id'=>$user_id))->getField('crystal');
+          if($money==0){
+            echo json_encode(['status'=>-1,'msg'=>'您的水晶不足']);exit;
+          }else{
+            // M('user')->where(array('user_id'=>$user_id))->setDec('crystal',$crystal);
+            $rand = rand(1,100);
+            $daytime = strtotime(date("Y-m-d",time()));
+            $shouru = M('zhuan')->where(array('addtime'=>array('gt',$daytime)))->sum('money'); 
+            $zhichu = M('zhuan')->where(array('addtime'=>array('gt',$daytime)))->sum('ying');
+            $jian = $crystal*2;
+            $lirun = ($shouru-($zhichu+$jian))/$shouru-((2-rand(1,3))*rand(1,10)/1000); 
+
+            if($lirun < $GLOBALS['_CFG']['hongbao']['lirun']*1){
+              $rand = rand(1,100*($GLOBALS['_CFG']['hongbao']['zhong01']+$GLOBALS['_CFG']['hongbao']['zhong05']));
+            }
+            if($rand<=$GLOBALS['_CFG']['hongbao']['zhong01']*100){
+               $zhuan = rand(275,355);
+               $ying = 0.1 * $crystal;
+            }
+            if( ($rand>$GLOBALS['_CFG']['hongbao']['zhong01']*100) && ($rand <= ($GLOBALS['_CFG']['hongbao']['zhong01']*100+$GLOBALS['_CFG']['hongbao']['zhong05']*100) )){
+               $zhuan = rand(185,265);
+               $ying = 0.5 * $crystal;
+            }
+            if( ($rand> ($GLOBALS['_CFG']['hongbao']['zhong01']*100+$GLOBALS['_CFG']['hongbao']['zhong05']*100) )  && $rand<= ($GLOBALS['_CFG']['hongbao']['zhong01']*100+$GLOBALS['_CFG']['hongbao']['zhong05']*100+$GLOBALS['_CFG']['hongbao']['zhong21']*100)  ){
+               $zhuan = rand(95,175);
+               $ying = 2.1 * $crystal;
+            }
+            if($rand>($GLOBALS['_CFG']['hongbao']['zhong01']*100+$GLOBALS['_CFG']['hongbao']['zhong05']*100+$GLOBALS['_CFG']['hongbao']['zhong21']*100)&&$rand<=100){
+               $zhuan = rand(5,85);
+               $ying = 3.6 * $crystal;
+            }
+          }
+          $add['uid']  = $user_id;   
+          $add['type'] = 1;   
+          $add['money']= $crystal;   
+          $add['ying'] = $ying;   
+          $add['rand'] = $rand;     
+          $add['addtime'] = time();  
+          $result = M('zhuan')->add($add); 
+          if($result){
+            M('user')->where(array('user_id'=>$user_id))->setInc('crystal',$ying);    
+          }
+          echo json_encode(['status'=>1,'msg'=>$ying]);exit;
         }
 
-         /**商品相关**/
-          public function product(){
-            $data = M('product')->field('number,type,price')->order('id desc')->select();
-            echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);
-          }
-          //史莱姆列表
-          public function slimeList(){
-              $user_id = $GLOBALS['token'][2];
-              $slime = M('user_slime')->where(array('u_id'=>$user_id))->field('s_id,is_lock,level,is_check,hat')->select();
-              foreach ($slime as $k => $v) {
-                $slime[$k]['s_id'] = $slime[$k]['s_id'] - 1 ;
-              }
-              $slime_robe = M('robe')->where(array('user_id'=>$user_id))->field('user_id,hat')->find();   
-              $slime_robe['hat'] = explode(',', $slime_robe['hat']);
-              $is_check =  M('user_slime')->where(array('u_id'=>$user_id,'is_check'=>1))->getField('s_id');  
-              $data = array('slime_list'=>$slime,'slime_robe'=>$slime_robe,'is_check'=>intval($is_check)-1);
-              echo json_encode(['status'=>1,'msg'=>'返回成功','data'=>$data]);
-          }
-      //升级史莱姆
-          public function upSlimes(){
-            $user_id = $GLOBALS['token'][2];
-            if(IS_POST){
-              $sid = $_POST['s_id']+1;
-              $price  = intval($_POST['price']);
-              $money = M('user')->where(array('user_id'=>$user_id))->getField('money');
-            
-              if($price > $money){
-                echo json_encode(['status'=>-1,'msg'=>'气泡不足']);exit;
-              }else{
-                  
-                $data = M('user')->where(array('user_id'=>$user_id))->setDec('money',$price); //扣除用户糖果数量
-                $up = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$sid))->setInc('level',1); //增加经验值  
-
-                if($up){
-                   echo json_encode(['status'=>1,'msg'=>'升级成功']);exit;
-
-                }else{
-                   echo json_encode(['status'=>-2,'msg'=>'升级失败']);exit;
-                }
-              }
-            }
-          }
-          //选择出战slime
-          public function checkSlimes(){
-            if(IS_POST){
-              $slime_id = $_POST['slime_id']+1;
-              $user_id  = $GLOBALS['token'][2];
-              $result = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>$slime_id))->setfield('is_check',1);
-              if($result){
-                $is_check = M('user_slime')->where(array('u_id'=>$user_id,'s_id'=>array('neq',$slime_id)))->setfield('is_check',0);
-                if($is_check){
-                  echo json_encode(['status'=>1,'msg'=>'切换成功']);exit;
-                }else{
-                  echo json_encode(['status'=>1,'msg'=>'切换失败']);exit;
-                }
-              }
-            }
-          } 
-          //装饰饰品
-          public function checkRobe(){
-            if(IS_POST){
-              $slime_id = $_POST['slime_id']+1;
-              $user_id = $GLOBALS['token'][2];
-              $data = array(
-                'hat'=>$_POST['hat']
-              );
-              $hat = M('robe')->where(array('user_id'=>$user_id))->getField('hat');
-              if(!$hat){
-                echo json_encode(['status'=>-1,'msg'=>'暂无该饰品']);exit;
-              }else{
-                $result = M('user_slime')->where(array('s_id'=>$slime_id,'u_id'=>$user_id))->save($data);
-                if($result){
-                  echo json_encode(['status'=>1,'msg'=>'装扮成功']);exit;
-                }
-              }
-            }
-          }
-
-
-          public function   chou(){
-            $user_id  = $GLOBALS['token'][2];
-            if(IS_POST){
-              $crystal = intval($_POST['crystal']);
-              $money =M('user')->where(array('user_id'=>$user_id,'crystal'=>array('EGT',$crystal)))->setDec('crystal',$crystal);
-              // $money = M('user')->where(array('user_id'=>$user_id))->getField('crystal');
-       
-              if($money==0){
-                echo json_encode(['status'=>-1,'msg'=>'水晶不足']);exit;
-              }else{
-                // M('user')->where(array('user_id'=>$user_id))->setDec('crystal',$crystal);
-                $rand = rand(1,100);
-                $daytime = strtotime(date("Y-m-d",time()));
-               
-                $shouru = M('zhuan')->where(array('addtime'=>array('gt',$daytime)))->sum('money'); 
-                $zhichu = M('zhuan')->where(array('addtime'=>array('gt',$daytime)))->sum('ying');
-           
-                $jian = $crystal*2;
-             
-                $lirun = ($shouru-($zhichu+$jian))/$shouru-((2-rand(1,3))*rand(1,10)/1000); 
-                // var_dump($GLOBALS['_CFG']['hongbao']);
-                // var_dump($lirun);
-         
-                if($lirun < $GLOBALS['_CFG']['hongbao']['lirun']*1){
-                  $rand = rand(1,100*($GLOBALS['_CFG']['hongbao']['zhong01']+$GLOBALS['_CFG']['hongbao']['zhong05']));
-                  // var_dump($rand);
-                }
-                
-                if($rand<=$GLOBALS['_CFG']['hongbao']['zhong01']*100){
-                  // var_dump($GLOBALS['_CFG']['hongbao']['zhong01']*100);
-                   $zhuan = rand(275,355);
-                   $ying = 0.1 * $crystal;
-                }
-                if( ($rand>$GLOBALS['_CFG']['hongbao']['zhong01']*100) && ($rand <= ($GLOBALS['_CFG']['hongbao']['zhong01']*100+$GLOBALS['_CFG']['hongbao']['zhong05']*100) )){
-                  // var_dump($GLOBALS['_CFG']['hongbao']['zhong01']*100);
-                  // var_dump($GLOBALS['_CFG']['hongbao']['zhong05']*100);
-                  // exit;
-                   $zhuan = rand(185,265);
-                   $ying = 0.5 * $crystal;
-                }
-                if( ($rand> ($GLOBALS['_CFG']['hongbao']['zhong01']*100+$GLOBALS['_CFG']['hongbao']['zhong05']*100) )  && $rand<= ($GLOBALS['_CFG']['hongbao']['zhong01']*100+$GLOBALS['_CFG']['hongbao']['zhong05']*100+$GLOBALS['_CFG']['hongbao']['zhong21']*100)  ){
-                   $zhuan = rand(95,175);
-                   $ying = 2.1 * $crystal;
-                }
-                if($rand>($GLOBALS['_CFG']['hongbao']['zhong01']*100+$GLOBALS['_CFG']['hongbao']['zhong05']*100+$GLOBALS['_CFG']['hongbao']['zhong21']*100)&&$rand<=100){
-                   $zhuan = rand(5,85);
-                   $ying = 3.6 * $crystal;
-                }
-
-            
-              }
-              $add['uid']  = $user_id;   
-              $add['type'] = 1;   
-              $add['money']= $crystal;   
-              $add['ying'] = $ying;   
-              $add['rand'] = $rand;     
-              $add['addtime'] = time();  
-              $result = M('zhuan')->add($add); 
-              if($result){
-                
-                M('user')->where(array('user_id'=>$user_id))->setInc('crystal',$ying);    
-              }
-              echo json_encode(['status'=>1,'msg'=>$ying]);exit;
-            }
-
-          }
-          //抢钻石
+      }
+      /**
+       * [抢钻石时间段 description]
+       * @Author   duke
+       * @DateTime 2019-08-07T09:59:56+0800
+       * @param    [type]                   $now     [description]
+       * @param    [type]                   $user_id [description]
+       * @return   boolean                           [description]
+       */
       public function isTime($now,$user_id){
         $times =  [
-              ['start' => strtotime(date('Y-m-d 12:00:00')),'end'=>strtotime(date('Y-m-d 12:30:00'))],
-              ['start' => strtotime(date('Y-m-d 18:00:00')),'end'=>strtotime(date('Y-m-d 18:30:00'))],
+              ['start' => strtotime(date('Y-m-d 12:00:00')),'end'=>strtotime(date('Y-m-d 14:00:00'))],
+              ['start' => strtotime(date('Y-m-d 19:00:00')),'end'=>strtotime(date('Y-m-d 21:00:00'))],
         ];
         $now = strtotime(date('Y-m-d H:i:s'));
         $robbone = M('robbing')->where(array('user_id'=>$user_id,'time'=>array('between',array($times[0]['start'],$times[0]['end']))))->find();
         $robbtwo = M('robbing')->where(array('user_id'=>$user_id,'time'=>array('between',array($times[1]['start'],$times[1]['end']))))->find();
-        // var_dump($robbone);
-        // var_dump($robbtwo);exit;
-          if($times[0]['start'] <= $now && $now <= $times[0]['end']){
-            if($robbone){
-              echo json_encode(['status'=>-2,'msg'=>'您已参与过,请下次再来']);exit;
-             
-            }else{
 
-              // echo json_encode(['status'=>-2,'msg'=>'啊啊']);exit;
-              return ture;        
-            }
-          }elseif($times[1]['start'] <= $now && $now <= $times[1]['end']){
-            if($robbtwo){
-              echo json_encode(['status'=>-4,'msg'=>'您已参与过,请下次再来']);exit;
-              
-            }else{
-              // echo json_encode(['status'=>-2,'msg'=>'压抑']);exit;
-              return ture;       
-            }
-
+        if($times[0]['start'] <= $now && $now <= $times[0]['end']){
+          if($robbone){
+            echo json_encode(['status'=>-2,'msg'=>'您已参与过,请下次再来']);exit;
           }else{
-             echo json_encode(['status'=>-1,'msg'=>'暂未开放']);exit;
-              // return false;
+            return ture;        
           }
-      
-        
-                
+        }elseif($times[1]['start'] <= $now && $now <= $times[1]['end']){
+          if($robbtwo){
+            echo json_encode(['status'=>-4,'msg'=>'您已参与过,请下次再来']);exit;
+          }else{
+            return ture;       
+          }
+        }else{
+           echo json_encode(['status'=>-1,'msg'=>'暂未开放']);exit;
+        }    
       }
+      /**
+       * [抢钻石 description]
+       * @Author   duke
+       * @DateTime 2019-08-07T09:56:43+0800
+       * @return   [type]                   [description]
+       */
       public function robbing(){
         $user_id  = $GLOBALS['token'][2];
         if(IS_POST){

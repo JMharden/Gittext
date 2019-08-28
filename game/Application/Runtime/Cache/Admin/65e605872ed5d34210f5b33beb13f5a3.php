@@ -8,12 +8,12 @@
 		<title>网站后台</title>
 		<link rel="stylesheet" href="/Public/admin/css/style.default.css" type="text/css" />
 		<link rel="stylesheet" href="/Public/plugins/bootstrap/css/bootstrap.font.css" type="text/css" />
-				<script type="text/javascript" src="../../../Public/admin/js/plugins/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../../Public/admin/js/plugins/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="/Public/admin/js/plugins/jquery-ui.js"></script>
 		<script type="text/javascript" src="/Public/admin/js/plugins/jquery.cookie.js"></script>
-       <script type="text/javascript" src="/Public/admin/js/plugins/jquery-plugin.js"></script>
-		<script type="text/javascript" src="../../../Public/admin/js/custom/jquery.cookie.js">
-				<script type="text/javascript" src="/Public/admin/js/custom/general.js"></script>
+        <script type="text/javascript" src="/Public/admin/js/plugins/jquery-plugin.js"></script>
+		<script type="text/javascript" src="../../../Public/admin/js/custom/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/Public/admin/js/custom/general.js"></script>
 
 		</script>
 		
@@ -46,10 +46,10 @@
 		<aside class="main-sidebar">
 			<section class="sidebar">
 				<ul class="sidebar-menu">
-					<li class="header">开心大转盘</li>
+					<li class="header">蹦蹦史莱姆</li>
 
 					<li>
-						<a href="/kpan.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
+						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=dayReport"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
 					</li>
 
 					<li class="treeview" onclick="index(0)">
@@ -60,13 +60,33 @@
 						</a>
 						<ul class="treeview-menu" style="display: none;">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
+							</li>
+							<li>
+								<a href="/index.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
 							</li>
 							<!-- <li><a href="/index.php?m=Admin&c=Config&a=pay_mp"><i class="fa fa-circle-o"></i>支付公众号</a></li> -->
 					</li>
-					</ul>
-					</li>
+
+
+				</ul>
 					<li class="treeview" onclick="index(1)">
+						<a href="#">
+							<i class="fa fa-user "></i> <span>用户管理</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="/index.php?m=Admin&c=User&a=index"><i class="fa fa-circle-o"></i> 会员管理</a>
+							</li>
+							<li>
+								<a href="/index.php?m=Admin&c=User&a=feedback"><i class="fa fa-circle-o"></i>用户反馈</a>
+							</li>
+						
+						</ul>
+					</li>
+					</li>
+					<li class="treeview" onclick="index(2)">
 						<a href="#">
 							<i class="fa fa-gamepad"></i>
 							<span>游戏设置</span>
@@ -74,17 +94,17 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 大转盘</a>
+								<a href="/index.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 大转盘</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 佣金设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 佣金设置</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=withdraw"><i class="fa fa-circle-o"></i> 提现设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=withdraw"><i class="fa fa-circle-o"></i> 提现设置</a>
 							</li>
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(2)">
+					<li class="treeview" onclick="index(3)">
 						<a href="#">
 							<i class="fa fa-comments"></i>
 							<span>公众号设置</span>
@@ -92,14 +112,14 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=mp"><i class="fa fa-circle-o"></i> 主公众号</a>
+								<a href="/index.php?m=Admin&c=Config&a=mp"><i class="fa fa-circle-o"></i> 主公众号</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=bei_mp"><i class="fa fa-circle-o"></i> 备份公众号</a>
+								<a href="/index.php?m=Admin&c=Config&a=bei_mp"><i class="fa fa-circle-o"></i> 备份公众号</a>
 							</li>
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(3)">
+					<li class="treeview" onclick="index(4)">
 						<a href="#">
 							<i class="fa fa-credit-card-alt"></i>
 							<span>支付设置</span>
@@ -107,12 +127,12 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=live_pay"><i class="fa fa-circle-o"></i> 生活圈支付</a>
+								<a href="/index.php?m=Admin&c=Config&a=live_pay"><i class="fa fa-circle-o"></i> 生活圈支付</a>
 							</li>
 						</ul>
 					</li>
 
-					<li class="treeview" onclick="index(4)">
+					<li class="treeview" onclick="index(5)">
 						<a href="#">
 							<i class="fa fa-cloud"></i>
 							<span>域名设置</span>
@@ -120,78 +140,38 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Domain&a=index"><i class="fa fa-circle-o"></i> 游戏域名</a>
+								<a href="/index.php?m=Admin&c=Domain&a=index"><i class="fa fa-circle-o"></i> 游戏域名</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Domain&a=generalize"><i class="fa fa-circle-o"></i> 推广域名</a>
+								<a href="/index.php?m=Admin&c=Domain&a=generalize"><i class="fa fa-circle-o"></i> 推广域名</a>
 							</li>
-						</ul>
-					</li>
-					<li class="treeview" onclick="index(5)">
-						<a href="#">
-							<i class="fa fa-user "></i> <span>用户管理</span>
-							<i class="fa fa-angle-left pull-right"></i>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="/kpan.php?m=Admin&c=User&a=agent_list"><i class="fa fa-circle-o"></i> 代理商管理</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=User&a=index"><i class="fa fa-circle-o"></i> 会员管理</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=User&a=qiehuan"><i class="fa fa-circle-o"></i> 调整会员数据</a>
-							</li>
-							<!-- <li><a href="#"><i class="fa fa-circle-o"></i> Editors</a></li> -->
 						</ul>
 					</li>
 					<li class="treeview" onclick="index(6)">
 						<a href="#">
-							<i class="fa fa-gamepad"></i>
-							<span>活动管理</span>
+							<i class="fa fa-cloud"></i>
+							<span>商品管理</span>
 							<i class="fa fa-angle-left pull-right"></i>
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Activity&a=index"><i class="fa fa-circle-o"></i>活动列表</a>
+								<a href="/index.php?m=Admin&c=Product&a=index"><i class="fa fa-circle-o"></i> 商品列表</a>
 							</li>
-							
-							
+							<!-- <li>
+								<a href="/index.php?m=Admin&c=Domain&a=generalize"><i class="fa fa-circle-o"></i> 推广域名</a>
+							</li> -->
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(7)">
-						<a href="#">
-							<i class="fa fa-pie-chart"></i> <span>报表查看</span>
-							<i class="fa fa-angle-left pull-right"></i>
-						</a>
-						<ul class="treeview-menu" ;>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Product&a=buy"><i class="fa fa-circle-o"></i> 购买列表</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=admin&c=product&a=zhong&money=5.00"><i class="fa fa-circle-o"></i> 中奖列表</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=admin&c=product&a=bizhong"><i class="fa fa-circle-o"></i> 必中列表</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Finance&a=withdraw"><i class="fa fa-circle-o"></i> 提现记录</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Finance&a=expense"><i class="fa fa-circle-o"></i> 佣金记录</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Finance&a=payorder"><i class="fa fa-circle-o"></i> 充值记录</a>
-							</li>
-						</ul>
-					</li>
+					
+				
+				
 
 					<li class="header">其他功能</li>
 					<li>
-						<a href="/kpan.php?m=Admin&c=Admin&a=clear_cache"><i class="fa fa-recycle text-yellow"></i> <span>[清除缓存]</span></a>
+						<a href="/index.php?m=Admin&c=Admin&a=clear_cache"><i class="fa fa-recycle text-yellow"></i> <span>[清除缓存]</span></a>
 					</li>
 					<li>
-						<a href="/kpan.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
+						<a href="/index.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
 					</li>
 				</ul>
 			</section>
@@ -257,6 +237,7 @@
 				setCookie(key, '', -1);
 			}
 		</script>
+
 		<script src="/Public/admin/dist/sidebar-menu.js"></script>
 		<script>
 			$.sidebarMenu($('.sidebar'))
@@ -265,31 +246,18 @@
 			<div class="pageheader notab"><h1 class="pagetitle">会员管理</h1></div><!--pageheader-->
 <div id="contentwrapper" class="contentwrapper lineheight21">
     <div class="tableoptions">
+        <a href="<?php echo U('User/excelUser');?>">导出用户信息</a> | 
         <form method="post"> 
             <!-- 手机: <input type="text" name="mobile" value="<?php echo ($_GET['mobile']); ?>" class="smallinput" style="width:100px;"/> 
             姓名: <input type="text" name="name" value="<?php echo ($_GET['name']); ?>" class="smallinput" style="width:100px;"/>  -->
-            用户ID: <input type="text" name="id" value="<?php echo ($_GET['id']); ?>" class="smallinput" style="width:100px;"/>
-            openid: <input type="text" name="openid" value="<?php echo ($_GET['openid']); ?>" class="smallinput" style="width:230px;"/>
+            用户昵称: <input type="text" name="nickname" value="<?php echo ($_GET['nickname']); ?>" class="smallinput" style="width:100px;"/>
+           
             <br />
             余额排序: 
             <select name="money" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
                 <option value="asc" <?php if($_GET['money'] == asc): ?>selected<?php endif; ?> >正序</option>
                 <option value="desc" <?php if($_GET['money'] == desc): ?>selected<?php endif; ?> >倒序</option>
-            </select>
-
-            <!-- 手数: 
-            <select name="num_order" style="width: 120px; min-width: 120px;">
-                <option value="">请选择</option>
-                <option value="asc" <?php if($_GET['num_order'] == asc): ?>selected<?php endif; ?> >正序</option>
-                <option value="desc" <?php if($_GET['num_order'] == desc): ?>selected<?php endif; ?> >倒序</option>
-            </select> -->
-
-            积分: 
-            <select name="integration" style="width: 120px; min-width: 120px;">
-                <option value="">请选择</option>
-                <option value="asc" <?php if($_GET['integration'] == asc): ?>selected<?php endif; ?> >正序</option>
-                <option value="desc" <?php if($_GET['integration'] == desc): ?>selected<?php endif; ?> >倒序</option>
             </select>
 
             活跃值: 
@@ -299,13 +267,12 @@
                 <option value="desc" <?php if($_GET['active_point'] == desc): ?>selected<?php endif; ?> >倒序</option>
             </select>
 
-           <!--  佣金: 
-            <select name="expense_order" style="width: 120px; min-width: 120px;">
+            段位分: 
+            <select name="rank" style="width: 120px; min-width: 120px;">
                 <option value="">请选择</option>
-                <option value="asc" <?php if($_GET['expense_order'] == asc): ?>selected<?php endif; ?> >正序</option>
-                <option value="desc" <?php if($_GET['expense_order'] == desc): ?>selected<?php endif; ?> >倒序</option>
-            </select> -->
-
+                <option value="asc" <?php if($_GET['rank'] == asc): ?>selected<?php endif; ?> >正序</option>
+                <option value="desc" <?php if($_GET['rank'] == desc): ?>selected<?php endif; ?> >倒序</option>
+            </select>
             <input type="submit" value="查找"/>
         </form>
     </div><!--tableoptions-->
@@ -316,19 +283,20 @@
                 <tr>
                     <th class="head1"><input type="checkbox" class="check_all"></th>
                     <th class="head1">编号</th>
-                    <!--th class="head0" style=" width:280px">OPENID</th-->
-                    <th class="head0">昵称</th>
-                    <!-- <th class="head0">手机</th> -->
-                    <th class="head0">注册日期</th>
-                    <th class="head0">上级</th>
-                    <!-- <th class="head0">充值</th> -->
+                    <th class="head1">昵称</th>
+                    <th class="head1">性别</th>
+                    <th class="head0">所在俱乐部</th>
+                   
+                    <th class="head0">上级ID</th>
                     <th class="head0">余额</th>
                     <th class="head0">活跃值</th>
-                    <th class="head0">积分</th>
-                    <!-- <th class="head0">黑名单</th> -->
-                    <!-- <th class="head0">累计佣金</th> -->
-                    <!-- <th class="head0">累计提现</th> -->
-                    <th class="head0">操作</th>
+                    <th class="head0">段位分</th>
+                    <th class="head0">娱乐赛场次</th>
+                    <th class="head0">竞技赛场次</th>
+                    <th class="head0">浏览广告次数</th>
+                    <th class="head0">分享次数</th>
+                    <th class="head0">注册日期</th>
+                    <!-- <th class="head0">操作</th> -->
                 </tr>
             </thead>
 
@@ -336,28 +304,31 @@
             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                     <td><input type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>"></td>
                     <td><?php echo ($vo["id"]); ?></td>                        
-                    <!--td><?php echo ($vo["openid"]); ?></td-->
                     <td><?php echo ($vo["nickname"]); ?></td>
-                    <!-- <td><?php echo ($vo["login_name"]); ?></td> -->
-                    <td><?php echo (date("Y-m-d H:i",$vo["sub_time"])); ?></td>
-                    <td><?php echo ($vo["parent1"]); ?> > <?php echo ($vo["parent2"]); ?> > <?php echo ($vo["parent3"]); ?></td>
-                    <!-- <td><?php echo ($vo["count_money"]); ?></td> -->
+                    <td>
+                        <?php if($vo['sex'] == 0): ?>未知<?php endif; ?>
+                        <?php if($vo['sex'] == 1): ?>男<?php endif; ?>
+                        <?php if($vo['sex'] == 2): ?>女<?php endif; ?>
+                    </td>
+                    <td><?php echo ($vo["club_id"]); ?></td>
+                    <td><?php echo ($vo["parent1"]); ?> -> <?php echo ($vo["parent2"]); ?> -> <?php echo ($vo["parent3"]); ?></td>
                     <td><?php echo ($vo["money"]); ?></td>
-                    <td><?php echo ($vo["integration"]); ?></td>
                     <td><?php echo ($vo["active_point"]); ?></td>
-                    <!-- <td>
-                        <?php if($vo['is_tong'] == 1): ?>是<?php endif; ?>
-                        <?php if($vo['is_tong'] == 0): ?>否<?php endif; ?>
-                    </td> -->
+                    <td><?php echo ($vo["rank"]); ?></td>
+                    <td><?php echo ($vo["fun_game"]); ?></td>
+                    <td><?php echo ($vo["play_game"]); ?></td>
+                    <td><?php echo ($vo["advert"]); ?></td>
+                    <td><?php echo ($vo["share"]); ?></td>
+                    <td><?php echo ($vo["join_time"]); ?></td>
                     <!-- <td><a href="<?php echo U('Finance/expense?user_id='.$vo['id']);?>"> <?php echo ($vo["expense"]); ?> </a></td> -->
                     <!-- <td><a href="<?php echo U('Finance/withdraw?user_id='.$vo['id']);?>"> <?php echo ($vo["withdraw"]); ?> </a></td> -->
-                    <td class="center">
+                    <!-- <td class="center">
                         <a href="<?php echo U('product/buy', 'uid='.$vo['id']);?>">历史战绩</a> | 
                         <a href="<?php echo U('finance/payorder', 'userid='.$vo['id']);?>">充值记录</a> | 
                         <a href="<?php echo U('add_agent', 'id='.$vo['id']);?>">设为代理商</a> | 
                         <a href="<?php echo U('edit', 'id='.$vo['id']);?>">修改</a> | 
                         <a href="<?php echo U('del', 'id='.$vo['id']);?>" onclick="return confirm('你确实要删除这个会员吗？')">删除</a>
-                    </td>
+                    </td> -->
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </tbody>
         </table>
@@ -366,8 +337,7 @@
             <input value="取消黑名单" type="submit" name="tongdao">&nbsp; &nbsp;&nbsp;            
         </div> -->
     </form>
-    <div class="dataTables_paginate paging_full_numbers" id="dyntable2_paginate"> <?php echo ((isset($page) && ($page !== ""))?($page):"<p
-                style='text-align:center'>暂时没有数据</p>"); ?>
+    <div class="dataTables_paginate paging_full_numbers" id="dyntable2_paginate"> <?php echo ((isset($page) && ($page !== ""))?($page):"<p style='text-align:center'>暂时没有数据</p>"); ?>
     </div>
 </div><!--contentwrapper-->
 

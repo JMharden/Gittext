@@ -136,14 +136,16 @@ class ApiController extends Controller {
             $userService->addReceive($user['id']);
 
         }else{
+          
+            $user = $userService->getUserFullInfoByOpen($user_info['openId']);
+            $user['firstLogin'] = $this->firstLogin($user['id']);
+            $user['is_new'] = 2;
             $save['area']      = $area;
             $save['nickname']  = $user_info['nickName'];
             $save['headimg']   = $user_info['avatarUrl'];
             $save['last_login_time']      = $time;
             M('user_base')->where(array('openid'=>$user['openid']))->save($save);
-            $user = $userService->getUserFullInfoByOpen($user_info['openId']);
-            $user['firstLogin'] = $this->firstLogin($user['id']);
-            $user['is_new'] = 2;
+
         }
 
         $user['session3rd'] = $session3rd;
@@ -151,7 +153,7 @@ class ApiController extends Controller {
         //累计登陆奖励
         $activityService =  new ActivityService();
         $acclogin = $activityService->accuLogin($user['openid'],$user['id']);
-        $slime = $userService->slimeLevel($user['openid']);
+        $slime = M('user_slime')->where(array('u_id'=>$user['id'],'is_check'=>1,'is_lock'=>1))->field('u_id,s_id,level,hat')->find();
         $this->write_log();
         $this->loginLog($user['id'],$introduceType,$uid);
         $sessionkey = array($session_key,$openid,$user['id']);

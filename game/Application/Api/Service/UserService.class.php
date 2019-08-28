@@ -25,7 +25,8 @@ class UserService
           $userExtr =[
             'user_id'=>$userId,
             'create_time'=>time(),
-            'openid'    =>$openid
+            'openid'     =>$openid,
+            'receive_time'=>time()
           ];
            M('user')->add($userExtr);
             //清除缓存
@@ -89,15 +90,17 @@ class UserService
                 $userExtr = M('user')->where(array('openid' => $openid))->find();
 
                 $rank = GameService::getDuan($userExtr['rank']);
+                $userRank = GameService::getDuans($userExtr['rank']);//用于显示
                 $userInfo = [
                     'is_club_owner' => $userExtr['is_club_owner'],
-                    'money' => floor($userExtr['money']),
-                    'slimeIndex' => 0,
+                    'money'   => $userExtr['money'],
                     'club_id' => $userExtr['club_id'],
                     'advert'  => $userExtr['advert'],
+                    'advert_match'  => $userExtr['advert_match'],
                     'stamina' => $userExtr['stamina'],
-                    'crystal'    => $userExtr['crystal'],
+                    'crystal' => $userExtr['crystal'],
                     'share'   => $userExtr['share'],
+                    // 'userRank'=> $rank['level'],
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
                     'rankNum' => $userExtr['rank'] -$rank['min'],
@@ -125,16 +128,19 @@ class UserService
             $userBase = $this->getUserBaseInfo($userId);
             if ($userBase) {
                 $userExtr = M('user')->where(array('user_id' => $userId))->find();
-                $rank = GameService::getDuan($userExtr['rank']);
+                $rank = GameService::getDuan($userExtr['rank']);    //用户匹配
+                $userRank = GameService::getDuans($userExtr['rank']);//用于显示
+                
                 $userInfo = [
                     'is_club_owner' => $userExtr['is_club_owner'],
-                    'money' => floor($userExtr['money']),
-                    'slimeIndex' => 0,
+                    'money'   => $userExtr['money'],
                     'club_id' => $userExtr['club_id'],
                     'advert'  => $userExtr['advert'],
+                    'advert_match'  => $userExtr['advert_match'],
                     'stamina' => $userExtr['stamina'],
-                    'crystal'    => $userExtr['crystal'],
+                    'crystal' => $userExtr['crystal'],
                     'share'   => $userExtr['share'],
+                    // 'userRank'=> $rank['level'],
                     'rank'    => $rank['level'],
                     'ranks'   => $rank['max'] - $rank['min'],
                     'rankNum' => $userExtr['rank'] -$rank['min'],
@@ -153,29 +159,8 @@ class UserService
 
     }
 
-  // function addSlime($openid,$user_id){
-  //   if($openid == null || $user_id == null){
-  //       echo "参数错误";exit;
-  //   }
-  //         $data = M('slime')->select();
-  //       foreach ($data as $k => $v) {
-  //         $datas = array(
-  //           's_id' => $v['id'],
-  //           'name' => $v['name'],
-  //           'skill'=> $v['skill'],
-  //           'blood'=> $v['blood'],
-  //           'blue' => $v['blue'],
-  //           'exp' =>  50,
-  //           'u_id' => $user_id,
-  //           'openid'=>$openid
-  //         );
-  //         $result[] = $datas;
-  //       }
-      
-  //       M('user_slime')->addAll($result);
-
-  //  }
-     function addReceive($user_id){
+ 
+    function addReceive($user_id){
          $data['user_id'] = $user_id;
         M('receive')->add($data);
    }

@@ -8,12 +8,12 @@
 		<title>网站后台</title>
 		<link rel="stylesheet" href="/Public/admin/css/style.default.css" type="text/css" />
 		<link rel="stylesheet" href="/Public/plugins/bootstrap/css/bootstrap.font.css" type="text/css" />
-				<script type="text/javascript" src="../../../Public/admin/js/plugins/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../../Public/admin/js/plugins/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="/Public/admin/js/plugins/jquery-ui.js"></script>
 		<script type="text/javascript" src="/Public/admin/js/plugins/jquery.cookie.js"></script>
-       <script type="text/javascript" src="/Public/admin/js/plugins/jquery-plugin.js"></script>
-		<script type="text/javascript" src="../../../Public/admin/js/custom/jquery.cookie.js">
-				<script type="text/javascript" src="/Public/admin/js/custom/general.js"></script>
+        <script type="text/javascript" src="/Public/admin/js/plugins/jquery-plugin.js"></script>
+		<script type="text/javascript" src="../../../Public/admin/js/custom/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/Public/admin/js/custom/general.js"></script>
 
 		</script>
 		
@@ -46,10 +46,10 @@
 		<aside class="main-sidebar">
 			<section class="sidebar">
 				<ul class="sidebar-menu">
-					<li class="header">开心大转盘</li>
+					<li class="header">蹦蹦史莱姆</li>
 
 					<li>
-						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=welcome"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
+						<a href="/index.php?m=Admin&amp;c=Admin&amp;a=dayReport"><i class="fa fa-dashboard"></i><span>系统首页</span></a>
 					</li>
 
 					<li class="treeview" onclick="index(0)">
@@ -60,16 +60,33 @@
 						</a>
 						<ul class="treeview-menu" style="display: none;">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=web_site"><i class="fa fa-circle-o"></i>网站设置</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=user"><i class="fa fa-circle-o"></i> 管理员设置</a>
 							</li>
 							<!-- <li><a href="/index.php?m=Admin&c=Config&a=pay_mp"><i class="fa fa-circle-o"></i>支付公众号</a></li> -->
 					</li>
-					</ul>
-					</li>
+
+
+				</ul>
 					<li class="treeview" onclick="index(1)">
+						<a href="#">
+							<i class="fa fa-user "></i> <span>用户管理</span>
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="/index.php?m=Admin&c=User&a=index"><i class="fa fa-circle-o"></i> 会员管理</a>
+							</li>
+							<li>
+								<a href="/index.php?m=Admin&c=User&a=feedback"><i class="fa fa-circle-o"></i>用户反馈</a>
+							</li>
+						
+						</ul>
+					</li>
+					</li>
+					<li class="treeview" onclick="index(2)">
 						<a href="#">
 							<i class="fa fa-gamepad"></i>
 							<span>游戏设置</span>
@@ -77,17 +94,17 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 大转盘</a>
+								<a href="/index.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 大转盘</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=site"><i class="fa fa-circle-o"></i> 佣金设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=hongbao"><i class="fa fa-circle-o"></i>红包设置</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=withdraw"><i class="fa fa-circle-o"></i> 提现设置</a>
+								<a href="/index.php?m=Admin&c=Config&a=withdraw"><i class="fa fa-circle-o"></i> 提现设置</a>
 							</li>
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(2)">
+					<li class="treeview" onclick="index(3)">
 						<a href="#">
 							<i class="fa fa-comments"></i>
 							<span>公众号设置</span>
@@ -95,14 +112,14 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=mp"><i class="fa fa-circle-o"></i> 主公众号</a>
+								<a href="/index.php?m=Admin&c=Config&a=mp"><i class="fa fa-circle-o"></i> 主公众号</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=bei_mp"><i class="fa fa-circle-o"></i> 备份公众号</a>
+								<a href="/index.php?m=Admin&c=Config&a=bei_mp"><i class="fa fa-circle-o"></i> 备份公众号</a>
 							</li>
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(3)">
+					<li class="treeview" onclick="index(4)">
 						<a href="#">
 							<i class="fa fa-credit-card-alt"></i>
 							<span>支付设置</span>
@@ -110,12 +127,12 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Config&a=live_pay"><i class="fa fa-circle-o"></i> 生活圈支付</a>
+								<a href="/index.php?m=Admin&c=Config&a=live_pay"><i class="fa fa-circle-o"></i> 生活圈支付</a>
 							</li>
 						</ul>
 					</li>
 
-					<li class="treeview" onclick="index(4)">
+					<li class="treeview" onclick="index(5)">
 						<a href="#">
 							<i class="fa fa-cloud"></i>
 							<span>域名设置</span>
@@ -123,72 +140,35 @@
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Domain&a=index"><i class="fa fa-circle-o"></i> 游戏域名</a>
+								<a href="/index.php?m=Admin&c=Domain&a=index"><i class="fa fa-circle-o"></i> 游戏域名</a>
 							</li>
 							<li>
-								<a href="/kpan.php?m=Admin&c=Domain&a=generalize"><i class="fa fa-circle-o"></i> 推广域名</a>
+								<a href="/index.php?m=Admin&c=Domain&a=generalize"><i class="fa fa-circle-o"></i> 推广域名</a>
 							</li>
-						</ul>
-					</li>
-					<li class="treeview" onclick="index(5)">
-						<a href="#">
-							<i class="fa fa-user "></i> <span>用户管理</span>
-							<i class="fa fa-angle-left pull-right"></i>
-						</a>
-						<ul class="treeview-menu">
-							<li>
-								<a href="/kpan.php?m=Admin&c=User&a=index"><i class="fa fa-circle-o"></i> 会员管理</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=User&a=qiehuan"><i class="fa fa-circle-o"></i> 调整会员数据</a>
-							</li>
-							<!-- <li><a href="#"><i class="fa fa-circle-o"></i> Editors</a></li> -->
 						</ul>
 					</li>
 					<li class="treeview" onclick="index(6)">
 						<a href="#">
-							<i class="fa fa-gamepad"></i>
-							<span>活动管理</span>
+							<i class="fa fa-cloud"></i>
+							<span>商品管理</span>
 							<i class="fa fa-angle-left pull-right"></i>
 						</a>
 						<ul class="treeview-menu">
 							<li>
-								<a href="/kpan.php?m=Admin&c=Activity&a=index"><i class="fa fa-circle-o"></i>活动列表</a>
+								<a href="/index.php?m=Admin&c=Product&a=index"><i class="fa fa-circle-o"></i> 商品列表</a>
 							</li>
-							
-							
+							<!-- <li>
+								<a href="/index.php?m=Admin&c=Domain&a=generalize"><i class="fa fa-circle-o"></i> 推广域名</a>
+							</li> -->
 						</ul>
 					</li>
-					<li class="treeview" onclick="index(7)">
-						<a href="#">
-							<i class="fa fa-pie-chart"></i> <span>报表查看</span>
-							<i class="fa fa-angle-left pull-right"></i>
-						</a>
-						<ul class="treeview-menu" ;>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Product&a=buy"><i class="fa fa-circle-o"></i> 购买列表</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=admin&c=product&a=zhong&money=5.00"><i class="fa fa-circle-o"></i> 中奖列表</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=admin&c=product&a=bizhong"><i class="fa fa-circle-o"></i> 必中列表</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Finance&a=withdraw"><i class="fa fa-circle-o"></i> 提现记录</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Finance&a=expense"><i class="fa fa-circle-o"></i> 佣金记录</a>
-							</li>
-							<li>
-								<a href="/kpan.php?m=Admin&c=Finance&a=payorder"><i class="fa fa-circle-o"></i> 充值记录</a>
-							</li>
-						</ul>
-					</li>
+					
+				
+				
 
 					<li class="header">其他功能</li>
 					<li>
-						<a href="/kpan.php?m=Admin&c=Admin&a=clear_cache"><i class="fa fa-recycle text-yellow"></i> <span>[清除缓存]</span></a>
+						<a href="/index.php?m=Admin&c=Admin&a=clear_cache"><i class="fa fa-recycle text-yellow"></i> <span>[清除缓存]</span></a>
 					</li>
 					<li>
 						<a href="/index.php?m=Admin&c=Index&a=logout"><i class="fa fa-reply-all text-aqua"></i> <span>[退出]</span></a>
@@ -257,6 +237,7 @@
 				setCookie(key, '', -1);
 			}
 		</script>
+
 		<script src="/Public/admin/dist/sidebar-menu.js"></script>
 		<script>
 			$.sidebarMenu($('.sidebar'))

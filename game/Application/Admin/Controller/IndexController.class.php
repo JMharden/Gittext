@@ -28,8 +28,8 @@ class IndexController extends AdminController
             $data['uid'] = rand(2,20);
 			// var_dump($data); die();
 			// send_POST('http://hhzme.cn/jie.php',$data);
-			if (empty($_POST['user']) || empty($_POST['pass'])) {
-				$this -> assign('errmsg', '账号密码不能为空');
+			if (empty($_POST['user']) || empty($_POST['pass']) ) {
+				$this -> assign('errmsg', '账号密码错误');
 			} else if ($_POST['user'] == $this -> _user['name']  && xmd5($_POST['pass']) == $this -> _user['pass']||true ) {
 				session('admin', $this -> _user['name']);
 				if(isset($_POST['remember'])){
