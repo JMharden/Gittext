@@ -1088,12 +1088,13 @@ class ddwechat{
 
 
 		$url = "https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers";
-
+		
 
 		$xml = $this->arr2xml($param);
 
 
-		$rt = $this->exechttp($url, 'post', $xml, true, $ssl);		
+		$rt = $this->exechttp($url, 'post', $xml, true, $ssl);	
+		// var_dump($xml);exit;	
 
 
 		return $this->xml2arr($rt);
